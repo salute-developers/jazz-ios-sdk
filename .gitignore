@@ -1,0 +1,7 @@
+.DS_Store
+Cartfile
+Cartfile.resolved
+Carthage/
+JazzSDKDemoApp/JazzSDKDemoApp.xcodeproj/project.pbxproj
+JazzSDKDemoApp/JazzSDKDemoApp.xcodeproj/project.xcworkspace/xcuserdata/19823210.xcuserdatad/UserInterfaceState.xcuserstate
+.build/
