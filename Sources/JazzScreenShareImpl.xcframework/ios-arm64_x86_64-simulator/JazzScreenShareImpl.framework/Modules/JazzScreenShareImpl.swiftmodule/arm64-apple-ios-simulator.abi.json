@@ -1,0 +1,3691 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "JazzScreenShareImpl",
+    "printedName": "JazzScreenShareImpl",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDOSServices",
+        "printedName": "SDOSServices",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ReplayKit",
+        "printedName": "ReplayKit",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BroadcastController",
+        "printedName": "BroadcastController",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(socketFilePath:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl19BroadcastControllerP5start14socketFilePath7onCloseySS_ys5Error_pctF",
+            "mangledName": "$s19JazzScreenShareImpl19BroadcastControllerP5start14socketFilePath7onCloseySS_ys5Error_pctF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.BroadcastController>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.BroadcastController>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl19BroadcastControllerP4stopyyF",
+            "mangledName": "$s19JazzScreenShareImpl19BroadcastControllerP4stopyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.BroadcastController>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.BroadcastController>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "processVideo",
+            "printedName": "processVideo(buffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMSampleBuffer",
+                "printedName": "CoreMedia.CMSampleBuffer",
+                "usr": "c:@T@CMSampleBufferRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl19BroadcastControllerP12processVideo6bufferySo17CMSampleBufferRefa_tF",
+            "mangledName": "$s19JazzScreenShareImpl19BroadcastControllerP12processVideo6bufferySo17CMSampleBufferRefa_tF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.BroadcastController>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.BroadcastController>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JazzScreenShareImpl19BroadcastControllerP",
+        "mangledName": "$s19JazzScreenShareImpl19BroadcastControllerP",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JazzAPI",
+        "printedName": "JazzAPI",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "ReplayKit",
+        "printedName": "ReplayKit",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDLogging",
+        "printedName": "SDLogging",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDOSServices",
+        "printedName": "SDOSServices",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDReactive",
+        "printedName": "SDReactive",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDThreading",
+        "printedName": "SDThreading",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BroadcastControllerImpl",
+        "printedName": "BroadcastControllerImpl",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "ConferenceState",
+            "printedName": "ConferenceState",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "inactive",
+                "printedName": "inactive",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState.Type) -> JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConferenceState",
+                        "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                        "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConferenceState",
+                            "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO8inactiveyA2EmF",
+                "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO8inactiveyA2EmF",
+                "moduleName": "JazzScreenShareImpl"
+              },
+              {
+                "kind": "Var",
+                "name": "active",
+                "printedName": "active",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState.Type) -> JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConferenceState",
+                        "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                        "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConferenceState",
+                            "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO6activeyA2EmF",
+                "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO6activeyA2EmF",
+                "moduleName": "JazzScreenShareImpl"
+              },
+              {
+                "kind": "Var",
+                "name": "finished",
+                "printedName": "finished",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState.Type) -> JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConferenceState",
+                        "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                        "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConferenceState",
+                            "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO8finishedyA2EmF",
+                "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO8finishedyA2EmF",
+                "moduleName": "JazzScreenShareImpl"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConferenceState",
+                    "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                    "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConferenceState",
+                    "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                    "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO2eeoiySbAE_AEtFZ",
+                "moduleName": "JazzScreenShareImpl",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO9hashValueSivp",
+                "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO9hashValueSivp",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO9hashValueSivg",
+                    "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO9hashValueSivg",
+                    "moduleName": "JazzScreenShareImpl",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO4hash4intoys6HasherVz_tF",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO",
+            "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(logger:notificationCenter:socketConnectionFactory:uploaderFactory:closeConnectionError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BroadcastControllerImpl",
+                "printedName": "JazzScreenShareImpl.BroadcastControllerImpl",
+                "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "any SDLogging.Logger",
+                "usr": "s:9SDLogging6LoggerP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DarwinNotificationCenter",
+                "printedName": "any SDOSServices.DarwinNotificationCenter",
+                "usr": "s:12SDOSServices24DarwinNotificationCenterP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Factory",
+                "printedName": "SDSoup.Factory<Swift.String, (any JazzScreenShareImpl.SocketConnectionClient)?>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any JazzScreenShareImpl.SocketConnectionClient)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketConnectionClient",
+                        "printedName": "any JazzScreenShareImpl.SocketConnectionClient",
+                        "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:6SDSoup7FactoryV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Factory",
+                "printedName": "SDSoup.Factory<any JazzScreenShareImpl.SocketConnectionClient, any JazzScreenShareImpl.SampleUploader>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketConnectionClient",
+                    "printedName": "any JazzScreenShareImpl.SocketConnectionClient",
+                    "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SampleUploader",
+                    "printedName": "any JazzScreenShareImpl.SampleUploader",
+                    "usr": "s:19JazzScreenShareImpl14SampleUploaderP"
+                  }
+                ],
+                "usr": "s:6SDSoup7FactoryV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState) -> any Swift.Error",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConferenceState",
+                    "printedName": "JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState",
+                    "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C15ConferenceStateO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C6logger18notificationCenter23socketConnectionFactory08uploaderL005closeK5ErrorAC9SDLogging6Logger_p_12SDOSServices018DarwinNotificationI0_p6SDSoup0L0VySSAA06SocketK6Client_pSgGAOyAaP_pAA14SampleUploader_pGs0O0_pAC15ConferenceStateOctcfc",
+            "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C6logger18notificationCenter23socketConnectionFactory08uploaderL005closeK5ErrorAC9SDLogging6Logger_p_12SDOSServices018DarwinNotificationI0_p6SDSoup0L0VySSAA06SocketK6Client_pSgGAOyAaP_pAA14SampleUploader_pGs0O0_pAC15ConferenceStateOctcfc",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(socketFilePath:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C5start14socketFilePath7onCloseySS_ys5Error_pctF",
+            "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C5start14socketFilePath7onCloseySS_ys5Error_pctF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C4stopyyF",
+            "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C4stopyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "processVideo",
+            "printedName": "processVideo(buffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMSampleBuffer",
+                "printedName": "CoreMedia.CMSampleBuffer",
+                "usr": "c:@T@CMSampleBufferRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C12processVideo6bufferySo17CMSampleBufferRefa_tF",
+            "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C12processVideo6bufferySo17CMSampleBufferRefa_tF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19JazzScreenShareImpl019BroadcastControllerD0C",
+        "mangledName": "$s19JazzScreenShareImpl019BroadcastControllerD0C",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BroadcastController",
+            "printedName": "BroadcastController",
+            "usr": "s:19JazzScreenShareImpl19BroadcastControllerP",
+            "mangledName": "$s19JazzScreenShareImpl19BroadcastControllerP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDOSServices",
+        "printedName": "SDOSServices",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ReplayKit",
+        "printedName": "ReplayKit",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMedia",
+        "printedName": "CoreMedia",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SampleUploader",
+        "printedName": "SampleUploader",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(sample:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMSampleBuffer",
+                "printedName": "CoreMedia.CMSampleBuffer",
+                "usr": "c:@T@CMSampleBufferRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl14SampleUploaderP4send6sampleySo17CMSampleBufferRefa_tF",
+            "mangledName": "$s19JazzScreenShareImpl14SampleUploaderP4send6sampleySo17CMSampleBufferRefa_tF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SampleUploader>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SampleUploader>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JazzScreenShareImpl14SampleUploaderP",
+        "mangledName": "$s19JazzScreenShareImpl14SampleUploaderP",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ReplayKit",
+        "printedName": "ReplayKit",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDLogging",
+        "printedName": "SDLogging",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDThreading",
+        "printedName": "SDThreading",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SampleUploaderImpl",
+        "printedName": "SampleUploaderImpl",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(connection:logger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SampleUploaderImpl",
+                "printedName": "JazzScreenShareImpl.SampleUploaderImpl",
+                "usr": "s:19JazzScreenShareImpl014SampleUploaderD0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SocketConnectionClient",
+                "printedName": "any JazzScreenShareImpl.SocketConnectionClient",
+                "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "any SDLogging.Logger",
+                "usr": "s:9SDLogging6LoggerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JazzScreenShareImpl014SampleUploaderD0C10connection6loggerAcA22SocketConnectionClient_p_9SDLogging6Logger_ptcfc",
+            "mangledName": "$s19JazzScreenShareImpl014SampleUploaderD0C10connection6loggerAcA22SocketConnectionClient_p_9SDLogging6Logger_ptcfc",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(sample:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMSampleBuffer",
+                "printedName": "CoreMedia.CMSampleBuffer",
+                "usr": "c:@T@CMSampleBufferRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl014SampleUploaderD0C4send6sampleySo17CMSampleBufferRefa_tF",
+            "mangledName": "$s19JazzScreenShareImpl014SampleUploaderD0C4send6sampleySo17CMSampleBufferRefa_tF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19JazzScreenShareImpl014SampleUploaderD0C",
+        "mangledName": "$s19JazzScreenShareImpl014SampleUploaderD0C",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SampleUploader",
+            "printedName": "SampleUploader",
+            "usr": "s:19JazzScreenShareImpl14SampleUploaderP",
+            "mangledName": "$s19JazzScreenShareImpl14SampleUploaderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketConnectionClient",
+        "printedName": "SocketConnectionClient",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "onClose",
+            "printedName": "onClose",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(((any Swift.Error)?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "((any Swift.Error)?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvp",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvp",
+            "moduleName": "JazzScreenShareImpl",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(((any Swift.Error)?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "((any Swift.Error)?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any Swift.Error)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvg",
+                "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvg",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+                "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(((any Swift.Error)?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "((any Swift.Error)?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any Swift.Error)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvs",
+                "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvs",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+                "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvM",
+                "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP7onCloseys5Error_pSgcSgvM",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+                "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onStreamHasSpaceAvailable",
+            "printedName": "onStreamHasSpaceAvailable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvp",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvp",
+            "moduleName": "JazzScreenShareImpl",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvg",
+                "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvg",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+                "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvs",
+                "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvs",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+                "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvM",
+                "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP25onStreamHasSpaceAvailableyycSgvM",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+                "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "addOpenHandler",
+            "printedName": "addOpenHandler(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP14addOpenHandleryyyycF",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP14addOpenHandleryyyycF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "open",
+            "printedName": "open()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP4openyyF",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP4openyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP5closeyyF",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP5closeyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeToStream",
+            "printedName": "writeToStream(buffer:maxLength:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafePointer",
+                "printedName": "Swift.UnsafePointer<Swift.UInt8>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:SP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP13writeToStream6buffer9maxLengthSiSPys5UInt8VG_SitF",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP13writeToStream6buffer9maxLengthSiSPys5UInt8VG_SitF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionClient>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionClient>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP",
+        "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP",
+        "moduleName": "JazzScreenShareImpl",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDLogging",
+        "printedName": "SDLogging",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketConnectionClientImpl",
+        "printedName": "SocketConnectionClientImpl",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "onClose",
+            "printedName": "onClose",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(((any Swift.Error)?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "((any Swift.Error)?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvp",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvp",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(((any Swift.Error)?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "((any Swift.Error)?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any Swift.Error)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvg",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvg",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(((any Swift.Error)?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "((any Swift.Error)?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any Swift.Error)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvs",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvs",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvM",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C7onCloseys5Error_pSgcSgvM",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onStreamHasSpaceAvailable",
+            "printedName": "onStreamHasSpaceAvailable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvp",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvp",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvg",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvg",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvs",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvs",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvM",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C25onStreamHasSpaceAvailableyycSgvM",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(filePath:logger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JazzScreenShareImpl.SocketConnectionClientImpl?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SocketConnectionClientImpl",
+                    "printedName": "JazzScreenShareImpl.SocketConnectionClientImpl",
+                    "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionClientImpl"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "any SDLogging.Logger",
+                "usr": "s:9SDLogging6LoggerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C8filePath6loggerACSgSS_9SDLogging6Logger_ptcfc",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C8filePath6loggerACSgSS_9SDLogging6Logger_ptcfc",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "open",
+            "printedName": "open()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C4openyyF",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C4openyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addOpenHandler",
+            "printedName": "addOpenHandler(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C14addOpenHandleryyyycF",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C14addOpenHandleryyyycF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C5closeyyF",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C5closeyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "writeToStream",
+            "printedName": "writeToStream(buffer:maxLength:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafePointer",
+                "printedName": "Swift.UnsafePointer<Swift.UInt8>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:SP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionClientD0C13writeToStream6buffer9maxLengthSiSPys5UInt8VG_SitF",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C13writeToStream6buffer9maxLengthSiSPys5UInt8VG_SitF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketConnectionClientImpl",
+                "printedName": "JazzScreenShareImpl.SocketConnectionClientImpl",
+                "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionClientImpl"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionClientImpl(im)init",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0CACycfc",
+            "moduleName": "JazzScreenShareImpl",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "stream",
+            "printedName": "stream(_:handle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Stream",
+                "printedName": "Foundation.Stream",
+                "usr": "c:objc(cs)NSStream"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Event",
+                "printedName": "Foundation.Stream.Event",
+                "usr": "c:@E@NSStreamEvent"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@JazzScreenShareImpl@objc(cs)SocketConnectionClientImpl(im)stream:handleEvent:",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C6stream_6handleySo8NSStreamC_So0J5EventVtF",
+            "moduleName": "JazzScreenShareImpl",
+            "objc_name": "stream:handleEvent:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionClientImpl",
+        "mangledName": "$s19JazzScreenShareImpl022SocketConnectionClientD0C",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketConnectionClient",
+            "printedName": "SocketConnectionClient",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionClientP",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionClientP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Configurable",
+            "printedName": "Configurable",
+            "usr": "s:6SDSoup12ConfigurableP",
+            "mangledName": "$s6SDSoup12ConfigurableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketConnectionServerDelegate",
+        "printedName": "SocketConnectionServerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didFinish",
+            "printedName": "didFinish()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl30SocketConnectionServerDelegateP9didFinishyyF",
+            "mangledName": "$s19JazzScreenShareImpl30SocketConnectionServerDelegateP9didFinishyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionServerDelegate>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionServerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bytesRead",
+            "printedName": "bytesRead(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl30SocketConnectionServerDelegateP9bytesReadyy10Foundation4DataVF",
+            "mangledName": "$s19JazzScreenShareImpl30SocketConnectionServerDelegateP9bytesReadyy10Foundation4DataVF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionServerDelegate>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionServerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JazzScreenShareImpl30SocketConnectionServerDelegateP",
+        "mangledName": "$s19JazzScreenShareImpl30SocketConnectionServerDelegateP",
+        "moduleName": "JazzScreenShareImpl",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketConnectionServer",
+        "printedName": "SocketConnectionServer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionServerP5startyyF",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionServerP5startyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionServer>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionServer>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionServerP4stopyyF",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionServerP4stopyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzScreenShareImpl.SocketConnectionServer>",
+            "sugared_genericSig": "<Self where Self : JazzScreenShareImpl.SocketConnectionServer>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:19JazzScreenShareImpl22SocketConnectionServerP",
+        "mangledName": "$s19JazzScreenShareImpl22SocketConnectionServerP",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDLogging",
+        "printedName": "SDLogging",
+        "declKind": "Import",
+        "moduleName": "JazzScreenShareImpl"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketConnectionServerImpl",
+        "printedName": "SocketConnectionServerImpl",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any JazzScreenShareImpl.SocketConnectionServerDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvp",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvp",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any JazzScreenShareImpl.SocketConnectionServerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketConnectionServerDelegate",
+                        "printedName": "any JazzScreenShareImpl.SocketConnectionServerDelegate",
+                        "usr": "s:19JazzScreenShareImpl30SocketConnectionServerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvg",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvg",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any JazzScreenShareImpl.SocketConnectionServerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SocketConnectionServerDelegate",
+                        "printedName": "any JazzScreenShareImpl.SocketConnectionServerDelegate",
+                        "usr": "s:19JazzScreenShareImpl30SocketConnectionServerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvs",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvs",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvM",
+                "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C8delegateAA0efG8Delegate_pSgvM",
+                "moduleName": "JazzScreenShareImpl",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(socketPath:logger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketConnectionServerImpl",
+                "printedName": "JazzScreenShareImpl.SocketConnectionServerImpl",
+                "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionServerImpl"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "any SDLogging.Logger",
+                "usr": "s:9SDLogging6LoggerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionServerD0C10socketPath6loggerACSS_9SDLogging6Logger_ptcfc",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C10socketPath6loggerACSS_9SDLogging6Logger_ptcfc",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionServerD0C5startyyF",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C5startyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19JazzScreenShareImpl022SocketConnectionServerD0C4stopyyF",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C4stopyyF",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketConnectionServerImpl",
+                "printedName": "JazzScreenShareImpl.SocketConnectionServerImpl",
+                "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionServerImpl"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionServerImpl(im)init",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0CACycfc",
+            "moduleName": "JazzScreenShareImpl",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "stream",
+            "printedName": "stream(_:handle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Stream",
+                "printedName": "Foundation.Stream",
+                "usr": "c:objc(cs)NSStream"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Event",
+                "printedName": "Foundation.Stream.Event",
+                "usr": "c:@E@NSStreamEvent"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@JazzScreenShareImpl@objc(cs)SocketConnectionServerImpl(im)stream:handleEvent:",
+            "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C6stream_6handleySo8NSStreamC_So0J5EventVtF",
+            "moduleName": "JazzScreenShareImpl",
+            "objc_name": "stream:handleEvent:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@JazzScreenShareImpl@objc(cs)SocketConnectionServerImpl",
+        "mangledName": "$s19JazzScreenShareImpl022SocketConnectionServerD0C",
+        "moduleName": "JazzScreenShareImpl",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SocketConnectionServer",
+            "printedName": "SocketConnectionServer",
+            "usr": "s:19JazzScreenShareImpl22SocketConnectionServerP",
+            "mangledName": "$s19JazzScreenShareImpl22SocketConnectionServerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Configurable",
+            "printedName": "Configurable",
+            "usr": "s:6SDSoup12ConfigurableP",
+            "mangledName": "$s6SDSoup12ConfigurableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Tagged",
+        "printedName": "Tagged",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "jazzScreenShare",
+            "printedName": "jazzScreenShare",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tagged",
+                "printedName": "SDSoup.Tagged<SDSoup.AppGroupTag, Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AppGroupTag",
+                    "printedName": "SDSoup.AppGroupTag",
+                    "usr": "s:6SDSoup11AppGroupTagO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:6SDSoup6TaggedV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6SDSoup6TaggedV19JazzScreenShareImplAA11AppGroupTagORszSSRs_rlE04jazzdE0ACyAFSSGvpZ",
+            "mangledName": "$s6SDSoup6TaggedV19JazzScreenShareImplAA11AppGroupTagORszSSRs_rlE04jazzdE0ACyAFSSGvpZ",
+            "moduleName": "JazzScreenShareImpl",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tagged",
+                    "printedName": "SDSoup.Tagged<SDSoup.AppGroupTag, Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AppGroupTag",
+                        "printedName": "SDSoup.AppGroupTag",
+                        "usr": "s:6SDSoup11AppGroupTagO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:6SDSoup6TaggedV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6SDSoup6TaggedV19JazzScreenShareImplAA11AppGroupTagORszSSRs_rlE04jazzdE0ACyAFSSGvgZ",
+                "mangledName": "$s6SDSoup6TaggedV19JazzScreenShareImplAA11AppGroupTagORszSSRs_rlE04jazzdE0ACyAFSSGvgZ",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 == SDSoup.AppGroupTag, τ_0_1 == Swift.String>",
+                "sugared_genericSig": "<Tag, T where Tag == SDSoup.AppGroupTag, T == Swift.String>",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6SDSoup6TaggedV",
+        "mangledName": "$s6SDSoup6TaggedV",
+        "moduleName": "SDSoup",
+        "genericSig": "<τ_0_0, τ_0_1>",
+        "sugared_genericSig": "<Tag, T>",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PrettyConvertible",
+            "printedName": "PrettyConvertible",
+            "usr": "s:6SDSoup17PrettyConvertibleP",
+            "mangledName": "$s6SDSoup17PrettyConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_1.ID"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Comparable",
+            "printedName": "Comparable",
+            "usr": "s:SL",
+            "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByStringLiteral",
+            "printedName": "ExpressibleByStringLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "StringLiteralType",
+                "printedName": "StringLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_1.StringLiteralType"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s26ExpressibleByStringLiteralP",
+            "mangledName": "$ss26ExpressibleByStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByIntegerLiteral",
+            "printedName": "ExpressibleByIntegerLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "IntegerLiteralType",
+                "printedName": "IntegerLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_1.IntegerLiteralType"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s27ExpressibleByIntegerLiteralP",
+            "mangledName": "$ss27ExpressibleByIntegerLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByFloatLiteral",
+            "printedName": "ExpressibleByFloatLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "FloatLiteralType",
+                "printedName": "FloatLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_1.FloatLiteralType"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s25ExpressibleByFloatLiteralP",
+            "mangledName": "$ss25ExpressibleByFloatLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByUnicodeScalarLiteral",
+            "printedName": "ExpressibleByUnicodeScalarLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "UnicodeScalarLiteralType",
+                "printedName": "UnicodeScalarLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_1.UnicodeScalarLiteralType"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+            "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ExtendedGraphemeClusterLiteralType",
+                "printedName": "ExtendedGraphemeClusterLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_1.ExtendedGraphemeClusterLiteralType"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+            "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByBooleanLiteral",
+            "printedName": "ExpressibleByBooleanLiteral",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "BooleanLiteralType",
+                "printedName": "BooleanLiteralType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DependentMember",
+                    "printedName": "τ_0_1.BooleanLiteralType"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s27ExpressibleByBooleanLiteralP",
+            "mangledName": "$ss27ExpressibleByBooleanLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DarwinNotification",
+        "printedName": "DarwinNotification",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "jazzBroadcastStarted",
+            "printedName": "jazzBroadcastStarted",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DarwinNotification",
+                "printedName": "SDOSServices.DarwinNotification",
+                "usr": "s:12SDOSServices18DarwinNotificationV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDOSServices18DarwinNotificationV19JazzScreenShareImplE20jazzBroadcastStartedACvpZ",
+            "mangledName": "$s12SDOSServices18DarwinNotificationV19JazzScreenShareImplE20jazzBroadcastStartedACvpZ",
+            "moduleName": "JazzScreenShareImpl",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DarwinNotification",
+                    "printedName": "SDOSServices.DarwinNotification",
+                    "usr": "s:12SDOSServices18DarwinNotificationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDOSServices18DarwinNotificationV19JazzScreenShareImplE20jazzBroadcastStartedACvgZ",
+                "mangledName": "$s12SDOSServices18DarwinNotificationV19JazzScreenShareImplE20jazzBroadcastStartedACvgZ",
+                "moduleName": "JazzScreenShareImpl",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "jazzBroadcastFinished",
+            "printedName": "jazzBroadcastFinished",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DarwinNotification",
+                "printedName": "SDOSServices.DarwinNotification",
+                "usr": "s:12SDOSServices18DarwinNotificationV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDOSServices18DarwinNotificationV19JazzScreenShareImplE21jazzBroadcastFinishedACvpZ",
+            "mangledName": "$s12SDOSServices18DarwinNotificationV19JazzScreenShareImplE21jazzBroadcastFinishedACvpZ",
+            "moduleName": "JazzScreenShareImpl",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DarwinNotification",
+                    "printedName": "SDOSServices.DarwinNotification",
+                    "usr": "s:12SDOSServices18DarwinNotificationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDOSServices18DarwinNotificationV19JazzScreenShareImplE21jazzBroadcastFinishedACvgZ",
+                "mangledName": "$s12SDOSServices18DarwinNotificationV19JazzScreenShareImplE21jazzBroadcastFinishedACvgZ",
+                "moduleName": "JazzScreenShareImpl",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "jazzConferenceFinished",
+            "printedName": "jazzConferenceFinished",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DarwinNotification",
+                "printedName": "SDOSServices.DarwinNotification",
+                "usr": "s:12SDOSServices18DarwinNotificationV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDOSServices18DarwinNotificationV19JazzScreenShareImplE22jazzConferenceFinishedACvpZ",
+            "mangledName": "$s12SDOSServices18DarwinNotificationV19JazzScreenShareImplE22jazzConferenceFinishedACvpZ",
+            "moduleName": "JazzScreenShareImpl",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DarwinNotification",
+                    "printedName": "SDOSServices.DarwinNotification",
+                    "usr": "s:12SDOSServices18DarwinNotificationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDOSServices18DarwinNotificationV19JazzScreenShareImplE22jazzConferenceFinishedACvgZ",
+                "mangledName": "$s12SDOSServices18DarwinNotificationV19JazzScreenShareImplE22jazzConferenceFinishedACvgZ",
+                "moduleName": "JazzScreenShareImpl",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12SDOSServices18DarwinNotificationV",
+        "mangledName": "$s12SDOSServices18DarwinNotificationV",
+        "moduleName": "SDOSServices",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileManagerTwin",
+        "printedName": "FileManagerTwin",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "jazzScreenShareSocketFilePath",
+            "printedName": "jazzScreenShareSocketFilePath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6SDSoup15FileManagerTwinP19JazzScreenShareImplE04jazzfg6SocketB4PathSSSgvp",
+            "mangledName": "$s6SDSoup15FileManagerTwinP19JazzScreenShareImplE04jazzfg6SocketB4PathSSSgvp",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6SDSoup15FileManagerTwinP19JazzScreenShareImplE04jazzfg6SocketB4PathSSSgvg",
+                "mangledName": "$s6SDSoup15FileManagerTwinP19JazzScreenShareImplE04jazzfg6SocketB4PathSSSgvg",
+                "moduleName": "JazzScreenShareImpl",
+                "genericSig": "<τ_0_0 where τ_0_0 : SDSoup.FileManagerTwin>",
+                "sugared_genericSig": "<Self where Self : SDSoup.FileManagerTwin>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:6SDSoup15FileManagerTwinP",
+        "mangledName": "$s6SDSoup15FileManagerTwinP",
+        "moduleName": "SDSoup",
+        "genericSig": "<τ_0_0 : Swift.Sendable>",
+        "sugared_genericSig": "<Self : Swift.Sendable>",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSError",
+        "printedName": "NSError",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "broadcastError",
+            "printedName": "broadcastError(withLocalizedDescription:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSError",
+                "printedName": "Foundation.NSError",
+                "usr": "c:objc(cs)NSError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So7NSErrorC19JazzScreenShareImplE14broadcastError24withLocalizedDescriptionABSS_tFZ",
+            "mangledName": "$sSo7NSErrorC19JazzScreenShareImplE14broadcastError24withLocalizedDescriptionABSS_tFZ",
+            "moduleName": "JazzScreenShareImpl",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSError",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSError",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Configurable",
+            "printedName": "Configurable",
+            "usr": "s:6SDSoup12ConfigurableP",
+            "mangledName": "$s6SDSoup12ConfigurableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Plist",
+        "printedName": "Plist",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "jazzScreenShareExtensionIdentifier",
+            "printedName": "jazzScreenShareExtensionIdentifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6SDSoup5PlistC19JazzScreenShareImplE04jazzdE19ExtensionIdentifierSSSgvp",
+            "mangledName": "$s6SDSoup5PlistC19JazzScreenShareImplE04jazzdE19ExtensionIdentifierSSSgvp",
+            "moduleName": "JazzScreenShareImpl",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6SDSoup5PlistC19JazzScreenShareImplE04jazzdE19ExtensionIdentifierSSSgvg",
+                "mangledName": "$s6SDSoup5PlistC19JazzScreenShareImplE04jazzdE19ExtensionIdentifierSSSgvg",
+                "moduleName": "JazzScreenShareImpl",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:6SDSoup5PlistC",
+        "mangledName": "$s6SDSoup5PlistC",
+        "moduleName": "SDSoup",
+        "declAttributes": [
+          "Final"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/ApplicationGroup+JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 347,
+      "length": 23,
+      "value": "\"RTCAppGroupIdentifier\""
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/ApplicationGroup+JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 449,
+      "length": 79,
+      "value": "\"Не найдена группа для демонстрации экрана\""
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/DarwinNotification+Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 25,
+      "value": "\"Jazz_ScreenShareStarted\""
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/DarwinNotification+Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 391,
+      "length": 25,
+      "value": "\"Jazz_ScreenShareStopped\""
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/DarwinNotification+Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 490,
+      "length": 25,
+      "value": "\"Jazz_ConferenceFinished\""
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/Uploader\/SampleUploaderImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 343,
+      "length": 6,
+      "value": "10240"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/Uploader\/SampleUploaderImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 447,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/Uploader\/SampleUploaderImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 598,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionClientImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 342,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionClientImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 554,
+      "length": 43,
+      "value": "\"ru.\""
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionClientImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 566,
+      "length": 1,
+      "value": "\".jazz.screenShare.connectTimer\""
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionClientImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 708,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionClientImpl.swift",
+      "kind": "Array",
+      "offset": 813,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionServerImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 419,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionServerImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 424,
+      "length": 5,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionServerImpl.swift",
+      "kind": "IntegerLiteral",
+      "offset": 469,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/18841448\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzScreenShareImpl\/SocketConnection\/SocketConnectionServerImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 707,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

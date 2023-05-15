@@ -1,0 +1,10 @@
+{
+  "main": {
+    "workspace": [],
+    "sdk": []
+  },
+  "test": {
+    "workspace": [],
+    "sdk": []
+  }
+}
