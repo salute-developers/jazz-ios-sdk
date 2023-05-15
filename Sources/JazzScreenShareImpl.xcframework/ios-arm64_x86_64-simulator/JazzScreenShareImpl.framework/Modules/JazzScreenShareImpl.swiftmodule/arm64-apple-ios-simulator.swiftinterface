@@ -1,0 +1,109 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name JazzScreenShareImpl
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CoreMedia
+import Foundation
+import JazzAPI
+import ReplayKit
+import SDLogging
+import SDOSServices
+import SDReactive
+import SDSoup
+import SDThreading
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension SDSoup.Tagged where Tag == SDSoup.AppGroupTag, T == Swift.String {
+  public static let jazzScreenShare: SDSoup.ApplicationGroup
+}
+public protocol BroadcastController {
+  func start(socketFilePath: Swift.String, onClose: @escaping (any Swift.Error) -> Swift.Void)
+  func stop()
+  func processVideo(buffer: CoreMedia.CMSampleBuffer)
+}
+final public class BroadcastControllerImpl : JazzScreenShareImpl.BroadcastController {
+  public enum ConferenceState {
+    case inactive
+    case active
+    case finished
+    public static func == (a: JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState, b: JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(logger: any SDLogging.Logger, notificationCenter: any SDOSServices.DarwinNotificationCenter, socketConnectionFactory: SDSoup.Factory<Swift.String, (any JazzScreenShareImpl.SocketConnectionClient)?>, uploaderFactory: SDSoup.Factory<any JazzScreenShareImpl.SocketConnectionClient, any JazzScreenShareImpl.SampleUploader>, closeConnectionError: @escaping (JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState) -> any Swift.Error)
+  final public func start(socketFilePath: Swift.String, onClose: @escaping (any Swift.Error) -> Swift.Void)
+  final public func stop()
+  final public func processVideo(buffer: CoreMedia.CMSampleBuffer)
+  @objc deinit
+}
+extension SDOSServices.DarwinNotification {
+  public static let jazzBroadcastStarted: SDOSServices.DarwinNotification
+  public static let jazzBroadcastFinished: SDOSServices.DarwinNotification
+  public static let jazzConferenceFinished: SDOSServices.DarwinNotification
+}
+extension SDSoup.FileManagerTwin {
+  public var jazzScreenShareSocketFilePath: Swift.String? {
+    get
+  }
+}
+extension Foundation.NSError {
+  public static func broadcastError(withLocalizedDescription description: Swift.String) -> Foundation.NSError
+}
+extension SDSoup.Plist {
+  final public var jazzScreenShareExtensionIdentifier: Swift.String? {
+    get
+  }
+}
+public protocol SampleUploader {
+  func send(sample buffer: CoreMedia.CMSampleBuffer)
+}
+final public class SampleUploaderImpl : JazzScreenShareImpl.SampleUploader {
+  public init(connection: any JazzScreenShareImpl.SocketConnectionClient, logger: any SDLogging.Logger)
+  final public func send(sample buffer: CoreMedia.CMSampleBuffer)
+  @objc deinit
+}
+public protocol SocketConnectionClient : AnyObject {
+  var onClose: (((any Swift.Error)?) -> Swift.Void)? { get set }
+  var onStreamHasSpaceAvailable: (() -> Swift.Void)? { get set }
+  func addOpenHandler(_ handler: @escaping () -> Swift.Void)
+  func open()
+  func close()
+  func writeToStream(buffer: Swift.UnsafePointer<Swift.UInt8>, maxLength length: Swift.Int) -> Swift.Int
+}
+@objc final public class SocketConnectionClientImpl : ObjectiveC.NSObject, JazzScreenShareImpl.SocketConnectionClient {
+  final public var onClose: (((any Swift.Error)?) -> Swift.Void)?
+  final public var onStreamHasSpaceAvailable: (() -> Swift.Void)?
+  public init?(filePath: Swift.String, logger: any SDLogging.Logger)
+  final public func open()
+  final public func addOpenHandler(_ handler: @escaping () -> Swift.Void)
+  final public func close()
+  final public func writeToStream(buffer: Swift.UnsafePointer<Swift.UInt8>, maxLength length: Swift.Int) -> Swift.Int
+  @objc deinit
+}
+extension JazzScreenShareImpl.SocketConnectionClientImpl : Foundation.StreamDelegate {
+  @objc final public func stream(_ aStream: Foundation.Stream, handle eventCode: Foundation.Stream.Event)
+}
+public protocol SocketConnectionServerDelegate : AnyObject {
+  func didFinish()
+  func bytesRead(_ buffer: Foundation.Data)
+}
+public protocol SocketConnectionServer {
+  func start()
+  func stop()
+}
+@objc final public class SocketConnectionServerImpl : ObjectiveC.NSObject, JazzScreenShareImpl.SocketConnectionServer {
+  weak final public var delegate: (any JazzScreenShareImpl.SocketConnectionServerDelegate)?
+  public init(socketPath: Swift.String, logger: any SDLogging.Logger)
+  @objc deinit
+  final public func start()
+  final public func stop()
+}
+extension JazzScreenShareImpl.SocketConnectionServerImpl : Foundation.StreamDelegate {
+  @objc final public func stream(_ aStream: Foundation.Stream, handle eventCode: Foundation.Stream.Event)
+}
+extension JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState : Swift.Equatable {}
+extension JazzScreenShareImpl.BroadcastControllerImpl.ConferenceState : Swift.Hashable {}

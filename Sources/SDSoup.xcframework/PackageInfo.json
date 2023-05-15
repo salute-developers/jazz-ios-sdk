@@ -1,0 +1,9 @@
+{
+  "description" : "Helper types and extensions. Все, что полезно для разработки, но еще не дотянуло до отдельной библиотеки.",
+  "graph" : {
+    "layer" : "3rdparty"
+  },
+  "jiraTeam" : "ATHENADEV",
+  "name" : "SDSoup",
+  "type" : "xcframework"
+}

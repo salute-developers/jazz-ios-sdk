@@ -1,0 +1,11 @@
+framework module SDSoup {
+  umbrella header "SDSoup.h"
+  export *
+
+  module * { export * }
+}
+
+module SDSoup.Swift {
+  header "SDSoup-Swift.h"
+  requires objc
+}

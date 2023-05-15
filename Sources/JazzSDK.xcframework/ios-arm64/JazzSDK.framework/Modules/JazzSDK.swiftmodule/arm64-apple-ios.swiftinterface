@@ -1,0 +1,1255 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name JazzSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFoundation
+import Combine
+import CryptoKit
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ConferencePreferredSpeaker : Swift.String, Swift.Hashable, Swift.CaseIterable, Swift.Codable {
+  case receiver
+  case speaker
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzSDK.ConferencePreferredSpeaker]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [JazzSDK.ConferencePreferredSpeaker] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferenceTokenError : Swift.Error {
+  case invalidToken
+  public static func == (a: JazzSDK.ConferenceTokenError, b: JazzSDK.ConferenceTokenError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum Jazz {
+  public static func initialize(conferenceAuthorizationType: JazzSDK.JazzConferenceAuthorizationType, container: UIKit.UIViewController, navigationType: JazzSDK.JazzNavigationType, settings: JazzSDK.JazzSettings, eventsListener: (any JazzSDK.JazzEventsListener)? = nil, jazzLogger: (any JazzSDK.JazzLogger)? = nil, shouldRateConference: Swift.Bool = true) throws
+  public static func getUrl(room: JazzSDK.JazzRoom) -> Foundation.URL
+}
+public protocol JazzActiveConferenceCoordinator {
+  var audioRoutePickerButton: UIKit.UIView { get }
+  func switchCamera()
+  func toggleCamera(isOn: Swift.Bool)
+  func toggleMicrohone(isOn: Swift.Bool)
+  func toggleShareScreen(isOn: Swift.Bool)
+  func changeLayout()
+  func raiseHand()
+  func toggleAsr()
+  func startRecord()
+  func stopRecord()
+  func endConference()
+  func sendMessage(message: Swift.String)
+  func sendReaction(reaction: JazzSDK.JazzConferenceReaction)
+  func toggleIncomingStreamsDisabled(isEnabled: Swift.Bool)
+  func toggleEnableNoiseSuppression(isEnabled: Swift.Bool)
+  func toggleParticipantsVideoEnlarged(isEnlarged: Swift.Bool)
+  func changeUserName(newName: Swift.String)
+  func changeRoomName(newName: Swift.String)
+}
+public struct JazzActiveConferenceMenuState : Swift.Equatable {
+  public var asrState: JazzSDK.JazzConferenceAsrState
+  public var layout: JazzSDK.JazzConferenceParticipantsLayout
+  public var isHandRaised: Swift.Bool
+  public var serverRecordState: JazzSDK.JazzServerRecordState
+  public init(asrState: JazzSDK.JazzConferenceAsrState, layout: JazzSDK.JazzConferenceParticipantsLayout, isHandRaised: Swift.Bool, serverRecordState: JazzSDK.JazzServerRecordState)
+  public static func == (a: JazzSDK.JazzActiveConferenceMenuState, b: JazzSDK.JazzActiveConferenceMenuState) -> Swift.Bool
+}
+public class JazzActiveConferenceOverlayRepresentation {
+  final public let builder: (_ state: JazzSDK.JazzActiveConferenceState, _ coordinator: any JazzSDK.JazzActiveConferenceCoordinator, _ router: any JazzSDK.JazzActiveConferenceRouter, _ emoji: UIKit.UIView) -> UIKit.UIView
+  public init(builder: @escaping (JazzSDK.JazzActiveConferenceState, any JazzSDK.JazzActiveConferenceCoordinator, any JazzSDK.JazzActiveConferenceRouter, UIKit.UIView) -> UIKit.UIView)
+  @objc deinit
+}
+public protocol JazzActiveConferenceRouter {
+  func openChat()
+  func openMenu()
+  func openSettings()
+  func openParticipants()
+  func openPollsList()
+  func openCreationSessionGroups()
+  func invite(onScreenPresented: @escaping () -> Swift.Void)
+  func initiateTransition()
+  func enterPiP()
+}
+public struct JazzActiveConferenceSettingsState : Swift.Equatable {
+  public var isIncomingVideoStreamsAllowed: Swift.Bool
+  public var isParticipantsVideoEnlarged: Swift.Bool
+  public var isNoiseSuppressionEnabled: Swift.Bool
+  public init(isIncomingVideoStreamsAllowed: Swift.Bool, isParticipantsVideoEnlarged: Swift.Bool, isNoiseSuppressionEnabled: Swift.Bool)
+  public static func == (a: JazzSDK.JazzActiveConferenceSettingsState, b: JazzSDK.JazzActiveConferenceSettingsState) -> Swift.Bool
+}
+final public class JazzActiveConferenceState : Combine.ObservableObject {
+  @Combine.Published @_projectedValueProperty($currentAudioRoute) final public var currentAudioRoute: AVFAudio.AVAudioSessionRouteDescription {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $currentAudioRoute: Combine.Published<AVFAudio.AVAudioSessionRouteDescription>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($cameraState) final public var cameraState: JazzSDK.JazzConferenceMediaFeatureDisplayState {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $cameraState: Combine.Published<JazzSDK.JazzConferenceMediaFeatureDisplayState>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($microphoneState) final public var microphoneState: JazzSDK.JazzConferenceMediaFeatureDisplayState {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $microphoneState: Combine.Published<JazzSDK.JazzConferenceMediaFeatureDisplayState>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($screenShareState) final public var screenShareState: JazzSDK.JazzConferenceMediaFeatureDisplayState {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $screenShareState: Combine.Published<JazzSDK.JazzConferenceMediaFeatureDisplayState>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($conferenceTitle) final public var conferenceTitle: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $conferenceTitle: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($localParticipant) final public var localParticipant: JazzSDK.JazzConferenceParticipant {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $localParticipant: Combine.Published<JazzSDK.JazzConferenceParticipant>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($remoteParticipants) final public var remoteParticipants: [Swift.String : JazzSDK.JazzConferenceParticipant] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $remoteParticipants: Combine.Published<[Swift.String : JazzSDK.JazzConferenceParticipant]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($dominantSpeaker) final public var dominantSpeaker: JazzSDK.JazzConferenceParticipant? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $dominantSpeaker: Combine.Published<JazzSDK.JazzConferenceParticipant?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($hasNewMessages) final public var hasNewMessages: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $hasNewMessages: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($activeConferenceSettingsState) final public var activeConferenceSettingsState: JazzSDK.JazzActiveConferenceSettingsState {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $activeConferenceSettingsState: Combine.Published<JazzSDK.JazzActiveConferenceSettingsState>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($activeConferenceMenuState) final public var activeConferenceMenuState: JazzSDK.JazzActiveConferenceMenuState {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $activeConferenceMenuState: Combine.Published<JazzSDK.JazzActiveConferenceMenuState>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isExtendedDisplay) final public var isExtendedDisplay: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isExtendedDisplay: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($duration) final public var duration: JazzSDK.JazzConferenceTiming {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $duration: Combine.Published<JazzSDK.JazzConferenceTiming>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isWebinar) final public var isWebinar: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isWebinar: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($participantsCount) final public var participantsCount: JazzSDK.JazzConferencePersonCount {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $participantsCount: Combine.Published<JazzSDK.JazzConferencePersonCount>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($maxTilesOnPage) final public var maxTilesOnPage: Swift.Int {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $maxTilesOnPage: Combine.Published<Swift.Int>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($currentPage) final public var currentPage: Swift.Double {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $currentPage: Combine.Published<Swift.Double>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isBackVisible) final public var isBackVisible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isBackVisible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isConferenceMenuVisible) final public var isConferenceMenuVisible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isConferenceMenuVisible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isOpenChatVisible) final public var isOpenChatVisible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isOpenChatVisible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isSummarizationOn) final public var isSummarizationOn: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isSummarizationOn: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isProgressSessionGroups) final public var isProgressSessionGroups: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isProgressSessionGroups: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($canLeaveSessionGroup) final public var canLeaveSessionGroup: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $canLeaveSessionGroup: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($canManageSessionGroups) final public var canManageSessionGroups: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $canManageSessionGroups: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($canFinishConference) final public var canFinishConference: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $canFinishConference: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isParticipantListVisible) final public var isParticipantListVisible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isParticipantListVisible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isShareScreenVisible) final public var isShareScreenVisible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isShareScreenVisible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isChangeLayoutVisible) final public var isChangeLayoutVisible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isChangeLayoutVisible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isToggleReactionsVisible) final public var isToggleReactionsVisible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isToggleReactionsVisible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($messages) final public var messages: [JazzSDK.JazzChatMessageModel] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $messages: Combine.Published<[JazzSDK.JazzChatMessageModel]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($canViewChat) final public var canViewChat: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $canViewChat: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($canViewAsr) final public var canViewAsr: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $canViewAsr: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($canManageAsr) final public var canManageAsr: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $canManageAsr: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(currentAudioRoute: AVFAudio.AVAudioSessionRouteDescription, cameraState: JazzSDK.JazzConferenceMediaFeatureDisplayState, microphoneState: JazzSDK.JazzConferenceMediaFeatureDisplayState, screenShareState: JazzSDK.JazzConferenceMediaFeatureDisplayState, conferenceTitle: Swift.String, localParticipant: JazzSDK.JazzConferenceParticipant, remoteParticipants: [Swift.String : JazzSDK.JazzConferenceParticipant], dominantSpeaker: JazzSDK.JazzConferenceParticipant?, hasNewMessages: Swift.Bool, activeConferenceSettingsState: JazzSDK.JazzActiveConferenceSettingsState, activeConferenceMenuState: JazzSDK.JazzActiveConferenceMenuState, isExtendedDisplay: Swift.Bool, duration: JazzSDK.JazzConferenceTiming, isWebinar: Swift.Bool, participantsCount: JazzSDK.JazzConferencePersonCount, maxTilesOnPage: Swift.Int, currentPage: Swift.Double, isBackVisible: Swift.Bool, isConferenceMenuVisible: Swift.Bool, isOpenChatVisible: Swift.Bool, isSummarizationOn: Swift.Bool, isProgressSessionGroups: Swift.Bool, canLeaveSessionGroup: Swift.Bool, canFinishConference: Swift.Bool, isParticipantListVisible: Swift.Bool, isShareScreenVisible: Swift.Bool, isChangeLayoutVisible: Swift.Bool, isToggleReactionsVisible: Swift.Bool, canManageSessionGroups: Swift.Bool, messages: [JazzSDK.JazzChatMessageModel], canViewChat: Swift.Bool, canViewAsr: Swift.Bool, canManageAsr: Swift.Bool)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public enum JazzActiveConferenceToastsRepresentation {
+  case `default`
+  case custom(builder: (Combine.AnyPublisher<[JazzSDK.JazzToast], Swift.Never>) -> UIKit.UIView)
+}
+public typealias JazzVideoView = UIKit.UIView
+public typealias JazzActiveConferenceVideoStreamsCustomRepresentation = UIKit.UIView
+public typealias JazzActiveConferenceVideoStreamsBuilder = (JazzSDK.JazzParticipantViewModel, JazzSDK.JazzVideoView) -> JazzSDK.JazzActiveConferenceVideoStreamsCustomRepresentation
+public class JazzActiveConferenceVideoStreamsRepresentation {
+  final public let builder: JazzSDK.JazzActiveConferenceVideoStreamsBuilder
+  public init(builder: @escaping JazzSDK.JazzActiveConferenceVideoStreamsBuilder)
+  @objc deinit
+}
+public struct JazzChatMessageModel : Swift.Equatable {
+  public enum MessageType : Swift.String {
+    case local
+    case remote
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.Equatable {
+    case processing
+    case delivered
+    case timeout
+    case rejected
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: JazzSDK.JazzChatMessageModel.Status, b: JazzSDK.JazzChatMessageModel.Status) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let id: Swift.String
+  public let participantId: Swift.String
+  public var currentName: Swift.String?
+  public var userNameWhenMessageSent: Swift.String?
+  public let messageType: JazzSDK.JazzChatMessageModel.MessageType
+  public var message: Swift.String
+  public let timestamp: Foundation.TimeInterval
+  public let isAsr: Swift.Bool
+  public var status: JazzSDK.JazzChatMessageModel.Status
+  public init(id: Swift.String, participantId: Swift.String, currentName: Swift.String?, userNameWhenMessageSent: Swift.String?, messageType: JazzSDK.JazzChatMessageModel.MessageType, message: Swift.String, timestamp: Foundation.TimeInterval, isAsr: Swift.Bool, status: JazzSDK.JazzChatMessageModel.Status)
+  public static func == (a: JazzSDK.JazzChatMessageModel, b: JazzSDK.JazzChatMessageModel) -> Swift.Bool
+}
+public enum JazzConferenceAsrState {
+  case enabled
+  case disabled
+  case loading
+  public static func == (a: JazzSDK.JazzConferenceAsrState, b: JazzSDK.JazzConferenceAsrState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension JazzSDK.JazzConferenceAsrState {
+  public var isOn: Swift.Bool {
+    get
+  }
+  public var isLoading: Swift.Bool {
+    get
+  }
+}
+public enum JazzConferenceAuthorizationType {
+  case secretKey(secretKey: Swift.String, tokenConfigurationProvider: any JazzSDK.JazzTokenConfigurationProvider)
+  case jazzToken(tokenProvider: any JazzSDK.JazzConferenceTokenProvider)
+  case jwt(tokenProvider: any JazzSDK.JazzJWTProvider)
+}
+public struct JazzConferenceConfiguration {
+  public let title: Swift.String?
+  public let type: Swift.String?
+  public let settings: JazzSDK.JazzConferenceSettings
+  public init(title: Swift.String? = nil, type: Swift.String? = nil, settings: JazzSDK.JazzConferenceSettings = JazzConferenceSettings())
+}
+extension JazzSDK.JazzConferenceConfiguration {
+  public static func anonymous(title: Swift.String? = nil, settings: JazzSDK.JazzConferenceSettings = .anonymous) -> JazzSDK.JazzConferenceConfiguration
+}
+public protocol JazzConferenceConnectionCoordinator {
+  func setPrefferedSpeaker(_ preferredSpeaker: JazzSDK.ConferencePreferredSpeaker?)
+  func toggleCamera()
+  func toggleMicrophone()
+  func cancelConnection()
+}
+final public class JazzConferenceConnectionCustomRepresentation : Combine.ObservableObject {
+  final public let view: UIKit.UIView
+  @Combine.Published @_projectedValueProperty($canOpenNextScreen) final public var canOpenNextScreen: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $canOpenNextScreen: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(view: UIKit.UIView, canOpenNextScreen: Swift.Bool)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public enum JazzConferenceConnectionError : Swift.Equatable {
+  case deniedForNonSbStaffUser(JazzSDK.JazzRoom)
+  case unathorized
+  case roomClosed
+  case roomNotFound(JazzSDK.JazzRoom?)
+  case rejectedDueToConnectionProblem
+  case canceled
+  case unsupported
+  public static func == (a: JazzSDK.JazzConferenceConnectionError, b: JazzSDK.JazzConferenceConnectionError) -> Swift.Bool
+}
+public class JazzConferenceConnectionRepresentation {
+  final public let builder: (_ state: JazzSDK.JazzConferenceConnectionState, _ coordinator: any JazzSDK.JazzConferenceConnectionCoordinator, _ preview: UIKit.UIView) -> JazzSDK.JazzConferenceConnectionCustomRepresentation
+  public init(builder: @escaping (_ state: JazzSDK.JazzConferenceConnectionState, _ coordinator: any JazzSDK.JazzConferenceConnectionCoordinator, _ preview: UIKit.UIView) -> JazzSDK.JazzConferenceConnectionCustomRepresentation)
+  @objc deinit
+}
+public enum JazzConferenceConnectionStage : Swift.Equatable {
+  public enum TerminationReason : Swift.Equatable, Swift.Error {
+    case rejectedByRecipient
+    case userCanceled
+    case alreadyInCall
+    case webinarUnsupported
+    case kickedFromConference(JazzSDK.JazzConferenceKickReason)
+    case rejectedDueToConferenceError(JazzSDK.JazzConferenceError)
+    case network(JazzSDK.JazzConferenceConnectionError)
+    case server(JazzSDK.JazzConferenceError)
+    public static func == (a: JazzSDK.JazzConferenceConnectionStage.TerminationReason, b: JazzSDK.JazzConferenceConnectionStage.TerminationReason) -> Swift.Bool
+  }
+  case connecting
+  case terminated(reason: JazzSDK.JazzConferenceConnectionStage.TerminationReason)
+  public static func == (a: JazzSDK.JazzConferenceConnectionStage, b: JazzSDK.JazzConferenceConnectionStage) -> Swift.Bool
+}
+final public class JazzConferenceConnectionState : Combine.ObservableObject {
+  @Combine.Published @_projectedValueProperty($preferredSpeaker) final public var preferredSpeaker: JazzSDK.ConferencePreferredSpeaker? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $preferredSpeaker: Combine.Published<JazzSDK.ConferencePreferredSpeaker?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isCameraOn) final public var isCameraOn: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isCameraOn: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($isMicrophoneOn) final public var isMicrophoneOn: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $isMicrophoneOn: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($connectionStage) final public var connectionStage: JazzSDK.JazzConferenceConnectionStage {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $connectionStage: Combine.Published<JazzSDK.JazzConferenceConnectionStage>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($remoteParticipants) final public var remoteParticipants: [Swift.String : JazzSDK.JazzConferenceParticipant] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $remoteParticipants: Combine.Published<[Swift.String : JazzSDK.JazzConferenceParticipant]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($displayType) final public var displayType: JazzSDK.JazzUIDisplayType {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $displayType: Combine.Published<JazzSDK.JazzUIDisplayType>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(preferredSpeaker: JazzSDK.ConferencePreferredSpeaker?, isCameraOn: Swift.Bool, isMicrophoneOn: Swift.Bool, connectionStage: JazzSDK.JazzConferenceConnectionStage, remoteParticipants: [Swift.String : JazzSDK.JazzConferenceParticipant], displayType: JazzSDK.JazzUIDisplayType)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct JazzConferenceError : Swift.Equatable {
+  public enum ServerError : Swift.Equatable {
+    case maxConferenceCapacityExceeded(maxConferenceCapacity: Swift.Int)
+    case maxConferenceViewersCapacityExceeded(maxConferenceViewersCapacity: Swift.Int)
+    case exceededMaxSdkMeetings
+    case unknown
+    public static func == (a: JazzSDK.JazzConferenceError.ServerError, b: JazzSDK.JazzConferenceError.ServerError) -> Swift.Bool
+  }
+  public enum ErrorType : Swift.Equatable {
+    case network
+    case server(JazzSDK.JazzConferenceError.ServerError)
+    case jitsi
+    public static func == (a: JazzSDK.JazzConferenceError.ErrorType, b: JazzSDK.JazzConferenceError.ErrorType) -> Swift.Bool
+  }
+  public let type: JazzSDK.JazzConferenceError.ErrorType
+  public let message: Swift.String
+  public let name: Swift.String
+  public init(type: JazzSDK.JazzConferenceError.ErrorType, message: Swift.String, name: Swift.String)
+  public static func == (a: JazzSDK.JazzConferenceError, b: JazzSDK.JazzConferenceError) -> Swift.Bool
+}
+public enum JazzConferenceEvictionReason {
+  case featureUnsupported(JazzSDK.JazzRoom?)
+}
+public enum JazzConferenceKickReason : Swift.Equatable {
+  case callEnded
+  case beenKicked
+  case maxConferenceCapacityExceeded
+  case maxConferenceViewersCapacityExceeded
+  case maxConferenceDurationExceeded
+  case featureUnsupported
+  case unknowned
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: JazzSDK.JazzConferenceKickReason, b: JazzSDK.JazzConferenceKickReason) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum JazzConferenceKind {
+  case conference
+  case webinar
+  public static func == (a: JazzSDK.JazzConferenceKind, b: JazzSDK.JazzConferenceKind) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum JazzConferenceMediaFeatureDisplayState : Swift.Equatable {
+  case on
+  case off
+  case disabled
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: JazzSDK.JazzConferenceMediaFeatureDisplayState, b: JazzSDK.JazzConferenceMediaFeatureDisplayState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct JazzConferenceMediaSettings : Swift.Equatable {
+  public var isCameraOn: Swift.Bool
+  public var isMicrophoneOn: Swift.Bool
+  public init(isCameraOn: Swift.Bool, isMicrophoneOn: Swift.Bool)
+  public static var allOff: JazzSDK.JazzConferenceMediaSettings {
+    get
+  }
+  public static var allOn: JazzSDK.JazzConferenceMediaSettings {
+    get
+  }
+  public static func == (a: JazzSDK.JazzConferenceMediaSettings, b: JazzSDK.JazzConferenceMediaSettings) -> Swift.Bool
+}
+public enum JazzConferenceOverlayHidingStrategy : Swift.String, Swift.CaseIterable, Swift.Codable {
+  case standart
+  case onlyTap
+  case neverHiding
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzSDK.JazzConferenceOverlayHidingStrategy]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [JazzSDK.JazzConferenceOverlayHidingStrategy] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct JazzConferenceParticipant : Swift.Equatable {
+  public enum Role : Swift.Equatable {
+    case moderator
+    case participant
+    case viewer
+    case owner
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: JazzSDK.JazzConferenceParticipant.Role, b: JazzSDK.JazzConferenceParticipant.Role) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct MediaStream : Swift.Equatable {
+    public let isOn: Swift.Bool
+    public let isReady: Swift.Bool
+    public static func == (a: JazzSDK.JazzConferenceParticipant.MediaStream, b: JazzSDK.JazzConferenceParticipant.MediaStream) -> Swift.Bool
+  }
+  public let id: Swift.String
+  public var userID: Swift.String?
+  public var userName: Swift.String?
+  public let isLocal: Swift.Bool
+  public var role: JazzSDK.JazzConferenceParticipant.Role?
+  public var isHandRaised: Swift.Bool
+  public var isRecording: Swift.Bool
+  public var isGuest: Swift.Bool
+  public var isSipUser: Swift.Bool
+  public var hasTurnedAsrOn: Swift.Bool
+  public var camera: JazzSDK.JazzConferenceParticipant.MediaStream
+  public var microphone: JazzSDK.JazzConferenceParticipant.MediaStream
+  public var screenSharing: JazzSDK.JazzConferenceParticipant.MediaStream
+  public var email: Swift.String?
+  public init(id: Swift.String, userID: Swift.String?, userName: Swift.String?, isLocal: Swift.Bool, role: JazzSDK.JazzConferenceParticipant.Role?, isHandRaised: Swift.Bool, isRecording: Swift.Bool, isGuest: Swift.Bool, isSipUser: Swift.Bool, hasTurnedAsrOn: Swift.Bool, camera: JazzSDK.JazzConferenceParticipant.MediaStream, microphone: JazzSDK.JazzConferenceParticipant.MediaStream, screenSharing: JazzSDK.JazzConferenceParticipant.MediaStream, email: Swift.String?)
+  public static func == (a: JazzSDK.JazzConferenceParticipant, b: JazzSDK.JazzConferenceParticipant) -> Swift.Bool
+}
+public enum JazzConferenceParticipantsLayout : Swift.String, Swift.CaseIterable, Swift.Equatable, Swift.Codable {
+  case speaker
+  case tile
+  public mutating func change()
+  public func next() -> JazzSDK.JazzConferenceParticipantsLayout
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzSDK.JazzConferenceParticipantsLayout]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [JazzSDK.JazzConferenceParticipantsLayout] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct JazzConferencePersonCount : Swift.Equatable {
+  public var totalParticipants: Swift.Int {
+    get
+  }
+  public var speakers: Swift.Int
+  public var viewers: Swift.Int
+  public init(totalParticipants: Swift.Int, viewers: Swift.Int)
+  public static func == (a: JazzSDK.JazzConferencePersonCount, b: JazzSDK.JazzConferencePersonCount) -> Swift.Bool
+}
+public enum JazzConferencePhase : Swift.Equatable {
+  case inactive
+  case connecting
+  case conferenceLobby
+  case activeConference(room: JazzSDK.JazzRoom)
+  case webinarLobby
+  case activeWebinar(room: JazzSDK.JazzRoom)
+  case waitingStream
+  case activeStream(streamId: Swift.String)
+  public static func == (a: JazzSDK.JazzConferencePhase, b: JazzSDK.JazzConferencePhase) -> Swift.Bool
+}
+public enum JazzConferenceRatingResult : Swift.String {
+  case like
+  case dislike
+  case skipped
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum JazzConferenceReaction {
+  case applause
+  case like
+  case dislike
+  case smile
+  case surprise
+  public static func == (a: JazzSDK.JazzConferenceReaction, b: JazzSDK.JazzConferenceReaction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct JazzConferenceRepresentation {
+  public let connectionRepresentation: JazzSDK.JazzConferenceConnectionRepresentation?
+  public let overlayRepresentation: JazzSDK.JazzActiveConferenceOverlayRepresentation?
+  public let toastsRepresentation: JazzSDK.JazzActiveConferenceToastsRepresentation
+  public let videoStreamsRepresentation: JazzSDK.JazzActiveConferenceVideoStreamsRepresentation?
+  public init(connectionRepresentation: JazzSDK.JazzConferenceConnectionRepresentation?, overlayRepresentation: JazzSDK.JazzActiveConferenceOverlayRepresentation?, toastsRepresentation: JazzSDK.JazzActiveConferenceToastsRepresentation, videoStreamsRepresentation: JazzSDK.JazzActiveConferenceVideoStreamsRepresentation?)
+}
+public struct JazzConferenceSettings {
+  public static let anonymous: JazzSDK.JazzConferenceSettings
+  public let isGuestsOn: Swift.Bool
+  public let isLobbyOn: Swift.Bool
+  public let isAutoRecordEnabled: Swift.Bool
+  public let isSummarizationOn: Swift.Bool
+  public let isMeetingHistoryFilesEnabled: Swift.Bool
+  public let moderatorEmails: [Swift.String]
+  public let isSipOn: Swift.Bool
+  public let forceUseJazzNext: Swift.Bool
+  public init(isGuestsOn: Swift.Bool = true, isLobbyOn: Swift.Bool = false, isAutoRecordEnabled: Swift.Bool = false, isSummarizationOn: Swift.Bool = false, isMeetingHistoryFilesEnabled: Swift.Bool = false, moderatorEmails: [Swift.String] = [], isSipOn: Swift.Bool = false, forceUseJazzNext: Swift.Bool = false)
+}
+public struct JazzConferenceTiming : Swift.Equatable {
+  public enum ExpireTime : Swift.Equatable {
+    case unlimited
+    case limited(timeLeft: Foundation.TimeInterval)
+    case expired
+    public static func == (a: JazzSDK.JazzConferenceTiming.ExpireTime, b: JazzSDK.JazzConferenceTiming.ExpireTime) -> Swift.Bool
+  }
+  public var duration: Foundation.TimeInterval
+  public var expireTime: JazzSDK.JazzConferenceTiming.ExpireTime
+  public var streamDelay: Foundation.TimeInterval?
+  public init(duration: Foundation.TimeInterval, expireTime: JazzSDK.JazzConferenceTiming.ExpireTime, streamDelay: Foundation.TimeInterval?)
+  public static func == (a: JazzSDK.JazzConferenceTiming, b: JazzSDK.JazzConferenceTiming) -> Swift.Bool
+}
+public typealias AuthTokenCompletion = (Swift.Result<Swift.String, JazzSDK.ConferenceTokenError>) -> Swift.Void
+public protocol JazzConferenceTokenProvider : Swift.Sendable {
+  func provideToken(completion: @escaping JazzSDK.AuthTokenCompletion)
+  func token() async -> Swift.Result<Swift.String, JazzSDK.ConferenceTokenError>
+}
+public enum JazzConferenceUserRole : Swift.String, Swift.Equatable, Swift.Sendable {
+  case owner
+  case moderator
+  case member
+  case viewer
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct JazzControlsVisibility {
+  public let isSettingsVisible: Swift.Bool
+  public let isOpenChatVisible: Swift.Bool
+  public let isBackVisible: Swift.Bool
+  public let isConferenceMenuVisible: Swift.Bool
+  public let isCalendarVisible: Swift.Bool
+  public let isToggleReactionsVisible: Swift.Bool
+  public let isParticipantListVisible: Swift.Bool
+  public let isChangeLayoutVisible: Swift.Bool
+  public let isShareConferenceLinkVisible: Swift.Bool
+  public let isSwitchCameraVisible: Swift.Bool
+  public let isRaiseHandVisible: Swift.Bool
+  public let isPinUserVisible: Swift.Bool
+  public let isShareScreenVisible: Swift.Bool
+  public let isAsrVisible: Swift.Bool
+  public let isAsrMessagesVisible: Swift.Bool
+  public let isCreatePollVisible: Swift.Bool
+  public let isCloudRecordVisible: Swift.Bool
+  public let isSessionGroupsVisible: Swift.Bool
+  public let isSessionGroupsAdminVisible: Swift.Bool
+  public let isMiniatureVisible: Swift.Bool
+  public let isTransitionToDeviceVisible: Swift.Bool
+  public let isManageWebinarVisible: Swift.Bool
+  public let isStartWebinarVisible: Swift.Bool
+  public init(isSettingsVisible: Swift.Bool, isToggleReactionsVisible: Swift.Bool, isOpenChatVisible: Swift.Bool, isBackVisible: Swift.Bool, isParticipantListVisible: Swift.Bool, isChangeLayoutVisible: Swift.Bool, isShareConferenceLinkVisible: Swift.Bool, isSwitchCameraVisible: Swift.Bool, isRaiseHandVisible: Swift.Bool, isPinUserVisible: Swift.Bool, isShareScreenVisible: Swift.Bool, isConferenceMenuVisible: Swift.Bool, isAsrVisible: Swift.Bool, isAsrMessagesVisible: Swift.Bool, isCreatePollVisible: Swift.Bool, isCloudRecordVisible: Swift.Bool, isSessionGroupsVisible: Swift.Bool, isSessionGroupsAdminVisible: Swift.Bool, isMiniatureVisible: Swift.Bool, isCalendarVisible: Swift.Bool, isTransitionToDeviceVisible: Swift.Bool, isManageWebinarVisible: Swift.Bool, isStartWebinarVisible: Swift.Bool)
+}
+extension JazzSDK.JazzControlsVisibility {
+  public static let allVisible: JazzSDK.JazzControlsVisibility
+}
+public protocol JazzEventsListener {
+  func onStartJoiningConference()
+  func onConferenceCreated(room: JazzSDK.JazzRoom)
+  func onConferenceJoined(room: JazzSDK.JazzRoom)
+  func onConferenceCanceled()
+  func onConferenceFailed()
+  func onConferenceLeft()
+  func onConferenceRated(result: JazzSDK.JazzConferenceRatingResult)
+  func onMediaConnectionEstablished(timeInterval: Foundation.TimeInterval)
+  func onStreamJoined(streamId: Swift.String)
+  func onEvicted(reason: JazzSDK.JazzConferenceEvictionReason)
+}
+extension JazzSDK.JazzEventsListener {
+  public func onStartJoiningConference()
+  public func onConferenceCreated(room _: JazzSDK.JazzRoom)
+  public func onConferenceJoined(room _: JazzSDK.JazzRoom)
+  public func onConferenceCanceled()
+  public func onConferenceFailed()
+  public func onConferenceLeft()
+  public func onConferenceRated(result _: JazzSDK.JazzConferenceRatingResult)
+  public func onMediaConnectionEstablished(timeInterval _: Foundation.TimeInterval)
+  public func onStreamJoined(streamId _: Swift.String)
+}
+public struct JazzFeatureFlags {
+  public let conferenceNewAsrOn: Swift.Bool
+  public let arePollsEnabled: Swift.Bool
+  public let isVideoCallCloudRecordingEnabled: Swift.Bool
+  public let isCallKitSupported: Swift.Bool
+  public let isSessionGroupsEnabled: Swift.Bool
+  public let isSessionGroupsAdminEnabled: Swift.Bool
+  public let isSystemPiPEnabled: Swift.Bool
+  public let canSystemPiPUseCamera: Swift.Bool
+  public let isRestreamEnabled: Swift.Bool
+  public let conferenceOverlayHidingStrategy: JazzSDK.JazzConferenceOverlayHidingStrategy
+  public let isJazzNextViewerWebinarEnabled: Swift.Bool
+  public let isJazzNextSpeakerWebinarEnabled: Swift.Bool
+  public let isCoOwnerEnabled: Swift.Bool
+  public let isMaxTilesEnabled: Swift.Bool
+  public let isSipEnabled: Swift.Bool
+  public let isMediaStatsVisible: Swift.Bool
+  public let isShareInvitationEnabled: Swift.Bool
+  public let enablingModeratorsInConferencesOn: Swift.Bool
+  public let isQRTransferEnabled: Swift.Bool
+  public let isChatMenuAvailable: Swift.Bool
+  public let isSoundNormalizationEnabled: Swift.Bool
+  public let isMicPowerObserverEnabled: Swift.Bool
+  public init(conferenceNewAsrOn: Swift.Bool, arePollsEnabled: Swift.Bool, isVideoCallCloudRecordingEnabled: Swift.Bool, isCallKitSupported: Swift.Bool, isSessionGroupsEnabled: Swift.Bool, isSessionGroupsAdminEnabled: Swift.Bool, isSystemPiPEnabled: Swift.Bool, canSystemPiPUseCamera: Swift.Bool, isRestreamEnabled: Swift.Bool, conferenceOverlayHidingStrategy: JazzSDK.JazzConferenceOverlayHidingStrategy, isJazzNextViewerWebinarEnabled: Swift.Bool, isJazzNextSpeakerWebinarEnabled: Swift.Bool, isCoOwnerEnabled: Swift.Bool, isMaxTilesEnabled: Swift.Bool, isSipEnabled: Swift.Bool, isMediaStatsVisible: Swift.Bool, isShareInvitationEnabled: Swift.Bool, enablingModeratorsInConferencesOn: Swift.Bool, isQRTransferEnabled: Swift.Bool, isChatMenuAvailable: Swift.Bool, isSoundNormalizationEnabled: Swift.Bool, isMicPowerObserverEnabled: Swift.Bool)
+}
+extension JazzSDK.JazzFeatureFlags {
+  public static let allEnabled: JazzSDK.JazzFeatureFlags
+  public static let allDisabled: JazzSDK.JazzFeatureFlags
+}
+public struct JazzInviteButton {
+  public let title: Swift.String
+  public let action: (Foundation.URL, JazzSDK.JazzRoom) -> Swift.Void
+  public init(title: Swift.String, action: @escaping (Foundation.URL, JazzSDK.JazzRoom) -> Swift.Void)
+}
+public typealias JWTCompletion = (Swift.Result<Swift.String, JazzSDK.ConferenceTokenError>) -> Swift.Void
+public protocol JazzJWTProvider {
+  func provideToken(completion: @escaping JazzSDK.JWTCompletion)
+}
+public enum JazzJoinConferenceType : Swift.Equatable {
+  case skipIntermidiateScreen(room: JazzSDK.JazzRoom)
+  case showIntermidiateScreen(room: JazzSDK.JazzRoom?)
+  public static func == (a: JazzSDK.JazzJoinConferenceType, b: JazzSDK.JazzJoinConferenceType) -> Swift.Bool
+}
+public enum JazzLinkType {
+  case applink
+  case deeplink
+  public static func == (a: JazzSDK.JazzLinkType, b: JazzSDK.JazzLinkType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol JazzLogger {
+  func logMessage(_ message: @autoclosure () -> (Swift.String), with logLevel: JazzSDK.LogLevel, file: Swift.StaticString, line: Swift.Int)
+}
+public protocol JazzMainScreenPresenter {
+  func presentScreen(screen: UIKit.UIViewController)
+  func removeScreen(screen: UIKit.UIViewController)
+}
+public enum JazzNavigationType {
+  case `default`
+  case custom(screenPresenter: any JazzSDK.JazzMainScreenPresenter)
+}
+public struct JazzNetwork {
+  public let hostUrl: Foundation.URL
+  public static let `default`: JazzSDK.JazzNetwork
+  public init(hostUrl: Foundation.URL)
+}
+public enum JazzParseLinkError : Swift.Error, Foundation.LocalizedError, Swift.Equatable {
+  case unsupportedUrlBase
+  case noRoomID
+  case noRoomPassword
+  case incorrectPasswordFormat
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: JazzSDK.JazzParseLinkError, b: JazzSDK.JazzParseLinkError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum JazzParseLinkTarget {
+  public typealias Result = Swift.Result<JazzSDK.JazzParseLinkTarget, JazzSDK.JazzParseLinkError>
+  case joinConferenceRoom(room: JazzSDK.JazzRoom)
+  case joinWebinar(room: JazzSDK.JazzRoom, userRole: JazzSDK.JazzConferenceUserRole)
+  case joinStream(streamId: Swift.String)
+  case openMeetingInfo(meetingId: Swift.String, domain: Foundation.URL)
+}
+public struct JazzParticipantViewModel : Swift.Equatable {
+  public enum DisplayMode {
+    case pip
+    case thumbnail
+    case speaker
+    case tile
+    public static func == (a: JazzSDK.JazzParticipantViewModel.DisplayMode, b: JazzSDK.JazzParticipantViewModel.DisplayMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let name: Swift.String
+  public let isAudioOn: Swift.Bool
+  public let isVideoOn: Swift.Bool
+  public let isPinned: Swift.Bool
+  public let isSharingScreen: Swift.Bool
+  public let isLocal: Swift.Bool
+  public let id: Swift.String
+  public let isDominantSpeaker: Swift.Bool
+  public let shouldShowParticipantInfo: Swift.Bool
+  public let isZoomable: Swift.Bool
+  public let watermarkState: JazzSDK.JazzParticipantViewWatermarksState
+  public let displayMode: JazzSDK.JazzParticipantViewModel.DisplayMode
+  public init(name: Swift.String, isAudioOn: Swift.Bool, isVideoOn: Swift.Bool, isPinned: Swift.Bool, isSharingScreen: Swift.Bool, isLocal: Swift.Bool, id: Swift.String, isDominantSpeaker: Swift.Bool, shouldShowParticipantInfo: Swift.Bool, isZoomable: Swift.Bool, watermarkState: JazzSDK.JazzParticipantViewWatermarksState, displayMode: JazzSDK.JazzParticipantViewModel.DisplayMode)
+  public static func == (a: JazzSDK.JazzParticipantViewModel, b: JazzSDK.JazzParticipantViewModel) -> Swift.Bool
+}
+public enum JazzParticipantViewWatermarksState : Swift.Equatable {
+  case visible(Swift.String)
+  case hidden
+  public static func == (a: JazzSDK.JazzParticipantViewWatermarksState, b: JazzSDK.JazzParticipantViewWatermarksState) -> Swift.Bool
+}
+public struct JazzRoom : Swift.Equatable {
+  public let id: Swift.String
+  public let decodedPassword: Swift.String
+  public let host: Swift.String?
+  public init(id: Swift.String, decodedPassword: Swift.String, host: Swift.String?)
+  public static func == (a: JazzSDK.JazzRoom, b: JazzSDK.JazzRoom) -> Swift.Bool
+}
+public enum JazzSDKError : Swift.Error {
+  case alreadyInitialized
+  case invalidSDKSecret
+  case invalidNetworkConfiguration
+  public static func == (a: JazzSDK.JazzSDKError, b: JazzSDK.JazzSDKError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum JazzServerRecordState : Swift.Equatable {
+  case available
+  case loading
+  case recording
+  case unavailable
+  case stopping
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: JazzSDK.JazzServerRecordState, b: JazzSDK.JazzServerRecordState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension JazzSDK.JazzServerRecordState {
+  public var isRecording: Swift.Bool {
+    get
+  }
+  public var isStopping: Swift.Bool {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class JazzSession {
+  public static let shared: JazzSDK.JazzSession
+  @Combine.Published @_projectedValueProperty($jazzConferencePhase) final public var jazzConferencePhase: JazzSDK.JazzConferencePhase {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  final public var $jazzConferencePhase: Combine.Published<JazzSDK.JazzConferencePhase>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  final public func createConference(configuration: JazzSDK.JazzConferenceConfiguration = .anonymous(), completion: @escaping (Foundation.URL?) -> Swift.Void)
+  final public func startConference(shouldSkipIntermidiateScreen: Swift.Bool = false, configuration: JazzSDK.JazzConferenceConfiguration = .anonymous(), mediaSettings: JazzSDK.JazzConferenceMediaSettings = .allOff, analyticsConferenceType: Swift.String? = nil, preferredSpeaker: JazzSDK.ConferencePreferredSpeaker? = nil, customRepresentation: JazzSDK.JazzConferenceRepresentation? = nil)
+  final public func joinConference(joinConferenceType: JazzSDK.JazzJoinConferenceType = .showIntermidiateScreen(room: nil), mediaSettings: JazzSDK.JazzConferenceMediaSettings = .allOff, analyticsConferenceType: Swift.String? = nil, preferredSpeaker: JazzSDK.ConferencePreferredSpeaker? = nil, customRepresentation: JazzSDK.JazzConferenceRepresentation? = nil)
+  final public func joinStream(streamId: Swift.String)
+  final public func terminateActiveConference()
+  final public func handle(url: Foundation.URL, type: JazzSDK.JazzLinkType) -> JazzSDK.JazzParseLinkTarget.Result
+  final public func openConferencePlanning()
+  final public func enterPiP()
+  final public func returnFromPiP()
+  @objc deinit
+}
+public struct JazzSettings {
+  public let network: JazzSDK.JazzNetwork
+  public let buttonsVisibility: JazzSDK.JazzControlsVisibility
+  public let inviteButton: ((JazzSDK.JazzConferenceKind) -> JazzSDK.JazzInviteButton?)?
+  public let screenShareExtensionIdentifier: Swift.String?
+  public let userNameService: (any JazzSDK.JazzUserNameService)?
+  public let featureFlags: JazzSDK.JazzFeatureFlags
+  public init(network: JazzSDK.JazzNetwork, buttonsVisibility: JazzSDK.JazzControlsVisibility = .allVisible, inviteButton: ((JazzSDK.JazzConferenceKind) -> JazzSDK.JazzInviteButton?)? = nil, screenShareExtensionIdentifier: Swift.String? = nil, userNameService: (any JazzSDK.JazzUserNameService)? = nil, featureFlags: JazzSDK.JazzFeatureFlags = .allDisabled)
+}
+public struct JazzToast {
+  public struct Button {
+    public let title: Swift.String
+    public let action: (Foundation.UUID) -> Swift.Void
+    public init(title: Swift.String, action: @escaping (Foundation.UUID) -> Swift.Void)
+  }
+  public let title: Swift.String
+  public let button: JazzSDK.JazzToast.Button?
+  public let accessoryItem: UIKit.UIView?
+  public init(title: Swift.String, button: JazzSDK.JazzToast.Button?, accessoryItem: UIKit.UIView?)
+}
+public struct JazzTokenConfiguration : Swift.Hashable {
+  public let timeToLive: Swift.Int
+  public let issuer: Swift.String
+  public let userId: Swift.String
+  public let userName: Swift.String?
+  public let userEmail: Swift.String?
+  public init(timeToLive: Swift.Int = 120, issuer: Swift.String, userId: Swift.String, userName: Swift.String? = nil, userEmail: Swift.String? = nil)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: JazzSDK.JazzTokenConfiguration, b: JazzSDK.JazzTokenConfiguration) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol JazzTokenConfigurationProvider {
+  func provideTokenConfiguration() -> JazzSDK.JazzTokenConfiguration
+}
+public enum JazzUIDisplayType {
+  case narrow
+  case compact
+  case medium
+  case regular
+  case wide
+  public static func == (a: JazzSDK.JazzUIDisplayType, b: JazzSDK.JazzUIDisplayType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol JazzUserNameService {
+  func userName() -> Swift.String?
+  func userNameUpdated(newName: Swift.String)
+}
+public enum LogLevel {
+  case debug
+  case info
+  case warn
+  case error
+  public static func == (a: JazzSDK.LogLevel, b: JazzSDK.LogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension JazzSDK.ConferencePreferredSpeaker : Swift.RawRepresentable {}
+extension JazzSDK.ConferenceTokenError : Swift.Equatable {}
+extension JazzSDK.ConferenceTokenError : Swift.Hashable {}
+extension JazzSDK.JazzConferenceOverlayHidingStrategy : Swift.Equatable {}
+extension JazzSDK.JazzConferenceOverlayHidingStrategy : Swift.Hashable {}
+extension JazzSDK.JazzConferenceOverlayHidingStrategy : Swift.RawRepresentable {}
+extension JazzSDK.JazzConferenceReaction : Swift.Equatable {}
+extension JazzSDK.JazzConferenceReaction : Swift.Hashable {}
+extension JazzSDK.JazzChatMessageModel.MessageType : Swift.Equatable {}
+extension JazzSDK.JazzChatMessageModel.MessageType : Swift.Hashable {}
+extension JazzSDK.JazzChatMessageModel.MessageType : Swift.RawRepresentable {}
+extension JazzSDK.JazzChatMessageModel.Status : Swift.Hashable {}
+extension JazzSDK.JazzConferenceAsrState : Swift.Equatable {}
+extension JazzSDK.JazzConferenceAsrState : Swift.Hashable {}
+extension JazzSDK.JazzConferenceKickReason : Swift.Hashable {}
+extension JazzSDK.JazzConferenceKind : Swift.Equatable {}
+extension JazzSDK.JazzConferenceKind : Swift.Hashable {}
+extension JazzSDK.JazzConferenceMediaFeatureDisplayState : Swift.Hashable {}
+extension JazzSDK.JazzConferenceParticipant.Role : Swift.Hashable {}
+extension JazzSDK.JazzConferenceParticipantsLayout : Swift.Hashable {}
+extension JazzSDK.JazzConferenceParticipantsLayout : Swift.RawRepresentable {}
+extension JazzSDK.JazzConferenceRatingResult : Swift.Equatable {}
+extension JazzSDK.JazzConferenceRatingResult : Swift.Hashable {}
+extension JazzSDK.JazzConferenceRatingResult : Swift.RawRepresentable {}
+extension JazzSDK.JazzConferenceUserRole : Swift.Hashable {}
+extension JazzSDK.JazzConferenceUserRole : Swift.RawRepresentable {}
+extension JazzSDK.JazzLinkType : Swift.Equatable {}
+extension JazzSDK.JazzLinkType : Swift.Hashable {}
+extension JazzSDK.JazzParseLinkError : Swift.Hashable {}
+extension JazzSDK.JazzParticipantViewModel.DisplayMode : Swift.Equatable {}
+extension JazzSDK.JazzParticipantViewModel.DisplayMode : Swift.Hashable {}
+extension JazzSDK.JazzSDKError : Swift.Equatable {}
+extension JazzSDK.JazzSDKError : Swift.Hashable {}
+extension JazzSDK.JazzServerRecordState : Swift.Hashable {}
+extension JazzSDK.JazzUIDisplayType : Swift.Equatable {}
+extension JazzSDK.JazzUIDisplayType : Swift.Hashable {}
+extension JazzSDK.LogLevel : Swift.Equatable {}
+extension JazzSDK.LogLevel : Swift.Hashable {}

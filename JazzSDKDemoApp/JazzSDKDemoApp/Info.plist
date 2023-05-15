@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Доступ к микрофону нужен, чтобы общаться голосом во время видеовстреч</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Доступ к камере нужен, чтобы общаться с видео во время видеовстреч</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Приложению нужен доступ к Bluetooth для подключения к SberPortal</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Приложению нужен доступ к Bluetooth для подключения к SberPortal</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_staros._tcp</string>
+	</array>
+</dict>
+</plist>
