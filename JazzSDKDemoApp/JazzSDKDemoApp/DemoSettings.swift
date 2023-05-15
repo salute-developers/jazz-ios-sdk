@@ -1,0 +1,24 @@
+//
+//  DemoJazzSettings.swift
+//  DemoApp
+//
+//  Created by Бузырев Илья Леонидович on 01.03.2023.
+//
+
+import Foundation
+import JazzSDK
+
+extension JazzSettings {
+	/// Демонстрационные настройки для работы Jazz.
+	/// Более поробно см. `JazzSettings`
+	static let demoSettings = JazzSettings(
+		network: JazzNetwork(
+			hostUrl: "https://jazz.sber.ru",
+			backendUrl: "https://backend.jazz.sber.ru"
+		),
+		buttonsVisibility: .allVisible,
+		inviteButton: nil,
+		screenShareExtensionIdentifier: nil,
+		userNameService: nil
+	)
+}
