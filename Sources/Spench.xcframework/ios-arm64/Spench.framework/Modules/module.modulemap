@@ -1,0 +1,11 @@
+framework module Spench {
+  umbrella header "Spench.h"
+  export *
+
+  module * { export * }
+}
+
+module Spench.Swift {
+  header "Spench-Swift.h"
+  requires objc
+}
