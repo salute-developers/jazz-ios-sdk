@@ -19,7 +19,9 @@ iOS: 14.x и выше; Swift: 5.6 и выше; Xcode: 13.3.1 и выше
 - JazzCore.xcframework
 - JazzImpl.xcframework
 - JazzPushSupport.xcframework
+- JazzScreenShareImpl.xcframework
 - JazzSDK.xcframework
+- JazzSDKScreenShare.xcframework
 - JazzServices.xcframework
 - JazzStrings.xcframework
 - LibSberCast.xcframework
