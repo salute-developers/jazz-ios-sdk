@@ -1,0 +1,242 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "JazzSDKScreenShare",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JazzScreenShareImpl",
+        "printedName": "JazzScreenShareImpl",
+        "declKind": "Import",
+        "moduleName": "JazzSDKScreenShare"
+      },
+      {
+        "kind": "Import",
+        "name": "ReplayKit",
+        "printedName": "ReplayKit",
+        "declKind": "Import",
+        "moduleName": "JazzSDKScreenShare"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JazzScreenShare",
+        "printedName": "JazzScreenShare",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(onError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JazzScreenShare",
+                "printedName": "JazzSDKScreenShare.JazzScreenShare",
+                "usr": "s:18JazzSDKScreenShare0a6ScreenC0C"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18JazzSDKScreenShare0a6ScreenC0C7onErrorACys0F0_pc_tcfc",
+            "mangledName": "$s18JazzSDKScreenShare0a6ScreenC0C7onErrorACys0F0_pc_tcfc",
+            "moduleName": "JazzSDKScreenShare",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "broadcastStarted",
+            "printedName": "broadcastStarted(withSetupInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : ObjectiveC.NSObject]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : ObjectiveC.NSObject]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSObject",
+                        "printedName": "ObjectiveC.NSObject",
+                        "usr": "c:objc(cs)NSObject"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18JazzSDKScreenShare0a6ScreenC0C16broadcastStarted13withSetupInfoySDySSSo8NSObjectCGSg_tF",
+            "mangledName": "$s18JazzSDKScreenShare0a6ScreenC0C16broadcastStarted13withSetupInfoySDySSSo8NSObjectCGSg_tF",
+            "moduleName": "JazzSDKScreenShare",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "broadcastFinished",
+            "printedName": "broadcastFinished()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18JazzSDKScreenShare0a6ScreenC0C17broadcastFinishedyyF",
+            "mangledName": "$s18JazzSDKScreenShare0a6ScreenC0C17broadcastFinishedyyF",
+            "moduleName": "JazzSDKScreenShare",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "processSampleBuffer",
+            "printedName": "processSampleBuffer(_:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMSampleBuffer",
+                "printedName": "CoreMedia.CMSampleBuffer",
+                "usr": "c:@T@CMSampleBufferRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RPSampleBufferType",
+                "printedName": "ReplayKit.RPSampleBufferType",
+                "usr": "c:@E@RPSampleBufferType"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18JazzSDKScreenShare0a6ScreenC0C19processSampleBuffer_4withySo08CMSampleG3Refa_So08RPSampleG4TypeVtF",
+            "mangledName": "$s18JazzSDKScreenShare0a6ScreenC0C19processSampleBuffer_4withySo08CMSampleG3Refa_So08RPSampleG4TypeVtF",
+            "moduleName": "JazzSDKScreenShare",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18JazzSDKScreenShare0a6ScreenC0C",
+        "mangledName": "$s18JazzSDKScreenShare0a6ScreenC0C",
+        "moduleName": "JazzSDKScreenShare",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDKScreenShare\/JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 726,
+      "length": 10,
+      "value": "\"rtc_SSFD\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDKScreenShare\/JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 2667,
+      "length": 31,
+      "value": "\"connection_closed_description\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDKScreenShare\/JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 2730,
+      "length": 27,
+      "value": "\"connection_failed_to_open\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDKScreenShare\/JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 2790,
+      "length": 28,
+      "value": "\"connection_closed_by_admin\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDKScreenShare\/JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 2667,
+      "length": 31,
+      "value": "\"connection_closed_description\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDKScreenShare\/JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 2730,
+      "length": 27,
+      "value": "\"connection_failed_to_open\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDKScreenShare\/JazzScreenShare.swift",
+      "kind": "StringLiteral",
+      "offset": 2790,
+      "length": 28,
+      "value": "\"connection_closed_by_admin\""
+    }
+  ]
+}

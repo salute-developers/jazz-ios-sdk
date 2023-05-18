@@ -1,0 +1,4 @@
+framework module CompanionCore {
+  header "CompanionCore-Swift.h"
+  requires objc
+}

@@ -1,0 +1,4 @@
+framework module JazzImpl {
+  header "JazzImpl-Swift.h"
+  requires objc
+}

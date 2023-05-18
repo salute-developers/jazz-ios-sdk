@@ -1,0 +1,2686 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JazzStrings
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import DevicesCore
+import DevicesUI
+import Swift
+import _Concurrency
+import _StringProcessing
+public enum AdministratorStringID : Swift.CaseIterable {
+  public enum Allowed : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case turnOnTheCamera
+    case turnOnTheMicrophone
+    case screenSharing
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AdministratorStringID.Allowed]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AdministratorStringID.Allowed] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Forbidden : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case turnOnTheCamera
+    case turnOnTheMicrophone
+    case screenSharing
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AdministratorStringID.Forbidden]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AdministratorStringID.Forbidden] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Disable : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case camera
+    case microphone
+    case screenShare
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AdministratorStringID.Disable]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AdministratorStringID.Disable] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.AdministratorStringID]
+  public static var allCases: [JazzStrings.AdministratorStringID] {
+    get
+  }
+}
+public enum AppLinkErrorStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case message
+  case closeButtonTitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.AppLinkErrorStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.AppLinkErrorStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AuthorizationAlertStringID : Swift.CaseIterable {
+  public enum MicrophoneNotDetermined : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationAlertStringID.MicrophoneNotDetermined]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationAlertStringID.MicrophoneNotDetermined] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum MicrophoneDenied : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationAlertStringID.MicrophoneDenied]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationAlertStringID.MicrophoneDenied] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CameraNotDetermined : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationAlertStringID.CameraNotDetermined]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationAlertStringID.CameraNotDetermined] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CameraDenied : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationAlertStringID.CameraDenied]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationAlertStringID.CameraDenied] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Action : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case notDetermined
+    case denied
+    case cancel
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationAlertStringID.Action]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationAlertStringID.Action] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.AuthorizationAlertStringID]
+  public static var allCases: [JazzStrings.AuthorizationAlertStringID] {
+    get
+  }
+}
+public enum AuthorizationStringID : Swift.CaseIterable {
+  public enum VideoSettings : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case text
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationStringID.VideoSettings]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationStringID.VideoSettings] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AudioSettings : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case text
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationStringID.AudioSettings]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationStringID.AudioSettings] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AudioVideoPermissions : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case text
+    case buttonTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.AuthorizationStringID.AudioVideoPermissions]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.AuthorizationStringID.AudioVideoPermissions] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.AuthorizationStringID]
+  public static var allCases: [JazzStrings.AuthorizationStringID] {
+    get
+  }
+}
+public enum CallStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Rejected : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case recipientSubtitle
+    case timeOutSubtitle
+    case connectionError
+    case unathorized
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CallStringID.Rejected]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CallStringID.Rejected] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case canceledSubtitle
+  case connectingSubtitle
+  case connecting
+  case callingSubtitle
+  case newConferenceDefaultTitle
+  case callBackText
+  case cancelCallText
+  case endCallText
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.CallStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.CallStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CheckboxStringID : Swift.CaseIterable {
+  public enum WaitingRoom : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CheckboxStringID.WaitingRoom]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CheckboxStringID.WaitingRoom] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Guest : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CheckboxStringID.Guest]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CheckboxStringID.Guest] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AutoRecord : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CheckboxStringID.AutoRecord]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CheckboxStringID.AutoRecord] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.CheckboxStringID]
+  public static var allCases: [JazzStrings.CheckboxStringID] {
+    get
+  }
+}
+public enum CommonStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Error : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case caption
+    case title
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CommonStringID.Error]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CommonStringID.Error] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Accessibility : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case back
+    case close
+    case scrollUp
+    case scrollDown
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CommonStringID.Accessibility]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CommonStringID.Accessibility] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case createCallTitleText
+  case ok
+  case close
+  case ready
+  case errorTransitionDeviceCastErrorTitle
+  case errorTransitionDeviceCastErrorSubtitle
+  case errorTransitionDiscoveryErrorSubtitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.CommonStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.CommonStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.CommonStringID.Accessibility {
+  public static func enterText(_ value1: Swift.String, _ value2: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func enterTextEmpty(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func turnOn(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func turnOff(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum ConferenceCloudToastRecordStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case autoRecordNotEnoughSpace
+  case notEnoughSpace
+  case askAdmin
+  case notStarted
+  case started
+  case stopped
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceCloudToastRecordStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceCloudToastRecordStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferenceErrorStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case longName
+  case longConferenceName
+  case longMessage
+  case manyEvents
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceErrorStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceErrorStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferenceForSberStaffStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case alertTitle
+  case alertSubtitle
+  case openActionTitle
+  case downloadActionTitle
+  case continueActionTitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceForSberStaffStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceForSberStaffStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferenceMeetingPlannedStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Invite : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case installCertificates
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceMeetingPlannedStringID.Invite]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceMeetingPlannedStringID.Invite] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case subtitle
+  case placeholder
+  case copyInvitation
+  case code
+  case password
+  case toastCopyLink
+  case shareInvitation
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceMeetingPlannedStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceMeetingPlannedStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ConferenceMeetingPlannedStringID {
+  public static func invite(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value4: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum ConferenceMenuStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Hand : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case raise
+    case lower
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceMenuStringID.Hand]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceMenuStringID.Hand] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Layout : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case speaker
+    case tile
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceMenuStringID.Layout]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceMenuStringID.Layout] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Asr : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case on
+    case off
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceMenuStringID.Asr]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceMenuStringID.Asr] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ShareScreen : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case start
+    case stop
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceMenuStringID.ShareScreen]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceMenuStringID.ShareScreen] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum RecordServer : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case start
+    case stop
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceMenuStringID.RecordServer]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceMenuStringID.RecordServer] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case openMenu
+  case invite
+  case switchCamera
+  case transition
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceMenuStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceMenuStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferencePlanningStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum RecordServer : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case checkboxTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferencePlanningStringID.RecordServer]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferencePlanningStringID.RecordServer] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case placeholder
+  case button
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferencePlanningStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferencePlanningStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ConferencePlanningStringID.RecordServer {
+  public static func checkboxSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+public enum ConferenceQualityEvaluationStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case titleAdmin
+  case subtitle
+  case questionTitle
+  case buttonTitle
+  case dislikeText
+  case telegramButton
+  case accessibilityTextLike
+  case accessibilityTextDislike
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceQualityEvaluationStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceQualityEvaluationStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferenceScreenStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case incomingVideoStreamsDisabledMessage
+  case openSettings
+  case raiseHand
+  case switchCamera
+  case sound
+  case microphone
+  case cameraTurn
+  case exit
+  case camera
+  case openParticipantsList
+  case invitePartipipant
+  case changeLayout
+  case transitionToDevice
+  case pin
+  case unpin
+  case shareScreen
+  case finishCall
+  case openChat
+  case openReactions
+  case participants
+  case chat
+  case share
+  case kind
+  case reactions
+  case other
+  case activeSpeakersToastTitle
+  case cloudRecordNavigationSubtitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceScreenStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceScreenStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ConferenceScreenStringID {
+  public static func turnOn(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func turnOff(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func raiseHandedTitle(_ value1: Swift.Int, _ value2: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum ConferenceSettingsStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum DisableIncomingVideoStream : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceSettingsStringID.DisableIncomingVideoStream]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceSettingsStringID.DisableIncomingVideoStream] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum EnableNoiseSuppression : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceSettingsStringID.EnableNoiseSuppression]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceSettingsStringID.EnableNoiseSuppression] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum EnableParticipantsEnlargedVideo : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceSettingsStringID.EnableParticipantsEnlargedVideo]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceSettingsStringID.EnableParticipantsEnlargedVideo] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum TechnicalSupport : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case internalNumber
+    case internalNumberDescription
+    case externalNumberDescription
+    case externalNumber
+    case hyperlinkForm
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceSettingsStringID.TechnicalSupport]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceSettingsStringID.TechnicalSupport] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum TechnicalSupportSection : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitleOne
+    case subtitleTwo
+    case buttonOne
+    case buttonTwo
+    case numberOne
+    case numberTwo
+    case numberThree
+    case numberFour
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceSettingsStringID.TechnicalSupportSection]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceSettingsStringID.TechnicalSupportSection] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case navigationTitle
+  case audioVideoSectionTitle
+  case userNamePlaceholder
+  case roomNamePlaceholder
+  case accessibilityPremiumLabel
+  case applyChanges
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceSettingsStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceSettingsStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ConferenceSettingsStringID {
+  public static func appVersionTitleFormat(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func audioOutputTitle(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum ConferenceStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum TransitionAlert : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case text
+    case confirm
+    case cancel
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.TransitionAlert]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.TransitionAlert] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Participant : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case pin
+    case unpin
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.Participant]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.Participant] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum NewDeviceWarning : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    case cancelActionTitle
+    case transitionToDeviceSuccess
+    case chooseDeviceActionTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.NewDeviceWarning]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.NewDeviceWarning] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AlreadyInCallWarning : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    case actionTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.AlreadyInCallWarning]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.AlreadyInCallWarning] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum SharingLink : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case shareLinkChatTitle
+    case chooseContactActionTitle
+    case shareLinkActionTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.SharingLink]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.SharingLink] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum TerminatedWarning : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case close
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.TerminatedWarning]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.TerminatedWarning] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Warning : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case notFound
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.Warning]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.Warning] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Recording : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case started
+    case finished
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.Recording]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.Recording] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum InviteToast : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case success
+    case failure
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.InviteToast]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.InviteToast] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CodeInput : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case description
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.CodeInput]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.CodeInput] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AsrError : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case alreadyEnabled
+    case disabledByAdmin
+    case forbidden
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.AsrError]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.AsrError] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum RaiseHand : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case action
+    case shortAction
+    case close
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.RaiseHand]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.RaiseHand] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum KickedOutError : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    case close
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.KickedOutError]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.KickedOutError] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum TerminatedByAdmin : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    case close
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.TerminatedByAdmin]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.TerminatedByAdmin] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AskPermission : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case cameraWarningTitle
+    case microphoneWarningTitle
+    case screenShareWarningTitle
+    case screenShareWarningSubtitle
+    case warningAcceptActionTitle
+    case warningCancelActionTitle
+    case cameraWarningSubtitle
+    case microphoneWarningSubtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.AskPermission]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.AskPermission] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum WebinarUnsupported : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.WebinarUnsupported]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.WebinarUnsupported] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum EvaluationSubmited : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.EvaluationSubmited]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.EvaluationSubmited] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ParticipantsListToast : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case action
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.ParticipantsListToast]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.ParticipantsListToast] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ConversationWillEndSoon : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.ConversationWillEndSoon]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.ConversationWillEndSoon] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ConversationTimeExpired : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.ConversationTimeExpired]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.ConversationTimeExpired] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum MaxParcipiantsReached : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case alertTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.MaxParcipiantsReached]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.MaxParcipiantsReached] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PoorConnection : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case seenToastText
+    case moreToastText
+    case heardToastText
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.PoorConnection]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.PoorConnection] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum FinishConference : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.FinishConference]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.FinishConference] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum MenuOther : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case condactPollMenuItem
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.MenuOther]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.MenuOther] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PollsList : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case pollTitle
+    case createPollButton
+    case noPollText
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.PollsList]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.PollsList] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CreatePoll : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case createPollTitle
+    case pollNameFieldHintText
+    case questionSubtitle
+    case yourQuestionFieldHintText
+    case answerOptionsSubtitle
+    case notLess2Text
+    case addAnswerOptionButton
+    case chooseSeveralOptionsFieldLable
+    case addQuestionButton
+    case confirmCreatePollButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.CreatePoll]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.CreatePoll] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum EditPoll : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case editPollTitle
+    case answerOptionsSubtitle
+    case notLess2Text
+    case addAnswerOptionButton
+    case chooseSeveralOptionsFieldLable
+    case addQuestionButton
+    case saveChangesButton
+    case cancelChangesButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.EditPoll]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.EditPoll] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PollStarted : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case pollInProgressTitle
+    case finishVoutingButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.PollStarted]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.PollStarted] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PollResults : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case pollResultsTitle
+    case shareResultsButton
+    case finishPollButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.PollResults]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.PollResults] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum SharePollResults : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case pollResultsTitle
+    case viewersSeeResultsText
+    case stopResultsSharingButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.SharePollResults]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.SharePollResults] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PopupFinishPoll : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case finishConfirmationText
+    case finishConfirmationButton
+    case finishCancelButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.PopupFinishPoll]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.PopupFinishPoll] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ViewerVoting : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case answerButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.ViewerVoting]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.ViewerVoting] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ViewPollResults : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case resultsTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.ViewPollResults]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.ViewPollResults] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum SnackBar : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case youConductPollText
+    case openPollButton
+    case youShareResultsText
+    case openPollResultsButton
+    case pollFinishedText
+    case ownerConductsPollText
+    case answerRecievedText
+    case ownerSharesPollResultsText
+    case viewPollResultsButton
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.SnackBar]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.SnackBar] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum RecordServer : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case toastErrorStart
+    case toastStart
+    case errorFreeSpaceTitle
+    case errorFreeSpaceSubtitle
+    case errorFreeSpaceActionTitle
+    case toastInfo
+    case toastStop
+    case navigationTitle
+    case status
+    case toastStopInfo
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.RecordServer]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.RecordServer] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AnotherCallWarning : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case undo
+    case call
+    case callTitle
+    case conferenceTitle
+    case conferenceSubtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.AnotherCallWarning]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.AnotherCallWarning] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PollPreview : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case editPollButton
+    case startPollButton
+    case parallelPollStartForbidenTooltipTitle
+    case parallelPollStartForbidenButtonTitle
+    case parallelPollStartForbidenTooltipSubtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConferenceStringID.PollPreview]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConferenceStringID.PollPreview] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case c2cPlusCTitle
+  case poorConnectionNotificationSeenTitle
+  case poorConnectionNotificationSeenText
+  case poorConnectionNotificationSeenButton
+  case poorConnectionNotificationHeardTitle
+  case poorConnectionNotificationHeardText
+  case poorConnectionNotificationHeardButton
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ConferenceStringID.ParticipantsListToast {
+  public static func lobbyTitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.ConversationWillEndSoon {
+  public static func subtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.ConversationTimeExpired {
+  public static func subtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.MaxParcipiantsReached {
+  public static func alertSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.FinishConference {
+  public static func connectSubtitle(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func startSubtitle(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.CreatePoll {
+  public static func questionNSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+  public static func optionNFieldHintText(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.PollPreview {
+  public static func questionNSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.EditPoll {
+  public static func questionNSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.PollStarted {
+  public static func voutingCounterText(_ value1: Swift.Int, _ value2: Swift.Int) -> DevicesCore.ArgumentsStringID
+  public static func questionNSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.PollResults {
+  public static func voutingCounterText(_ value1: Swift.Int, _ value2: Swift.Int) -> DevicesCore.ArgumentsStringID
+  public static func questionNSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.SharePollResults {
+  public static func voutingCounterText(_ value1: Swift.Int, _ value2: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.ViewerVoting {
+  public static func questionNSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.ConferenceStringID.ViewPollResults {
+  public static func voutingCounterText(_ value1: Swift.Int, _ value2: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+public enum ConferenceVideoStreamsStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case screenSharingTileTitle
+  case incomingVideoTurnOffText
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConferenceVideoStreamsStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConferenceVideoStreamsStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConnectingErrorAlertStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Unauthorized : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case text
+    case buttonTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.ConnectingErrorAlertStringID.Unauthorized]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.ConnectingErrorAlertStringID.Unauthorized] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case noConnectionTitle
+  case noConnectionText
+  case failedToConnect
+  case failedToConnectWellknown
+  case tryAgainToConnectText
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ConnectingErrorAlertStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ConnectingErrorAlertStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ConnectingErrorAlertStringID {
+  public static func unauthorizedTextWithDomain(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum CreateConferenceStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum RoomNameField : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case caption
+    case placeholder
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CreateConferenceStringID.RoomNameField]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CreateConferenceStringID.RoomNameField] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum UserNameField : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case caption
+    case placeholder
+    case emptyWarning
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CreateConferenceStringID.UserNameField]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CreateConferenceStringID.UserNameField] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Accessibility {
+  }
+  case title
+  case button
+  case cameraOffPlaceholder
+  case cameraAndMicrophoneOffPlaceholder
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.CreateConferenceStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.CreateConferenceStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.CreateConferenceStringID {
+  public static func subtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.CreateConferenceStringID.Accessibility {
+  public static func title(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+public enum CreateСonferenceStringID : Swift.CaseIterable {
+  public enum RecordServer : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case checkboxTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.CreateСonferenceStringID.RecordServer]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.CreateСonferenceStringID.RecordServer] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.CreateСonferenceStringID]
+  public static var allCases: [JazzStrings.CreateСonferenceStringID] {
+    get
+  }
+}
+extension JazzStrings.CreateСonferenceStringID.RecordServer {
+  public static func checkboxSubtitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+public enum DevicesListStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case subtitle
+  case noDevicesAvailableTitle
+  case noDevicesAvailableSubtitle
+  case refresh
+  case searchPlaceholder
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.DevicesListStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.DevicesListStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EmojeStringID : Swift.CaseIterable {
+  public enum Accessibility : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case applause
+    case like
+    case dislike
+    case smile
+    case surprise
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.EmojeStringID.Accessibility]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.EmojeStringID.Accessibility] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.EmojeStringID]
+  public static var allCases: [JazzStrings.EmojeStringID] {
+    get
+  }
+}
+extension JazzStrings.EmojeStringID.Accessibility {
+  public static func sendEmoji(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum ExcellentEvaluationCallStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case caseOne
+  case caseTwo
+  case caseThree
+  case caseFour
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ExcellentEvaluationCallStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ExcellentEvaluationCallStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FinishedConferenceStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.FinishedConferenceStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.FinishedConferenceStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum GuestModeWarningStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case subtitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.GuestModeWarningStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.GuestModeWarningStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HomeStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case createConferenceTitle
+  case scheduleButtonTitle
+  case joinButtonTitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.HomeStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.HomeStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum IncomingStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Action : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case decline
+    case accept
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.IncomingStringID.Action]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.IncomingStringID.Action] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case toastSubtitle
+  case groupToastSubtitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.IncomingStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.IncomingStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum InviteStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum WarningInformation : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case expires
+    case expired
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.InviteStringID.WarningInformation]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.InviteStringID.WarningInformation] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case subtitle
+  case subtitleSip
+  case placeholder
+  case copyInvitation
+  case shareLink
+  case code
+  case password
+  case number
+  case pinCode
+  case copiedInvitation
+  case phone
+  case shareInvitationButton
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.InviteStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.InviteStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.InviteStringID {
+  public static func sipInstruction(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func textInvitation(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value4: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func sipInformationInvitation(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value4: Swift.String, _ value5: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum JoinConferenceStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Code : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case fieldPlaceholder
+    case incorrectValueWarning
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.JoinConferenceStringID.Code]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.JoinConferenceStringID.Code] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Password : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case incorrectValueWarning
+    case fieldPlaceholder
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.JoinConferenceStringID.Password]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.JoinConferenceStringID.Password] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum NameField : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case caption
+    case placeholder
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.JoinConferenceStringID.NameField]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.JoinConferenceStringID.NameField] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Toggle : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case cameraOnText
+    case cameraOffText
+    case microphoneOnText
+    case microphoneOffText
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.JoinConferenceStringID.Toggle]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.JoinConferenceStringID.Toggle] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Button : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case join
+    case create
+    case cancel
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.JoinConferenceStringID.Button]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.JoinConferenceStringID.Button] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Error : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case processing
+    case processingUnkown
+    case unknownServerTitle
+    case unknownServerText
+    case unknownServerButtonTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.JoinConferenceStringID.Error]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.JoinConferenceStringID.Error] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case cameraOffPlaceholder
+  case cameraAndMicrophoneOffPlaceholder
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.JoinConferenceStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.JoinConferenceStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LicensesPopupStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case text
+  case basic
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.LicensesPopupStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.LicensesPopupStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.LicensesPopupStringID {
+  public static func description(_ value1: Swift.String, _ value2: Swift.Int, _ value3: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func descriptionDuration(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+  public static func descriptionParticipants(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+  public static func descriptionInfiniteDuration(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+public enum MediaModelToggleStringID : Swift.CaseIterable {
+  public enum Camera : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case on
+    case off
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.MediaModelToggleStringID.Camera]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.MediaModelToggleStringID.Camera] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Microphone : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case on
+    case off
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.MediaModelToggleStringID.Microphone]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.MediaModelToggleStringID.Microphone] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.MediaModelToggleStringID]
+  public static var allCases: [JazzStrings.MediaModelToggleStringID] {
+    get
+  }
+}
+public enum MessagerStringID : Swift.CaseIterable {
+  public enum Cell {
+  }
+  public typealias AllCases = [JazzStrings.MessagerStringID]
+  public static var allCases: [JazzStrings.MessagerStringID] {
+    get
+  }
+}
+extension JazzStrings.MessagerStringID.Cell {
+  public static func accessibilityMessage(_ value1: Swift.String, _ value2: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum MessangerStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case searchBarPlaceholder
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.MessangerStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.MessangerStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MessengerContactsStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Alert : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case description
+    case text
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.MessengerContactsStringID.Alert]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.MessengerContactsStringID.Alert] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Header : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case initiated
+    case syncing
+    case syncingError
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.MessengerContactsStringID.Header]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.MessengerContactsStringID.Header] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case invite
+  case addressBookIsEmpty
+  case searchText
+  case nothingFoundHeader
+  case nothingFoundText
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.MessengerContactsStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.MessengerContactsStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MessengerMenuStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Asr : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case showMessages
+    case hideMessages
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.MessengerMenuStringID.Asr]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.MessengerMenuStringID.Asr] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case shareHistoryTitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.MessengerMenuStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.MessengerMenuStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MessengerStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case inputPlaceholder
+  case title
+  case inputPlaceholderDisabled
+  case searchPlaceholder
+  case rejectMessage
+  case reloadMessage
+  case rejectToast
+  case reloadToast
+  case resultNotFound
+  case sendMessage
+  case rejectToastHighlighted
+  case rejectToastUrl
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.MessengerStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.MessengerStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.MessengerStringID {
+  public static func textResultSearch(_ value1: Swift.Int, _ value2: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+public enum ParticipantsListStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case moderatorTitle
+  case recordingTitle
+  case transcriptTitle
+  case dotSeparator
+  case open
+  case roomTitle
+  case connectedTitle
+  case searchPlaceholder
+  case guestTitle
+  case clearSearch
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ParticipantsListStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ParticipantsListStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ParticipantsListStringID {
+  public static func localTitle(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func title(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+  public static func viewersTitle(_ value1: Swift.Int) -> DevicesCore.ArgumentsStringID
+}
+public enum PromoStringID : Swift.CaseIterable {
+  public enum Devices : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case description
+    case sberportal
+    case sberboxtop
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.PromoStringID.Devices]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.PromoStringID.Devices] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.PromoStringID]
+  public static var allCases: [JazzStrings.PromoStringID] {
+    get
+  }
+}
+public enum PushStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case incomingCallSubtitle
+  case missedCallSubtitle
+  case incomingGroupCallSubtitle
+  case missedGroupCallSubtitle
+  case doneOnAnotherDevice
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.PushStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.PushStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.PushStringID {
+  public static func unknownContactFormat(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum RedirectUserStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Download : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case b2b
+    case sberchat
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.RedirectUserStringID.Download]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.RedirectUserStringID.Download] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case subtitle
+  case continueInApp
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.RedirectUserStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.RedirectUserStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RequestStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case turnOnTheCameraHasBeenSent
+  case turnOnTheMicrophoneHasBeenSent
+  case enableScreenSharingHasBeenSent
+  case permission
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.RequestStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.RequestStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ShareHistoryMenuStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case subtitle
+  case allMessages
+  case textMessages
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ShareHistoryMenuStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ShareHistoryMenuStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.ShareHistoryMenuStringID {
+  public static func message(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func asrMessage(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum ShareLinkStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case subtitle
+  case invite
+  case join
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.ShareLinkStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.ShareLinkStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TransitionBySelectionStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum NoDevicesAvailable : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionBySelectionStringID.NoDevicesAvailable]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionBySelectionStringID.NoDevicesAvailable] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case subtitle
+  case refresh
+  case searchPlaceholder
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.TransitionBySelectionStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.TransitionBySelectionStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TransitionByTouchStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case subtitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.TransitionByTouchStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.TransitionByTouchStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TransitionErrorStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Access : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionErrorStringID.Access]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionErrorStringID.Access] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Connection : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionErrorStringID.Connection]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionErrorStringID.Connection] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum DeviceCast : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionErrorStringID.DeviceCast]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionErrorStringID.DeviceCast] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Discovery : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case subtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionErrorStringID.Discovery]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionErrorStringID.Discovery] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case noConnection
+  case wrongPinCode
+  case pinCodeLimitExceeded
+  case tooManyRequests
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.TransitionErrorStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.TransitionErrorStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TransitionPermissionStringID : Swift.CaseIterable {
+  public enum Bluetooth : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    case askTurnOnTitle
+    case askTurnOnSubtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionPermissionStringID.Bluetooth]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionPermissionStringID.Bluetooth] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Geo : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    case askTurnOnTitle
+    case askTurnOnSubtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionPermissionStringID.Geo]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionPermissionStringID.Geo] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Wifi : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case title
+    case subtitle
+    case askTurnOnTitle
+    case askTurnOnSubtitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionPermissionStringID.Wifi]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionPermissionStringID.Wifi] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.TransitionPermissionStringID]
+  public static var allCases: [JazzStrings.TransitionPermissionStringID] {
+    get
+  }
+}
+public enum TransitionStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Action : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case close
+    case allow
+    case settings
+    case cancel
+    case clearSearch
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.TransitionStringID.Action]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.TransitionStringID.Action] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case title
+  case subtitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.TransitionStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.TransitionStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WaitingParticipantsListStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum Accessibility {
+  }
+  case title
+  case accept
+  case allAccept
+  case cancel
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.WaitingParticipantsListStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.WaitingParticipantsListStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.WaitingParticipantsListStringID.Accessibility {
+  public static func accept(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func cancel(_ value1: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum WaitingRoomStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  public enum AccessDenied : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case text
+    case ok
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.WaitingRoomStringID.AccessDenied]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.WaitingRoomStringID.AccessDenied] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case navigationTitle
+  case adminPermissionSubtitle
+  case adminJoinSubtitle
+  case cameraOffPlaceholder
+  case cameraAndMicrophoneOffPlaceholder
+  case leaveButtonTitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.WaitingRoomStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.WaitingRoomStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WebinarInviteStringID : Swift.CaseIterable {
+  public enum Speaker : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case linkTitle
+    case invitationButtonTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.WebinarInviteStringID.Speaker]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.WebinarInviteStringID.Speaker] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Viewer : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+    case linkTitle
+    case invitationButtonTitle
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [JazzStrings.WebinarInviteStringID.Viewer]
+    public typealias RawValue = Swift.String
+    public static var allCases: [JazzStrings.WebinarInviteStringID.Viewer] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias AllCases = [JazzStrings.WebinarInviteStringID]
+  public static var allCases: [JazzStrings.WebinarInviteStringID] {
+    get
+  }
+}
+extension JazzStrings.WebinarInviteStringID.Speaker {
+  public static func invitationTemplateWithDescription(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value4: Swift.String, _ value5: Swift.String, _ value6: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func invitationTemplate(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value4: Swift.String, _ value5: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+extension JazzStrings.WebinarInviteStringID.Viewer {
+  public static func invitationTemplateWithDescription(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value4: Swift.String, _ value5: Swift.String, _ value6: Swift.String) -> DevicesCore.ArgumentsStringID
+  public static func invitationTemplate(_ value1: Swift.String, _ value2: Swift.String, _ value3: Swift.String, _ value4: Swift.String, _ value5: Swift.String) -> DevicesCore.ArgumentsStringID
+}
+public enum WebinarStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case toastMediaDisabledTitle
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.WebinarStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.WebinarStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WebinarWaitingRoomStringID : Swift.String, DevicesCore.StringID, DevicesUI.StringContent, Swift.CaseIterable {
+  case title
+  case copyLink
+  case linkCopied
+  case alreadyStarted
+  case comingSoon
+  case startDateFormat
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzStrings.WebinarWaitingRoomStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzStrings.WebinarWaitingRoomStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension JazzStrings.AdministratorStringID.Allowed : Swift.Equatable {}
+extension JazzStrings.AdministratorStringID.Allowed : Swift.Hashable {}
+extension JazzStrings.AdministratorStringID.Allowed : Swift.RawRepresentable {}
+extension JazzStrings.AdministratorStringID.Forbidden : Swift.Equatable {}
+extension JazzStrings.AdministratorStringID.Forbidden : Swift.Hashable {}
+extension JazzStrings.AdministratorStringID.Forbidden : Swift.RawRepresentable {}
+extension JazzStrings.AdministratorStringID.Disable : Swift.Equatable {}
+extension JazzStrings.AdministratorStringID.Disable : Swift.Hashable {}
+extension JazzStrings.AdministratorStringID.Disable : Swift.RawRepresentable {}
+extension JazzStrings.AppLinkErrorStringID : Swift.Equatable {}
+extension JazzStrings.AppLinkErrorStringID : Swift.Hashable {}
+extension JazzStrings.AppLinkErrorStringID : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationAlertStringID.MicrophoneNotDetermined : Swift.Equatable {}
+extension JazzStrings.AuthorizationAlertStringID.MicrophoneNotDetermined : Swift.Hashable {}
+extension JazzStrings.AuthorizationAlertStringID.MicrophoneNotDetermined : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationAlertStringID.MicrophoneDenied : Swift.Equatable {}
+extension JazzStrings.AuthorizationAlertStringID.MicrophoneDenied : Swift.Hashable {}
+extension JazzStrings.AuthorizationAlertStringID.MicrophoneDenied : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationAlertStringID.CameraNotDetermined : Swift.Equatable {}
+extension JazzStrings.AuthorizationAlertStringID.CameraNotDetermined : Swift.Hashable {}
+extension JazzStrings.AuthorizationAlertStringID.CameraNotDetermined : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationAlertStringID.CameraDenied : Swift.Equatable {}
+extension JazzStrings.AuthorizationAlertStringID.CameraDenied : Swift.Hashable {}
+extension JazzStrings.AuthorizationAlertStringID.CameraDenied : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationAlertStringID.Action : Swift.Equatable {}
+extension JazzStrings.AuthorizationAlertStringID.Action : Swift.Hashable {}
+extension JazzStrings.AuthorizationAlertStringID.Action : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationStringID.VideoSettings : Swift.Equatable {}
+extension JazzStrings.AuthorizationStringID.VideoSettings : Swift.Hashable {}
+extension JazzStrings.AuthorizationStringID.VideoSettings : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationStringID.AudioSettings : Swift.Equatable {}
+extension JazzStrings.AuthorizationStringID.AudioSettings : Swift.Hashable {}
+extension JazzStrings.AuthorizationStringID.AudioSettings : Swift.RawRepresentable {}
+extension JazzStrings.AuthorizationStringID.AudioVideoPermissions : Swift.Equatable {}
+extension JazzStrings.AuthorizationStringID.AudioVideoPermissions : Swift.Hashable {}
+extension JazzStrings.AuthorizationStringID.AudioVideoPermissions : Swift.RawRepresentable {}
+extension JazzStrings.CallStringID : Swift.Equatable {}
+extension JazzStrings.CallStringID : Swift.Hashable {}
+extension JazzStrings.CallStringID : Swift.RawRepresentable {}
+extension JazzStrings.CallStringID.Rejected : Swift.Equatable {}
+extension JazzStrings.CallStringID.Rejected : Swift.Hashable {}
+extension JazzStrings.CallStringID.Rejected : Swift.RawRepresentable {}
+extension JazzStrings.CheckboxStringID.WaitingRoom : Swift.Equatable {}
+extension JazzStrings.CheckboxStringID.WaitingRoom : Swift.Hashable {}
+extension JazzStrings.CheckboxStringID.WaitingRoom : Swift.RawRepresentable {}
+extension JazzStrings.CheckboxStringID.Guest : Swift.Equatable {}
+extension JazzStrings.CheckboxStringID.Guest : Swift.Hashable {}
+extension JazzStrings.CheckboxStringID.Guest : Swift.RawRepresentable {}
+extension JazzStrings.CheckboxStringID.AutoRecord : Swift.Equatable {}
+extension JazzStrings.CheckboxStringID.AutoRecord : Swift.Hashable {}
+extension JazzStrings.CheckboxStringID.AutoRecord : Swift.RawRepresentable {}
+extension JazzStrings.CommonStringID : Swift.Equatable {}
+extension JazzStrings.CommonStringID : Swift.Hashable {}
+extension JazzStrings.CommonStringID : Swift.RawRepresentable {}
+extension JazzStrings.CommonStringID.Error : Swift.Equatable {}
+extension JazzStrings.CommonStringID.Error : Swift.Hashable {}
+extension JazzStrings.CommonStringID.Error : Swift.RawRepresentable {}
+extension JazzStrings.CommonStringID.Accessibility : Swift.Equatable {}
+extension JazzStrings.CommonStringID.Accessibility : Swift.Hashable {}
+extension JazzStrings.CommonStringID.Accessibility : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceCloudToastRecordStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceCloudToastRecordStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceCloudToastRecordStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceErrorStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceErrorStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceErrorStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceForSberStaffStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceForSberStaffStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceForSberStaffStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMeetingPlannedStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceMeetingPlannedStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceMeetingPlannedStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMeetingPlannedStringID.Invite : Swift.Equatable {}
+extension JazzStrings.ConferenceMeetingPlannedStringID.Invite : Swift.Hashable {}
+extension JazzStrings.ConferenceMeetingPlannedStringID.Invite : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMenuStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceMenuStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceMenuStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMenuStringID.Hand : Swift.Equatable {}
+extension JazzStrings.ConferenceMenuStringID.Hand : Swift.Hashable {}
+extension JazzStrings.ConferenceMenuStringID.Hand : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMenuStringID.Layout : Swift.Equatable {}
+extension JazzStrings.ConferenceMenuStringID.Layout : Swift.Hashable {}
+extension JazzStrings.ConferenceMenuStringID.Layout : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMenuStringID.Asr : Swift.Equatable {}
+extension JazzStrings.ConferenceMenuStringID.Asr : Swift.Hashable {}
+extension JazzStrings.ConferenceMenuStringID.Asr : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMenuStringID.ShareScreen : Swift.Equatable {}
+extension JazzStrings.ConferenceMenuStringID.ShareScreen : Swift.Hashable {}
+extension JazzStrings.ConferenceMenuStringID.ShareScreen : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceMenuStringID.RecordServer : Swift.Equatable {}
+extension JazzStrings.ConferenceMenuStringID.RecordServer : Swift.Hashable {}
+extension JazzStrings.ConferenceMenuStringID.RecordServer : Swift.RawRepresentable {}
+extension JazzStrings.ConferencePlanningStringID : Swift.Equatable {}
+extension JazzStrings.ConferencePlanningStringID : Swift.Hashable {}
+extension JazzStrings.ConferencePlanningStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferencePlanningStringID.RecordServer : Swift.Equatable {}
+extension JazzStrings.ConferencePlanningStringID.RecordServer : Swift.Hashable {}
+extension JazzStrings.ConferencePlanningStringID.RecordServer : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceQualityEvaluationStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceQualityEvaluationStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceQualityEvaluationStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceScreenStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceScreenStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceScreenStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceSettingsStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceSettingsStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceSettingsStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceSettingsStringID.DisableIncomingVideoStream : Swift.Equatable {}
+extension JazzStrings.ConferenceSettingsStringID.DisableIncomingVideoStream : Swift.Hashable {}
+extension JazzStrings.ConferenceSettingsStringID.DisableIncomingVideoStream : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceSettingsStringID.EnableNoiseSuppression : Swift.Equatable {}
+extension JazzStrings.ConferenceSettingsStringID.EnableNoiseSuppression : Swift.Hashable {}
+extension JazzStrings.ConferenceSettingsStringID.EnableNoiseSuppression : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceSettingsStringID.EnableParticipantsEnlargedVideo : Swift.Equatable {}
+extension JazzStrings.ConferenceSettingsStringID.EnableParticipantsEnlargedVideo : Swift.Hashable {}
+extension JazzStrings.ConferenceSettingsStringID.EnableParticipantsEnlargedVideo : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceSettingsStringID.TechnicalSupport : Swift.Equatable {}
+extension JazzStrings.ConferenceSettingsStringID.TechnicalSupport : Swift.Hashable {}
+extension JazzStrings.ConferenceSettingsStringID.TechnicalSupport : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceSettingsStringID.TechnicalSupportSection : Swift.Equatable {}
+extension JazzStrings.ConferenceSettingsStringID.TechnicalSupportSection : Swift.Hashable {}
+extension JazzStrings.ConferenceSettingsStringID.TechnicalSupportSection : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.TransitionAlert : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.TransitionAlert : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.TransitionAlert : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.Participant : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.Participant : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.Participant : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.NewDeviceWarning : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.NewDeviceWarning : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.NewDeviceWarning : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.AlreadyInCallWarning : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.AlreadyInCallWarning : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.AlreadyInCallWarning : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.SharingLink : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.SharingLink : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.SharingLink : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.TerminatedWarning : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.TerminatedWarning : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.TerminatedWarning : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.Warning : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.Warning : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.Warning : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.Recording : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.Recording : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.Recording : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.InviteToast : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.InviteToast : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.InviteToast : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.CodeInput : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.CodeInput : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.CodeInput : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.AsrError : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.AsrError : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.AsrError : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.RaiseHand : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.RaiseHand : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.RaiseHand : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.KickedOutError : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.KickedOutError : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.KickedOutError : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.TerminatedByAdmin : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.TerminatedByAdmin : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.TerminatedByAdmin : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.AskPermission : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.AskPermission : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.AskPermission : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.WebinarUnsupported : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.WebinarUnsupported : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.WebinarUnsupported : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.EvaluationSubmited : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.EvaluationSubmited : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.EvaluationSubmited : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.ParticipantsListToast : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.ParticipantsListToast : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.ParticipantsListToast : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.ConversationWillEndSoon : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.ConversationWillEndSoon : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.ConversationWillEndSoon : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.ConversationTimeExpired : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.ConversationTimeExpired : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.ConversationTimeExpired : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.MaxParcipiantsReached : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.MaxParcipiantsReached : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.MaxParcipiantsReached : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.PoorConnection : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.PoorConnection : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.PoorConnection : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.FinishConference : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.FinishConference : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.FinishConference : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.MenuOther : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.MenuOther : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.MenuOther : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.PollsList : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.PollsList : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.PollsList : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.CreatePoll : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.CreatePoll : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.CreatePoll : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.EditPoll : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.EditPoll : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.EditPoll : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.PollStarted : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.PollStarted : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.PollStarted : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.PollResults : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.PollResults : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.PollResults : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.SharePollResults : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.SharePollResults : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.SharePollResults : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.PopupFinishPoll : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.PopupFinishPoll : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.PopupFinishPoll : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.ViewerVoting : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.ViewerVoting : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.ViewerVoting : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.ViewPollResults : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.ViewPollResults : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.ViewPollResults : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.SnackBar : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.SnackBar : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.SnackBar : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.RecordServer : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.RecordServer : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.RecordServer : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.AnotherCallWarning : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.AnotherCallWarning : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.AnotherCallWarning : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceStringID.PollPreview : Swift.Equatable {}
+extension JazzStrings.ConferenceStringID.PollPreview : Swift.Hashable {}
+extension JazzStrings.ConferenceStringID.PollPreview : Swift.RawRepresentable {}
+extension JazzStrings.ConferenceVideoStreamsStringID : Swift.Equatable {}
+extension JazzStrings.ConferenceVideoStreamsStringID : Swift.Hashable {}
+extension JazzStrings.ConferenceVideoStreamsStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConnectingErrorAlertStringID : Swift.Equatable {}
+extension JazzStrings.ConnectingErrorAlertStringID : Swift.Hashable {}
+extension JazzStrings.ConnectingErrorAlertStringID : Swift.RawRepresentable {}
+extension JazzStrings.ConnectingErrorAlertStringID.Unauthorized : Swift.Equatable {}
+extension JazzStrings.ConnectingErrorAlertStringID.Unauthorized : Swift.Hashable {}
+extension JazzStrings.ConnectingErrorAlertStringID.Unauthorized : Swift.RawRepresentable {}
+extension JazzStrings.CreateConferenceStringID : Swift.Equatable {}
+extension JazzStrings.CreateConferenceStringID : Swift.Hashable {}
+extension JazzStrings.CreateConferenceStringID : Swift.RawRepresentable {}
+extension JazzStrings.CreateConferenceStringID.RoomNameField : Swift.Equatable {}
+extension JazzStrings.CreateConferenceStringID.RoomNameField : Swift.Hashable {}
+extension JazzStrings.CreateConferenceStringID.RoomNameField : Swift.RawRepresentable {}
+extension JazzStrings.CreateConferenceStringID.UserNameField : Swift.Equatable {}
+extension JazzStrings.CreateConferenceStringID.UserNameField : Swift.Hashable {}
+extension JazzStrings.CreateConferenceStringID.UserNameField : Swift.RawRepresentable {}
+extension JazzStrings.CreateСonferenceStringID.RecordServer : Swift.Equatable {}
+extension JazzStrings.CreateСonferenceStringID.RecordServer : Swift.Hashable {}
+extension JazzStrings.CreateСonferenceStringID.RecordServer : Swift.RawRepresentable {}
+extension JazzStrings.DevicesListStringID : Swift.Equatable {}
+extension JazzStrings.DevicesListStringID : Swift.Hashable {}
+extension JazzStrings.DevicesListStringID : Swift.RawRepresentable {}
+extension JazzStrings.EmojeStringID.Accessibility : Swift.Equatable {}
+extension JazzStrings.EmojeStringID.Accessibility : Swift.Hashable {}
+extension JazzStrings.EmojeStringID.Accessibility : Swift.RawRepresentable {}
+extension JazzStrings.ExcellentEvaluationCallStringID : Swift.Equatable {}
+extension JazzStrings.ExcellentEvaluationCallStringID : Swift.Hashable {}
+extension JazzStrings.ExcellentEvaluationCallStringID : Swift.RawRepresentable {}
+extension JazzStrings.FinishedConferenceStringID : Swift.Equatable {}
+extension JazzStrings.FinishedConferenceStringID : Swift.Hashable {}
+extension JazzStrings.FinishedConferenceStringID : Swift.RawRepresentable {}
+extension JazzStrings.GuestModeWarningStringID : Swift.Equatable {}
+extension JazzStrings.GuestModeWarningStringID : Swift.Hashable {}
+extension JazzStrings.GuestModeWarningStringID : Swift.RawRepresentable {}
+extension JazzStrings.HomeStringID : Swift.Equatable {}
+extension JazzStrings.HomeStringID : Swift.Hashable {}
+extension JazzStrings.HomeStringID : Swift.RawRepresentable {}
+extension JazzStrings.IncomingStringID : Swift.Equatable {}
+extension JazzStrings.IncomingStringID : Swift.Hashable {}
+extension JazzStrings.IncomingStringID : Swift.RawRepresentable {}
+extension JazzStrings.IncomingStringID.Action : Swift.Equatable {}
+extension JazzStrings.IncomingStringID.Action : Swift.Hashable {}
+extension JazzStrings.IncomingStringID.Action : Swift.RawRepresentable {}
+extension JazzStrings.InviteStringID : Swift.Equatable {}
+extension JazzStrings.InviteStringID : Swift.Hashable {}
+extension JazzStrings.InviteStringID : Swift.RawRepresentable {}
+extension JazzStrings.InviteStringID.WarningInformation : Swift.Equatable {}
+extension JazzStrings.InviteStringID.WarningInformation : Swift.Hashable {}
+extension JazzStrings.InviteStringID.WarningInformation : Swift.RawRepresentable {}
+extension JazzStrings.JoinConferenceStringID : Swift.Equatable {}
+extension JazzStrings.JoinConferenceStringID : Swift.Hashable {}
+extension JazzStrings.JoinConferenceStringID : Swift.RawRepresentable {}
+extension JazzStrings.JoinConferenceStringID.Code : Swift.Equatable {}
+extension JazzStrings.JoinConferenceStringID.Code : Swift.Hashable {}
+extension JazzStrings.JoinConferenceStringID.Code : Swift.RawRepresentable {}
+extension JazzStrings.JoinConferenceStringID.Password : Swift.Equatable {}
+extension JazzStrings.JoinConferenceStringID.Password : Swift.Hashable {}
+extension JazzStrings.JoinConferenceStringID.Password : Swift.RawRepresentable {}
+extension JazzStrings.JoinConferenceStringID.NameField : Swift.Equatable {}
+extension JazzStrings.JoinConferenceStringID.NameField : Swift.Hashable {}
+extension JazzStrings.JoinConferenceStringID.NameField : Swift.RawRepresentable {}
+extension JazzStrings.JoinConferenceStringID.Toggle : Swift.Equatable {}
+extension JazzStrings.JoinConferenceStringID.Toggle : Swift.Hashable {}
+extension JazzStrings.JoinConferenceStringID.Toggle : Swift.RawRepresentable {}
+extension JazzStrings.JoinConferenceStringID.Button : Swift.Equatable {}
+extension JazzStrings.JoinConferenceStringID.Button : Swift.Hashable {}
+extension JazzStrings.JoinConferenceStringID.Button : Swift.RawRepresentable {}
+extension JazzStrings.JoinConferenceStringID.Error : Swift.Equatable {}
+extension JazzStrings.JoinConferenceStringID.Error : Swift.Hashable {}
+extension JazzStrings.JoinConferenceStringID.Error : Swift.RawRepresentable {}
+extension JazzStrings.LicensesPopupStringID : Swift.Equatable {}
+extension JazzStrings.LicensesPopupStringID : Swift.Hashable {}
+extension JazzStrings.LicensesPopupStringID : Swift.RawRepresentable {}
+extension JazzStrings.MediaModelToggleStringID.Camera : Swift.Equatable {}
+extension JazzStrings.MediaModelToggleStringID.Camera : Swift.Hashable {}
+extension JazzStrings.MediaModelToggleStringID.Camera : Swift.RawRepresentable {}
+extension JazzStrings.MediaModelToggleStringID.Microphone : Swift.Equatable {}
+extension JazzStrings.MediaModelToggleStringID.Microphone : Swift.Hashable {}
+extension JazzStrings.MediaModelToggleStringID.Microphone : Swift.RawRepresentable {}
+extension JazzStrings.MessangerStringID : Swift.Equatable {}
+extension JazzStrings.MessangerStringID : Swift.Hashable {}
+extension JazzStrings.MessangerStringID : Swift.RawRepresentable {}
+extension JazzStrings.MessengerContactsStringID : Swift.Equatable {}
+extension JazzStrings.MessengerContactsStringID : Swift.Hashable {}
+extension JazzStrings.MessengerContactsStringID : Swift.RawRepresentable {}
+extension JazzStrings.MessengerContactsStringID.Alert : Swift.Equatable {}
+extension JazzStrings.MessengerContactsStringID.Alert : Swift.Hashable {}
+extension JazzStrings.MessengerContactsStringID.Alert : Swift.RawRepresentable {}
+extension JazzStrings.MessengerContactsStringID.Header : Swift.Equatable {}
+extension JazzStrings.MessengerContactsStringID.Header : Swift.Hashable {}
+extension JazzStrings.MessengerContactsStringID.Header : Swift.RawRepresentable {}
+extension JazzStrings.MessengerMenuStringID : Swift.Equatable {}
+extension JazzStrings.MessengerMenuStringID : Swift.Hashable {}
+extension JazzStrings.MessengerMenuStringID : Swift.RawRepresentable {}
+extension JazzStrings.MessengerMenuStringID.Asr : Swift.Equatable {}
+extension JazzStrings.MessengerMenuStringID.Asr : Swift.Hashable {}
+extension JazzStrings.MessengerMenuStringID.Asr : Swift.RawRepresentable {}
+extension JazzStrings.MessengerStringID : Swift.Equatable {}
+extension JazzStrings.MessengerStringID : Swift.Hashable {}
+extension JazzStrings.MessengerStringID : Swift.RawRepresentable {}
+extension JazzStrings.ParticipantsListStringID : Swift.Equatable {}
+extension JazzStrings.ParticipantsListStringID : Swift.Hashable {}
+extension JazzStrings.ParticipantsListStringID : Swift.RawRepresentable {}
+extension JazzStrings.PromoStringID.Devices : Swift.Equatable {}
+extension JazzStrings.PromoStringID.Devices : Swift.Hashable {}
+extension JazzStrings.PromoStringID.Devices : Swift.RawRepresentable {}
+extension JazzStrings.PushStringID : Swift.Equatable {}
+extension JazzStrings.PushStringID : Swift.Hashable {}
+extension JazzStrings.PushStringID : Swift.RawRepresentable {}
+extension JazzStrings.RedirectUserStringID : Swift.Equatable {}
+extension JazzStrings.RedirectUserStringID : Swift.Hashable {}
+extension JazzStrings.RedirectUserStringID : Swift.RawRepresentable {}
+extension JazzStrings.RedirectUserStringID.Download : Swift.Equatable {}
+extension JazzStrings.RedirectUserStringID.Download : Swift.Hashable {}
+extension JazzStrings.RedirectUserStringID.Download : Swift.RawRepresentable {}
+extension JazzStrings.RequestStringID : Swift.Equatable {}
+extension JazzStrings.RequestStringID : Swift.Hashable {}
+extension JazzStrings.RequestStringID : Swift.RawRepresentable {}
+extension JazzStrings.ShareHistoryMenuStringID : Swift.Equatable {}
+extension JazzStrings.ShareHistoryMenuStringID : Swift.Hashable {}
+extension JazzStrings.ShareHistoryMenuStringID : Swift.RawRepresentable {}
+extension JazzStrings.ShareLinkStringID : Swift.Equatable {}
+extension JazzStrings.ShareLinkStringID : Swift.Hashable {}
+extension JazzStrings.ShareLinkStringID : Swift.RawRepresentable {}
+extension JazzStrings.TransitionBySelectionStringID : Swift.Equatable {}
+extension JazzStrings.TransitionBySelectionStringID : Swift.Hashable {}
+extension JazzStrings.TransitionBySelectionStringID : Swift.RawRepresentable {}
+extension JazzStrings.TransitionBySelectionStringID.NoDevicesAvailable : Swift.Equatable {}
+extension JazzStrings.TransitionBySelectionStringID.NoDevicesAvailable : Swift.Hashable {}
+extension JazzStrings.TransitionBySelectionStringID.NoDevicesAvailable : Swift.RawRepresentable {}
+extension JazzStrings.TransitionByTouchStringID : Swift.Equatable {}
+extension JazzStrings.TransitionByTouchStringID : Swift.Hashable {}
+extension JazzStrings.TransitionByTouchStringID : Swift.RawRepresentable {}
+extension JazzStrings.TransitionErrorStringID : Swift.Equatable {}
+extension JazzStrings.TransitionErrorStringID : Swift.Hashable {}
+extension JazzStrings.TransitionErrorStringID : Swift.RawRepresentable {}
+extension JazzStrings.TransitionErrorStringID.Access : Swift.Equatable {}
+extension JazzStrings.TransitionErrorStringID.Access : Swift.Hashable {}
+extension JazzStrings.TransitionErrorStringID.Access : Swift.RawRepresentable {}
+extension JazzStrings.TransitionErrorStringID.Connection : Swift.Equatable {}
+extension JazzStrings.TransitionErrorStringID.Connection : Swift.Hashable {}
+extension JazzStrings.TransitionErrorStringID.Connection : Swift.RawRepresentable {}
+extension JazzStrings.TransitionErrorStringID.DeviceCast : Swift.Equatable {}
+extension JazzStrings.TransitionErrorStringID.DeviceCast : Swift.Hashable {}
+extension JazzStrings.TransitionErrorStringID.DeviceCast : Swift.RawRepresentable {}
+extension JazzStrings.TransitionErrorStringID.Discovery : Swift.Equatable {}
+extension JazzStrings.TransitionErrorStringID.Discovery : Swift.Hashable {}
+extension JazzStrings.TransitionErrorStringID.Discovery : Swift.RawRepresentable {}
+extension JazzStrings.TransitionPermissionStringID.Bluetooth : Swift.Equatable {}
+extension JazzStrings.TransitionPermissionStringID.Bluetooth : Swift.Hashable {}
+extension JazzStrings.TransitionPermissionStringID.Bluetooth : Swift.RawRepresentable {}
+extension JazzStrings.TransitionPermissionStringID.Geo : Swift.Equatable {}
+extension JazzStrings.TransitionPermissionStringID.Geo : Swift.Hashable {}
+extension JazzStrings.TransitionPermissionStringID.Geo : Swift.RawRepresentable {}
+extension JazzStrings.TransitionPermissionStringID.Wifi : Swift.Equatable {}
+extension JazzStrings.TransitionPermissionStringID.Wifi : Swift.Hashable {}
+extension JazzStrings.TransitionPermissionStringID.Wifi : Swift.RawRepresentable {}
+extension JazzStrings.TransitionStringID : Swift.Equatable {}
+extension JazzStrings.TransitionStringID : Swift.Hashable {}
+extension JazzStrings.TransitionStringID : Swift.RawRepresentable {}
+extension JazzStrings.TransitionStringID.Action : Swift.Equatable {}
+extension JazzStrings.TransitionStringID.Action : Swift.Hashable {}
+extension JazzStrings.TransitionStringID.Action : Swift.RawRepresentable {}
+extension JazzStrings.WaitingParticipantsListStringID : Swift.Equatable {}
+extension JazzStrings.WaitingParticipantsListStringID : Swift.Hashable {}
+extension JazzStrings.WaitingParticipantsListStringID : Swift.RawRepresentable {}
+extension JazzStrings.WaitingRoomStringID : Swift.Equatable {}
+extension JazzStrings.WaitingRoomStringID : Swift.Hashable {}
+extension JazzStrings.WaitingRoomStringID : Swift.RawRepresentable {}
+extension JazzStrings.WaitingRoomStringID.AccessDenied : Swift.Equatable {}
+extension JazzStrings.WaitingRoomStringID.AccessDenied : Swift.Hashable {}
+extension JazzStrings.WaitingRoomStringID.AccessDenied : Swift.RawRepresentable {}
+extension JazzStrings.WebinarInviteStringID.Speaker : Swift.Equatable {}
+extension JazzStrings.WebinarInviteStringID.Speaker : Swift.Hashable {}
+extension JazzStrings.WebinarInviteStringID.Speaker : Swift.RawRepresentable {}
+extension JazzStrings.WebinarInviteStringID.Viewer : Swift.Equatable {}
+extension JazzStrings.WebinarInviteStringID.Viewer : Swift.Hashable {}
+extension JazzStrings.WebinarInviteStringID.Viewer : Swift.RawRepresentable {}
+extension JazzStrings.WebinarStringID : Swift.Equatable {}
+extension JazzStrings.WebinarStringID : Swift.Hashable {}
+extension JazzStrings.WebinarStringID : Swift.RawRepresentable {}
+extension JazzStrings.WebinarWaitingRoomStringID : Swift.Equatable {}
+extension JazzStrings.WebinarWaitingRoomStringID : Swift.Hashable {}
+extension JazzStrings.WebinarWaitingRoomStringID : Swift.RawRepresentable {}

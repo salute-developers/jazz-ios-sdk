@@ -1,0 +1,2267 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DevicesUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import Combine
+import CoreGraphics
+import CoreMotion
+import DevicesCore
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func accessible(value: DevicesUI.StringContent?, traits: UIKit.UIAccessibilityTraits = .none, accessibilityCustomActions: [UIKit.UIAccessibilityCustomAction] = [], hint: DevicesUI.StringContent? = nil) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "accessible", subject: self) { view, context in
+			guard
+				value?.string(context: context).isEmpty == false ||
+				!traits.isEmpty
+			else {
+				view.isAccessibilityElement = false
+				view.accessibilityHint = nil
+				return
+			}
+			view.isAccessibilityElement = true
+			view.accessibilityValue = value?.string(context: context)
+			view.accessibilityTraits = traits
+			view.accessibilityCustomActions = accessibilityCustomActions
+			view.accessibilityHint = hint?.string(context: context)
+		}
+	}
+  @inlinable public func accessibleByChildren(traits: UIKit.UIAccessibilityTraits = .none, hint: DevicesUI.StringContent? = nil) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "accessibleByChildren", subject: self) { view, context in
+			view.isAccessibilityElement = true
+			view.accessibilityValue = view.subviews.compactMap(\.accessibilityValue).joined(separator: ", ")
+			if view.subviews.map(\.accessibilityTraits).contains(.button) {
+				view.accessibilityTraits = .button
+			} else if view.subviews.map(\.accessibilityTraits).contains(.image) {
+				view.accessibilityTraits = .image
+			} else {
+				view.accessibilityTraits = traits
+			}
+			view.accessibilityHint = hint?.string(context: context)
+		}
+	}
+  @inlinable public func accessibleForChildren(hint: DevicesUI.StringContent? = nil) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "accessible", subject: self) { view, context in
+			let hint = hint?.string(context: context)
+			view.allSubviews.compactMap { $0.accessibilityHint = hint }
+		}
+	}
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var allSubviews: [UIKit.UIView] {
+    get
+  }
+}
+extension SwiftUI.View {
+  public func activity(isPresented: SwiftUI.Binding<Swift.Bool>, activityItems: [Any], applicationActivities: [UIKit.UIActivity]? = nil) -> some SwiftUI.View
+  
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AlphaAdjustingCell : UIKit.UICollectionViewCell, DevicesUI.Highlightable {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AlphaAdjustingControl : UIKit.UIControl, DevicesUI.Highlightable {
+  @_Concurrency.MainActor(unsafe) public var isHitClear: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func alpha(_ alpha: CoreFoundation.CGFloat, animationDuration: Foundation.TimeInterval = 0) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "alpha", subject: self) { view, _ in
+			let animations = {
+				view.alpha = alpha
+			}
+			if animationDuration.isAlmostEqual(0) {
+				animations()
+			} else {
+				UIView.animate(
+					withDuration: animationDuration,
+					animations: animations
+				)
+			}
+		}
+	}
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func animate<T>(keyPath: Swift.ReferenceWritableKeyPath<UIKit.UIView, T>, toValue: T, duration: Foundation.TimeInterval = 0.25, options: UIKit.UIView.AnimationOptions = .beginFromCurrentState, delay: Foundation.TimeInterval = 0) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: NSExpression(forKeyPath: keyPath).keyPath, subject: self) { view, _ in
+			UIView.animate(
+				withDuration: duration,
+				delay: delay,
+				options: options,
+				animations: { view[keyPath: keyPath] = toValue },
+				completion: nil
+			)
+		}
+	}
+}
+public struct AnyConcreteViewRenderable<ConcreteView> : DevicesUI.ConcreteViewRenderable where ConcreteView : DevicesUI.View {
+  @usableFromInline
+  internal let renderConcreteViewHandler: (_ context: DevicesUI.ViewContext, _ view: DevicesUI.View?) -> ConcreteView
+  public init<Subject>(_ subject: Subject) where ConcreteView == Subject.ConcreteView, Subject : DevicesUI.ConcreteViewRenderable
+  @inlinable public func renderConcreteView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> ConcreteView {
+		renderConcreteViewHandler(context, view)
+	}
+}
+extension DevicesUI.ConcreteViewRenderable {
+  @inlinable @_transparent public func eraseToAnyConcreteViewRenderable() -> DevicesUI.AnyConcreteViewRenderable<Self.ConcreteView> {
+		AnyConcreteViewRenderable(self)
+	}
+}
+public struct AnyViewCanvas : DevicesUI.ViewCanvas {
+  public var size: CoreFoundation.CGSize {
+    get
+  }
+  public init(layoutCanvas: @escaping (_ animated: Swift.Bool) -> Swift.Void, canvasSize: @escaping () -> (CoreFoundation.CGSize))
+  public func layoutCanvas(animated: Swift.Bool)
+}
+extension Swift.Array where Element == DevicesUI.ViewRenderable {
+  public func reuse(_ views: inout [DevicesUI.View], context: DevicesUI.ViewContext)
+  public func reuse(_ views: inout [DevicesUI.NativeView], context: DevicesUI.ViewContext)
+}
+extension Swift.Array where Element == DevicesUI.ViewRenderable {
+  public func asVStackItems(margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.HorizontalGravity = .center, greediness: DevicesUI.Greediness = .intrinsic) -> [DevicesUI.VStackItem]
+  public func asHStackItems(gravity: DevicesUI.VerticalGravity = .center, greediness: DevicesUI.Greediness = .intrinsic) -> [DevicesUI.HStackItem]
+  public func asZStackItems(gravity: DevicesUI.Gravity = .center, sizing: DevicesUI.ZStackSizing = .measuring) -> [DevicesUI.ZStackItem]
+}
+public typealias AttributedTextFactory = DevicesCore.Factory<DevicesUI.ViewContext, DevicesUI.AttributedTextInfo>
+public struct AttributedTextInfo {
+  public let text: Foundation.NSAttributedString
+  public let linksAttributes: [Foundation.NSAttributedString.Key : Any]
+  public init(text: Foundation.NSAttributedString, linksAttributes: [Foundation.NSAttributedString.Key : Any])
+}
+extension DevicesUI.AttributedTextModel : DevicesUI.NativeViewRenderable {
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+public struct AttributedTextModel {
+  public let textFactory: DevicesUI.AttributedTextFactory
+  public let margins: UIKit.UIEdgeInsets
+  public let alignment: DevicesUI.TextAlignment
+  public let urlTapped: (Foundation.URL) -> Swift.Void
+  public let detectsData: Swift.Bool
+  public init(textFactory: DevicesUI.AttributedTextFactory, urlTapped: @escaping (Foundation.URL) -> Swift.Void, alignment: DevicesUI.TextAlignment? = nil, margins: UIKit.UIEdgeInsets? = nil, detectsData: Swift.Bool = false)
+}
+extension DevicesCore.ArgumentsStringID : DevicesUI.StringContent {
+  public func isStringContentEqual(to another: DevicesUI.StringContent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func string(context: DevicesUI.ViewContext) -> Swift.String
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func backgroundColor(_ color: UIKit.UIColor) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "backgroundColor", subject: self) { view, _ in
+			view.backgroundColor = color
+		}
+	}
+}
+extension DevicesUI.ViewRenderable {
+  public func background(_ subject: DevicesUI.ViewRenderable, gravity: DevicesUI.Gravity = .center) -> DevicesUI.ViewRenderable
+}
+extension SwiftUI.Binding {
+  public func onChange(_ handler: @escaping (Value) -> Swift.Void) -> SwiftUI.Binding<Value>
+}
+@propertyWrapper public struct Binding<Value> {
+  @usableFromInline
+  internal let get: () -> Value
+  @usableFromInline
+  internal let set: (Value, DevicesUI.Transaction) -> Swift.Void
+  public var transaction: DevicesUI.Transaction
+  public let signal: DevicesCore.Signal<(Value, DevicesUI.Transaction)>
+  @inlinable @_transparent public var wrappedValue: Value {
+    @_transparent get { get() }
+    @_transparent nonmutating set { set(newValue, transaction) }
+  }
+  @inlinable @_transparent public var projectedValue: DevicesUI.Binding<Value> {
+    @_transparent get { self }
+  }
+  public init(get: @escaping () -> Value, set: @escaping (Value, DevicesUI.Transaction) -> Swift.Void, signal: DevicesCore.Signal<(Value, DevicesUI.Transaction)>)
+}
+extension DevicesUI.Binding {
+  @inlinable public init(get: @escaping () -> Value, set: @escaping (Value, DevicesUI.Transaction) -> Swift.Void) {
+		let signal = DefaultSignal<(Value, Transaction)>()
+
+		self.init(
+			get: get,
+			set: { newValue, transaction in
+				set(newValue, transaction)
+				signal.fire((newValue, transaction))
+			},
+			signal: signal.eraseToAnyPublisher()
+		)
+	}
+  @inlinable public init(_ value: DevicesCore.MutableProperty<Value>) {
+		self.init(
+			get: { value.value },
+			set: { newValue, _ in
+				value.value = newValue
+			},
+			signal: value.signal.map {
+				($0, Transaction())
+			}.eraseToAnyPublisher()
+		)
+	}
+  @inlinable public init(wrappedValue: Value) {
+		var value = wrappedValue
+
+		self.init(
+			get: { value },
+			set: { newValue, _ in value = newValue }
+		)
+	}
+  @inlinable @_transparent public func asProperty() -> DevicesCore.Property<Value> {
+		Property(
+			getter: get,
+			signal: signal.map(\.0).eraseToAnyPublisher()
+		)
+	}
+  @inlinable @_transparent public static func constant(_ constant: Value) -> DevicesUI.Binding<Value> {
+		Self(wrappedValue: constant)
+	}
+  @inlinable public func withTransaction(using block: (inout DevicesUI.Transaction) -> Swift.Void) -> DevicesUI.Binding<Value> {
+		var newTransaction = transaction
+		var newBinding = self
+		block(&newTransaction)
+		newBinding.transaction = newTransaction
+		return newBinding
+	}
+  @inlinable @_transparent public func set(_ value: Value, disablesAnimation: Swift.Bool) {
+		withTransaction {
+			$0.disablesAnimations = disablesAnimation
+		}
+		.wrappedValue = value
+	}
+}
+extension DevicesUI.Binding : Swift.Equatable where Value : Swift.Equatable {
+  public static func == (lhs: DevicesUI.Binding<Value>, rhs: DevicesUI.Binding<Value>) -> Swift.Bool
+}
+public struct BlockMeasurable : DevicesUI.Measurable {
+  public init(block: @escaping (CoreFoundation.CGSize) -> CoreFoundation.CGSize)
+  public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func border(width: CoreFoundation.CGFloat, color: UIKit.UIColor) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "border", subject: self) { view, _ in
+			view.layer.borderWidth = width
+			view.layer.borderColor = color.cgColor
+		}
+	}
+}
+extension DevicesUI.Measurable {
+  public func resizeTo(minWidth: CoreFoundation.CGFloat? = nil, maxWidth: CoreFoundation.CGFloat? = nil, minHeight: CoreFoundation.CGFloat? = nil, maxHeight: CoreFoundation.CGFloat? = nil) -> DevicesUI.Measurable
+}
+extension DevicesUI.Button : DevicesUI.NativeViewRenderable {
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+public struct Button {
+  public init(content: DevicesUI.ViewRenderable, style: DevicesUI.ButtonStyle = PlainButtonStyle(), accessibilityLabel: DevicesUI.StringContent? = nil, isEnabled: Swift.Bool = true, action: @escaping () -> Swift.Void)
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func asButton(style: DevicesUI.ButtonStyle = PlainButtonStyle(), accessibilityLabel: DevicesUI.StringContent? = nil, isEnabled: Swift.Bool = true, action: @escaping () -> Swift.Void) -> DevicesUI.NativeViewRenderable {
+		Button(
+			content: self,
+			style: style,
+			accessibilityLabel: accessibilityLabel,
+			isEnabled: isEnabled,
+			action: action
+		)
+	}
+}
+extension DevicesUI.PlainButtonStyle {
+  public struct ButtonSettings {
+    public let animationDuratin: Foundation.TimeInterval
+    public let disabledAlpha: CoreFoundation.CGFloat
+    public let highlightedAlpha: CoreFoundation.CGFloat
+    public init(animationDuratin: Foundation.TimeInterval = 0, disabledAlpha: CoreFoundation.CGFloat = 0.25, highlightedAlpha: CoreFoundation.CGFloat = 0.7)
+  }
+}
+public protocol ButtonStyle {
+  func transformContent(config: DevicesUI.ButtonStyleConfig, context: DevicesUI.ViewContext) -> DevicesUI.ViewRenderable
+}
+public struct ButtonStyleConfig {
+  public let content: DevicesUI.ViewRenderable
+  public let isPressed: Swift.Bool
+  public let isEnabled: Swift.Bool
+}
+extension QuartzCore.CACornerMask {
+  public static var layerAllCorners: QuartzCore.CACornerMask {
+    get
+  }
+  public static var layerRightEdgeCorners: QuartzCore.CACornerMask {
+    get
+  }
+  public static var layerLeftEdgeCorners: QuartzCore.CACornerMask {
+    get
+  }
+  public static var topEdgeCorners: QuartzCore.CACornerMask {
+    get
+  }
+  public static var bottomEdgeCorners: QuartzCore.CACornerMask {
+    get
+  }
+}
+extension CoreFoundation.CGRect {
+  public var hProjection: DevicesUI.FrameProjection {
+    get
+  }
+  public var vProjection: DevicesUI.FrameProjection {
+    get
+  }
+  public init(hProjection: DevicesUI.FrameProjection, vProjection: DevicesUI.FrameProjection)
+}
+extension DevicesUI.CameraViewModel : DevicesUI.NativeViewRenderable {
+  public func renderNativeView(context _: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CameraView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public init(session: DevicesCore.VideoCaptureSession, enabled: Swift.Bool, orientation: UIKit.UIInterfaceOrientation)
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) final public func start()
+  @_Concurrency.MainActor(unsafe) final public func enable(_ isEnabled: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) final public func stop()
+  @_Concurrency.MainActor(unsafe) final public func updateOrientation()
+  @_Concurrency.MainActor(unsafe) final public func normalize(_ frame: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @objc deinit
+}
+public struct CameraViewModel {
+  public init(session: DevicesCore.VideoCaptureSession, enabled: Swift.Bool, orientation: UIKit.UIInterfaceOrientation)
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func clipsToBounds(_ clipsToBounds: Swift.Bool) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "clipsToBounds", subject: self) { view, _ in
+			view.clipsToBounds = clipsToBounds
+		}
+	}
+}
+public protocol CollectionDifferenceUpdater {
+  func reload<Item>(collection: UIKit.UICollectionView, sourceData: [Item], targetData: [Item], setData: @escaping ([Item]) -> Swift.Void) where Item : DevicesUI.ContentDifferentiable
+  func reload<Item>(collection: UIKit.UITableView, animation: UIKit.UITableView.RowAnimation, sourceData: [Item], targetData: [Item], setData: @escaping ([Item]) -> Swift.Void) where Item : DevicesUI.ContentDifferentiable
+}
+extension DevicesCore.KeyValueContextKey where Tag == DevicesUI.ViewContextTag {
+  public static var collectionDifferenceUpdater: DevicesUI.ViewContextKey<DevicesUI.CollectionDifferenceUpdater> {
+    get
+  }
+}
+final public class CollectionDifferenceUpdaterImpl : DevicesUI.CollectionDifferenceUpdater {
+  final public func reload<Item>(collection: UIKit.UICollectionView, sourceData: [Item], targetData: [Item], setData: @escaping ([Item]) -> Swift.Void) where Item : DevicesUI.ContentDifferentiable
+  final public func reload<Item>(collection: UIKit.UITableView, animation: UIKit.UITableView.RowAnimation, sourceData: [Item], targetData: [Item], setData: @escaping ([Item]) -> Swift.Void) where Item : DevicesUI.ContentDifferentiable
+  public init()
+  @objc deinit
+}
+public struct ColumnGrid {
+  public struct Column {
+    public let items: [DevicesUI.ViewRenderable]
+    public let insets: UIKit.UIEdgeInsets
+    public init(items: [DevicesUI.ViewRenderable], margins: UIKit.UIEdgeInsets = .zero)
+  }
+  public let columns: [DevicesUI.ColumnGrid.Column]
+  public let itemsVerticalSpacing: CoreFoundation.CGFloat
+  public let columnsHorizontalSpacing: CoreFoundation.CGFloat
+  public init(columns: [DevicesUI.ColumnGrid.Column], itemsVerticalSpacing: CoreFoundation.CGFloat, columnsHorizontalSpacing: CoreFoundation.CGFloat)
+}
+extension DevicesUI.ColumnGrid : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+extension DevicesUI.Measurable {
+  public func compactSize(width: Swift.Bool = true, height: Swift.Bool = true) -> DevicesUI.Measurable
+  public func compactWidth() -> DevicesUI.Measurable
+  public func compactHeight() -> DevicesUI.Measurable
+}
+extension DevicesUI.ViewRenderable {
+  public func compactSize() -> DevicesUI.ViewRenderable
+  public func compactWidth() -> DevicesUI.ViewRenderable
+  public func compactHeight() -> DevicesUI.ViewRenderable
+}
+public struct ConcreteLayoutModifier : DevicesUI.NativeViewRenderable {
+  public let label: Swift.String
+  public let subject: DevicesUI.ViewRenderable
+  public let handler: (UIKit.UIView, CoreFoundation.CGRect) -> Swift.Void
+  public init(label: Swift.String, subject: DevicesUI.ViewRenderable, handler: @escaping (UIKit.UIView, CoreFoundation.CGRect) -> Swift.Void)
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+public struct ConcreteViewModifier : DevicesUI.NativeViewRenderable {
+  public let label: Swift.String
+  public let subject: DevicesUI.NativeViewRenderable
+  public let update: (UIKit.UIView, DevicesUI.ViewContext) -> Swift.Void
+  public init(label: Swift.String, subject: DevicesUI.NativeViewRenderable, update: @escaping (UIKit.UIView, DevicesUI.ViewContext) -> Swift.Void)
+  @inlinable @_transparent public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView {
+		let nativeView = subject.renderNativeView(context: context, reusing: view)
+		update(nativeView.uiView, context)
+		return nativeView
+	}
+}
+public protocol ConcreteViewRenderable : DevicesUI.ViewRenderable {
+  associatedtype ConcreteView : DevicesUI.View
+  func renderConcreteView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> Self.ConcreteView
+}
+extension DevicesUI.ConcreteViewRenderable {
+  @inlinable @_transparent public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View {
+		renderConcreteView(context: context, reusing: view)
+	}
+  @inlinable @_transparent public func renderConcreteView(context: DevicesUI.ViewContext) -> Self.ConcreteView {
+		renderConcreteView(context: context, reusing: nil)
+	}
+}
+extension DevicesUI.ConcreteViewRenderable where Self : DevicesUI.NativeViewRenderable, Self.ConcreteView : DevicesUI.NativeView {
+  @inlinable @_transparent public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView {
+		renderConcreteView(context: context, reusing: view)
+	}
+}
+public protocol ContentDifferentiable {
+  associatedtype DifferenceID : Swift.Hashable
+  var differenceID: Self.DifferenceID { get }
+  func isContentEqual(to source: Self) -> Swift.Bool
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func cornerRadius(_ cornerRadius: CoreFoundation.CGFloat, corners: QuartzCore.CACornerMask = .layerAllCorners) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "cornerRadius", subject: self) { view, _ in
+			view.layer.cornerRadius = cornerRadius
+			view.layer.maskedCorners = corners
+			view.clipsToBounds = true
+		}
+	}
+}
+extension DevicesUI.ViewRenderable {
+  public func beforeMeasure(_ handler: @escaping () -> Swift.Void) -> DevicesUI.ViewRenderable
+  public func beforeLayout(_ handler: @escaping () -> Swift.Void) -> DevicesUI.ViewRenderable
+  public func afterMeasure(_ handler: @escaping () -> Swift.Void) -> DevicesUI.ViewRenderable
+  public func afterLayout(_ handler: @escaping () -> Swift.Void) -> DevicesUI.ViewRenderable
+}
+public enum DeviceOrientation {
+  case portrait
+  case landscapeLeft
+  case landscapeRight
+  case portraitUpsideDown
+  public static func == (a: DevicesUI.DeviceOrientation, b: DevicesUI.DeviceOrientation) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIDeviceOrientation {
+  public var deviceOrientation: DevicesUI.DeviceOrientation {
+    get
+  }
+}
+extension DevicesUI.DeviceOrientation {
+  public var interfaceOrientation: UIKit.UIInterfaceOrientation {
+    get
+  }
+}
+extension Foundation.NotificationCenter {
+  public func deviceOrientation(device: DevicesCore.UIDeviceTwin) -> DevicesCore.Signal<DevicesUI.DeviceOrientation>
+}
+final public class DifferenceKitScrollListUpdater : DevicesUI.ScrollListUpdater {
+  public init()
+  final public func update(_ collectionView: UIKit.UICollectionView, source: [DevicesUI.ScrollListItem], target: [DevicesUI.ScrollListItem], context: DevicesUI.ViewContext, setData: @escaping ([DevicesUI.ScrollListItem]) -> Swift.Void)
+  @objc deinit
+}
+public struct Edges : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = DevicesUI.Edges
+  public typealias Element = DevicesUI.Edges
+  public typealias RawValue = Swift.Int
+}
+extension DevicesUI.Edges {
+  public static let top: DevicesUI.Edges
+  public static let bottom: DevicesUI.Edges
+  public static let left: DevicesUI.Edges
+  public static let right: DevicesUI.Edges
+  public static let all: DevicesUI.Edges
+  public static let vertical: DevicesUI.Edges
+  public static let horizontal: DevicesUI.Edges
+}
+extension DevicesUI.NativeViewRenderable {
+  public func effect(_ effect: UIKit.UIVisualEffect) -> DevicesUI.ViewRenderable
+}
+public struct EquatableStringContent : Swift.Equatable {
+  public static func == (lhs: DevicesUI.EquatableStringContent, rhs: DevicesUI.EquatableStringContent) -> Swift.Bool
+}
+extension DevicesUI.StringContent {
+  public func asEquatable() -> DevicesUI.EquatableStringContent
+}
+public typealias ExternalString = DevicesCore.Tagged<DevicesUI.ExternalStringTag, Swift.String>
+public struct ExternalStringTag {
+}
+extension DevicesCore.Tagged : DevicesUI.StringContent where Tag == DevicesUI.ExternalStringTag, T == Swift.String {
+  public static let empty: DevicesUI.ExternalString
+  @inlinable public func string(context _: DevicesUI.ViewContext) -> Swift.String {
+		value
+	}
+}
+extension Swift.String {
+  public var externalStringContent: DevicesUI.ExternalString {
+    get
+  }
+}
+public enum FadeAxis {
+  case vertical
+  case horizontal
+  public static func == (a: DevicesUI.FadeAxis, b: DevicesUI.FadeAxis) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.ViewRenderable {
+  public func axisFadeMask(topFadeInset: CoreFoundation.CGFloat, bottomFadeInset: CoreFoundation.CGFloat, axis: DevicesUI.FadeAxis = .vertical) -> DevicesUI.ViewRenderable
+}
+public struct FlowGrid {
+  public let items: [DevicesUI.FlowGridItem]
+  public let rowSpacing: CoreFoundation.CGFloat
+  public let itemSpacing: CoreFoundation.CGFloat
+  public init(items: [DevicesUI.FlowGridItem], rowSpacing: CoreFoundation.CGFloat = 0, itemSpacing: CoreFoundation.CGFloat = 0)
+}
+extension DevicesUI.FlowGrid : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public struct FlowGridItem {
+  public let content: DevicesUI.ViewRenderable
+  public init(content: DevicesUI.ViewRenderable)
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func asFlowGridItem() -> DevicesUI.FlowGridItem {
+		FlowGridItem(
+			content: self
+		)
+	}
+}
+public struct FlowGridLayout : DevicesUI.Measurable, DevicesUI.Layoutable {
+  public let items: [DevicesUI.FlowGridLayoutItem]
+  public let rowSpacing: CoreFoundation.CGFloat
+  public let itemSpacing: CoreFoundation.CGFloat
+  public init(items: [DevicesUI.FlowGridLayoutItem], rowSpacing: CoreFoundation.CGFloat, itemSpacing: CoreFoundation.CGFloat)
+  public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func layout(in rect: CoreFoundation.CGRect)
+}
+public struct FlowGridLayoutItem {
+  public let content: DevicesUI.Layoutable & DevicesUI.Measurable
+  public init(content: DevicesUI.Layoutable & DevicesUI.Measurable)
+}
+public typealias FrameProjection = Swift.ClosedRange<CoreFoundation.CGFloat>
+extension Swift.ClosedRange where Bound == CoreFoundation.CGFloat {
+  public init(length: CoreFoundation.CGFloat, leadingInset: CoreFoundation.CGFloat = 0, trailingInset: CoreFoundation.CGFloat = 0)
+}
+public struct GeometryReader {
+  public init(content: @escaping (DevicesUI.GeometrySource) -> DevicesUI.ViewRenderable)
+}
+extension DevicesUI.GeometryReader : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public protocol GeometrySource {
+  var size: CoreFoundation.CGSize { get }
+  var frame: CoreFoundation.CGRect { get }
+}
+public struct GestureModifier<T> : DevicesUI.NativeViewRenderable where T : UIKit.UIGestureRecognizer {
+  public init(subject: DevicesUI.NativeViewRenderable, action: @escaping (T) -> Swift.Void, cancelsTouchesInView: Swift.Bool = false)
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+extension CoreFoundation.CGAffineTransform {
+  public var scale: Swift.Double {
+    get
+  }
+}
+extension DevicesUI.Gradient : DevicesUI.NativeViewRenderable {
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+public struct Gradient : Swift.Hashable {
+  public struct DefaultStyle : DevicesUI.GradientStyle {
+    public let config: DevicesUI.GradientConfig
+    public init(config: DevicesUI.GradientConfig)
+    @inlinable public func makeGradientConfig(context _: DevicesUI.ViewContext) -> DevicesUI.GradientConfig {
+			config
+		}
+  }
+  public init(style: DevicesUI.GradientStyle)
+  public static func == (_: DevicesUI.Gradient, _: DevicesUI.Gradient) -> Swift.Bool
+  public func hash(into _: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.Gradient {
+  public init(parts: [DevicesUI.GradientConfig.Part], type: DevicesUI.GradientConfig.Kind, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+  public init(startColor: UIKit.UIColor, endColor: UIKit.UIColor, type: DevicesUI.GradientConfig.Kind, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+  public func configure(_ gradientLayer: QuartzCore.CAGradientLayer, context: DevicesUI.ViewContext)
+}
+public struct GradientConfig : Swift.Equatable {
+  public struct Part : Swift.Equatable, Swift.Hashable {
+    public let color: UIKit.UIColor
+    public let location: CoreFoundation.CGFloat
+    public init(color: UIKit.UIColor, location: CoreFoundation.CGFloat)
+    public init(hex: Swift.Int64, location: CoreFoundation.CGFloat)
+    public static func == (a: DevicesUI.GradientConfig.Part, b: DevicesUI.GradientConfig.Part) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Kind : Swift.String, Swift.Equatable {
+    case axial
+    case radial
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let parts: [DevicesUI.GradientConfig.Part]
+  public let type: DevicesUI.GradientConfig.Kind
+  public let startPoint: CoreFoundation.CGPoint
+  public let endPoint: CoreFoundation.CGPoint
+  public var endColor: UIKit.UIColor {
+    get
+  }
+  public init(parts: [DevicesUI.GradientConfig.Part], type: DevicesUI.GradientConfig.Kind, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+  public init(startColor: UIKit.UIColor, endColor: UIKit.UIColor, type: DevicesUI.GradientConfig.Kind, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+  public static func == (a: DevicesUI.GradientConfig, b: DevicesUI.GradientConfig) -> Swift.Bool
+}
+extension DevicesUI.GradientConfig : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func gradient(_ style: DevicesUI.GradientStyle) -> DevicesUI.NativeViewRenderable {
+		let model = Gradient(style: style)
+		return gradient(model)
+	}
+  @inlinable public func gradient(_ config: DevicesUI.GradientConfig) -> DevicesUI.NativeViewRenderable {
+		let model = Gradient(style: Gradient.DefaultStyle(config: config))
+		return gradient(model)
+	}
+  public func gradient(_ model: DevicesUI.Gradient) -> DevicesUI.NativeViewRenderable
+}
+public protocol GradientStyle {
+  func makeGradientConfig(context: DevicesUI.ViewContext) -> DevicesUI.GradientConfig
+}
+public struct Gravity : Swift.Hashable {
+  public let horizontal: DevicesUI.HorizontalGravity
+  public let vertical: DevicesUI.VerticalGravity
+  public init(horizontal: DevicesUI.HorizontalGravity, vertical: DevicesUI.VerticalGravity)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: DevicesUI.Gravity, b: DevicesUI.Gravity) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.Gravity {
+  public static let top: DevicesUI.Gravity
+  public static let topLeading: DevicesUI.Gravity
+  public static let topTrailing: DevicesUI.Gravity
+  public static let center: DevicesUI.Gravity
+  public static let leading: DevicesUI.Gravity
+  public static let trailing: DevicesUI.Gravity
+  public static let bottom: DevicesUI.Gravity
+  public static let bottomLeading: DevicesUI.Gravity
+  public static let bottomTrailing: DevicesUI.Gravity
+  public func frame(ofSize size: CoreFoundation.CGSize, inParentArea bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+}
+extension DevicesUI.ViewRenderable {
+  public func gravity(_ gravity: DevicesUI.Gravity) -> DevicesUI.ViewRenderable
+  @inlinable public func gravity(horizontal: DevicesUI.HorizontalGravity = .center, vertical: DevicesUI.VerticalGravity = .center) -> DevicesUI.ViewRenderable {
+		gravity(Gravity(horizontal: horizontal, vertical: vertical))
+	}
+}
+public enum Greediness : Swift.Hashable {
+  case flexible(weight: CoreFoundation.CGFloat)
+  case intrinsic
+  public static let flexible: DevicesUI.Greediness
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: DevicesUI.Greediness, b: DevicesUI.Greediness) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.Measurable {
+  public func greedySize(width: Swift.Bool = true, height: Swift.Bool = true) -> DevicesUI.Measurable
+  public func greedyWidth() -> DevicesUI.Measurable
+  public func greedyHeight() -> DevicesUI.Measurable
+}
+extension DevicesUI.ViewRenderable {
+  public func greedySize() -> DevicesUI.ViewRenderable
+  public func greedyWidth() -> DevicesUI.ViewRenderable
+  public func greedyHeight() -> DevicesUI.ViewRenderable
+}
+extension DevicesUI.HStack {
+  public init(spacing: CoreFoundation.CGFloat = 0.0, @DevicesUI.StackItemsBuilder<DevicesUI.HStackItem> items: () -> [DevicesUI.HStackItem])
+}
+extension DevicesUI.StackItemsBuilder where StackItem == DevicesUI.HStackItem {
+  @inlinable public static func buildExpression(_ viewRenderable: DevicesUI.ViewRenderable) -> [StackItem] {
+		[viewRenderable.asHStackItem()]
+	}
+}
+public struct HStack {
+  public let items: [DevicesUI.HStackItem]
+  public let spacing: CoreFoundation.CGFloat
+  public init(items: [DevicesUI.HStackItem], spacing: CoreFoundation.CGFloat = 0.0)
+}
+extension DevicesUI.HStack : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public struct HStackItem {
+  public let content: DevicesUI.ViewRenderable
+  public let margins: UIKit.UIEdgeInsets
+  public let gravity: DevicesUI.VerticalGravity
+  public let greediness: DevicesUI.Greediness
+  public init(content: DevicesUI.ViewRenderable, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.VerticalGravity, greediness: DevicesUI.Greediness)
+  public static func spacer(weight: CoreFoundation.CGFloat) -> DevicesUI.HStackItem
+  public static func spacer(width: CoreFoundation.CGFloat) -> DevicesUI.HStackItem
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func asHStackItem(gravity: DevicesUI.VerticalGravity = .center, greediness: DevicesUI.Greediness = .intrinsic) -> DevicesUI.HStackItem {
+		HStackItem(content: self, gravity: gravity, greediness: greediness)
+	}
+}
+public struct HStackLayout : DevicesUI.Measurable, DevicesUI.Layoutable {
+  public let items: [DevicesUI.HStackLayoutItem]
+  public let spacing: CoreFoundation.CGFloat
+  public init(items: [DevicesUI.HStackLayoutItem], spacing: CoreFoundation.CGFloat = 0)
+  public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func layout(in bounds: CoreFoundation.CGRect)
+}
+public struct HStackLayoutItem : DevicesUI.Measurable, DevicesUI.Layoutable {
+  public let gravity: DevicesUI.VerticalGravity
+  public let measurable: DevicesUI.Measurable
+  public let layoutable: DevicesUI.Layoutable
+  public let margins: UIKit.UIEdgeInsets
+  public let greediness: DevicesUI.Greediness
+  public init(content: DevicesUI.Layoutable & DevicesUI.Measurable, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.VerticalGravity, greediness: DevicesUI.Greediness)
+  public init(measurable: DevicesUI.Measurable, layoutable: DevicesUI.Layoutable, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.VerticalGravity, greediness: DevicesUI.Greediness)
+  @inlinable public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize {
+		measurable.sizeThatFits(size, insets: margins)
+	}
+  @inlinable public func layout(in rect: CoreFoundation.CGRect) {
+		layoutable.layout(in: rect, insets: margins)
+	}
+}
+public protocol HashableViewRenderable : DevicesUI.ViewRenderable, Swift.Hashable {
+}
+extension DevicesUI.HashableViewRenderable {
+  public func eraseToAnyHashableViewRenderable() -> DevicesUI.AnyHashableViewRenderable
+}
+public struct AnyHashableViewRenderable : DevicesUI.HashableViewRenderable {
+  public let viewRenderable: DevicesUI.ViewRenderable
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+  public static func == (lhs: DevicesUI.AnyHashableViewRenderable, rhs: DevicesUI.AnyHashableViewRenderable) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public init(viewRenderable: DevicesUI.ViewRenderable, equal: @escaping (_ rhs: DevicesUI.ViewRenderable) -> Swift.Bool, hashing: @escaping (DevicesUI.ViewRenderable, inout Swift.Hasher) -> Swift.Void)
+  public init<V>(viewRenderable: V) where V : DevicesUI.HashableViewRenderable
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias HeaderCentralItem = DevicesUI.HStackItem
+public struct Header {
+  public let left: [DevicesUI.HeaderSideItem]
+  public let center: [DevicesUI.HeaderCentralItem]
+  public let right: [DevicesUI.HeaderSideItem]
+  public let spacing: CoreFoundation.CGFloat
+  public init(left: [DevicesUI.HeaderSideItem], center: [DevicesUI.HeaderCentralItem], right: [DevicesUI.HeaderSideItem], spacing: CoreFoundation.CGFloat = .zero)
+}
+extension DevicesUI.Header : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public typealias HeaderLayoutItem = DevicesUI.HStackLayoutItem
+public struct HeaderLayout : DevicesUI.Measurable, DevicesUI.Layoutable {
+  public let leftItems: [DevicesUI.HeaderLayoutItem]
+  public let centerItems: [DevicesUI.HeaderLayoutItem]
+  public let rightItems: [DevicesUI.HeaderLayoutItem]
+  public let spacing: CoreFoundation.CGFloat
+  public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func layout(in rect: CoreFoundation.CGRect)
+}
+public struct HeaderSideItem {
+  public let content: DevicesUI.ViewRenderable
+  public let margins: UIKit.UIEdgeInsets
+  public let gravity: DevicesUI.VerticalGravity
+  public init(content: DevicesUI.ViewRenderable, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.VerticalGravity)
+  public static func spacer(width: CoreFoundation.CGFloat) -> DevicesUI.HeaderSideItem
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func asHeaderSideItem(gravity: DevicesUI.VerticalGravity = .center) -> DevicesUI.HeaderSideItem {
+		HeaderSideItem(
+			content: self,
+			gravity: gravity
+		)
+	}
+}
+public protocol Highlightable {
+  var isHighlighted: Swift.Bool { get set }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func highlight(_ isHighlighted: Swift.Bool)
+}
+public enum HorizontalGravity : Swift.String {
+  case left
+  case center
+  case right
+  case justified
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension DevicesUI.HorizontalGravity {
+  public func projection(ofWidth width: CoreFoundation.CGFloat, inParentProjection bounds: DevicesUI.FrameProjection) -> DevicesUI.FrameProjection
+  public func projection(ofWidth width: CoreFoundation.CGFloat, inParentWidth bounds: CoreFoundation.CGFloat) -> DevicesUI.FrameProjection
+  public func originX(forWidth width: CoreFoundation.CGFloat, inParentProjection bounds: DevicesUI.FrameProjection) -> CoreFoundation.CGFloat
+  public func originX(forWidth width: CoreFoundation.CGFloat, inParentWidth bounds: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+}
+extension DevicesUI.HorizontalGravity {
+  public static func projection(ofWidth width: CoreFoundation.CGFloat, inParentProjection bounds: DevicesUI.FrameProjection, withInsetsProportion proportion: CoreFoundation.CGFloat) -> DevicesUI.FrameProjection
+}
+extension DevicesUI.Image : DevicesUI.NativeViewRenderable {
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+public struct Image {
+  public init(source: DevicesUI.ImageSource, contentMode: UIKit.UIView.ContentMode = .scaleToFill, initialContentMode: UIKit.UIView.ContentMode = .scaleAspectFit, initialContent: DevicesUI.ImageContent? = nil, failureContentMode: UIKit.UIView.ContentMode = .scaleAspectFit, failureContent: DevicesUI.ImageContent? = nil)
+  public init(local: DevicesCore.ImageID, contentMode: UIKit.UIView.ContentMode = .scaleToFill)
+  public init(remoteURL: Foundation.URL, hash: Swift.String? = nil, contentMode: UIKit.UIView.ContentMode = .scaleToFill, initialContentMode: UIKit.UIView.ContentMode = .scaleAspectFit, initialContent: DevicesUI.ImageContent? = nil, failureContentMode: UIKit.UIView.ContentMode = .scaleAspectFit, failureContent: DevicesUI.ImageContent? = nil)
+}
+public protocol ImageContent : DevicesUI.ImageSource {
+  func image(context: DevicesUI.ViewContext) -> UIKit.UIImage
+}
+extension DevicesUI.ImageContent {
+  public func loadImage(context: DevicesUI.ViewContext, _ completion: @escaping (Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void) -> DevicesCore.Cancellable
+}
+extension DevicesCore.ImageID where Self : DevicesUI.ImageContent {
+  @inlinable public func image(context: DevicesUI.ViewContext) -> UIKit.UIImage {
+		context[.imageProvider].image(for: self, logger: context[.logger])
+	}
+}
+public struct ImageIDContent : DevicesUI.ImageContent, Swift.Hashable {
+  public init(id: DevicesCore.ImageID)
+  public func image(context: DevicesUI.ViewContext) -> UIKit.UIImage
+  public static func == (lhs: DevicesUI.ImageIDContent, rhs: DevicesUI.ImageIDContent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+final public class ImageProviderObject : DevicesCore.ImageProvider, Foundation.ObservableObject {
+  public init(_ subject: DevicesCore.ImageProvider)
+  final public func getImage(for id: DevicesCore.ImageID) -> UIKit.UIImage?
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public protocol ImageSource {
+  func isImageSourceEqual(to another: DevicesUI.ImageSource) -> Swift.Bool
+  func loadImage(context: DevicesUI.ViewContext, _ completion: @escaping (Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void) -> DevicesCore.Cancellable
+}
+extension DevicesUI.ImageSource where Self : Swift.Equatable {
+  public func isImageSourceEqual(to another: DevicesUI.ImageSource) -> Swift.Bool
+}
+public struct ImageURLSource : DevicesUI.ImageSource, Swift.Hashable {
+  public init(url: Foundation.URL, renderingMode: UIKit.UIImage.RenderingMode = .automatic, hash: Swift.String?)
+  public func loadImage(context: DevicesUI.ViewContext, _ completion: @escaping (Swift.Result<UIKit.UIImage, Swift.Error>) -> Swift.Void) -> DevicesCore.Cancellable
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: DevicesUI.ImageURLSource, b: DevicesUI.ImageURLSource) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_Concurrency.MainActor(unsafe) final public class ImageView : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) final public var placeholder: DevicesUI.ImageContent? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(model: DevicesUI.Image, context: DevicesUI.ViewContext)
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override final public func didMoveToWindow()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) final public func update(_ model: DevicesUI.Image, context: DevicesUI.ViewContext)
+  @_Concurrency.MainActor(unsafe) @objc override final public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+extension DevicesUI.ViewRenderable {
+  public func inset(by insets: UIKit.UIEdgeInsets) -> DevicesUI.ViewRenderable
+  @inlinable public func insetBy(top: CoreFoundation.CGFloat = 0, bottom: CoreFoundation.CGFloat = 0, left: CoreFoundation.CGFloat = 0, right: CoreFoundation.CGFloat = 0) -> DevicesUI.ViewRenderable {
+		inset(by: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right))
+	}
+  @inlinable public func insetBy(dx: CoreFoundation.CGFloat = 0, dy: CoreFoundation.CGFloat = 0) -> DevicesUI.ViewRenderable {
+		inset(by: UIEdgeInsets(horizontal: dx, vertical: dy))
+	}
+  @inlinable public func inset(eachSide inset: CoreFoundation.CGFloat) -> DevicesUI.ViewRenderable {
+		self.inset(by: UIEdgeInsets(inset: inset))
+	}
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func interactive(_ isInteractive: Swift.Bool) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "interactive", subject: self) { view, _ in
+			view.isUserInteractionEnabled = isInteractive
+		}
+	}
+}
+public protocol InterfaceOrientationController {
+  var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask { get set }
+  func forceOrientation(_ orientation: UIKit.UIInterfaceOrientation)
+  func lockOrientation(_ mask: UIKit.UIInterfaceOrientationMask)
+  func lockCurrentOrientation()
+  func unlockOrientation()
+}
+final public class InterfaceOrientationControllerImpl : DevicesUI.InterfaceOrientationController {
+  final public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    get
+    set
+  }
+  public init(interfaceOrientationProvider: DevicesUI.InterfaceOrientationProvider = UIApplication.shared, initialSupportedOrientations: UIKit.UIInterfaceOrientationMask = .portrait)
+  final public func forceOrientation(_ orientation: UIKit.UIInterfaceOrientation)
+  final public func lockOrientation(_ mask: UIKit.UIInterfaceOrientationMask)
+  final public func lockCurrentOrientation()
+  final public func unlockOrientation()
+  @objc deinit
+}
+public protocol InterfaceOrientationProvider {
+  var interfaceOrientation: UIKit.UIInterfaceOrientation { get }
+}
+extension DevicesUI.ViewRenderable {
+  public func keyboardArea() -> DevicesUI.ViewRenderable
+}
+public enum KeyboardEvent : Swift.Equatable {
+  case notification(DevicesUI.KeyboardNotification)
+  case changeHeightFromTrackingView
+  public static func == (a: DevicesUI.KeyboardEvent, b: DevicesUI.KeyboardEvent) -> Swift.Bool
+}
+public struct KeyboardNotification : Swift.Equatable {
+  public enum Stage : Swift.Equatable {
+    case willShow
+    case didShow
+    case willChangeFrame
+    case didChangeFrame
+    case willHide
+    case didHide
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: DevicesUI.KeyboardNotification.Stage, b: DevicesUI.KeyboardNotification.Stage) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let stage: DevicesUI.KeyboardNotification.Stage
+  public let duration: Foundation.TimeInterval
+  public let animationCurve: UIKit.UIView.AnimationCurve
+  public let startFrame: CoreFoundation.CGRect
+  public let finalFrame: CoreFoundation.CGRect
+  public init(stage: DevicesUI.KeyboardNotification.Stage, duration: Foundation.TimeInterval, animationCurve: UIKit.UIView.AnimationCurve, startFrame: CoreFoundation.CGRect, finalFrame: CoreFoundation.CGRect)
+  public func keyboardHeight(in view: UIKit.UIView) -> CoreFoundation.CGFloat
+  public static func keyboardHeight(frame: CoreFoundation.CGRect, in view: UIKit.UIView) -> CoreFoundation.CGFloat
+  public func keyboardFrame(in view: UIKit.UIView) -> CoreFoundation.CGRect
+  public static func keyboardFrame(frame: CoreFoundation.CGRect, in view: UIKit.UIView) -> CoreFoundation.CGRect
+  public static func == (a: DevicesUI.KeyboardNotification, b: DevicesUI.KeyboardNotification) -> Swift.Bool
+}
+public enum KeyboardStatus : Swift.Equatable {
+  case hidden
+  case shown(frame: CoreFoundation.CGRect)
+  public var frame: CoreFoundation.CGRect {
+    get
+  }
+  public var height: CoreFoundation.CGFloat {
+    get
+  }
+  public static func == (a: DevicesUI.KeyboardStatus, b: DevicesUI.KeyboardStatus) -> Swift.Bool
+}
+public protocol KeyboardTracker {
+  var keyboardLastUpdate: DevicesCore.Property<DevicesUI.KeyboardUpdate> { get }
+  var trackingView: UIKit.UIView { get }
+}
+@_hasMissingDesignatedInitializers final public class KeyboardTrackerImpl : DevicesUI.KeyboardTracker {
+  final public var keyboardLastUpdate: DevicesCore.Property<DevicesUI.KeyboardUpdate> {
+    get
+  }
+  final public var trackingView: UIKit.UIView {
+    get
+  }
+  convenience public init(viewController: UIKit.UIViewController, notificationCenter: Foundation.NotificationCenter = .default)
+  convenience public init(view: @escaping () -> UIKit.UIView?, notificationCenter: Foundation.NotificationCenter = .default)
+  @objc deinit
+}
+public typealias KeyboardTrackingWrapperFactory = DevicesCore.Factory<UIKit.UIView?, UIKit.UIView>
+extension DevicesCore.Factory where Arg == UIKit.UIView?, Item == UIKit.UIView {
+  public init(windowProvider: @escaping () -> UIKit.UIWindow?, notificationSignal: DevicesCore.Signal<DevicesUI.KeyboardNotification>, keyboardLastUpdate: DevicesCore.MutableProperty<DevicesUI.KeyboardUpdate>)
+}
+public struct KeyboardUpdate : Swift.Equatable {
+  public let event: DevicesUI.KeyboardEvent
+  public let status: DevicesUI.KeyboardStatus
+  public init(event: DevicesUI.KeyboardEvent, status: DevicesUI.KeyboardStatus)
+  public static func == (a: DevicesUI.KeyboardUpdate, b: DevicesUI.KeyboardUpdate) -> Swift.Bool
+}
+extension DevicesUI.NativeViewRenderable {
+  public func animatableLayout(_ animationDuration: Foundation.TimeInterval) -> DevicesUI.NativeViewRenderable
+}
+public protocol Layoutable {
+  func layout(in rect: CoreFoundation.CGRect)
+}
+extension DevicesUI.Layoutable {
+  public func layout(in rect: CoreFoundation.CGRect, insets: UIKit.UIEdgeInsets)
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func longPress(action: @escaping () -> Swift.Void) -> DevicesUI.ViewRenderable {
+		GestureModifier<UILongPressGestureRecognizer>(
+			subject: self,
+			action: { _ in action() }
+		)
+	}
+}
+extension DevicesUI.NativeViewRenderable {
+  public func mask(_ mask: DevicesUI.NativeViewRenderable) -> DevicesUI.NativeViewRenderable
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class MaskedScrollView : UIKit.UIScrollView {
+  @_Concurrency.MainActor(unsafe) public init(topFade: CoreFoundation.CGFloat, bottomFade: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @objc deinit
+}
+public protocol Measurable {
+  func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+extension DevicesUI.Measurable {
+  public func sizeThatFits(_ size: CoreFoundation.CGSize, insets: UIKit.UIEdgeInsets) -> CoreFoundation.CGSize
+}
+extension DevicesUI.Measurable {
+  public func sizeWithWidthNotLessThenWidthOf(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func sizeWithHeightNotLessThenHeightOf(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+public struct MeasurableCache {
+  public init(subject: DevicesUI.Measurable, limit: Swift.Int, scale: CoreFoundation.CGFloat = UIScreen.main.scale)
+  public mutating func removeAll()
+  public mutating func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+public struct MultilineText {
+  public init(text: DevicesCore.MutableProperty<Swift.String>, style: DevicesUI.MultilineTextStyle, isFirstResponder: DevicesCore.MutableProperty<Swift.Bool>, shouldReplaceText: @escaping (Swift.String) -> Swift.Bool = { _ in true })
+}
+extension DevicesUI.MultilineText : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public struct MultilineTextConfig {
+  public init(attributes: [Foundation.NSAttributedString.Key : Any])
+}
+public protocol MultilineTextStyle {
+  func makeMultilineTextConfig(context: DevicesUI.ViewContext) -> DevicesUI.MultilineTextConfig
+}
+public protocol MultipleSubjectView : DevicesUI.View {
+  var subjects: [DevicesUI.View] { get }
+}
+extension DevicesUI.MultipleSubjectView {
+  @inlinable public func add(to container: UIKit.UIView) {
+		subjects.forEach {
+			$0.add(to: container)
+		}
+	}
+  @inlinable public func remove(from container: UIKit.UIView) {
+		subjects.forEach {
+			$0.remove(from: container)
+		}
+	}
+}
+extension DevicesUI.NativeView {
+  @inlinable public func accessible(context: DevicesUI.ViewContext, value: DevicesUI.StringContent?, traits: UIKit.UIAccessibilityTraits = .none, accessibilityCustomActions: [UIKit.UIAccessibilityCustomAction] = [], hint: DevicesUI.StringContent? = nil) -> DevicesUI.NativeView {
+		uiView.isAccessibilityElement = true
+		uiView.accessibilityValue = value?.string(context: context)
+		uiView.accessibilityTraits = traits
+		uiView.accessibilityCustomActions = accessibilityCustomActions
+		uiView.accessibilityHint = hint?.string(context: context)
+		return uiView
+	}
+}
+public protocol NativeView : DevicesUI.View {
+  var uiView: UIKit.UIView { get }
+}
+extension DevicesUI.NativeView {
+  @inlinable public func add(to container: UIKit.UIView) {
+		container.addSubview(uiView)
+	}
+  @inlinable public func remove(from container: UIKit.UIView) {
+		guard uiView.superview === container else {
+			return
+		}
+		uiView.removeFromSuperview()
+	}
+  public func layout(in rect: CoreFoundation.CGRect)
+  public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+extension UIKit.UIView : DevicesUI.NativeView {
+  @_Concurrency.MainActor(unsafe) public var uiView: UIKit.UIView {
+    get
+  }
+}
+public protocol NativeViewRenderable : DevicesUI.ViewRenderable {
+  func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View {
+		renderNativeView(context: context, reusing: view)
+	}
+  @inlinable public func renderNativeView(context: DevicesUI.ViewContext) -> DevicesUI.NativeView {
+		renderNativeView(context: context, reusing: nil)
+	}
+  @inlinable public func withWrapped<T>(_ value: T?, transform: (DevicesUI.NativeViewRenderable, T) -> DevicesUI.NativeViewRenderable) -> DevicesUI.NativeViewRenderable {
+		if let value = value {
+			return transform(self, value)
+		}
+		return self
+	}
+  @inlinable public func whenSatisfy(_ condition: Swift.Bool, transform: (DevicesUI.NativeViewRenderable) -> DevicesUI.NativeViewRenderable) -> DevicesUI.NativeViewRenderable {
+		if condition {
+			return transform(self)
+		}
+		return self
+	}
+}
+extension DevicesUI.ViewRenderable {
+  public func native() -> DevicesUI.NativeViewWrapper
+  public func makeUIView(using context: DevicesUI.ViewContext) -> UIKit.UIView
+  public func makeUIView(using context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> UIKit.UIView
+}
+public struct NativeViewWrapper : DevicesUI.NativeViewRenderable, DevicesUI.ConcreteViewRenderable {
+  public func renderConcreteView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> UIKit.UIView
+  @inlinable @_transparent public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View {
+		renderConcreteView(context: context, reusing: view)
+	}
+  public typealias ConcreteView = UIKit.UIView
+}
+extension DevicesUI.ViewRenderable {
+  public func offset(x: CoreFoundation.CGFloat = 0, y: CoreFoundation.CGFloat = 0, sizing: DevicesUI.OffsetSizing = .shift) -> DevicesUI.ViewRenderable
+}
+public enum OffsetSizing {
+  case shift
+  case symmetric
+  case contentOnly
+  public static func == (a: DevicesUI.OffsetSizing, b: DevicesUI.OffsetSizing) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func zOrder(_ order: Swift.Int) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "zOrder", subject: self) { view, _ in
+			view.layer.zPosition = CGFloat(order)
+		}
+	}
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func pan() -> DevicesUI.NativeViewRenderable {
+		GestureModifier<UIPanGestureRecognizer>(subject: self) { (recognizer: UIPanGestureRecognizer) in
+			if let view = recognizer.view, recognizer.state == .began || recognizer.state == .changed {
+				let translation = recognizer.translation(in: nil)
+				var center = CGPoint(
+					x: view.center.x + translation.x,
+					y: view.center.y
+				)
+
+				if let window = UIApplication.shared.firstKeyWindow {
+					let previewRect = view.frame.applying(view.transform)
+					let widthSlice = (previewRect.width - window.frame.width) / 2.0
+					if center.x <= window.center.x - widthSlice ||
+						center.x >= window.center.x + widthSlice {
+						center.x = view.center.x
+					}
+				}
+
+				view.center = center
+				recognizer.setTranslation(CGPoint.zero, in: nil)
+			}
+		}
+	}
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func pinch() -> DevicesUI.NativeViewRenderable {
+		GestureModifier<UIPinchGestureRecognizer>(subject: self) {
+			if let view = $0.view {
+				let scaled = (view.transform.scale * $0.scale)
+
+				guard scaled <= 2.5, scaled >= 1 else {
+					return
+				}
+
+				view.transform = view.transform.scaledBy(x: $0.scale, y: $0.scale)
+				$0.scale = 1
+			}
+		}
+	}
+}
+public struct PlainButtonStyle : DevicesUI.ButtonStyle {
+  public init()
+  public func transformContent(config: DevicesUI.ButtonStyleConfig, context: DevicesUI.ViewContext) -> DevicesUI.ViewRenderable
+}
+public struct PlainScrollListUpdater : DevicesUI.ScrollListUpdater {
+  public init()
+  public func update(_ collectionView: UIKit.UICollectionView, source _: [DevicesUI.ScrollListItem], target items: [DevicesUI.ScrollListItem], context _: DevicesUI.ViewContext, setData: @escaping ([DevicesUI.ScrollListItem]) -> Swift.Void)
+}
+extension DevicesUI.ViewRenderable {
+  public func resizeTo(width: CoreFoundation.CGFloat? = nil, height: CoreFoundation.CGFloat? = nil) -> DevicesUI.ViewRenderable
+  public func resizeTo(minWidth: CoreFoundation.CGFloat? = nil, maxWidth: CoreFoundation.CGFloat? = nil, minHeight: CoreFoundation.CGFloat? = nil, maxHeight: CoreFoundation.CGFloat? = nil) -> DevicesUI.ViewRenderable
+  @inlinable public func resizeTo(_ size: CoreFoundation.CGSize) -> DevicesUI.ViewRenderable {
+		resizeTo(width: size.width, height: size.height)
+	}
+  @inlinable public func resizeTo(square: CoreFoundation.CGFloat) -> DevicesUI.ViewRenderable {
+		resizeTo(width: square, height: square)
+	}
+}
+extension DevicesCore.PluralNounStringID {
+  @inlinable public func string(context: DevicesUI.ViewContext, count: Swift.Int) -> Swift.String {
+		ArgumentsStringID(stringID: self, args: [count]).string(context: context)
+	}
+}
+extension DevicesCore.Property where Value == DevicesUI.KeyboardNotification {
+  @inlinable public static func keyboardFrame(notificationCenter: Foundation.NotificationCenter = .default) -> DevicesCore.Property<CoreFoundation.CGRect> {
+		keyboardFrame(notificationSignal: notificationCenter.keyboardNotification())
+	}
+  public static func keyboardFrame(notificationSignal: DevicesCore.Signal<DevicesUI.KeyboardNotification>) -> DevicesCore.Property<CoreFoundation.CGRect>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+@propertyWrapper public struct PublishedObject<Value> {
+  public init(wrappedValue: Value) where Value : Combine.ObservableObject, Value.ObjectWillChangePublisher == Combine.ObservableObjectPublisher
+  public init<V>(wrappedValue: V?) where Value == V?, V : Combine.ObservableObject, V.ObjectWillChangePublisher == Combine.ObservableObjectPublisher
+  public var wrappedValue: Value {
+    get
+    set
+  }
+  public static subscript<EnclosingSelf>(_enclosingInstance observed: EnclosingSelf, wrapped _: Swift.ReferenceWritableKeyPath<EnclosingSelf, Value>, storage storageKeyPath: Swift.ReferenceWritableKeyPath<EnclosingSelf, DevicesUI.PublishedObject<Value>>) -> Value where EnclosingSelf : Combine.ObservableObject, EnclosingSelf.ObjectWillChangePublisher == Combine.ObservableObjectPublisher {
+    get
+    set
+  }
+  public static subscript<EnclosingSelf>(_enclosingInstance observed: EnclosingSelf, projected _: Swift.KeyPath<EnclosingSelf, DevicesUI.PublishedObject<Value>.Publisher>, storage storageKeyPath: Swift.ReferenceWritableKeyPath<EnclosingSelf, DevicesUI.PublishedObject<Value>>) -> DevicesUI.PublishedObject<Value>.Publisher where EnclosingSelf : Combine.ObservableObject, EnclosingSelf.ObjectWillChangePublisher == Combine.ObservableObjectPublisher {
+    get
+  }
+  public typealias Publisher = Combine.AnyPublisher<Value, Swift.Never>
+  public var projectedValue: DevicesUI.PublishedObject<Value>.Publisher {
+    mutating get
+  }
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Published where Value : Combine.ObservableObject {
+  public init(wrappedValue _: Value)
+}
+@objc @_hasMissingDesignatedInitializers final public class PulseAnimatedLayer : QuartzCore.CALayer {
+  @objc override dynamic public init(layer: Any)
+  public init(numberOfPulse: Swift.Float = .infinity, initialOpacity: Swift.Float = 0.4, radius: CoreFoundation.CGFloat, position: CoreFoundation.CGPoint, duration: Foundation.TimeInterval = 1, delay: Foundation.TimeInterval = 0)
+  final public func update(position: CoreFoundation.CGPoint, radius: CoreFoundation.CGFloat)
+  @objc deinit
+}
+public protocol RefreshViewRenderable : DevicesUI.ViewRenderable {
+  func renderRefreshControl(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> UIKit.UIRefreshControl
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func cornerRadius(clipsToBounds: Swift.Bool = true, computeCornerRadius: @escaping (CoreFoundation.CGSize) -> CoreFoundation.CGFloat) -> DevicesUI.ConcreteLayoutModifier {
+		ConcreteLayoutModifier(label: "cornerRadius", subject: self) { view, bounds in
+			view.layer.cornerRadius = computeCornerRadius(bounds.size)
+			view.clipsToBounds = clipsToBounds
+		}
+	}
+  @inlinable public func circle(clipsToBounds: Swift.Bool = true) -> DevicesUI.ConcreteLayoutModifier {
+		cornerRadius(
+			clipsToBounds: clipsToBounds,
+			computeCornerRadius: { min($0.width, $0.height) / 2 }
+		)
+	}
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class RenderingCollectionCell : UIKit.UICollectionViewCell, DevicesUI.ViewRenderer {
+  @_Concurrency.MainActor(unsafe) open var view: DevicesUI.View? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+final public class RenderingNavigationBarCoordinator : DevicesUI.RenderingScreenCoordinator {
+  public init()
+  final public func bind(to screen: DevicesUI.RenderingScreen)
+  final public func viewWillAppear()
+  final public func viewWillDisappear()
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class RenderingScreen : UIKit.UIViewController, DevicesCore.Screen {
+  @_Concurrency.MainActor(unsafe) public var context: DevicesUI.ViewContext {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var model: DevicesUI.ViewRenderable {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public init(model: DevicesUI.ViewRenderable, context: DevicesUI.ViewContext, coordinator: DevicesUI.RenderingScreenCoordinator? = nil)
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) final public func set(_ model: DevicesUI.ViewRenderable, context: DevicesUI.ViewContext, animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillLayoutSubviews()
+  @objc deinit
+}
+public protocol RenderingScreenCoordinator {
+  func bind(to screen: DevicesUI.RenderingScreen)
+  func viewDidLoad()
+  func viewWillAppear()
+  func viewDidAppear()
+  func viewWillDisappear()
+  func viewDidDisappear()
+  func viewWillLayoutSubviews()
+  func modelDidUpdate()
+}
+extension DevicesUI.RenderingScreenCoordinator {
+  public func bind(to _: DevicesUI.RenderingScreen)
+  public func viewDidLoad()
+  public func viewWillAppear()
+  public func viewDidAppear()
+  public func viewWillDisappear()
+  public func viewDidDisappear()
+  public func viewWillLayoutSubviews()
+  public func modelDidUpdate()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class RenderingTableCell : UIKit.UITableViewCell, DevicesUI.ViewRenderer {
+  @_Concurrency.MainActor(unsafe) public var view: DevicesUI.View? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class RenderingView : UIKit.UIView, DevicesUI.ViewRenderer {
+  @_Concurrency.MainActor(unsafe) public var view: DevicesUI.View? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) public init(view: DevicesUI.View)
+  @inlinable @_Concurrency.MainActor(unsafe) convenience public init(model: DevicesUI.ViewRenderable, context: DevicesUI.ViewContext) {
+		self.init(view: model.renderView(context: context))
+	}
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+extension DevicesUI.Measurable {
+  public func resizeTo(width: CoreFoundation.CGFloat? = nil, height: CoreFoundation.CGFloat? = nil) -> DevicesUI.Measurable
+  @inlinable public func resizeTo(_ size: CoreFoundation.CGSize) -> DevicesUI.Measurable {
+		resizeTo(width: size.width, height: size.height)
+	}
+}
+public typealias ReuseID = DevicesCore.Tagged<DevicesUI.ReuseIDTag, Swift.String>
+extension DevicesCore.Tagged where Tag == DevicesUI.ReuseIDTag, T == Swift.String {
+  public static var `default`: DevicesUI.ReuseID {
+    get
+  }
+}
+public enum ReuseIDTag {
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func rotate(_ angle: CoreFoundation.CGFloat) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "rotate", subject: self) { view, _ in
+			view.transform = CGAffineTransform(rotationAngle: angle)
+		}
+	}
+}
+extension DevicesUI.ViewRenderable {
+  public func safeArea(_ insets: UIKit.UIEdgeInsets = .zero, excludedEdges: DevicesUI.Edges = []) -> DevicesUI.ViewRenderable
+}
+public protocol ScreenOrientationController {
+  var deviceOrientation: DevicesCore.Property<DevicesUI.DeviceOrientation> { get }
+  var interfaceOrientation: DevicesCore.Property<UIKit.UIInterfaceOrientation> { get }
+  func allowInterfaceRotation()
+  func restoreOriginalOrientation()
+  func lockCurrentOrientation()
+  func unlockOrientation()
+  func forceOrientation(_ interfaceOrientation: UIKit.UIInterfaceOrientation)
+  func lockOrientations(_ interfaceOrientationMask: UIKit.UIInterfaceOrientationMask)
+}
+@_hasMissingDesignatedInitializers final public class ScreenOrientationControllerImpl {
+  final public var interfaceOrientationProperty: DevicesCore.Property<UIKit.UIInterfaceOrientation> {
+    get
+    set
+  }
+  convenience public init(interfaceOrientationController: DevicesUI.InterfaceOrientationController, assertionCaller: DevicesCore.AssertionCaller, interfaceOrientationProvider: DevicesUI.InterfaceOrientationProvider = UIApplication.shared, orientationUpdater: DevicesCore.DeviceOrientationUpdater = UIDevice.current, notificationCenter: Foundation.NotificationCenter = .default)
+  @objc deinit
+}
+extension DevicesUI.ScreenOrientationControllerImpl : DevicesUI.ScreenOrientationController {
+  final public var deviceOrientation: DevicesCore.Property<DevicesUI.DeviceOrientation> {
+    get
+  }
+  final public var interfaceOrientation: DevicesCore.Property<UIKit.UIInterfaceOrientation> {
+    get
+  }
+  final public func allowInterfaceRotation()
+  final public func restoreOriginalOrientation()
+  final public func lockCurrentOrientation()
+  final public func unlockOrientation()
+  final public func lockOrientations(_ interfaceOrientationMask: UIKit.UIInterfaceOrientationMask)
+  final public func forceOrientation(_ interfaceOrientation: UIKit.UIInterfaceOrientation)
+}
+public struct ScrollGeometryReader {
+  public init(content: @escaping (DevicesUI.ScrollGeometrySource) -> DevicesUI.ScrollViewRenderable)
+}
+extension DevicesUI.ScrollGeometryReader : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public protocol ScrollGeometrySource {
+  var contentSize: CoreFoundation.CGSize { get }
+  var bounds: CoreFoundation.CGRect { get }
+}
+extension DevicesUI.ScrollList : DevicesUI.ScrollListViewRenderable {
+  public func renderScrollListView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.ScrollListView
+}
+public struct ScrollList {
+  public let items: [DevicesUI.ScrollListItem]
+  @DevicesCore.MutableProperty @_projectedValueProperty($contentOffset) public var contentOffset: CoreFoundation.CGFloat {
+    get
+    nonmutating set
+    nonmutating _modify
+  }
+  public var $contentOffset: DevicesCore.MutableProperty<CoreFoundation.CGFloat> {
+    get
+  }
+  public init(items: [DevicesUI.ScrollListItem], style: DevicesUI.ScrollListStyle, offset: DevicesCore.MutableProperty<CoreFoundation.CGFloat> = MutableProperty(.zero), refreshItem: DevicesUI.RefreshViewRenderable? = nil, refreshItemTopEdgeOffset: CoreFoundation.CGFloat = 0, background: DevicesUI.NativeViewRenderable? = nil, scrollListUpdater: DevicesUI.ScrollListUpdater = PlainScrollListUpdater(), offsetModifier: DevicesUI.ScrollListOffsetModifier = ScrollListProposedOffsetModifier(), debugLabel: Swift.StaticString? = nil, didEndDragging: ((_ view: DevicesUI.ScrollListView, _ decelerate: Swift.Bool) -> Swift.Void)? = nil, didEndDecelerating: ((_ view: DevicesUI.ScrollListView) -> Swift.Void)? = nil, didScroll: ((_ view: DevicesUI.ScrollListView) -> Swift.Void)? = nil)
+  public init(sections: [DevicesUI.ScrollListSection], style: DevicesUI.ScrollListStyle, offset: DevicesCore.MutableProperty<CoreFoundation.CGFloat> = MutableProperty(.zero), refreshItem: DevicesUI.RefreshViewRenderable? = nil, refreshItemTopEdgeOffset: CoreFoundation.CGFloat = 0, background: DevicesUI.NativeViewRenderable? = nil, scrollListUpdater: DevicesUI.ScrollListUpdater = PlainScrollListUpdater(), offsetModifier: DevicesUI.ScrollListOffsetModifier = ScrollListProposedOffsetModifier(), debugLabel: Swift.StaticString? = nil, didEndDragging: ((_ view: DevicesUI.ScrollListView, _ decelerate: Swift.Bool) -> Swift.Void)? = nil, didEndDecelerating: ((_ view: DevicesUI.ScrollListView) -> Swift.Void)? = nil, didScroll: ((_ view: DevicesUI.ScrollListView) -> Swift.Void)? = nil)
+}
+extension DevicesUI.ScrollListViewRenderable {
+  public func resizeToCurrentPage() -> DevicesUI.ScrollListViewRenderable
+}
+final public class ScrollListDidEndHandler {
+  public init(geometry: DevicesUI.ScrollGeometrySource, offset: DevicesCore.MutableProperty<CoreFoundation.CGFloat>, endListHandler: @escaping () -> Swift.Void)
+  final public func asMutableProperty() -> DevicesCore.MutableProperty<CoreFoundation.CGFloat>
+  @objc deinit
+}
+extension DevicesUI.ScrollListItem : DevicesUI.ContentDifferentiable {
+  public var differenceID: DevicesUI.ScrollListItem {
+    get
+  }
+  public func isContentEqual(to source: DevicesUI.ScrollListItem) -> Swift.Bool
+  public typealias DifferenceID = DevicesUI.ScrollListItem
+}
+public struct ScrollListItem : Swift.Hashable {
+  public let content: DevicesUI.ViewRenderable
+  public let screenHeader: DevicesUI.ViewRenderable?
+  public init<E>(content: E, screenHeader: DevicesUI.ViewRenderable? = nil, reuseID: DevicesUI.ReuseID = .default, onWillShow: (() -> Swift.Void)? = nil, onDidHide: (() -> Swift.Void)? = nil, hash: @escaping (E, inout Swift.Hasher) -> Swift.Void = { _, _ in }, equals: @escaping (E, E) -> Swift.Bool = { _, _ in false }) where E : DevicesUI.ViewRenderable
+  public static func == (lhs: DevicesUI.ScrollListItem, rhs: DevicesUI.ScrollListItem) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.ScrollListItem {
+  @inlinable public init<E>(content: E, screenHeader: DevicesUI.ViewRenderable? = nil, reuseID: DevicesUI.ReuseID = .default, onWillShow: (() -> Swift.Void)? = nil, onDidHide: (() -> Swift.Void)? = nil) where E : DevicesUI.ViewRenderable, E : Swift.Hashable {
+		self.init(
+			content: content,
+			screenHeader: screenHeader,
+			reuseID: reuseID,
+			onWillShow: onWillShow,
+			onDidHide: onDidHide,
+			hash: { $0.hash(into: &$1) },
+			equals: ==
+		)
+	}
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func asScrollListItem(screenHeader: DevicesUI.ViewRenderable? = nil, reuseID: DevicesUI.ReuseID = .default, onWillShow: (() -> Swift.Void)? = nil, onDidHide: (() -> Swift.Void)? = nil, hash: @escaping (Self, inout Swift.Hasher) -> Swift.Void = { _, _ in }, equals: @escaping (Self, Self) -> Swift.Bool = { _, _ in false }) -> DevicesUI.ScrollListItem {
+		ScrollListItem(
+			content: self,
+			screenHeader: screenHeader,
+			reuseID: reuseID,
+			onWillShow: onWillShow,
+			onDidHide: onDidHide,
+			hash: hash,
+			equals: equals
+		)
+	}
+}
+extension DevicesUI.ViewRenderable where Self : Swift.Hashable {
+  @inlinable public func asScrollListItem(screenHeader: DevicesUI.ViewRenderable? = nil, reuseID: DevicesUI.ReuseID = .default, onWillShow: (() -> Swift.Void)? = nil, onDidHide: (() -> Swift.Void)? = nil) -> DevicesUI.ScrollListItem {
+		ScrollListItem(
+			content: self,
+			screenHeader: screenHeader,
+			reuseID: reuseID,
+			onWillShow: onWillShow,
+			onDidHide: onDidHide
+		)
+	}
+}
+public protocol ScrollListLayout {
+  func computeSize(forItemAt index: Swift.Int, thatFits size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  func preferredSize(itemsSize: CoreFoundation.CGSize, thatFits size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+public protocol ScrollListOffsetModifier {
+  func targetContentOffset(scrollList: DevicesUI.ScrollList, collectionViewLayout: UIKit.UICollectionViewFlowLayout, proposedContentOffset: CoreFoundation.CGPoint, scrollingVelocity: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+}
+public struct ScrollListPagingModifier : DevicesUI.ScrollListOffsetModifier {
+  public enum Anchor {
+    case leading
+    case center
+    public static func == (a: DevicesUI.ScrollListPagingModifier.Anchor, b: DevicesUI.ScrollListPagingModifier.Anchor) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(anchor: DevicesUI.ScrollListPagingModifier.Anchor)
+  public func targetContentOffset(scrollList: DevicesUI.ScrollList, collectionViewLayout: UIKit.UICollectionViewFlowLayout, proposedContentOffset: CoreFoundation.CGPoint, scrollingVelocity: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+}
+public struct ScrollListProposedOffsetModifier : DevicesUI.ScrollListOffsetModifier {
+  public init()
+  public func targetContentOffset(scrollList _: DevicesUI.ScrollList, collectionViewLayout _: UIKit.UICollectionViewFlowLayout, proposedContentOffset: CoreFoundation.CGPoint, scrollingVelocity _: CoreFoundation.CGPoint) -> CoreFoundation.CGPoint
+}
+public struct ScrollListSection {
+  public init(header: DevicesUI.ScrollListItem? = nil, items: [DevicesUI.ScrollListItem], footer: DevicesUI.ScrollListItem? = nil)
+}
+extension DevicesUI.ScrollListSection {
+  public init<E, F>(header: E, items: [DevicesUI.ScrollListItem], footer: F) where E : DevicesUI.ViewRenderable, F : DevicesUI.ViewRenderable
+  public init<E>(header: E, items: [DevicesUI.ScrollListItem]) where E : DevicesUI.ViewRenderable
+  public init<E>(items: [DevicesUI.ScrollListItem], footer: E) where E : DevicesUI.ViewRenderable
+  public init(header: DevicesUI.ViewRenderable?, items: [DevicesUI.ScrollListItem], footer: DevicesUI.ViewRenderable?)
+}
+extension DevicesUI.ScrollListViewRenderable {
+  public func resizeScrollList(using transform: @escaping (_ fittingSize: CoreFoundation.CGSize, _ view: DevicesUI.ScrollListView) -> CoreFoundation.CGSize) -> DevicesUI.ScrollListViewRenderable
+}
+public struct ScrollListStyle {
+  public enum ScrollDirection {
+    case horizontal
+    case vertical
+    public static func == (a: DevicesUI.ScrollListStyle.ScrollDirection, b: DevicesUI.ScrollListStyle.ScrollDirection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ContentInsetAdjustmentBehavior {
+    case never
+    case scrollableAxes
+    case always
+    public static func == (a: DevicesUI.ScrollListStyle.ContentInsetAdjustmentBehavior, b: DevicesUI.ScrollListStyle.ContentInsetAdjustmentBehavior) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ContentMeasuringMode {
+    case infinite
+    case bounds
+    public static func == (a: DevicesUI.ScrollListStyle.ContentMeasuringMode, b: DevicesUI.ScrollListStyle.ContentMeasuringMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(itemsSpacing: CoreFoundation.CGFloat = 0.0, scrollDirection: DevicesUI.ScrollListStyle.ScrollDirection, contentMeasuringMode: DevicesUI.ScrollListStyle.ContentMeasuringMode = .infinite, contentInset: UIKit.UIEdgeInsets = .zero, contentInsetAdjustmentBehavior: DevicesUI.ScrollListStyle.ContentInsetAdjustmentBehavior = .never, decelerationRate: UIKit.UIScrollView.DecelerationRate = .normal, offsetMode: DevicesUI.ScrollOffsetMode = .relative(anchor: .leading), clampsOffset: Swift.Bool = true, estimatedSize: CoreFoundation.CGFloat = 0, showsScrollIndicator: Swift.Bool = false, indicatorStyle: UIKit.UIScrollView.IndicatorStyle = .default)
+}
+public protocol ScrollListUpdater {
+  func update(_ collectionView: UIKit.UICollectionView, source: [DevicesUI.ScrollListItem], target: [DevicesUI.ScrollListItem], context: DevicesUI.ViewContext, setData: @escaping ([DevicesUI.ScrollListItem]) -> Swift.Void)
+}
+public protocol ScrollListView : DevicesUI.ScrollView {
+  var model: DevicesUI.ScrollList { get }
+  var layout: DevicesUI.ScrollListLayout { get }
+  var visibleIndexes: [Swift.Int] { get }
+}
+public protocol ScrollListViewRenderable : DevicesUI.ScrollViewRenderable {
+  func renderScrollListView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.ScrollListView
+}
+extension DevicesUI.ScrollListViewRenderable {
+  @inlinable public func renderScrollView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.ScrollView {
+		renderScrollListView(context: context, reusing: view)
+	}
+  @inlinable public func renderScrollListView(context: DevicesUI.ViewContext) -> DevicesUI.ScrollListView {
+		renderScrollListView(context: context, reusing: nil)
+	}
+}
+public enum ScrollOffsetMode {
+  public enum Anchor {
+    case leading
+    case center
+    case trailing
+    public static func == (a: DevicesUI.ScrollOffsetMode.Anchor, b: DevicesUI.ScrollOffsetMode.Anchor) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case relative(anchor: DevicesUI.ScrollOffsetMode.Anchor)
+  case absolute
+}
+public protocol ScrollView : DevicesUI.NativeView {
+  var scrollView: UIKit.UIScrollView { get }
+}
+extension UIKit.UIScrollView : DevicesUI.ScrollView {
+  @inlinable @_Concurrency.MainActor(unsafe) public var scrollView: UIKit.UIScrollView {
+    get { self }
+  }
+}
+extension DevicesUI.ScrollView {
+  @inlinable public var uiView: UIKit.UIView {
+    get {
+		scrollView
+	}
+  }
+}
+public protocol ScrollViewRenderable : DevicesUI.NativeViewRenderable {
+  func renderScrollView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.ScrollView
+}
+extension DevicesUI.ScrollViewRenderable {
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+  @inlinable public func renderScrollView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> UIKit.UIScrollView {
+		renderScrollView(context: context, reusing: view).scrollView
+	}
+  @inlinable public func renderScrollView(context: DevicesUI.ViewContext) -> UIKit.UIScrollView {
+		renderScrollView(context: context, reusing: nil).scrollView
+	}
+}
+public struct ZoomOptions {
+  public init(bounces: Swift.Bool = true, minimumScale: CoreFoundation.CGFloat = 1, maximumScale: CoreFoundation.CGFloat = 1)
+}
+extension DevicesUI.NativeViewRenderable {
+  public func scrollable(contentInsetAdjustmentBehavior: UIKit.UIScrollView.ContentInsetAdjustmentBehavior = .never, bounces: Swift.Bool = true, isPagingEnabled: Swift.Bool = false, showsVerticalScrollIndicator: Swift.Bool = true, showsHorizontalScrollIndicator: Swift.Bool = true, decelerationRate: UIKit.UIScrollView.DecelerationRate = .normal, zoomOptions: DevicesUI.ZoomOptions? = nil, resetsZoomOnSizeChange: Swift.Bool = false) -> DevicesUI.NativeViewRenderable
+}
+public struct SearchBar : SwiftUI.View {
+  public let title: Swift.String
+  @SwiftUI.Binding @_projectedValueProperty($searchText) public var searchText: Swift.String {
+    get
+    nonmutating set
+    nonmutating _modify
+  }
+  public var $searchText: SwiftUI.Binding<Swift.String> {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public init(_ title: Swift.String, searchText: SwiftUI.Binding<Swift.String>)
+  public typealias Body = @_opaqueReturnTypeOf("$s9DevicesUI9SearchBarV4bodyQrvp", 0) __
+}
+public struct SearchBarConfig {
+  public init(backgroundColor: UIKit.UIColor, textColor: UIKit.UIColor, placeholderColor: UIKit.UIColor, shouldEnableClearMode: Swift.Bool)
+}
+public struct SearchBarModel {
+  @DevicesCore.MutableProperty @_projectedValueProperty($text) public var text: Swift.String {
+    get
+    nonmutating set
+    nonmutating _modify
+  }
+  public var $text: DevicesCore.MutableProperty<Swift.String> {
+    get
+  }
+  public init(text: DevicesCore.MutableProperty<Swift.String>, placeholder: DevicesUI.StringContent, style: DevicesUI.SearchBarStyle, shouldChangeText: @escaping (Swift.String) -> Swift.Bool = { _ in true }, didBeginEditing: @escaping () -> Swift.Void = {}, didEndEditing: @escaping () -> Swift.Void = {})
+}
+extension DevicesUI.SearchBarModel : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public protocol SearchBarStyle {
+  func makeSearchBarConfig(context: DevicesUI.ViewContext) -> DevicesUI.SearchBarConfig
+}
+public protocol Selectable {
+  var isSelected: Swift.Bool { get set }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func select(_ isSelected: Swift.Bool)
+}
+public struct Shadow {
+  public init(opacity: Swift.Float = .zero, radius: CoreFoundation.CGFloat = 3.0, offset: CoreFoundation.CGSize = CGSize(width: 0.0, height: -3.0), color: UIKit.UIColor = .black)
+}
+extension DevicesUI.NativeViewRenderable {
+  public func shadow(_ shadows: [DevicesUI.Shadow]) -> DevicesUI.NativeViewRenderable
+  public func shadow(opacity: Swift.Float = .zero, radius: CoreFoundation.CGFloat = 3.0, offset: CoreFoundation.CGSize = CGSize(width: 0.0, height: -3.0), color: UIKit.UIColor = .black) -> DevicesUI.NativeViewRenderable
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ShadowView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open class var layerClass: Swift.AnyClass {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) open var path: CoreGraphics.CGPath? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var fillColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Foundation.NotificationCenter {
+  public func keyboardNotification() -> DevicesCore.Signal<DevicesUI.KeyboardNotification>
+}
+public protocol SingleSubjectRenderable : DevicesUI.ViewRenderable {
+  var subject: DevicesUI.ViewRenderable { get }
+}
+extension DevicesUI.SingleSubjectRenderable {
+  @inlinable public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View {
+		subject.renderView(context: context, reusing: view)
+	}
+}
+extension DevicesUI.ViewRenderable {
+  public func reuseSingleSubject(transformView: @escaping (DevicesUI.View) -> DevicesUI.View) -> DevicesUI.ViewRenderable
+}
+public protocol SingleSubjectView : DevicesUI.View {
+  var subject: DevicesUI.View { get }
+}
+extension DevicesUI.SingleSubjectView {
+  @inlinable public func add(to container: UIKit.UIView) {
+		subject.add(to: container)
+	}
+  @inlinable public func remove(from container: UIKit.UIView) {
+		subject.remove(from: container)
+	}
+  @inlinable public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize {
+		subject.sizeThatFits(size)
+	}
+  @inlinable public func layout(in rect: CoreFoundation.CGRect) {
+		subject.layout(in: rect)
+	}
+}
+public struct Spacer : DevicesUI.ViewRenderable {
+  public let size: CoreFoundation.CGSize
+  public init(size: CoreFoundation.CGSize)
+  public init(width: CoreFoundation.CGFloat = 0, height: CoreFoundation.CGFloat = 0)
+  public init(square: CoreFoundation.CGFloat)
+  public func renderView(context _: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+@_functionBuilder public enum StackItemsBuilder<StackItem> {
+  @inlinable public static func buildBlock(_ items: [StackItem]...) -> [StackItem] {
+		items.flatMap { $0 }
+	}
+  @inlinable public static func buildOptional(_ items: [StackItem]?) -> [StackItem] {
+		items ?? []
+	}
+  @inlinable public static func buildExpression(_ item: StackItem) -> [StackItem] {
+		[item]
+	}
+  @inlinable public static func buildEither(first items: [StackItem]) -> [StackItem] {
+		items
+	}
+  @inlinable public static func buildEither(second items: [StackItem]) -> [StackItem] {
+		items
+	}
+}
+@propertyWrapper @_Concurrency.MainActor(unsafe) public struct StateObject<ObjectType> : SwiftUI.DynamicProperty where ObjectType : Combine.ObservableObject, ObjectType.ObjectWillChangePublisher == Combine.ObservableObjectPublisher {
+  @_Concurrency.MainActor(unsafe) public var wrappedValue: ObjectType {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var projectedValue: SwiftUI.ObservedObject<ObjectType>.Wrapper {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public init(wrappedValue thunk: @autoclosure @escaping () -> ObjectType)
+  @_Concurrency.MainActor(unsafe) public mutating func update()
+}
+extension DevicesUI.StringContent {
+  public func string(context: DevicesUI.ViewContextObject) -> Swift.String
+}
+public protocol StringContent {
+  func isStringContentEqual(to another: DevicesUI.StringContent) -> Swift.Bool
+  func hash(into: inout Swift.Hasher)
+  func string(context: DevicesUI.ViewContext) -> Swift.String
+}
+extension DevicesUI.StringContent where Self : Swift.Equatable {
+  public func isStringContentEqual(to another: DevicesUI.StringContent) -> Swift.Bool
+}
+extension DevicesCore.StringID where Self : DevicesUI.StringContent {
+  @inlinable public func string(context: DevicesUI.ViewContext) -> Swift.String {
+		context[.stringProvider].string(for: self)
+	}
+}
+final public class StringProviderObject : DevicesCore.StringProvider, Foundation.ObservableObject {
+  public init(_ subject: DevicesCore.StringProvider)
+  final public func getString(for id: DevicesCore.StringID) -> Swift.String?
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension SwiftUI.View {
+  public func keyboardAvoidance() -> some SwiftUI.View
+  
+}
+public struct KeyboardAvoidanceView<Content> : SwiftUI.View where Content : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s9DevicesUI21KeyboardAvoidanceViewV4bodyQrvp", 0) __<Content>
+}
+extension SwiftUI.Color {
+  public init(hex: Swift.Int64)
+}
+extension SwiftUI.View {
+  public func placeholder<Content>(when shouldShow: Swift.Bool, alignment: SwiftUI.Alignment = .leading, @SwiftUI.ViewBuilder placeholder: () -> Content) -> some SwiftUI.View where Content : SwiftUI.View
+  
+}
+public enum SwipeGestureDirection {
+  case left
+  case right
+  case up
+  case down
+  public static func == (a: DevicesUI.SwipeGestureDirection, b: DevicesUI.SwipeGestureDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.NativeViewRenderable {
+  public func swipe(direction: DevicesUI.SwipeGestureDirection, action: @escaping () -> Swift.Void) -> DevicesUI.ViewRenderable
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func tap(_ action: @escaping () -> Swift.Void) -> DevicesUI.NativeViewRenderable {
+		GestureModifier<UITapGestureRecognizer>(
+			subject: self,
+			action: { _ in action() }
+		)
+	}
+}
+public enum TextAlignment : Swift.String, Swift.CustomStringConvertible {
+  case leading
+  case center
+  case trailing
+  case justified
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension DevicesUI.TextAlignment {
+  public var nsAlignment: UIKit.NSTextAlignment {
+    get
+  }
+}
+public struct TextField {
+  public let style: DevicesUI.TextFieldStyle
+  public let placeholder: DevicesUI.StringContent
+  @DevicesCore.MutableProperty @_projectedValueProperty($text) public var text: Swift.String {
+    get
+    nonmutating set
+    nonmutating _modify
+  }
+  public var $text: DevicesCore.MutableProperty<Swift.String> {
+    get
+  }
+  public let willChangeText: (Swift.String, _ range: Foundation.NSRange, _ replacement: Swift.String) -> Swift.Bool
+  public init(text: DevicesCore.MutableProperty<Swift.String>, placeholder: DevicesUI.StringContent, style: DevicesUI.TextFieldStyle, willChangeText: @escaping (Swift.String, _ range: Foundation.NSRange, _ replacement: Swift.String) -> Swift.Bool = { _, _, _ in true })
+}
+extension DevicesUI.TextField : DevicesUI.NativeViewRenderable {
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+public struct TextFieldConfig {
+  public let alignment: UIKit.NSTextAlignment
+  public let textColor: UIKit.UIColor
+  public let placeholderAttributes: [Foundation.NSAttributedString.Key : Any]
+  public let inputAccessory: DevicesUI.ViewRenderable?
+  public init(alignment: UIKit.NSTextAlignment, textColor: UIKit.UIColor, placeholderAttributes: [Foundation.NSAttributedString.Key : Any], inputAccessory: DevicesUI.ViewRenderable? = nil)
+}
+public protocol TextFieldStyle {
+  func makeTextFieldConfig(context: DevicesUI.ViewContext) -> DevicesUI.TextFieldConfig
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func tintColor(_ tintColor: UIKit.UIColor?) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "tintColor", subject: self) { view, _ in
+			view.tintColor = tintColor
+		}
+	}
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TouchesPassView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var onPassTouch: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TouchesPassViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct Transaction : Swift.Equatable {
+  public var disablesAnimations: Swift.Bool
+  public init(disablesAnimations: Swift.Bool = false)
+  public static func == (a: DevicesUI.Transaction, b: DevicesUI.Transaction) -> Swift.Bool
+}
+extension DevicesUI.ViewRenderable {
+  public func transform(label: Swift.String, using renderContent: @escaping (DevicesUI.ViewRenderable, DevicesUI.ViewContext, DevicesUI.View?) -> DevicesUI.View) -> DevicesUI.ViewRenderable
+}
+extension DevicesUI.NativeViewRenderable {
+  public func transform(label: Swift.String, using renderContent: @escaping (DevicesUI.NativeViewRenderable, DevicesUI.ViewContext, DevicesUI.View?) -> DevicesUI.NativeView) -> DevicesUI.NativeViewRenderable
+}
+extension DevicesUI.ViewRenderable {
+  public func resize(using sizeTransform: @escaping (CoreFoundation.CGSize, DevicesUI.View) -> CoreFoundation.CGSize) -> DevicesUI.ViewRenderable
+  public func aspectRatio(_ aspectRatio: CoreFoundation.CGFloat, prefersWidthMajor: Swift.Bool) -> DevicesUI.ViewRenderable
+}
+extension UIKit.UIApplication : DevicesUI.InterfaceOrientationProvider {
+  @_Concurrency.MainActor(unsafe) public var interfaceOrientation: UIKit.UIInterfaceOrientation {
+    get
+  }
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) public var firstKeyWindow: UIKit.UIWindow? {
+    get
+  }
+}
+extension UIKit.UIBarButtonItem {
+  @available(*, deprecated, message: "obj-c runtime issues")
+  @_Concurrency.MainActor(unsafe) convenience public init(image: UIKit.UIImage, style: UIKit.UIBarButtonItem.Style = .plain, action: @escaping () -> Swift.Void)
+  @available(*, deprecated, message: "obj-c runtime issues")
+  @_Concurrency.MainActor(unsafe) convenience public init(title: Swift.String, style: UIKit.UIBarButtonItem.Style = .plain, action: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) convenience public init(content: DevicesUI.ViewRenderable, context: DevicesUI.ViewContext, iconSize: CoreFoundation.CGSize = CGSize(width: 24, height: 24), action: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) convenience public init(imageContent: DevicesUI.ImageContent, context: DevicesUI.ViewContext, size: CoreFoundation.CGSize, action: @escaping () -> Swift.Void)
+}
+extension UIKit.UIBezierPath {
+  convenience public init(roundedRect frame: CoreFoundation.CGRect, topLeft: CoreFoundation.CGFloat = 0, topRight: CoreFoundation.CGFloat = 0, bottomLeft: CoreFoundation.CGFloat = 0, bottomRight: CoreFoundation.CGFloat = 0)
+}
+extension UIKit.UIImage : DevicesUI.ImageContent {
+  @inlinable public func image(context _: DevicesUI.ViewContext) -> UIKit.UIImage {
+		self
+	}
+}
+extension UIKit.UIInterfaceOrientation {
+  public var mask: UIKit.UIInterfaceOrientationMask {
+    get
+  }
+}
+extension UIKit.UIInterfaceOrientationMask {
+  public func contains(_ orientation: UIKit.UIInterfaceOrientation) -> Swift.Bool
+  public func nextPrefferedOrientation(after orientation: UIKit.UIInterfaceOrientation) -> UIKit.UIInterfaceOrientation?
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func hitTestEligibleSubviews(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+}
+extension UIKit.UIView : DevicesUI.Layoutable {
+  @inlinable @_Concurrency.MainActor(unsafe) public func layout(in rect: CoreFoundation.CGRect) {
+		self.frame = rect
+	}
+}
+extension UIKit.UIView : DevicesUI.Measurable {
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addSubview(_ view: DevicesUI.View)
+  @_Concurrency.MainActor(unsafe) public func addSubviews(_ views: [DevicesUI.View])
+  @_Concurrency.MainActor(unsafe) public func addSubviews(_ views: DevicesUI.View...)
+  @_Concurrency.MainActor(unsafe) public func addSubviews(_ views: DevicesUI.View?...)
+}
+extension UIKit.UIView : DevicesUI.View {
+  @inlinable @_Concurrency.MainActor(unsafe) public func add(to container: UIKit.UIView) {
+		assertDebug(self !== container)
+		container.addSubview(self)
+	}
+  @inlinable @_Concurrency.MainActor(unsafe) public func remove(from container: UIKit.UIView) {
+		guard container === superview else {
+			return
+		}
+		removeFromSuperview()
+	}
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func setBackAction(image: UIKit.UIImage, tintColor: UIKit.UIColor, action: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func setBackContent(_ content: DevicesUI.ViewRenderable, context: DevicesUI.ViewContext, action: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func setRightButtonAction(image: UIKit.UIImage, tintColor: UIKit.UIColor, action: @escaping () -> Swift.Void)
+  @discardableResult
+  @_Concurrency.MainActor(unsafe) public func setRightButtonAction(title: Swift.String, tintColor: UIKit.UIColor, action: @escaping () -> Swift.Void) -> UIKit.UIBarButtonItem
+  @_Concurrency.MainActor(unsafe) public func removeBackAction()
+}
+public struct UpdatableRenderable : DevicesUI.NativeViewRenderable {
+  public typealias Animation = (UIKit.UIView, _ action: @escaping () -> Swift.Void) -> Swift.Void
+  @DevicesCore.Property @_projectedValueProperty($subject) public var subject: DevicesUI.ViewRenderable {
+    get
+  }
+  public var $subject: DevicesCore.Property<DevicesUI.ViewRenderable> {
+    get
+  }
+  public init(subject: DevicesCore.Property<DevicesUI.ViewRenderable>, animate: @escaping DevicesUI.UpdatableRenderable.Animation = { _, action in action() })
+  public func renderNativeView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.NativeView
+}
+extension DevicesCore.Property {
+  @inlinable public func asViewRenderable(using transform: @escaping (Value) -> DevicesUI.ViewRenderable, animate: @escaping DevicesUI.UpdatableRenderable.Animation = { _, action in action() }) -> DevicesUI.NativeViewRenderable {
+		UpdatableRenderable(
+			subject: map(using: transform),
+			animate: animate
+		)
+	}
+}
+extension DevicesUI.VStack {
+  public init(spacing: CoreFoundation.CGFloat = 0.0, @DevicesUI.StackItemsBuilder<DevicesUI.VStackItem> items: () -> [DevicesUI.VStackItem])
+}
+extension DevicesUI.StackItemsBuilder where StackItem == DevicesUI.VStackItem {
+  @inlinable public static func buildExpression(_ viewRenderable: DevicesUI.ViewRenderable) -> [StackItem] {
+		[viewRenderable.asVStackItem()]
+	}
+}
+public struct VStack {
+  public let items: [DevicesUI.VStackItem]
+  public let spacing: CoreFoundation.CGFloat
+  public init(items: [DevicesUI.VStackItem], spacing: CoreFoundation.CGFloat = 0.0)
+}
+extension DevicesUI.VStack : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public struct VStackItem {
+  public let content: DevicesUI.ViewRenderable
+  public let margins: UIKit.UIEdgeInsets
+  public let gravity: DevicesUI.HorizontalGravity
+  public let greediness: DevicesUI.Greediness
+  public init(content: DevicesUI.ViewRenderable, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.HorizontalGravity, greediness: DevicesUI.Greediness)
+  public static func spacer(weight: CoreFoundation.CGFloat) -> DevicesUI.VStackItem
+  public static func spacer(height: CoreFoundation.CGFloat) -> DevicesUI.VStackItem
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func asVStackItem(margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.HorizontalGravity = .center, greediness: DevicesUI.Greediness = .intrinsic) -> DevicesUI.VStackItem {
+		VStackItem(content: self, margins: margins, gravity: gravity, greediness: greediness)
+	}
+}
+public struct VStackLayout : DevicesUI.Measurable, DevicesUI.Layoutable {
+  public let items: [DevicesUI.VStackLayoutItem]
+  public let spacing: CoreFoundation.CGFloat
+  public init(items: [DevicesUI.VStackLayoutItem], spacing: CoreFoundation.CGFloat = 0)
+  public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func layout(in bounds: CoreFoundation.CGRect)
+}
+public struct VStackLayoutItem : DevicesUI.Measurable, DevicesUI.Layoutable {
+  public let gravity: DevicesUI.HorizontalGravity
+  public let measurable: DevicesUI.Measurable
+  public let layoutable: DevicesUI.Layoutable
+  public let margins: UIKit.UIEdgeInsets
+  public let greediness: DevicesUI.Greediness
+  public init(content: DevicesUI.Layoutable & DevicesUI.Measurable, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.HorizontalGravity, greediness: DevicesUI.Greediness)
+  public init(measurable: DevicesUI.Measurable, layoutable: DevicesUI.Layoutable, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.HorizontalGravity, greediness: DevicesUI.Greediness)
+  @inlinable public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize {
+		measurable.sizeThatFits(size, insets: margins)
+	}
+  @inlinable public func layout(in rect: CoreFoundation.CGRect) {
+		layoutable.layout(in: rect, insets: margins)
+	}
+}
+public enum VerticalGravity : Swift.String {
+  case top
+  case center
+  case bottom
+  case justified
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension DevicesUI.VerticalGravity {
+  public func projection(ofHeight height: CoreFoundation.CGFloat, inParentProjection bounds: DevicesUI.FrameProjection) -> DevicesUI.FrameProjection
+  public func projection(ofHeight height: CoreFoundation.CGFloat, inParentHeight bounds: CoreFoundation.CGFloat) -> DevicesUI.FrameProjection
+  public func originY(forHeight height: CoreFoundation.CGFloat, inParentProjection bounds: DevicesUI.FrameProjection) -> CoreFoundation.CGFloat
+  public func originY(forHeight height: CoreFoundation.CGFloat, inParentHeight bounds: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat
+}
+extension DevicesUI.VerticalGravity {
+  public static func projection(ofHeight height: CoreFoundation.CGFloat, inParentProjection bounds: DevicesUI.FrameProjection, withInsetsProportion proportion: CoreFoundation.CGFloat) -> DevicesUI.FrameProjection
+}
+extension DevicesUI.View {
+  public func staticRenderable() -> DevicesUI.ViewRenderable
+}
+extension DevicesUI.View {
+  public func asUIView() -> UIKit.UIView
+}
+public protocol View : DevicesUI.Layoutable, DevicesUI.Measurable {
+  func add(to container: UIKit.UIView)
+  func remove(from container: UIKit.UIView)
+}
+extension DevicesUI.View {
+  public func isSameUIView(_ view: DevicesUI.View) -> Swift.Bool
+}
+public protocol ViewCanvas {
+  var size: CoreFoundation.CGSize { get }
+  func layoutCanvas(animated: Swift.Bool)
+}
+extension DevicesCore.KeyValueContextKey where Tag == DevicesUI.ViewContextTag {
+  public static var stringProvider: DevicesUI.ViewContextKey<DevicesCore.StringProvider> {
+    get
+  }
+  public static var imageProvider: DevicesUI.ViewContextKey<DevicesCore.ImageProvider> {
+    get
+  }
+  public static var remoteImageProvider: DevicesUI.ViewContextKey<DevicesCore.RemoteImageProvider> {
+    get
+  }
+  public static var assertionCaller: DevicesUI.ViewContextKey<DevicesCore.AssertionCaller> {
+    get
+  }
+  public static var logger: DevicesUI.ViewContextKey<DevicesCore.Logger?> {
+    get
+  }
+  public static var osLogger: DevicesUI.ViewContextKey<DevicesCore.OSLogger?> {
+    get
+  }
+  public static var analyticsService: DevicesUI.ViewContextKey<DevicesCore.AnalyticsService?> {
+    get
+  }
+  public static var canvas: DevicesUI.ViewContextKey<DevicesUI.ViewCanvas?> {
+    get
+  }
+  public static var stackScreenFlags: DevicesUI.ViewContextKey<DevicesCore.Property<DevicesCore.StackScreenFlags>?> {
+    get
+  }
+  public static var keyboardFrame: DevicesUI.ViewContextKey<DevicesCore.Property<CoreFoundation.CGRect>> {
+    get
+  }
+  public static var buttonSettings: DevicesUI.ViewContextKey<DevicesUI.PlainButtonStyle.ButtonSettings> {
+    get
+  }
+}
+public enum ViewContextTag {
+}
+public typealias ViewContext = DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>
+public typealias ViewContextKey<Value> = DevicesCore.KeyValueContextKey<Value, DevicesUI.ViewContextTag>
+extension DevicesCore.KeyValueContext where Tag == DevicesUI.ViewContextTag {
+  public init(label: Swift.String = #fileID, logger: DevicesCore.Logger?, assertionCaller: DevicesCore.AssertionCaller?, osLogger: DevicesCore.OSLogger?, analyticsService: DevicesCore.AnalyticsService?, stringProvider: DevicesCore.StringProvider, imageProvider: DevicesCore.ImageProvider, remoteImageProvider: DevicesCore.RemoteImageProvider, keyboardFrame: DevicesCore.Property<CoreFoundation.CGRect>)
+}
+extension SwiftUI.View {
+  public func sduiContext(_ context: DevicesUI.ViewContext) -> some SwiftUI.View
+  
+}
+final public class ViewContextObject : Foundation.ObservableObject {
+  final public let subject: DevicesUI.ViewContext
+  public init(_ subject: DevicesUI.ViewContext)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension DevicesUI.ViewContextObject {
+  final public subscript<Value>(key: DevicesCore.KeyValueContextKey<Value, DevicesUI.ViewContextTag>) -> Value {
+    get
+  }
+}
+public protocol ViewRenderable {
+  func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func renderView(context: DevicesUI.ViewContext) -> DevicesUI.View {
+		renderView(context: context, reusing: nil)
+	}
+  @inlinable public func withWrapped<T>(_ value: T?, transform: (DevicesUI.ViewRenderable, T) -> DevicesUI.ViewRenderable) -> DevicesUI.ViewRenderable {
+		if let value = value {
+			return transform(self, value)
+		}
+		return self
+	}
+  @inlinable public func whenSatisfy(_ condition: Swift.Bool, transform: (DevicesUI.ViewRenderable) -> DevicesUI.ViewRenderable) -> DevicesUI.ViewRenderable {
+		if condition {
+			return transform(self)
+		}
+		return self
+	}
+}
+public protocol ViewRenderer : UIKit.UIView {
+  var view: DevicesUI.View? { get set }
+}
+extension DevicesUI.ViewRenderer {
+  public func set(_ view: DevicesUI.View, animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @inlinable public func set(_ model: DevicesUI.ViewRenderable, context: DevicesUI.ViewContext, animated: Swift.Bool, completion: (() -> Swift.Void)? = nil) {
+		let view = model.renderView(context: context, reusing: self.view)
+		set(view, animated: animated, completion: completion)
+	}
+}
+extension DevicesUI.NativeViewRenderable {
+  @inlinable public func isHidden(_ isHidden: Swift.Bool) -> DevicesUI.ConcreteViewModifier {
+		ConcreteViewModifier(label: "isHidden", subject: self) { view, _ in
+			view.isHidden = isHidden
+		}
+	}
+}
+extension DevicesUI.ZStack {
+  public init(@DevicesUI.StackItemsBuilder<DevicesUI.ZStackItem> items: () -> [DevicesUI.ZStackItem])
+}
+extension DevicesUI.StackItemsBuilder where StackItem == DevicesUI.ZStackItem {
+  @inlinable public static func buildExpression(_ viewRenderable: DevicesUI.ViewRenderable) -> [StackItem] {
+		[viewRenderable.asZStackItem()]
+	}
+}
+public struct ZStack {
+  public let items: [DevicesUI.ZStackItem]
+  public init(items: [DevicesUI.ZStackItem])
+}
+extension DevicesUI.ZStack : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public struct ZStackItem {
+  public let content: DevicesUI.ViewRenderable
+  public let gravity: DevicesUI.Gravity
+  public let sizing: DevicesUI.ZStackSizing
+  public init(content: DevicesUI.ViewRenderable, gravity: DevicesUI.Gravity, sizing: DevicesUI.ZStackSizing)
+}
+extension DevicesUI.ViewRenderable {
+  @inlinable public func asZStackItem(gravity: DevicesUI.Gravity = .center, sizing: DevicesUI.ZStackSizing = .measuring) -> DevicesUI.ZStackItem {
+		ZStackItem(
+			content: self,
+			gravity: gravity,
+			sizing: sizing
+		)
+	}
+}
+public struct ZStackLayout : DevicesUI.Measurable, DevicesUI.Layoutable {
+  public let items: [DevicesUI.ZStackLayoutItem]
+  public init(items: [DevicesUI.ZStackLayoutItem])
+  public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  public func layout(in bounds: CoreFoundation.CGRect)
+}
+public struct ZStackLayoutItem {
+  public let content: DevicesUI.Layoutable & DevicesUI.Measurable
+  public let gravity: DevicesUI.Gravity
+  public let sizing: DevicesUI.ZStackSizing
+  public init(content: DevicesUI.Layoutable & DevicesUI.Measurable, gravity: DevicesUI.Gravity, sizing: DevicesUI.ZStackSizing)
+}
+public enum ZStackSizing {
+  case measuring
+  case layoutOnly
+  public static func == (a: DevicesUI.ZStackSizing, b: DevicesUI.ZStackSizing) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesUI.DeviceOrientation : Swift.Equatable {}
+extension DevicesUI.DeviceOrientation : Swift.Hashable {}
+extension DevicesUI.FadeAxis : Swift.Equatable {}
+extension DevicesUI.FadeAxis : Swift.Hashable {}
+extension DevicesUI.GradientConfig.Kind : Swift.Hashable {}
+extension DevicesUI.GradientConfig.Kind : Swift.RawRepresentable {}
+extension DevicesUI.HorizontalGravity : Swift.Equatable {}
+extension DevicesUI.HorizontalGravity : Swift.Hashable {}
+extension DevicesUI.HorizontalGravity : Swift.RawRepresentable {}
+extension DevicesUI.KeyboardNotification.Stage : Swift.Hashable {}
+extension DevicesUI.OffsetSizing : Swift.Equatable {}
+extension DevicesUI.OffsetSizing : Swift.Hashable {}
+extension DevicesUI.ScrollListPagingModifier.Anchor : Swift.Equatable {}
+extension DevicesUI.ScrollListPagingModifier.Anchor : Swift.Hashable {}
+extension DevicesUI.ScrollListStyle.ScrollDirection : Swift.Equatable {}
+extension DevicesUI.ScrollListStyle.ScrollDirection : Swift.Hashable {}
+extension DevicesUI.ScrollListStyle.ContentInsetAdjustmentBehavior : Swift.Equatable {}
+extension DevicesUI.ScrollListStyle.ContentInsetAdjustmentBehavior : Swift.Hashable {}
+extension DevicesUI.ScrollListStyle.ContentMeasuringMode : Swift.Equatable {}
+extension DevicesUI.ScrollListStyle.ContentMeasuringMode : Swift.Hashable {}
+extension DevicesUI.ScrollOffsetMode.Anchor : Swift.Equatable {}
+extension DevicesUI.ScrollOffsetMode.Anchor : Swift.Hashable {}
+extension DevicesUI.SwipeGestureDirection : Swift.Equatable {}
+extension DevicesUI.SwipeGestureDirection : Swift.Hashable {}
+extension DevicesUI.TextAlignment : Swift.Equatable {}
+extension DevicesUI.TextAlignment : Swift.Hashable {}
+extension DevicesUI.TextAlignment : Swift.RawRepresentable {}
+extension DevicesUI.VerticalGravity : Swift.Equatable {}
+extension DevicesUI.VerticalGravity : Swift.Hashable {}
+extension DevicesUI.VerticalGravity : Swift.RawRepresentable {}
+extension DevicesUI.ZStackSizing : Swift.Equatable {}
+extension DevicesUI.ZStackSizing : Swift.Hashable {}

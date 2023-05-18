@@ -1,0 +1,212 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SaluteDesignSystem
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CompanionCore
+import CoreGraphics
+import DevicesCore
+import DevicesDesignSystem
+import DevicesUI
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+extension Foundation.Bundle {
+  public var saluteDesignSystem: Foundation.Bundle {
+    get
+  }
+}
+public enum SaluteImageID : Swift.String, DevicesCore.ImageID, Swift.CaseIterable, DevicesUI.ImageContent {
+  case notificationsAlert
+  case bluetoothAlert
+  case wifiAlert
+  case geoAlert
+  public func hash(into hasher: inout Swift.Hasher)
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SaluteDesignSystem.SaluteImageID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [SaluteDesignSystem.SaluteImageID] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension DevicesDesignSystem.InlineAlertModel {
+  public init(type: SaluteDesignSystem.ServiceAlertType, title: DevicesUI.StringContent? = nil, description: DevicesUI.StringContent, presentationStyle: DevicesDesignSystem.InlineAlertModel.PresentationStyle, onContinue: @escaping () -> Swift.Void, onCancel: @escaping () -> Swift.Void)
+}
+public struct LimitTextFormatter : SaluteDesignSystem.TextFormatter {
+  public init(upperLimit: Swift.Int)
+  public func format(_ text: Swift.String) -> SaluteDesignSystem.TextFormatterResult
+}
+public struct RegexTextReplacer : SaluteDesignSystem.TextFormatter {
+  public init(regex: Swift.String, replacementText: Swift.String)
+  public func format(_ text: Swift.String) -> SaluteDesignSystem.TextFormatterResult
+}
+public struct SaluteBanner {
+  public enum Background : Swift.Equatable {
+    case positive
+    case negative
+    case neutral
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: SaluteDesignSystem.SaluteBanner.Background, b: SaluteDesignSystem.SaluteBanner.Background) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let content: DevicesUI.ViewRenderable
+  public let background: SaluteDesignSystem.SaluteBanner.Background
+  public init(content: DevicesUI.ViewRenderable, background: SaluteDesignSystem.SaluteBanner.Background)
+  public func makeScreen(context: DevicesUI.ViewContext) -> DevicesCore.StackScreen
+}
+public struct SaluteSheetBackground : DevicesUI.ViewRenderable {
+  public init()
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+extension SaluteDesignSystem.SelectionForm : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public struct SelectionForm {
+  public init(title: DevicesUI.StringContent, itemLabels: [DevicesUI.StringContent], selectedIndex: DevicesCore.MutableProperty<Swift.Int>, stackScreenPresenter: DevicesCore.StackScreenPresenter, presentationMode: DevicesCore.StackPresentationMode)
+}
+public typealias SelectionSheetFactory = DevicesCore.Factory<SaluteDesignSystem.SelectionSheetParameters, DevicesCore.StackScreen>
+extension DevicesCore.Factory where Arg == SaluteDesignSystem.SelectionSheetParameters, Item == DevicesCore.StackScreen {
+  public init(context: DevicesUI.ViewContext)
+}
+public struct SelectionSheetOption {
+  public let content: DevicesUI.ViewRenderable
+  public let onSelected: () -> Swift.Void
+  public init(content: DevicesUI.ViewRenderable, onSelected: @escaping () -> Swift.Void)
+  public init(label: DevicesUI.StringContent, onSelected: @escaping () -> Swift.Void)
+}
+public struct SelectionSheetParameters {
+  public let caption: DevicesUI.StringContent?
+  public let options: [SaluteDesignSystem.SelectionSheetOption]
+  public init(caption: DevicesUI.StringContent?, options: [SaluteDesignSystem.SelectionSheetOption])
+}
+public enum ServiceAlertType {
+  public enum Permissions {
+    case ble
+    case notifications
+    case geo
+    public static func == (a: SaluteDesignSystem.ServiceAlertType.Permissions, b: SaluteDesignSystem.ServiceAlertType.Permissions) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Hardware {
+    case ble
+    case wifi
+    public static func == (a: SaluteDesignSystem.ServiceAlertType.Hardware, b: SaluteDesignSystem.ServiceAlertType.Hardware) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case permissions(SaluteDesignSystem.ServiceAlertType.Permissions)
+  case hardware(SaluteDesignSystem.ServiceAlertType.Hardware)
+}
+extension DevicesCore.Tagged where Tag == DevicesDesignSystem.StringValidator.FailureTag, T == Swift.String {
+  public func provideErrorMessage(context _: DevicesUI.ViewContext, forbiddenWordsProviderMode: SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode?) -> DevicesUI.StringContent
+}
+extension DevicesCore.Tagged where Tag == DevicesDesignSystem.StringValidator.FailureTag, T == Swift.String {
+  public static let forbiddenWord: DevicesCore.Tagged<DevicesDesignSystem.StringValidator.FailureTag, Swift.String>
+  public static let forbiddenSymbol: DevicesCore.Tagged<DevicesDesignSystem.StringValidator.FailureTag, Swift.String>
+  public static let outOfBounds: DevicesCore.Tagged<DevicesDesignSystem.StringValidator.FailureTag, Swift.String>
+}
+public struct TextEnteringScreen {
+  public init(title: DevicesUI.StringContent, subtitle: DevicesUI.StringContent, initialText: Swift.String = "", textFormConfig: SaluteDesignSystem.TextForm.Config, applyButtonText: DevicesUI.StringContent, applyButtonAction: @escaping (Swift.String) -> Swift.Void, statesDescriptions: [DevicesDesignSystem.StringValidator.Failure : DevicesUI.StringContent] = [:], isFirstResponder: DevicesCore.MutableProperty<Swift.Bool> = MutableProperty(false))
+}
+extension SaluteDesignSystem.TextEnteringScreen : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+@_hasMissingDesignatedInitializers final public class TextEnteringScreenCoordinatorImpl {
+  final public var text: DevicesCore.Property<Swift.String>
+  @objc deinit
+}
+public struct TextForm {
+  public enum RightIconKind {
+    case inputSecurity(isInitiallySecured: Swift.Bool)
+    case custom(imageID: DevicesCore.ImageID, accessibilityValue: DevicesUI.StringContent?, onTap: () -> Swift.Void, customSize: DevicesDesignSystem.Icon.Size.Dimension?)
+  }
+  @DevicesCore.MutableProperty @_projectedValueProperty($text) public var text: Swift.String {
+    get
+    nonmutating set
+    nonmutating _modify
+  }
+  public var $text: DevicesCore.MutableProperty<Swift.String> {
+    get
+  }
+  public init(config: SaluteDesignSystem.TextForm.Config, text: DevicesCore.MutableProperty<Swift.String> = MutableProperty(""), isFirstResponder: DevicesCore.MutableProperty<Swift.Bool> = MutableProperty(false))
+}
+extension SaluteDesignSystem.TextForm {
+  public func onValidationStateChanged(_ validationStateChanged: @escaping (DevicesDesignSystem.StringValidator.Validity) -> Swift.Void) -> SaluteDesignSystem.TextForm
+}
+extension SaluteDesignSystem.TextForm : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+extension SaluteDesignSystem.TextForm.RightIconKind {
+  public static func custom(imageID: DevicesCore.ImageID, accessibilityValue: DevicesUI.StringContent? = nil, onTap: @escaping () -> Swift.Void = {}) -> SaluteDesignSystem.TextForm.RightIconKind
+}
+extension SaluteDesignSystem.TextForm {
+  public enum State {
+    case active
+    case textInputDisabled
+    case disabled
+    public static func == (a: SaluteDesignSystem.TextForm.State, b: SaluteDesignSystem.TextForm.State) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct Config {
+    public init(caption: DevicesUI.StringContent, placeholder: DevicesUI.StringContent, accessibilityValue: DevicesCore.Property<DevicesUI.StringContent?> = .constant(nil), rightIcon: SaluteDesignSystem.TextForm.RightIconKind?, keyboardType: UIKit.UIKeyboardType, allowedCharacters: [CompanionCore.RegexCharacterSet], forbiddenWordsProviderMode: SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode? = nil, lengthLimit: Swift.ClosedRange<Swift.Int>, inputFormatter: SaluteDesignSystem.TextFormatter? = nil, resultFormatter: SaluteDesignSystem.TextFormatter? = nil, textFormState: SaluteDesignSystem.TextForm.State = .active, autocapitalizationType: UIKit.UITextAutocapitalizationType = .sentences, backgroundColor: DevicesDesignSystem.ColorProtocol = BackgroundColor.liquid30)
+    public init(caption: DevicesUI.StringContent, placeholder: DevicesUI.StringContent, accessibilityValue: DevicesCore.Property<DevicesUI.StringContent?>, propertyRightIcon: DevicesCore.Property<SaluteDesignSystem.TextForm.RightIconKind?>, keyboardType: UIKit.UIKeyboardType, allowedCharacters: [CompanionCore.RegexCharacterSet], forbiddenWordsProviderMode: SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode? = nil, lengthLimit: Swift.ClosedRange<Swift.Int>, inputFormatter: SaluteDesignSystem.TextFormatter? = nil, resultFormatter: SaluteDesignSystem.TextFormatter? = nil, textFormState: SaluteDesignSystem.TextForm.State = .active, autocapitalizationType: UIKit.UITextAutocapitalizationType = .sentences, backgroundColor: DevicesDesignSystem.ColorProtocol = BackgroundColor.liquid30)
+  }
+}
+extension SaluteDesignSystem.TextForm {
+  public struct ForbiddenWordsProvider {
+    public let values: Swift.Set<Swift.String>
+    public init(context: DevicesUI.ViewContext, mode: SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode?)
+  }
+}
+extension SaluteDesignSystem.TextForm.ForbiddenWordsProvider {
+  public struct Mode : Swift.Equatable {
+    public static func list(_ words: [DevicesUI.StringContent], errorDescription: DevicesUI.StringContent?) -> SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode
+    public static func single(_ word: DevicesUI.StringContent, errorDescription: DevicesUI.StringContent?) -> SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode
+    public static var noRoom: SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode {
+      get
+    }
+    public static func duplicateHomeNames(_ names: [Swift.String]) -> SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode
+    public static func == (lhs: SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode, rhs: SaluteDesignSystem.TextForm.ForbiddenWordsProvider.Mode) -> Swift.Bool
+  }
+}
+public protocol TextFormatter {
+  func format(_ text: Swift.String) -> SaluteDesignSystem.TextFormatterResult
+}
+public struct TextFormatterResult : Swift.Equatable {
+  public init(text: Swift.String, replacementText: Swift.String, replacedRanges: [Foundation.NSRange])
+  public static func == (a: SaluteDesignSystem.TextFormatterResult, b: SaluteDesignSystem.TextFormatterResult) -> Swift.Bool
+}
+extension SaluteDesignSystem.TextFormatterResult {
+  public func format(range: Foundation.NSRange) -> Foundation.NSRange
+}
+public struct TrimmingTextFormatter : SaluteDesignSystem.TextFormatter {
+  public init(symbols: [Swift.String] = ["\n", " "])
+  public func format(_ text: Swift.String) -> SaluteDesignSystem.TextFormatterResult
+}
+extension SaluteDesignSystem.SaluteImageID : Swift.Equatable {}
+extension SaluteDesignSystem.SaluteImageID : Swift.Hashable {}
+extension SaluteDesignSystem.SaluteImageID : Swift.RawRepresentable {}
+extension SaluteDesignSystem.SaluteBanner.Background : Swift.Hashable {}
+extension SaluteDesignSystem.ServiceAlertType.Permissions : Swift.Equatable {}
+extension SaluteDesignSystem.ServiceAlertType.Permissions : Swift.Hashable {}
+extension SaluteDesignSystem.ServiceAlertType.Hardware : Swift.Equatable {}
+extension SaluteDesignSystem.ServiceAlertType.Hardware : Swift.Hashable {}
+extension SaluteDesignSystem.TextForm.State : Swift.Equatable {}
+extension SaluteDesignSystem.TextForm.State : Swift.Hashable {}

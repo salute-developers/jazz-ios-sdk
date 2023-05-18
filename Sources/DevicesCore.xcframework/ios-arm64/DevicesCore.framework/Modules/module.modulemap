@@ -1,0 +1,11 @@
+framework module DevicesCore {
+  umbrella header "DevicesCore.h"
+
+  export *
+  module * { export * }
+}
+
+module DevicesCore.Swift {
+  header "DevicesCore-Swift.h"
+  requires objc
+}

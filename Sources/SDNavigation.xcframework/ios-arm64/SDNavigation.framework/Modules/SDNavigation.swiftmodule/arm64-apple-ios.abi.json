@@ -1,0 +1,4307 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AlertPresenter",
+        "printedName": "AlertPresenter",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Alert",
+                "printedName": "DevicesDesignSystem.Alert",
+                "usr": "s:19DevicesDesignSystem5AlertV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation14AlertPresenterP7presentyy19DevicesDesignSystem0B0VF",
+            "mangledName": "$s12SDNavigation14AlertPresenterP7presentyy19DevicesDesignSystem0B0VF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.AlertPresenter>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.AlertPresenter>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12SDNavigation14AlertPresenterP",
+        "mangledName": "$s12SDNavigation14AlertPresenterP",
+        "moduleName": "SDNavigation",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesUI",
+        "printedName": "DevicesUI",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ContextStackScreenAdapter",
+        "printedName": "ContextStackScreenAdapter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "content",
+            "printedName": "content",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV7contentxvp",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV7contentxvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV7contentxvg",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV7contentxvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "measure",
+            "printedName": "measure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreFoundation.CGSize, UIKit.UIEdgeInsets) -> CoreFoundation.CGSize",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(CoreFoundation.CGSize, UIKit.UIEdgeInsets)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIEdgeInsets",
+                        "printedName": "UIKit.UIEdgeInsets",
+                        "usr": "c:@S@UIEdgeInsets"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV7measureySo6CGSizeVAF_So12UIEdgeInsetsVtcvp",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV7measureySo6CGSizeVAF_So12UIEdgeInsetsVtcvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreFoundation.CGSize, UIKit.UIEdgeInsets) -> CoreFoundation.CGSize",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(CoreFoundation.CGSize, UIKit.UIEdgeInsets)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGSize",
+                            "printedName": "CoreFoundation.CGSize",
+                            "usr": "c:@S@CGSize"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIEdgeInsets",
+                            "printedName": "UIKit.UIEdgeInsets",
+                            "usr": "c:@S@UIEdgeInsets"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV7measureySo6CGSizeVAF_So12UIEdgeInsetsVtcvg",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV7measureySo6CGSizeVAF_So12UIEdgeInsetsVtcvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mutableFlags",
+            "printedName": "mutableFlags",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeyValueContext",
+                "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StackScreenFlagsTag",
+                    "printedName": "DevicesCore.StackScreenFlagsTag",
+                    "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                  }
+                ],
+                "usr": "s:11DevicesCore15KeyValueContextV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvp",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyValueContext",
+                    "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackScreenFlagsTag",
+                        "printedName": "DevicesCore.StackScreenFlagsTag",
+                        "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15KeyValueContextV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvg",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyValueContext",
+                    "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackScreenFlagsTag",
+                        "printedName": "DevicesCore.StackScreenFlagsTag",
+                        "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15KeyValueContextV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvs",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvs",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvM",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV12mutableFlags11DevicesCore08KeyValueB0VyAE0cdG3TagOGvM",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$mutableFlags",
+            "printedName": "$mutableFlags",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MutableProperty",
+                "printedName": "DevicesCore.MutableProperty<DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyValueContext",
+                    "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackScreenFlagsTag",
+                        "printedName": "DevicesCore.StackScreenFlagsTag",
+                        "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15KeyValueContextV"
+                  }
+                ],
+                "usr": "s:11DevicesCore15MutablePropertyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV13$mutableFlags11DevicesCore15MutablePropertyVyAE08KeyValueB0VyAE0cdG3TagOGGvp",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV13$mutableFlags11DevicesCore15MutablePropertyVyAE08KeyValueB0VyAE0cdG3TagOGGvp",
+            "moduleName": "SDNavigation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MutableProperty",
+                    "printedName": "DevicesCore.MutableProperty<DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyValueContext",
+                        "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StackScreenFlagsTag",
+                            "printedName": "DevicesCore.StackScreenFlagsTag",
+                            "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                          }
+                        ],
+                        "usr": "s:11DevicesCore15KeyValueContextV"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15MutablePropertyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV13$mutableFlags11DevicesCore15MutablePropertyVyAE08KeyValueB0VyAE0cdG3TagOGGvg",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV13$mutableFlags11DevicesCore15MutablePropertyVyAE08KeyValueB0VyAE0cdG3TagOGGvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flags",
+            "printedName": "flags",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Property",
+                "printedName": "DevicesCore.Property<DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyValueContext",
+                    "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackScreenFlagsTag",
+                        "printedName": "DevicesCore.StackScreenFlagsTag",
+                        "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15KeyValueContextV"
+                  }
+                ],
+                "usr": "s:11DevicesCore8PropertyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV5flags11DevicesCore8PropertyVyAE08KeyValueB0VyAE0cD8FlagsTagOGGvp",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV5flags11DevicesCore8PropertyVyAE08KeyValueB0VyAE0cD8FlagsTagOGGvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Property",
+                    "printedName": "DevicesCore.Property<DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "KeyValueContext",
+                        "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StackScreenFlagsTag",
+                            "printedName": "DevicesCore.StackScreenFlagsTag",
+                            "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                          }
+                        ],
+                        "usr": "s:11DevicesCore15KeyValueContextV"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore8PropertyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV5flags11DevicesCore8PropertyVyAE08KeyValueB0VyAE0cD8FlagsTagOGGvg",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV5flags11DevicesCore8PropertyVyAE08KeyValueB0VyAE0cD8FlagsTagOGGvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "viewController",
+            "printedName": "viewController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV14viewControllerSo06UIViewG0Cvp",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV14viewControllerSo06UIViewG0Cvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "AccessControl",
+              "Inlinable"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV14viewControllerSo06UIViewG0Cvg",
+                "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV14viewControllerSo06UIViewG0Cvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+                "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(makeSubject:context:flags:measure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ContextStackScreenAdapter",
+                "printedName": "SDNavigation.ContextStackScreenAdapter<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:12SDNavigation25ContextStackScreenAdapterV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>) -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyValueContext",
+                    "printedName": "DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewContextTag",
+                        "printedName": "DevicesUI.ViewContextTag",
+                        "usr": "s:9DevicesUI14ViewContextTagO"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15KeyValueContextV"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyValueContext",
+                "printedName": "DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewContextTag",
+                    "printedName": "DevicesUI.ViewContextTag",
+                    "usr": "s:9DevicesUI14ViewContextTagO"
+                  }
+                ],
+                "usr": "s:11DevicesCore15KeyValueContextV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MutableProperty",
+                "printedName": "DevicesCore.MutableProperty<DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyValueContext",
+                    "printedName": "DevicesCore.KeyValueContext<DevicesCore.StackScreenFlagsTag>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackScreenFlagsTag",
+                        "printedName": "DevicesCore.StackScreenFlagsTag",
+                        "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15KeyValueContextV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:11DevicesCore15MutablePropertyV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreFoundation.CGSize, UIKit.UIEdgeInsets) -> CoreFoundation.CGSize",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(CoreFoundation.CGSize, UIKit.UIEdgeInsets)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIEdgeInsets",
+                        "printedName": "UIKit.UIEdgeInsets",
+                        "usr": "c:@S@UIEdgeInsets"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV11makeSubject7context5flags7measureACyxGx11DevicesCore08KeyValueB0Vy0K2UI04ViewB3TagOGXE_AoI15MutablePropertyVyAKyAI0cd5FlagsQ0OGGSo6CGSizeVAW_So12UIEdgeInsetsVtctcfc",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV11makeSubject7context5flags7measureACyxGx11DevicesCore08KeyValueB0Vy0K2UI04ViewB3TagOGXE_AoI15MutablePropertyVyAKyAI0cd5FlagsQ0OGGSo6CGSizeVAW_So12UIEdgeInsetsVtctcfc",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+            "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setHeader",
+            "printedName": "setHeader(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenHeader",
+                "printedName": "SDNavigation.ScreenHeader",
+                "usr": "s:12SDNavigation12ScreenHeaderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation25ContextStackScreenAdapterV9setHeaderyyAA0dG0VF",
+            "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV9setHeaderyyAA0dG0VF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+            "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12SDNavigation25ContextStackScreenAdapterV",
+        "mangledName": "$s12SDNavigation25ContextStackScreenAdapterV",
+        "moduleName": "SDNavigation",
+        "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController>",
+        "sugared_genericSig": "<Content where Content : UIKit.UIViewController>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "StackScreen",
+            "printedName": "StackScreen",
+            "usr": "s:11DevicesCore11StackScreenP",
+            "mangledName": "$s11DevicesCore11StackScreenP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Screen",
+            "printedName": "Screen",
+            "usr": "s:11DevicesCore6ScreenP",
+            "mangledName": "$s11DevicesCore6ScreenP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultAlertPresenter",
+        "printedName": "DefaultAlertPresenter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stackScreenPresenter:alertScreenFactory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultAlertPresenter",
+                "printedName": "SDNavigation.DefaultAlertPresenter",
+                "usr": "s:12SDNavigation21DefaultAlertPresenterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenPresenter",
+                "printedName": "DevicesCore.StackScreenPresenter",
+                "usr": "s:11DevicesCore20StackScreenPresenterP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Factory",
+                "printedName": "DevicesCore.Factory<DevicesDesignSystem.AlertScreenFactoryInput, DevicesCore.StackScreen>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AlertScreenFactoryInput",
+                    "printedName": "DevicesDesignSystem.AlertScreenFactoryInput",
+                    "usr": "s:19DevicesDesignSystem23AlertScreenFactoryInputV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StackScreen",
+                    "printedName": "DevicesCore.StackScreen",
+                    "usr": "s:11DevicesCore11StackScreenP"
+                  }
+                ],
+                "usr": "s:11DevicesCore7FactoryV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation21DefaultAlertPresenterC011stackScreenD005alertF7FactoryAC11DevicesCore05StackfD0_p_AF0H0Vy0I12DesignSystem0cfH5InputVAF0kF0_pGtcfc",
+            "mangledName": "$s12SDNavigation21DefaultAlertPresenterC011stackScreenD005alertF7FactoryAC11DevicesCore05StackfD0_p_AF0H0Vy0I12DesignSystem0cfH5InputVAF0kF0_pGtcfc",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Alert",
+                "printedName": "DevicesDesignSystem.Alert",
+                "usr": "s:19DevicesDesignSystem5AlertV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21DefaultAlertPresenterC7presentyy19DevicesDesignSystem0C0VF",
+            "mangledName": "$s12SDNavigation21DefaultAlertPresenterC7presentyy19DevicesDesignSystem0C0VF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismissAlert",
+            "printedName": "dismissAlert()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21DefaultAlertPresenterC07dismissC0yyF",
+            "mangledName": "$s12SDNavigation21DefaultAlertPresenterC07dismissC0yyF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12SDNavigation21DefaultAlertPresenterC",
+        "mangledName": "$s12SDNavigation21DefaultAlertPresenterC",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AlertPresenter",
+            "printedName": "AlertPresenter",
+            "usr": "s:12SDNavigation14AlertPresenterP",
+            "mangledName": "$s12SDNavigation14AlertPresenterP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesUI",
+        "printedName": "DevicesUI",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HeaderBar",
+        "printedName": "HeaderBar",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "containerTopInset",
+            "printedName": "containerTopInset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation9HeaderBarC17containerTopInset14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s12SDNavigation9HeaderBarC17containerTopInset12CoreGraphics7CGFloatVvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Custom",
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation9HeaderBarC17containerTopInset14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s12SDNavigation9HeaderBarC17containerTopInset12CoreGraphics7CGFloatVvg",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation9HeaderBarC17containerTopInset14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s12SDNavigation9HeaderBarC17containerTopInset12CoreGraphics7CGFloatVvs",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation9HeaderBarC17containerTopInset14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s12SDNavigation9HeaderBarC17containerTopInset12CoreGraphics7CGFloatVvM",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HeaderBar",
+                "printedName": "SDNavigation.HeaderBar",
+                "usr": "c:@M@SDNavigation@objc(cs)HeaderBar"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyValueContext",
+                "printedName": "DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewContextTag",
+                    "printedName": "DevicesUI.ViewContextTag",
+                    "usr": "s:9DevicesUI14ViewContextTagO"
+                  }
+                ],
+                "usr": "s:11DevicesCore15KeyValueContextV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation9HeaderBarC7contextAC11DevicesCore15KeyValueContextVy0E2UI04ViewI3TagOG_tcfc",
+            "mangledName": "$s12SDNavigation9HeaderBarC7contextAC11DevicesCore15KeyValueContextVy0E2UI04ViewI3TagOG_tcfc",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setItem",
+            "printedName": "setItem(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenHeader",
+                "printedName": "SDNavigation.ScreenHeader",
+                "usr": "s:12SDNavigation12ScreenHeaderV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation9HeaderBarC7setItemyyAA06ScreenB0VF",
+            "mangledName": "$s12SDNavigation9HeaderBarC7setItemyyAA06ScreenB0VF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "layoutSubviews",
+            "printedName": "layoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SDNavigation@objc(cs)HeaderBar(im)layoutSubviews",
+            "mangledName": "$s12SDNavigation9HeaderBarC14layoutSubviewsyyF",
+            "moduleName": "SDNavigation",
+            "overriding": true,
+            "objc_name": "layoutSubviews",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sizeThatFits",
+            "printedName": "sizeThatFits(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SDNavigation@objc(cs)HeaderBar(im)sizeThatFits:",
+            "mangledName": "$s12SDNavigation9HeaderBarC12sizeThatFitsySo6CGSizeVAFF",
+            "moduleName": "SDNavigation",
+            "overriding": true,
+            "objc_name": "sizeThatFits:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HeaderBar",
+                "printedName": "SDNavigation.HeaderBar",
+                "usr": "c:@M@SDNavigation@objc(cs)HeaderBar"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SDNavigation@objc(cs)HeaderBar(im)initWithFrame:",
+            "mangledName": "$s12SDNavigation9HeaderBarC5frameACSo6CGRectV_tcfc",
+            "moduleName": "SDNavigation",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SDNavigation@objc(cs)HeaderBar",
+        "mangledName": "$s12SDNavigation9HeaderBarC",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "Custom",
+          "Final",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Configurable",
+            "printedName": "Configurable",
+            "usr": "s:11DevicesCore12ConfigurableP",
+            "mangledName": "$s11DevicesCore12ConfigurableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NativeView",
+            "printedName": "NativeView",
+            "usr": "s:9DevicesUI10NativeViewP",
+            "mangledName": "$s9DevicesUI10NativeViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Layoutable",
+            "printedName": "Layoutable",
+            "usr": "s:9DevicesUI10LayoutableP",
+            "mangledName": "$s9DevicesUI10LayoutableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Measurable",
+            "printedName": "Measurable",
+            "usr": "s:9DevicesUI10MeasurableP",
+            "mangledName": "$s9DevicesUI10MeasurableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "usr": "s:9DevicesUI4ViewP",
+            "mangledName": "$s9DevicesUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LegacyShareScreenPresenter",
+        "printedName": "LegacyShareScreenPresenter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isPresented",
+            "printedName": "isPresented",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation26LegacyShareScreenPresenterC11isPresentedSbvp",
+            "mangledName": "$s12SDNavigation26LegacyShareScreenPresenterC11isPresentedSbvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation26LegacyShareScreenPresenterC11isPresentedSbvg",
+                "mangledName": "$s12SDNavigation26LegacyShareScreenPresenterC11isPresentedSbvg",
+                "moduleName": "SDNavigation",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(modalScreenPresenter:shareScreenFactory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LegacyShareScreenPresenter",
+                "printedName": "SDNavigation.LegacyShareScreenPresenter",
+                "usr": "s:12SDNavigation26LegacyShareScreenPresenterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModalScreenPresenter",
+                "printedName": "DevicesDesignSystem.ModalScreenPresenter",
+                "usr": "s:19DevicesDesignSystem20ModalScreenPresenterP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Factory",
+                "printedName": "DevicesCore.Factory<DevicesDesignSystem.ShareScreenConfig, DevicesCore.ModalScreen>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShareScreenConfig",
+                    "printedName": "DevicesDesignSystem.ShareScreenConfig",
+                    "usr": "s:19DevicesDesignSystem17ShareScreenConfigV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModalScreen",
+                    "printedName": "DevicesCore.ModalScreen",
+                    "usr": "s:11DevicesCore11ModalScreenP"
+                  }
+                ],
+                "usr": "s:11DevicesCore7FactoryV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation26LegacyShareScreenPresenterC05modaldE005shareD7FactoryAC19DevicesDesignSystem05ModaldE0_p_0I4Core0H0VyAF0cD6ConfigVAH0lD0_pGtcfc",
+            "mangledName": "$s12SDNavigation26LegacyShareScreenPresenterC05modaldE005shareD7FactoryAC19DevicesDesignSystem05ModaldE0_p_0I4Core0H0VyAF0cD6ConfigVAH0lD0_pGtcfc",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ShareScreenConfig",
+                "printedName": "DevicesDesignSystem.ShareScreenConfig",
+                "usr": "s:19DevicesDesignSystem17ShareScreenConfigV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation26LegacyShareScreenPresenterC7presentyy19DevicesDesignSystem0cD6ConfigVF",
+            "mangledName": "$s12SDNavigation26LegacyShareScreenPresenterC7presentyy19DevicesDesignSystem0cD6ConfigVF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismiss",
+            "printedName": "dismiss()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation26LegacyShareScreenPresenterC7dismissyyF",
+            "mangledName": "$s12SDNavigation26LegacyShareScreenPresenterC7dismissyyF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12SDNavigation26LegacyShareScreenPresenterC",
+        "mangledName": "$s12SDNavigation26LegacyShareScreenPresenterC",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ShareScreenPresenter",
+            "printedName": "ShareScreenPresenter",
+            "usr": "s:12SDNavigation20ShareScreenPresenterP",
+            "mangledName": "$s12SDNavigation20ShareScreenPresenterP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesUI",
+        "printedName": "DevicesUI",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesUI",
+        "printedName": "DevicesUI",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScreenHeader",
+        "printedName": "ScreenHeader",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "left",
+            "printedName": "left",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DevicesUI.ViewRenderable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewRenderable",
+                    "printedName": "DevicesUI.ViewRenderable",
+                    "usr": "s:9DevicesUI14ViewRenderableP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation12ScreenHeaderV4left9DevicesUI14ViewRenderable_pSgvp",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV4left9DevicesUI14ViewRenderable_pSgvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "DevicesUI.ViewRenderable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewRenderable",
+                        "printedName": "DevicesUI.ViewRenderable",
+                        "usr": "s:9DevicesUI14ViewRenderableP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation12ScreenHeaderV4left9DevicesUI14ViewRenderable_pSgvg",
+                "mangledName": "$s12SDNavigation12ScreenHeaderV4left9DevicesUI14ViewRenderable_pSgvg",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "center",
+            "printedName": "center",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DevicesUI.ViewRenderable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewRenderable",
+                    "printedName": "DevicesUI.ViewRenderable",
+                    "usr": "s:9DevicesUI14ViewRenderableP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation12ScreenHeaderV6center9DevicesUI14ViewRenderable_pSgvp",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV6center9DevicesUI14ViewRenderable_pSgvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "DevicesUI.ViewRenderable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewRenderable",
+                        "printedName": "DevicesUI.ViewRenderable",
+                        "usr": "s:9DevicesUI14ViewRenderableP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation12ScreenHeaderV6center9DevicesUI14ViewRenderable_pSgvg",
+                "mangledName": "$s12SDNavigation12ScreenHeaderV6center9DevicesUI14ViewRenderable_pSgvg",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "right",
+            "printedName": "right",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DevicesUI.ViewRenderable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewRenderable",
+                    "printedName": "DevicesUI.ViewRenderable",
+                    "usr": "s:9DevicesUI14ViewRenderableP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation12ScreenHeaderV5right9DevicesUI14ViewRenderable_pSgvp",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV5right9DevicesUI14ViewRenderable_pSgvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "DevicesUI.ViewRenderable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewRenderable",
+                        "printedName": "DevicesUI.ViewRenderable",
+                        "usr": "s:9DevicesUI14ViewRenderableP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation12ScreenHeaderV5right9DevicesUI14ViewRenderable_pSgvg",
+                "mangledName": "$s12SDNavigation12ScreenHeaderV5right9DevicesUI14ViewRenderable_pSgvg",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "header",
+            "printedName": "header",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MutableProperty",
+                "printedName": "DevicesCore.MutableProperty<DevicesUI.ViewRenderable?>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "DevicesUI.ViewRenderable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewRenderable",
+                        "printedName": "DevicesUI.ViewRenderable",
+                        "usr": "s:9DevicesUI14ViewRenderableP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:11DevicesCore15MutablePropertyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation12ScreenHeaderV6header11DevicesCore15MutablePropertyVy0E2UI14ViewRenderable_pSgGvp",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV6header11DevicesCore15MutablePropertyVy0E2UI14ViewRenderable_pSgGvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MutableProperty",
+                    "printedName": "DevicesCore.MutableProperty<DevicesUI.ViewRenderable?>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "DevicesUI.ViewRenderable?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ViewRenderable",
+                            "printedName": "DevicesUI.ViewRenderable",
+                            "usr": "s:9DevicesUI14ViewRenderableP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore15MutablePropertyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation12ScreenHeaderV6header11DevicesCore15MutablePropertyVy0E2UI14ViewRenderable_pSgGvg",
+                "mangledName": "$s12SDNavigation12ScreenHeaderV6header11DevicesCore15MutablePropertyVy0E2UI14ViewRenderable_pSgGvg",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(left:center:right:header:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScreenHeader",
+                "printedName": "SDNavigation.ScreenHeader",
+                "usr": "s:12SDNavigation12ScreenHeaderV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DevicesUI.ViewRenderable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewRenderable",
+                    "printedName": "DevicesUI.ViewRenderable",
+                    "usr": "s:9DevicesUI14ViewRenderableP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DevicesUI.ViewRenderable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewRenderable",
+                    "printedName": "DevicesUI.ViewRenderable",
+                    "usr": "s:9DevicesUI14ViewRenderableP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DevicesUI.ViewRenderable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ViewRenderable",
+                    "printedName": "DevicesUI.ViewRenderable",
+                    "usr": "s:9DevicesUI14ViewRenderableP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MutableProperty",
+                "printedName": "DevicesCore.MutableProperty<DevicesUI.ViewRenderable?>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "DevicesUI.ViewRenderable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ViewRenderable",
+                        "printedName": "DevicesUI.ViewRenderable",
+                        "usr": "s:9DevicesUI14ViewRenderableP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:11DevicesCore15MutablePropertyV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation12ScreenHeaderV4left6center5right6headerAC9DevicesUI14ViewRenderable_pSg_A2J0H4Core15MutablePropertyVyAJGtcfc",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV4left6center5right6headerAC9DevicesUI14ViewRenderable_pSg_A2J0H4Core15MutablePropertyVyAJGtcfc",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "makeCloseButton",
+            "printedName": "makeCloseButton(action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ViewRenderable",
+                "printedName": "DevicesUI.ViewRenderable",
+                "usr": "s:9DevicesUI14ViewRenderableP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation12ScreenHeaderV15makeCloseButton6action9DevicesUI14ViewRenderable_pyyc_tFZ",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV15makeCloseButton6action9DevicesUI14ViewRenderable_pyyc_tFZ",
+            "moduleName": "SDNavigation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeBackButton",
+            "printedName": "makeBackButton(action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ViewRenderable",
+                "printedName": "DevicesUI.ViewRenderable",
+                "usr": "s:9DevicesUI14ViewRenderableP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation12ScreenHeaderV14makeBackButton6action9DevicesUI14ViewRenderable_pyyc_tFZ",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV14makeBackButton6action9DevicesUI14ViewRenderable_pyyc_tFZ",
+            "moduleName": "SDNavigation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeTitle",
+            "printedName": "makeTitle(text:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ViewRenderable",
+                "printedName": "DevicesUI.ViewRenderable",
+                "usr": "s:9DevicesUI14ViewRenderableP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StringContent",
+                "printedName": "DevicesUI.StringContent",
+                "usr": "s:9DevicesUI13StringContentP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation12ScreenHeaderV9makeTitle4text9DevicesUI14ViewRenderable_pAF13StringContent_p_tFZ",
+            "mangledName": "$s12SDNavigation12ScreenHeaderV9makeTitle4text9DevicesUI14ViewRenderable_pAF13StringContent_p_tFZ",
+            "moduleName": "SDNavigation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12SDNavigation12ScreenHeaderV",
+        "mangledName": "$s12SDNavigation12ScreenHeaderV",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesUI",
+        "printedName": "DevicesUI",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ShareScreenPresenter",
+        "printedName": "ShareScreenPresenter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isPresented",
+            "printedName": "isPresented",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation20ShareScreenPresenterP11isPresentedSbvp",
+            "mangledName": "$s12SDNavigation20ShareScreenPresenterP11isPresentedSbvp",
+            "moduleName": "SDNavigation",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation20ShareScreenPresenterP11isPresentedSbvg",
+                "mangledName": "$s12SDNavigation20ShareScreenPresenterP11isPresentedSbvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.ShareScreenPresenter>",
+                "sugared_genericSig": "<Self where Self : SDNavigation.ShareScreenPresenter>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ShareScreenConfig",
+                "printedName": "DevicesDesignSystem.ShareScreenConfig",
+                "usr": "s:19DevicesDesignSystem17ShareScreenConfigV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation20ShareScreenPresenterP7presentyy19DevicesDesignSystem0bC6ConfigVF",
+            "mangledName": "$s12SDNavigation20ShareScreenPresenterP7presentyy19DevicesDesignSystem0bC6ConfigVF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.ShareScreenPresenter>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.ShareScreenPresenter>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismiss",
+            "printedName": "dismiss()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation20ShareScreenPresenterP7dismissyyF",
+            "mangledName": "$s12SDNavigation20ShareScreenPresenterP7dismissyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.ShareScreenPresenter>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.ShareScreenPresenter>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12SDNavigation20ShareScreenPresenterP",
+        "mangledName": "$s12SDNavigation20ShareScreenPresenterP",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackControllerAnimator",
+        "printedName": "StackControllerAnimator",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isRunning",
+            "printedName": "isRunning",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation23StackControllerAnimatorP9isRunningSbvp",
+            "mangledName": "$s12SDNavigation23StackControllerAnimatorP9isRunningSbvp",
+            "moduleName": "SDNavigation",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation23StackControllerAnimatorP9isRunningSbvg",
+                "mangledName": "$s12SDNavigation23StackControllerAnimatorP9isRunningSbvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerAnimator>",
+                "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerAnimator>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "addAnimations",
+            "printedName": "addAnimations(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation23StackControllerAnimatorP13addAnimationsyyyycF",
+            "mangledName": "$s12SDNavigation23StackControllerAnimatorP13addAnimationsyyyycF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerAnimator>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerAnimator>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addCompletion",
+            "printedName": "addCompletion(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UIKit.UIViewAnimatingPosition) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewAnimatingPosition",
+                    "printedName": "UIKit.UIViewAnimatingPosition",
+                    "usr": "c:@E@UIViewAnimatingPosition"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation23StackControllerAnimatorP13addCompletionyyySo23UIViewAnimatingPositionVcF",
+            "mangledName": "$s12SDNavigation23StackControllerAnimatorP13addCompletionyyySo23UIViewAnimatingPositionVcF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerAnimator>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerAnimator>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startAnimation",
+            "printedName": "startAnimation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation23StackControllerAnimatorP14startAnimationyyF",
+            "mangledName": "$s12SDNavigation23StackControllerAnimatorP14startAnimationyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerAnimator>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerAnimator>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12SDNavigation23StackControllerAnimatorP",
+        "mangledName": "$s12SDNavigation23StackControllerAnimatorP",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackControllerAnimatorError",
+        "printedName": "StackControllerAnimatorError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "alreadyHasInteractiveAnimator",
+            "printedName": "alreadyHasInteractiveAnimator",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SDNavigation.StackControllerAnimatorError.Type) -> SDNavigation.StackControllerAnimatorError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StackControllerAnimatorError",
+                    "printedName": "SDNavigation.StackControllerAnimatorError",
+                    "usr": "s:12SDNavigation28StackControllerAnimatorErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SDNavigation.StackControllerAnimatorError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackControllerAnimatorError",
+                        "printedName": "SDNavigation.StackControllerAnimatorError",
+                        "usr": "s:12SDNavigation28StackControllerAnimatorErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12SDNavigation28StackControllerAnimatorErrorO021alreadyHasInteractiveD0yA2CmF",
+            "mangledName": "$s12SDNavigation28StackControllerAnimatorErrorO021alreadyHasInteractiveD0yA2CmF",
+            "moduleName": "SDNavigation"
+          },
+          {
+            "kind": "Var",
+            "name": "alreadyInAnimationState",
+            "printedName": "alreadyInAnimationState",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SDNavigation.StackControllerAnimatorError.Type) -> SDNavigation.StackControllerAnimatorError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StackControllerAnimatorError",
+                    "printedName": "SDNavigation.StackControllerAnimatorError",
+                    "usr": "s:12SDNavigation28StackControllerAnimatorErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SDNavigation.StackControllerAnimatorError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackControllerAnimatorError",
+                        "printedName": "SDNavigation.StackControllerAnimatorError",
+                        "usr": "s:12SDNavigation28StackControllerAnimatorErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12SDNavigation28StackControllerAnimatorErrorO23alreadyInAnimationStateyA2CmF",
+            "mangledName": "$s12SDNavigation28StackControllerAnimatorErrorO23alreadyInAnimationStateyA2CmF",
+            "moduleName": "SDNavigation"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackControllerAnimatorError",
+                "printedName": "SDNavigation.StackControllerAnimatorError",
+                "usr": "s:12SDNavigation28StackControllerAnimatorErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackControllerAnimatorError",
+                "printedName": "SDNavigation.StackControllerAnimatorError",
+                "usr": "s:12SDNavigation28StackControllerAnimatorErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation28StackControllerAnimatorErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12SDNavigation28StackControllerAnimatorErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "SDNavigation",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation28StackControllerAnimatorErrorO9hashValueSivp",
+            "mangledName": "$s12SDNavigation28StackControllerAnimatorErrorO9hashValueSivp",
+            "moduleName": "SDNavigation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation28StackControllerAnimatorErrorO9hashValueSivg",
+                "mangledName": "$s12SDNavigation28StackControllerAnimatorErrorO9hashValueSivg",
+                "moduleName": "SDNavigation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation28StackControllerAnimatorErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12SDNavigation28StackControllerAnimatorErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "SDNavigation",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12SDNavigation28StackControllerAnimatorErrorO",
+        "mangledName": "$s12SDNavigation28StackControllerAnimatorErrorO",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackControllerChildAnimator",
+        "printedName": "StackControllerChildAnimator",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "cancelInteractiveAnimation",
+            "printedName": "cancelInteractiveAnimation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation28StackControllerChildAnimatorP26cancelInteractiveAnimationyyF",
+            "mangledName": "$s12SDNavigation28StackControllerChildAnimatorP26cancelInteractiveAnimationyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerChildAnimator>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerChildAnimator>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12SDNavigation28StackControllerChildAnimatorP",
+        "mangledName": "$s12SDNavigation28StackControllerChildAnimatorP",
+        "moduleName": "SDNavigation",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackControllerInteractiveAnimationFocus",
+        "printedName": "StackControllerInteractiveAnimationFocus",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "cancelInteractiveAnimationIfNeeded",
+            "printedName": "cancelInteractiveAnimationIfNeeded()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation40StackControllerInteractiveAnimationFocusP06canceldE8IfNeededyyF",
+            "mangledName": "$s12SDNavigation40StackControllerInteractiveAnimationFocusP06canceldE8IfNeededyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerInteractiveAnimationFocus>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerInteractiveAnimationFocus>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tryToStartInteractiveAnimation",
+            "printedName": "tryToStartInteractiveAnimation(animator:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackControllerChildAnimator",
+                "printedName": "SDNavigation.StackControllerChildAnimator",
+                "usr": "s:12SDNavigation28StackControllerChildAnimatorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation40StackControllerInteractiveAnimationFocusP010tryToStartdE08animatoryAA0bC13ChildAnimator_p_tKF",
+            "mangledName": "$s12SDNavigation40StackControllerInteractiveAnimationFocusP010tryToStartdE08animatoryAA0bC13ChildAnimator_p_tKF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerInteractiveAnimationFocus>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerInteractiveAnimationFocus>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "releaseInteractiveAnimation",
+            "printedName": "releaseInteractiveAnimation(animator:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackControllerChildAnimator",
+                "printedName": "SDNavigation.StackControllerChildAnimator",
+                "usr": "s:12SDNavigation28StackControllerChildAnimatorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation40StackControllerInteractiveAnimationFocusP07releasedE08animatoryAA0bC13ChildAnimator_p_tF",
+            "mangledName": "$s12SDNavigation40StackControllerInteractiveAnimationFocusP07releasedE08animatoryAA0bC13ChildAnimator_p_tF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackControllerInteractiveAnimationFocus>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackControllerInteractiveAnimationFocus>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12SDNavigation40StackControllerInteractiveAnimationFocusP",
+        "mangledName": "$s12SDNavigation40StackControllerInteractiveAnimationFocusP",
+        "moduleName": "SDNavigation",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesUI",
+        "printedName": "DevicesUI",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackScreenController",
+        "printedName": "StackScreenController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "topScreen",
+            "printedName": "topScreen",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Property",
+                "printedName": "DevicesCore.Property<τ_0_0?>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:11DevicesCore8PropertyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation21StackScreenControllerC03topC011DevicesCore8PropertyVyxSgGvp",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC03topC011DevicesCore8PropertyVyxSgGvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Property",
+                    "printedName": "DevicesCore.Property<τ_0_0?>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "τ_0_0?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore8PropertyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation21StackScreenControllerC03topC011DevicesCore8PropertyVyxSgGvg",
+                "mangledName": "$s12SDNavigation21StackScreenControllerC03topC011DevicesCore8PropertyVyxSgGvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+                "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modelScreens",
+            "printedName": "modelScreens",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Property",
+                "printedName": "DevicesCore.Property<[τ_0_0]>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:11DevicesCore8PropertyV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation21StackScreenControllerC12modelScreens11DevicesCore8PropertyVySayxGGvp",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC12modelScreens11DevicesCore8PropertyVySayxGGvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Property",
+                    "printedName": "DevicesCore.Property<[τ_0_0]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[τ_0_0]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore8PropertyV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation21StackScreenControllerC12modelScreens11DevicesCore8PropertyVySayxGGvg",
+                "mangledName": "$s12SDNavigation21StackScreenControllerC12modelScreens11DevicesCore8PropertyVySayxGGvg",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+                "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(container:actionsQueue:animator:assertionCaller:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenController",
+                "printedName": "SDNavigation.StackScreenController<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:12SDNavigation21StackScreenControllerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionQueue",
+                "printedName": "DevicesCore.ActionQueue",
+                "usr": "s:11DevicesCore11ActionQueueP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "SDNavigation.StackControllerAnimator & SDNavigation.StackControllerInteractiveAnimationFocus"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssertionCaller",
+                "printedName": "DevicesCore.AssertionCaller",
+                "usr": "s:11DevicesCore15AssertionCallerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation21StackScreenControllerC9container12actionsQueue8animator15assertionCallerACyxGSo06UIViewD0C_11DevicesCore06ActionG0_pAA0bD8Animator_AA0bD25InteractiveAnimationFocuspAK09AssertionJ0_ptcfc",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC9container12actionsQueue8animator15assertionCallerACyxGSo06UIViewD0C_11DevicesCore06ActionG0_pAA0bD8Animator_AA0bD25InteractiveAnimationFocuspAK09AssertionJ0_ptcfc",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(container:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenController",
+                "printedName": "SDNavigation.StackScreenController<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:12SDNavigation21StackScreenControllerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation21StackScreenControllerC9containerACyxGSo06UIViewD0C_tcfc",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC9containerACyxGSo06UIViewD0C_tcfc",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "hasDisplayedScreen",
+            "printedName": "hasDisplayedScreen(withTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC012hasDisplayedC07withTagSb11DevicesCore0bcH0_p_tF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC012hasDisplayedC07withTagSb11DevicesCore0bcH0_p_tF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "findScreen",
+            "printedName": "findScreen(byTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC04findC05byTagxSg11DevicesCore0bcG0_p_tF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC04findC05byTagxSg11DevicesCore0bcG0_p_tF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resume",
+            "printedName": "resume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC6resumeyyF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC6resumeyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC5pauseyyF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC5pauseyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepend",
+            "printedName": "prepend(_:tag:interactivity:trigger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenInteractivity",
+                "printedName": "DevicesCore.StackScreenInteractivity",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionSource",
+                "printedName": "DevicesCore.StackScreenInteractivity.ActionSource",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV12ActionSourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC7prepend_3tag13interactivity7triggeryx_11DevicesCore0bC3Tag_pAH0bC13InteractivityVAK12ActionSourceOtF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC7prepend_3tag13interactivity7triggeryx_11DevicesCore0bC3Tag_pAH0bC13InteractivityVAK12ActionSourceOtF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "push",
+            "printedName": "push(_:tag:interactivity:trigger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenInteractivity",
+                "printedName": "DevicesCore.StackScreenInteractivity",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionSource",
+                "printedName": "DevicesCore.StackScreenInteractivity.ActionSource",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV12ActionSourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC4push_3tag13interactivity7triggeryx_11DevicesCore0bC3Tag_pAH0bC13InteractivityVAK12ActionSourceOtF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC4push_3tag13interactivity7triggeryx_11DevicesCore0bC3Tag_pAH0bC13InteractivityVAK12ActionSourceOtF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pop",
+            "printedName": "pop(tag:trigger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionSource",
+                "printedName": "DevicesCore.StackScreenInteractivity.ActionSource",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV12ActionSourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC3pop3tag7triggery11DevicesCore0bC3Tag_p_AG0bC13InteractivityV12ActionSourceOtF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC3pop3tag7triggery11DevicesCore0bC3Tag_p_AG0bC13InteractivityV12ActionSourceOtF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(_:trigger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionSource",
+                "printedName": "DevicesCore.StackScreenInteractivity.ActionSource",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV12ActionSourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC6remove_7triggeryx_11DevicesCore0bC13InteractivityV12ActionSourceOtF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC6remove_7triggeryx_11DevicesCore0bC13InteractivityV12ActionSourceOtF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dropAll",
+            "printedName": "dropAll(withTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC7dropAll7withTagy11DevicesCore0bcH0_p_tF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC7dropAll7withTagy11DevicesCore0bcH0_p_tF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bringToFront",
+            "printedName": "bringToFront(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC12bringToFront3tagy11DevicesCore0bC3Tag_p_tF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC12bringToFront3tagy11DevicesCore0bC3Tag_p_tF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dropAll",
+            "printedName": "dropAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation21StackScreenControllerC7dropAllyyF",
+            "mangledName": "$s12SDNavigation21StackScreenControllerC7dropAllyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12SDNavigation21StackScreenControllerC",
+        "mangledName": "$s12SDNavigation21StackScreenControllerC",
+        "moduleName": "SDNavigation",
+        "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+        "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Pausable",
+            "printedName": "Pausable",
+            "usr": "s:11DevicesCore8PausableP",
+            "mangledName": "$s11DevicesCore8PausableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "StackScreenDropper",
+            "printedName": "StackScreenDropper",
+            "usr": "s:12SDNavigation18StackScreenDropperP",
+            "mangledName": "$s12SDNavigation18StackScreenDropperP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackScreenDropper",
+        "printedName": "StackScreenDropper",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "dropAll",
+            "printedName": "dropAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation18StackScreenDropperP7dropAllyyF",
+            "mangledName": "$s12SDNavigation18StackScreenDropperP7dropAllyyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : SDNavigation.StackScreenDropper>",
+            "sugared_genericSig": "<Self where Self : SDNavigation.StackScreenDropper>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12SDNavigation18StackScreenDropperP",
+        "mangledName": "$s12SDNavigation18StackScreenDropperP",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackScreenDropperComposite",
+        "printedName": "StackScreenDropperComposite",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stackControllers:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenDropperComposite",
+                "printedName": "SDNavigation.StackScreenDropperComposite",
+                "usr": "s:12SDNavigation27StackScreenDropperCompositeC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SDNavigation.StackScreenDropper]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StackScreenDropper",
+                    "printedName": "SDNavigation.StackScreenDropper",
+                    "usr": "s:12SDNavigation18StackScreenDropperP"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation27StackScreenDropperCompositeC16stackControllersACSayAA0bcD0_pG_tcfc",
+            "mangledName": "$s12SDNavigation27StackScreenDropperCompositeC16stackControllersACSayAA0bcD0_pG_tcfc",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "dropAll",
+            "printedName": "dropAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation27StackScreenDropperCompositeC7dropAllyyF",
+            "mangledName": "$s12SDNavigation27StackScreenDropperCompositeC7dropAllyyF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12SDNavigation27StackScreenDropperCompositeC",
+        "mangledName": "$s12SDNavigation27StackScreenDropperCompositeC",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "StackScreenDropper",
+            "printedName": "StackScreenDropper",
+            "usr": "s:12SDNavigation18StackScreenDropperP",
+            "mangledName": "$s12SDNavigation18StackScreenDropperP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesDesignSystem",
+        "printedName": "DevicesDesignSystem",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackScreenInteractiveAnimator",
+        "printedName": "StackScreenInteractiveAnimator",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "cancelInteractiveAnimation",
+            "printedName": "cancelInteractiveAnimation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC06cancelD9AnimationyyF",
+            "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC06cancelD9AnimationyyF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "percentComplete",
+            "printedName": "percentComplete",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC15percentComplete14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC15percentComplete12CoreGraphics7CGFloatVvp",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC15percentComplete14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC15percentComplete12CoreGraphics7CGFloatVvg",
+                "moduleName": "SDNavigation",
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC5startyyF",
+            "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC5startyyF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cancel",
+            "printedName": "cancel()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC6cancelyyF",
+            "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC6cancelyyF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finish",
+            "printedName": "finish()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC6finishyyF",
+            "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC6finishyyF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "update",
+            "printedName": "update(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC6updateyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC6updateyy12CoreGraphics7CGFloatVF",
+            "moduleName": "SDNavigation",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12SDNavigation30StackScreenInteractiveAnimatorC",
+        "mangledName": "$s12SDNavigation30StackScreenInteractiveAnimatorC",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "StackControllerChildAnimator",
+            "printedName": "StackControllerChildAnimator",
+            "usr": "s:12SDNavigation28StackControllerChildAnimatorP",
+            "mangledName": "$s12SDNavigation28StackControllerChildAnimatorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TransitionDriverDelegate",
+            "printedName": "TransitionDriverDelegate",
+            "usr": "s:19DevicesDesignSystem24TransitionDriverDelegateP",
+            "mangledName": "$s19DevicesDesignSystem24TransitionDriverDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "DevicesCore",
+        "printedName": "DevicesCore",
+        "declKind": "Import",
+        "moduleName": "SDNavigation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SDNavigation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StackScreenPresenterWrapper",
+        "printedName": "StackScreenPresenterWrapper",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stackController:screenFactory:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenPresenterWrapper",
+                "printedName": "SDNavigation.StackScreenPresenterWrapper<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:12SDNavigation27StackScreenPresenterWrapperC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenController",
+                "printedName": "SDNavigation.StackScreenController<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:12SDNavigation21StackScreenControllerC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DevicesCore.StackScreen) -> τ_0_0",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StackScreen",
+                    "printedName": "DevicesCore.StackScreen",
+                    "usr": "s:11DevicesCore11StackScreenP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12SDNavigation27StackScreenPresenterWrapperC15stackController13screenFactoryACyxGAA0bcG0CyxG_x11DevicesCore0bC0_pctcfc",
+            "mangledName": "$s12SDNavigation27StackScreenPresenterWrapperC15stackController13screenFactoryACyxGAA0bcG0CyxG_x11DevicesCore0bC0_pctcfc",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "prepend",
+            "printedName": "prepend(_:tag:interactivity:trigger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreen",
+                "printedName": "DevicesCore.StackScreen",
+                "usr": "s:11DevicesCore11StackScreenP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenInteractivity",
+                "printedName": "DevicesCore.StackScreenInteractivity",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionSource",
+                "printedName": "DevicesCore.StackScreenInteractivity.ActionSource",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV12ActionSourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation27StackScreenPresenterWrapperC7prepend_3tag13interactivity7triggery11DevicesCore0bC0_p_AH0bC3Tag_pAH0bC13InteractivityVAL12ActionSourceOtF",
+            "mangledName": "$s12SDNavigation27StackScreenPresenterWrapperC7prepend_3tag13interactivity7triggery11DevicesCore0bC0_p_AH0bC3Tag_pAH0bC13InteractivityVAL12ActionSourceOtF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "push",
+            "printedName": "push(_:tag:interactivity:trigger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreen",
+                "printedName": "DevicesCore.StackScreen",
+                "usr": "s:11DevicesCore11StackScreenP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenInteractivity",
+                "printedName": "DevicesCore.StackScreenInteractivity",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionSource",
+                "printedName": "DevicesCore.StackScreenInteractivity.ActionSource",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV12ActionSourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation27StackScreenPresenterWrapperC4push_3tag13interactivity7triggery11DevicesCore0bC0_p_AH0bC3Tag_pAH0bC13InteractivityVAL12ActionSourceOtF",
+            "mangledName": "$s12SDNavigation27StackScreenPresenterWrapperC4push_3tag13interactivity7triggery11DevicesCore0bC0_p_AH0bC3Tag_pAH0bC13InteractivityVAL12ActionSourceOtF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pop",
+            "printedName": "pop(tag:trigger:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ActionSource",
+                "printedName": "DevicesCore.StackScreenInteractivity.ActionSource",
+                "usr": "s:11DevicesCore24StackScreenInteractivityV12ActionSourceO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation27StackScreenPresenterWrapperC3pop3tag7triggery11DevicesCore0bC3Tag_p_AG0bC13InteractivityV12ActionSourceOtF",
+            "mangledName": "$s12SDNavigation27StackScreenPresenterWrapperC3pop3tag7triggery11DevicesCore0bC3Tag_p_AG0bC13InteractivityV12ActionSourceOtF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dropAll",
+            "printedName": "dropAll(withTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation27StackScreenPresenterWrapperC7dropAll7withTagy11DevicesCore0bcI0_p_tF",
+            "mangledName": "$s12SDNavigation27StackScreenPresenterWrapperC7dropAll7withTagy11DevicesCore0bcI0_p_tF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasDisplayedScreen",
+            "printedName": "hasDisplayedScreen(withTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StackScreenTag",
+                "printedName": "DevicesCore.StackScreenTag",
+                "usr": "s:11DevicesCore14StackScreenTagP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12SDNavigation27StackScreenPresenterWrapperC012hasDisplayedC07withTagSb11DevicesCore0bcI0_p_tF",
+            "mangledName": "$s12SDNavigation27StackScreenPresenterWrapperC012hasDisplayedC07withTagSb11DevicesCore0bcI0_p_tF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+            "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12SDNavigation27StackScreenPresenterWrapperC",
+        "mangledName": "$s12SDNavigation27StackScreenPresenterWrapperC",
+        "moduleName": "SDNavigation",
+        "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
+        "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "StackScreenPresenter",
+            "printedName": "StackScreenPresenter",
+            "usr": "s:11DevicesCore20StackScreenPresenterP",
+            "mangledName": "$s11DevicesCore20StackScreenPresenterP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ScrollListViewRenderable",
+        "printedName": "ScrollListViewRenderable",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "updatingDynamicHeader",
+            "printedName": "updatingDynamicHeader()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ScrollListViewRenderable",
+                "printedName": "DevicesUI.ScrollListViewRenderable",
+                "usr": "s:9DevicesUI24ScrollListViewRenderableP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9DevicesUI24ScrollListViewRenderableP12SDNavigationE21updatingDynamicHeaderAaB_pyF",
+            "mangledName": "$s9DevicesUI24ScrollListViewRenderableP12SDNavigationE21updatingDynamicHeaderAaB_pyF",
+            "moduleName": "SDNavigation",
+            "genericSig": "<τ_0_0 where τ_0_0 : DevicesUI.ScrollListViewRenderable>",
+            "sugared_genericSig": "<Self where Self : DevicesUI.ScrollListViewRenderable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:9DevicesUI24ScrollListViewRenderableP",
+        "mangledName": "$s9DevicesUI24ScrollListViewRenderableP",
+        "moduleName": "DevicesUI",
+        "genericSig": "<τ_0_0 : DevicesUI.ScrollViewRenderable>",
+        "sugared_genericSig": "<Self : DevicesUI.ScrollViewRenderable>",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ScrollViewRenderable",
+            "printedName": "ScrollViewRenderable",
+            "usr": "s:9DevicesUI20ScrollViewRenderableP",
+            "mangledName": "$s9DevicesUI20ScrollViewRenderableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NativeViewRenderable",
+            "printedName": "NativeViewRenderable",
+            "usr": "s:9DevicesUI20NativeViewRenderableP",
+            "mangledName": "$s9DevicesUI20NativeViewRenderableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ViewRenderable",
+            "printedName": "ViewRenderable",
+            "usr": "s:9DevicesUI14ViewRenderableP",
+            "mangledName": "$s9DevicesUI14ViewRenderableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIViewPropertyAnimator",
+        "printedName": "UIViewPropertyAnimator",
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIViewPropertyAnimator",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "10.0",
+        "objc_name": "UIViewPropertyAnimator",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Configurable",
+            "printedName": "Configurable",
+            "usr": "s:11DevicesCore12ConfigurableP",
+            "mangledName": "$s11DevicesCore12ConfigurableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "StackControllerAnimator",
+            "printedName": "StackControllerAnimator",
+            "usr": "s:12SDNavigation23StackControllerAnimatorP",
+            "mangledName": "$s12SDNavigation23StackControllerAnimatorP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyValueContextKey",
+        "printedName": "KeyValueContextKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "screenHeader",
+            "printedName": "screenHeader",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KeyValueContextKey",
+                "printedName": "DevicesCore.KeyValueContextKey<SDNavigation.ScreenHeader?, DevicesCore.StackScreenFlagsTag>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SDNavigation.ScreenHeader?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ScreenHeader",
+                        "printedName": "SDNavigation.ScreenHeader",
+                        "usr": "s:12SDNavigation12ScreenHeaderV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StackScreenFlagsTag",
+                    "printedName": "DevicesCore.StackScreenFlagsTag",
+                    "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                  }
+                ],
+                "usr": "s:11DevicesCore015KeyValueContextC0V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11DevicesCore015KeyValueContextC0V12SDNavigationAA19StackScreenFlagsTagORs_rlE12screenHeaderACyAD0hL0VSgAFGvpZ",
+            "mangledName": "$s11DevicesCore015KeyValueContextC0V12SDNavigationAA19StackScreenFlagsTagORs_rlE12screenHeaderACyAD0hL0VSgAFGvpZ",
+            "moduleName": "SDNavigation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "KeyValueContextKey",
+                    "printedName": "DevicesCore.KeyValueContextKey<SDNavigation.ScreenHeader?, DevicesCore.StackScreenFlagsTag>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SDNavigation.ScreenHeader?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ScreenHeader",
+                            "printedName": "SDNavigation.ScreenHeader",
+                            "usr": "s:12SDNavigation12ScreenHeaderV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StackScreenFlagsTag",
+                        "printedName": "DevicesCore.StackScreenFlagsTag",
+                        "usr": "s:11DevicesCore19StackScreenFlagsTagO"
+                      }
+                    ],
+                    "usr": "s:11DevicesCore015KeyValueContextC0V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11DevicesCore015KeyValueContextC0V12SDNavigationAA19StackScreenFlagsTagORs_rlE12screenHeaderACyAD0hL0VSgAFGvgZ",
+                "mangledName": "$s11DevicesCore015KeyValueContextC0V12SDNavigationAA19StackScreenFlagsTagORs_rlE12screenHeaderACyAD0hL0VSgAFGvgZ",
+                "moduleName": "SDNavigation",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 == DevicesCore.StackScreenFlagsTag>",
+                "sugared_genericSig": "<Value, Tag where Tag == DevicesCore.StackScreenFlagsTag>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11DevicesCore015KeyValueContextC0V",
+        "mangledName": "$s11DevicesCore015KeyValueContextC0V",
+        "moduleName": "DevicesCore",
+        "genericSig": "<τ_0_0, τ_0_1>",
+        "sugared_genericSig": "<Value, Tag>",
+        "isExternal": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/AlertPresenter\/DefaultAlertPresenter.swift",
+      "kind": "StringLiteral",
+      "offset": 1193,
+      "length": 23,
+      "value": "\"defaultAlertScreenTag\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/HeaderBar\/HeaderBar.swift",
+      "kind": "IntegerLiteral",
+      "offset": 547,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/HeaderBar\/HeaderBar.swift",
+      "kind": "StringLiteral",
+      "offset": 380,
+      "length": 9,
+      "value": "\"SDNavigation.HeaderBar\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/HeaderBar\/ScreenHeader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1358,
+      "length": 3,
+      "value": "108"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/HeaderBar\/ScrollListDynamicHeaderModifier.swift",
+      "kind": "IntegerLiteral",
+      "offset": 987,
+      "length": 2,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/Animation\/StackControllerAnimatorImpl.swift",
+      "kind": "FloatLiteral",
+      "offset": 1922,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenContainer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 871,
+      "length": 13,
+      "value": "0x080808CC"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenContainer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 899,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenContainer.swift",
+      "kind": "StringLiteral",
+      "offset": 196,
+      "length": 20,
+      "value": "\"SDNavigation.StackScreenContainer\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenController.swift",
+      "kind": "StringLiteral",
+      "offset": 1383,
+      "length": 65,
+      "value": "\"Unable to change state twice was \""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenController.swift",
+      "kind": "StringLiteral",
+      "offset": 1428,
+      "length": 3,
+      "value": "\" new value \""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenController.swift",
+      "kind": "StringLiteral",
+      "offset": 1447,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5705,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/SDNavigation\/Sources\/SDNavigation\/StackScreen\/StackScreenControllerModelLayer.swift",
+      "kind": "Array",
+      "offset": 376,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}

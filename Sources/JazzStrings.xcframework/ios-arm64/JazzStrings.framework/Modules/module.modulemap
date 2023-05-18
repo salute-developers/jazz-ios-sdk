@@ -1,0 +1,4 @@
+framework module JazzStrings {
+  header "JazzStrings-Swift.h"
+  requires objc
+}

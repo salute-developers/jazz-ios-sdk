@@ -1,0 +1,2058 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AVKit",
+        "printedName": "AVKit",
+        "declKind": "Import",
+        "moduleName": "JazzCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CallKit",
+        "printedName": "CallKit",
+        "declKind": "Import",
+        "moduleName": "JazzCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzCore"
+      },
+      {
+        "kind": "Import",
+        "name": "CallKit",
+        "printedName": "CallKit",
+        "declKind": "Import",
+        "moduleName": "JazzCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CXProviderProtocol",
+        "printedName": "CXProviderProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "configuration",
+            "printedName": "configuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CXProviderConfiguration",
+                "printedName": "CallKit.CXProviderConfiguration",
+                "usr": "c:objc(cs)CXProviderConfiguration"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvp",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvp",
+            "moduleName": "JazzCore",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CXProviderConfiguration",
+                    "printedName": "CallKit.CXProviderConfiguration",
+                    "usr": "c:objc(cs)CXProviderConfiguration"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvg",
+                "mangledName": "$s8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvg",
+                "moduleName": "JazzCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+                "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CXProviderConfiguration",
+                    "printedName": "CallKit.CXProviderConfiguration",
+                    "usr": "c:objc(cs)CXProviderConfiguration"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvs",
+                "mangledName": "$s8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvs",
+                "moduleName": "JazzCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+                "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvM",
+                "mangledName": "$s8JazzCore18CXProviderProtocolP13configurationSo0C13ConfigurationCvM",
+                "moduleName": "JazzCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+                "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setDelegate",
+            "printedName": "setDelegate(_:queue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CallKit.CXProviderDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CXProviderDelegate",
+                    "printedName": "CallKit.CXProviderDelegate",
+                    "usr": "c:objc(pl)CXProviderDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore18CXProviderProtocolP11setDelegate_5queueySo0cF0_pSg_So012OS_dispatch_G0CSgtF",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP11setDelegate_5queueySo0cF0_pSg_So012OS_dispatch_G0CSgtF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportNewIncomingCall",
+            "printedName": "reportNewIncomingCall(with:update:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CXCallUpdate",
+                "printedName": "CallKit.CXCallUpdate",
+                "usr": "c:objc(cs)CXCallUpdate"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore18CXProviderProtocolP21reportNewIncomingCall4with6update10completiony10Foundation4UUIDV_So12CXCallUpdateCys5Error_pSgctF",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP21reportNewIncomingCall4with6update10completiony10Foundation4UUIDV_So12CXCallUpdateCys5Error_pSgctF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportCall",
+            "printedName": "reportCall(with:updated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CXCallUpdate",
+                "printedName": "CallKit.CXCallUpdate",
+                "usr": "c:objc(cs)CXCallUpdate"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore18CXProviderProtocolP10reportCall4with7updatedy10Foundation4UUIDV_So12CXCallUpdateCtF",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP10reportCall4with7updatedy10Foundation4UUIDV_So12CXCallUpdateCtF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportCall",
+            "printedName": "reportCall(with:endedAt:reason:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CXCallEndedReason",
+                "printedName": "CallKit.CXCallEndedReason",
+                "usr": "c:@E@CXCallEndedReason"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore18CXProviderProtocolP10reportCall4with7endedAt6reasony10Foundation4UUIDV_AH4DateVSgSo17CXCallEndedReasonVtF",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP10reportCall4with7endedAt6reasony10Foundation4UUIDV_AH4DateVSgSo17CXCallEndedReasonVtF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportOutgoingCall",
+            "printedName": "reportOutgoingCall(with:startedConnectingAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore18CXProviderProtocolP18reportOutgoingCall4with19startedConnectingAty10Foundation4UUIDV_AG4DateVSgtF",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP18reportOutgoingCall4with19startedConnectingAty10Foundation4UUIDV_AG4DateVSgtF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportOutgoingCall",
+            "printedName": "reportOutgoingCall(with:connectedAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore18CXProviderProtocolP18reportOutgoingCall4with11connectedAty10Foundation4UUIDV_AG4DateVSgtF",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP18reportOutgoingCall4with11connectedAty10Foundation4UUIDV_AG4DateVSgtF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "invalidate",
+            "printedName": "invalidate()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore18CXProviderProtocolP10invalidateyyF",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP10invalidateyyF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXProviderProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXProviderProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8JazzCore18CXProviderProtocolP",
+        "mangledName": "$s8JazzCore18CXProviderProtocolP",
+        "moduleName": "JazzCore",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CXCallControllerProtocol",
+        "printedName": "CXCallControllerProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "calls",
+            "printedName": "calls",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CallKit.CXCall]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CXCall",
+                    "printedName": "CallKit.CXCall",
+                    "usr": "c:objc(cs)CXCall"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JazzCore24CXCallControllerProtocolP5callsSaySo0C0CGvp",
+            "mangledName": "$s8JazzCore24CXCallControllerProtocolP5callsSaySo0C0CGvp",
+            "moduleName": "JazzCore",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CallKit.CXCall]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CXCall",
+                        "printedName": "CallKit.CXCall",
+                        "usr": "c:objc(cs)CXCall"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore24CXCallControllerProtocolP5callsSaySo0C0CGvg",
+                "mangledName": "$s8JazzCore24CXCallControllerProtocolP5callsSaySo0C0CGvg",
+                "moduleName": "JazzCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXCallControllerProtocol>",
+                "sugared_genericSig": "<Self where Self : JazzCore.CXCallControllerProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "request",
+            "printedName": "request(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CXTransaction",
+                "printedName": "CallKit.CXTransaction",
+                "usr": "c:objc(cs)CXTransaction"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8JazzCore24CXCallControllerProtocolP7request_10completionySo13CXTransactionC_ys5Error_pSgctF",
+            "mangledName": "$s8JazzCore24CXCallControllerProtocolP7request_10completionySo13CXTransactionC_ys5Error_pSgctF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.CXCallControllerProtocol>",
+            "sugared_genericSig": "<Self where Self : JazzCore.CXCallControllerProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8JazzCore24CXCallControllerProtocolP",
+        "mangledName": "$s8JazzCore24CXCallControllerProtocolP",
+        "moduleName": "JazzCore",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMCallKitProxy",
+        "printedName": "JMCallKitProxy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "callKitProvider",
+            "printedName": "callKitProvider",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JazzCore.CXProviderProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CXProviderProtocol",
+                    "printedName": "JazzCore.CXProviderProtocol",
+                    "usr": "s:8JazzCore18CXProviderProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvpZ",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvpZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "JazzCore.CXProviderProtocol?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CXProviderProtocol",
+                        "printedName": "JazzCore.CXProviderProtocol",
+                        "usr": "s:8JazzCore18CXProviderProtocolP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvgZ",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvgZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "JazzCore.CXProviderProtocol?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CXProviderProtocol",
+                        "printedName": "JazzCore.CXProviderProtocol",
+                        "usr": "s:8JazzCore18CXProviderProtocolP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvsZ",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvsZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvMZ",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC04callD8ProviderAA18CXProviderProtocol_pSgvMZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "callKitCallController",
+            "printedName": "callKitCallController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "JazzCore.CXCallControllerProtocol?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CXCallControllerProtocol",
+                    "printedName": "JazzCore.CXCallControllerProtocol",
+                    "usr": "s:8JazzCore24CXCallControllerProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvpZ",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvpZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "JazzCore.CXCallControllerProtocol?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CXCallControllerProtocol",
+                        "printedName": "JazzCore.CXCallControllerProtocol",
+                        "usr": "s:8JazzCore24CXCallControllerProtocolP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvgZ",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvgZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "JazzCore.CXCallControllerProtocol?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CXCallControllerProtocol",
+                        "printedName": "JazzCore.CXCallControllerProtocol",
+                        "usr": "s:8JazzCore24CXCallControllerProtocolP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvsZ",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvsZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvMZ",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC04callD14CallControllerAA06CXCallH8Protocol_pSgvMZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enabled",
+            "printedName": "enabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cpy)enabled",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC7enabledSbvpZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)enabled",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC7enabledSbvgZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)setEnabled:",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC7enabledSbvsZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8JazzCore14JMCallKitProxyC7enabledSbvMZ",
+                "mangledName": "$s8JazzCore14JMCallKitProxyC7enabledSbvMZ",
+                "moduleName": "JazzCore",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "configureProvider",
+            "printedName": "configureProvider(localizedName:ringtoneSound:iconTemplateImageData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)configureProviderWithLocalizedName:ringtoneSound:iconTemplateImageData:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC17configureProvider13localizedName13ringtoneSound21iconTemplateImageDataySS_SSSg10Foundation0O0VSgtFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "objc_name": "configureProviderWithLocalizedName:ringtoneSound:iconTemplateImageData:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isProviderConfigured",
+            "printedName": "isProviderConfigured()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)isProviderConfigured",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC20isProviderConfiguredSbyFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addListener",
+            "printedName": "addListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMCallKitListener",
+                "printedName": "JazzCore.JMCallKitListener",
+                "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)addListener:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC11addListeneryyAA0cdG0_pFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeListener",
+            "printedName": "removeListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JMCallKitListener",
+                "printedName": "JazzCore.JMCallKitListener",
+                "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)removeListener:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC14removeListeneryyAA0cdG0_pFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasActiveCallForUUID",
+            "printedName": "hasActiveCallForUUID(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)hasActiveCallForUUID:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC20hasActiveCallForUUIDySbSSFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportNewIncomingCall",
+            "printedName": "reportNewIncomingCall(UUID:handle:displayName:hasVideo:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)reportNewIncomingCallWithUUID:handle:displayName:hasVideo:completion:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC21reportNewIncomingCall4UUID6handle11displayName8hasVideo10completiony10FoundationAEV_SSSgALSbys5Error_pSgctFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "objc_name": "reportNewIncomingCallWithUUID:handle:displayName:hasVideo:completion:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportCallUpdate",
+            "printedName": "reportCallUpdate(with:handle:displayName:hasVideo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)reportCallUpdateWith:handle:displayName:hasVideo:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC16reportCallUpdate4with6handle11displayName8hasVideoy10Foundation4UUIDV_SSSgALSbtFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "objc_name": "reportCallUpdateWith:handle:displayName:hasVideo:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportCall",
+            "printedName": "reportCall(with:endedAt:reason:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CXCallEndedReason",
+                "printedName": "CallKit.CXCallEndedReason",
+                "usr": "c:@E@CXCallEndedReason"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)reportCallWith:endedAt:reason:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC10reportCall4with7endedAt6reasony10Foundation4UUIDV_AH4DateVSgSo17CXCallEndedReasonVtFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "objc_name": "reportCallWith:endedAt:reason:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportOutgoingCall",
+            "printedName": "reportOutgoingCall(with:startedConnectingAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)reportOutgoingCallWith:startedConnectingAt:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC18reportOutgoingCall4with19startedConnectingAty10Foundation4UUIDV_AG4DateVSgtFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "objc_name": "reportOutgoingCallWith:startedConnectingAt:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reportOutgoingCall",
+            "printedName": "reportOutgoingCall(with:connectedAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)reportOutgoingCallWith:connectedAt:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC18reportOutgoingCall4with11connectedAty10Foundation4UUIDV_AG4DateVSgtFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "objc_name": "reportOutgoingCallWith:connectedAt:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "request",
+            "printedName": "request(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CXTransaction",
+                "printedName": "CallKit.CXTransaction",
+                "usr": "c:objc(cs)CXTransaction"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy(cm)request:completion:",
+            "mangledName": "$s8JazzCore14JMCallKitProxyC7request_10completionySo13CXTransactionC_ys5Error_pSgctFZ",
+            "moduleName": "JazzCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@JazzCore@objc(cs)JMCallKitProxy",
+        "mangledName": "$s8JazzCore14JMCallKitProxyC",
+        "moduleName": "JazzCore",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVKit",
+        "printedName": "AVKit",
+        "declKind": "Import",
+        "moduleName": "JazzCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CallKit",
+        "printedName": "CallKit",
+        "declKind": "Import",
+        "moduleName": "JazzCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "JMCallKitListener",
+        "printedName": "JMCallKitListener",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "providerDidReset",
+            "printedName": "providerDidReset()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)providerDidReset",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP16providerDidResetyyF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performAnswerCall",
+            "printedName": "performAnswerCall(UUID:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)performAnswerCallWithUUID:",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP17performAnswerCall4UUIDy10FoundationAEV_tF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "objc_name": "performAnswerCallWithUUID:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performEndCall",
+            "printedName": "performEndCall(UUID:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)performEndCallWithUUID:",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP14performEndCall4UUIDy10FoundationAEV_tF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "objc_name": "performEndCallWithUUID:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performSetMutedCall",
+            "printedName": "performSetMutedCall(UUID:isMuted:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)performSetMutedCallWithUUID:isMuted:",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP19performSetMutedCall4UUID02isH0y10FoundationAEV_SbtF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "objc_name": "performSetMutedCallWithUUID:isMuted:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performStartCall",
+            "printedName": "performStartCall(UUID:isVideo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)performStartCallWithUUID:isVideo:",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP16performStartCall4UUID7isVideoy10FoundationAEV_SbtF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "objc_name": "performStartCallWithUUID:isVideo:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "providerDidActivateAudioSession",
+            "printedName": "providerDidActivateAudioSession(session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioSession",
+                "printedName": "AVFAudio.AVAudioSession",
+                "usr": "c:objc(cs)AVAudioSession"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)providerDidActivateAudioSessionWithSession:",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP31providerDidActivateAudioSession7sessionySo07AVAudioJ0C_tF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "objc_name": "providerDidActivateAudioSessionWithSession:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "providerDidDeactivateAudioSession",
+            "printedName": "providerDidDeactivateAudioSession(session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioSession",
+                "printedName": "AVFAudio.AVAudioSession",
+                "usr": "c:objc(cs)AVAudioSession"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)providerDidDeactivateAudioSessionWithSession:",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP33providerDidDeactivateAudioSession7sessionySo07AVAudioJ0C_tF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "objc_name": "providerDidDeactivateAudioSessionWithSession:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "providerTimedOutPerformingAction",
+            "printedName": "providerTimedOutPerformingAction(action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CXAction",
+                "printedName": "CallKit.CXAction",
+                "usr": "c:objc(cs)CXAction"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener(im)providerTimedOutPerformingActionWithAction:",
+            "mangledName": "$s8JazzCore17JMCallKitListenerP32providerTimedOutPerformingAction6actionySo8CXActionC_tF",
+            "moduleName": "JazzCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : JazzCore.JMCallKitListener>",
+            "sugared_genericSig": "<Self where Self : JazzCore.JMCallKitListener>",
+            "protocolReq": true,
+            "objc_name": "providerTimedOutPerformingActionWithAction:",
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener",
+        "mangledName": "$s8JazzCore17JMCallKitListenerP",
+        "moduleName": "JazzCore",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CXProvider",
+        "printedName": "CXProvider",
+        "declKind": "Class",
+        "usr": "c:objc(cs)CXProvider",
+        "moduleName": "CallKit",
+        "isOpen": true,
+        "intro_iOS": "10.0",
+        "objc_name": "CXProvider",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CXProviderProtocol",
+            "printedName": "CXProviderProtocol",
+            "usr": "s:8JazzCore18CXProviderProtocolP",
+            "mangledName": "$s8JazzCore18CXProviderProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CXCallController",
+        "printedName": "CXCallController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "calls",
+            "printedName": "calls",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CallKit.CXCall]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CXCall",
+                    "printedName": "CallKit.CXCall",
+                    "usr": "c:objc(cs)CXCall"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So16CXCallControllerC8JazzCoreE5callsSaySo0A0CGvp",
+            "mangledName": "$sSo16CXCallControllerC8JazzCoreE5callsSaySo0A0CGvp",
+            "moduleName": "JazzCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CallKit.CXCall]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CXCall",
+                        "printedName": "CallKit.CXCall",
+                        "usr": "c:objc(cs)CXCall"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So16CXCallControllerC8JazzCoreE5callsSaySo0A0CGvg",
+                "mangledName": "$sSo16CXCallControllerC8JazzCoreE5callsSaySo0A0CGvg",
+                "moduleName": "JazzCore",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)CXCallController",
+        "moduleName": "CallKit",
+        "isOpen": true,
+        "intro_iOS": "10.0",
+        "objc_name": "CXCallController",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CXCallControllerProtocol",
+            "printedName": "CXCallControllerProtocol",
+            "usr": "s:8JazzCore24CXCallControllerProtocolP",
+            "mangledName": "$s8JazzCore24CXCallControllerProtocolP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 2732,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3058,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

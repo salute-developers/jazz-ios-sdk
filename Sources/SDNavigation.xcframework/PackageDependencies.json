@@ -1,0 +1,14 @@
+{
+  "main": {
+    "workspace": [
+      "DevicesCore",
+      "DevicesDesignSystem",
+      "DevicesUI"
+    ],
+    "sdk": []
+  },
+  "test": {
+    "workspace": [],
+    "sdk": []
+  }
+}

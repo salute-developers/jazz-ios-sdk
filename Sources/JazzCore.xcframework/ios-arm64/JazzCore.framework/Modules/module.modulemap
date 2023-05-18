@@ -1,0 +1,11 @@
+framework module JazzCore {
+  umbrella header "JazzCore.h"
+
+  export *
+  module * { export * }
+}
+
+module JazzCore.Swift {
+  header "JazzCore-Swift.h"
+  requires objc
+}

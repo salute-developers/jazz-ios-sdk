@@ -1,0 +1,1748 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CompanionCore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CallKit
+import CoreBluetooth
+import CoreGraphics
+import DevicesCore
+import DevicesDesignSystem
+import DevicesUI
+import Foundation
+import SafariServices
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+public protocol AcceptAgreementFlowPresenter {
+  func startAcceptAgreementFlow(onSuccessfulFinish: (() -> Swift.Void)?)
+}
+public enum ActionScreen {
+}
+extension CompanionCore.ActionScreen {
+  public typealias Factory = DevicesCore.Factory<CompanionCore.ActionScreen.Parameters, DevicesCore.StackScreen>
+}
+extension DevicesCore.Factory where Arg == CompanionCore.ActionScreen.Parameters, Item == DevicesCore.StackScreen {
+  public init()
+}
+extension CompanionCore.ActionScreen.Parameters {
+  public var model: CompanionCore.ActionScreen.Model {
+    get
+  }
+}
+extension CompanionCore.ActionScreen {
+  public struct Model : DevicesUI.ViewRenderable {
+    public let icon: DevicesUI.ViewRenderable?
+    public let caption: CompanionCore.RenderableText
+    public let description: DevicesUI.ViewRenderable?
+    public let controls: [DevicesUI.ViewRenderable]
+    public let rightItem: DevicesUI.ViewRenderable?
+    public let background: DevicesUI.ViewRenderable?
+    public func renderView(context: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+  }
+}
+extension CompanionCore.ActionScreen {
+  public enum RightItem {
+    case close(() -> Swift.Void)
+  }
+  public struct Parameters {
+    public init(context: DevicesUI.ViewContext, icon: DevicesUI.ViewRenderable?, caption: CompanionCore.RenderableText, description: DevicesUI.ViewRenderable?, controls: [DevicesUI.ViewRenderable], rightItem: CompanionCore.ActionScreen.RightItem?, background: DevicesUI.ViewRenderable?)
+  }
+}
+extension CompanionCore.ActionScreen.Parameters {
+  public init(context: DevicesUI.ViewContext, icon: DevicesUI.ViewRenderable?, caption: DevicesUI.StringContent, description: DevicesUI.StringContent, controls: [DevicesUI.ViewRenderable], rightItem: CompanionCore.ActionScreen.RightItem? = nil, background: DevicesUI.ViewRenderable? = nil)
+  public init(context: DevicesUI.ViewContext, icon: DevicesUI.ViewRenderable?, caption: DevicesUI.StringContent, description: DevicesUI.ViewRenderable?, controls: [DevicesUI.ViewRenderable], rightItem: DevicesUI.ViewRenderable? = nil, background: DevicesUI.ViewRenderable? = nil)
+  public init(context: DevicesUI.ViewContext, icon: DevicesUI.ViewRenderable?, caption: CompanionCore.RenderableText, description: DevicesUI.ViewRenderable?, controls: [DevicesUI.ViewRenderable], rightItem: DevicesUI.ViewRenderable? = nil, background: DevicesUI.ViewRenderable? = nil)
+}
+extension CompanionCore.ActionScreen.RightItem : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+public typealias AdvertisingID = DevicesCore.Tagged<CompanionCore.AdvertisingIDTag, Swift.String>
+public enum AdvertisingIDTag {
+}
+public protocol AdvertisingIDProvider {
+  var advertisingID: CompanionCore.AdvertisingID { get }
+}
+public protocol AnalyticsServiceContainer : DevicesCore.AnalyticsService {
+  func add(events: [Swift.String], to analyticsType: CompanionCore.AnalyticsType)
+}
+public typealias AnalyticsServiceFactory = DevicesCore.Factory<Swift.Void, DevicesCore.AnalyticsService & DevicesCore.AnalyticsUserContainer>
+public enum AnalyticsType : Swift.Equatable {
+  case firebase
+  case amplitude
+  case appsflyer
+  case appmetrica
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: CompanionCore.AnalyticsType, b: CompanionCore.AnalyticsType) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum AppIconID : Swift.String, DevicesCore.ImageID, Swift.CaseIterable, Swift.LosslessStringConvertible {
+  case release
+  case beta
+  case dev
+  public init?(_ description: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CompanionCore.AppIconID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CompanionCore.AppIconID] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CompanionCore.AppImageID {
+  public enum Placeholder : Swift.String, DevicesCore.ImageID, Swift.CaseIterable {
+    case landscape
+    case profileAvatar
+    case paymentCard
+    case serviceIcon
+    public func hash(into hasher: inout Swift.Hasher)
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CompanionCore.AppImageID.Placeholder]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CompanionCore.AppImageID.Placeholder] {
+      get
+    }
+    public var hashValue: Swift.Int {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension CompanionCore.AppImageID.Placeholder {
+  public var name: Swift.String {
+    get
+  }
+}
+public enum AppImageID : Swift.String, DevicesCore.ImageID, Swift.CaseIterable {
+  case errorIcon
+  case exclamationIcon
+  case successIcon
+  case successV2
+  case crossIcon
+  case trashIcon
+  case checkboxOn
+  case checkboxOff
+  case circleCheckboxOn
+  case circleCheckboxOff
+  case reloadIcon
+  case plusIcon
+  case secureEnter
+  case settings
+  case addIcon
+  case disclosureDown
+  case arrowRightSmall
+  case arrowDown
+  case editIcon
+  case copyIcon
+  case profileError
+  case profile
+  case remote
+  case homeIcon
+  case shadowTab
+  case warning
+  public func hash(into hasher: inout Swift.Hasher)
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CompanionCore.AppImageID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CompanionCore.AppImageID] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CompanionCore.AppImageID {
+  public var name: Swift.String {
+    get
+  }
+}
+extension CompanionCore.AppImageID : DevicesUI.ImageContent {
+}
+extension DevicesCore.Tagged where Tag == DevicesCore.AppMetricaTag, T == Swift.String {
+  public static var salute: DevicesCore.Tagged<DevicesCore.AppMetricaTag, Swift.String>
+}
+public protocol AppRouter : CompanionCore.AcceptAgreementFlowPresenter, CompanionCore.AuthFlowPresenter, CompanionCore.DeauthFlowPresenter, CompanionCore.RemoteScreenPresenter, DevicesCore.AlertPresenter, DevicesDesignSystem.ModalScreenPresenter {
+}
+public enum AppStringID {
+  public enum Time : Swift.String, DevicesCore.StringID, Swift.CaseIterable {
+    case justNowText
+    case agoText
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CompanionCore.AppStringID.Time]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CompanionCore.AppStringID.Time] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ErrorModel : Swift.String, DevicesCore.StringID, Swift.CaseIterable, DevicesUI.StringContent {
+    case buttonLabelText
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CompanionCore.AppStringID.ErrorModel]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CompanionCore.AppStringID.ErrorModel] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Common : Swift.String, DevicesCore.StringID, Swift.CaseIterable {
+    case search
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CompanionCore.AppStringID.Common]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CompanionCore.AppStringID.Common] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension DevicesCore.Tagged where Tag == DevicesCore.ApplicationGroupTag, T == Swift.String {
+  public static var salute: DevicesCore.ApplicationGroup
+}
+public enum AppsFlyerAnalyticsEvent : DevicesCore.AnalyticsEvent, Swift.Equatable, Swift.CaseIterable {
+  case authScreenOpened
+  case authCompleted
+  case assistantDeeplinkOpened
+  public var name: Swift.String {
+    get
+  }
+  public var parameters: [Swift.String : Any]? {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: CompanionCore.AppsFlyerAnalyticsEvent, b: CompanionCore.AppsFlyerAnalyticsEvent) -> Swift.Bool
+  public typealias AllCases = [CompanionCore.AppsFlyerAnalyticsEvent]
+  public static var allCases: [CompanionCore.AppsFlyerAnalyticsEvent] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesCore.Factory where Arg == DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>, Item == DevicesUI.AttributedTextInfo {
+  public init(text: Swift.String, commonTypeface: DevicesDesignSystem.Typeface = .footnote1, textColor: DevicesDesignSystem.TypeColor = .secondary, linksColor: DevicesDesignSystem.TypeColor = .default, customAttributes: [DevicesCore.Factory<Arg, Item>.CustomAttribute]? = nil, urlsInText: [DevicesCore.Factory<Arg, Item>.URLInfo]? = nil, selectableText: Swift.String? = nil, selectableTextColor: DevicesDesignSystem.ColorProtocol = TypeColor.default, selectableRanges: [Foundation.NSRange] = [], currentSelectableTextColor: DevicesDesignSystem.ColorProtocol = TypeColor.default, currentSelectableRange: Foundation.NSRange? = nil)
+  public init(text: Swift.String, commonTypeface: DevicesDesignSystem.Typeface = .footnote1, unifiedTextColor: DevicesDesignSystem.ColorProtocol, unifiedLinkColor: DevicesDesignSystem.ColorProtocol, customAttributes: [DevicesCore.Factory<Arg, Item>.CustomAttribute]? = nil, urlsInText: [DevicesCore.Factory<Arg, Item>.URLInfo]? = nil, selectableText: Swift.String? = nil, selectableTextColor: DevicesDesignSystem.ColorProtocol = TypeColor.default, selectableRanges: [Foundation.NSRange] = [], currentSelectableTextColor: DevicesDesignSystem.ColorProtocol = TypeColor.default, currentSelectableRange: Foundation.NSRange? = nil)
+}
+extension DevicesCore.Factory where Arg == DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>, Item == DevicesUI.AttributedTextInfo {
+  public struct CustomAttribute {
+    public init(key: Foundation.NSAttributedString.Key, value: Swift.String, range: Foundation.NSRange? = nil, valuePrefix: Swift.String?)
+  }
+}
+extension DevicesCore.Factory where Arg == DevicesCore.KeyValueContext<DevicesUI.ViewContextTag>, Item == DevicesUI.AttributedTextInfo {
+  public struct URLInfo {
+    public init(caption: DevicesUI.StringContent, url: Foundation.URL)
+  }
+}
+public protocol AuthFlowPresenter {
+  func startAuthFlow(onSuccessfulFinish: (() -> Swift.Void)?, shouldStartOnboarding: Swift.Bool)
+}
+public typealias AuthFlowsStarter = CompanionCore.AcceptAgreementFlowPresenter & CompanionCore.AuthFlowPresenter & CompanionCore.DeauthFlowPresenter
+public struct BackgroundGradientStyle : DevicesUI.GradientStyle {
+  public init()
+  public func makeGradientConfig(context: DevicesUI.ViewContext) -> DevicesUI.GradientConfig
+}
+public struct BannerSheetModel {
+}
+extension CompanionCore.BannerSheetModel {
+  public enum Icon {
+    case success
+    case error
+    case custom(DevicesCore.ImageID)
+  }
+  public enum Style : Swift.Equatable {
+    case positive
+    case negative
+    case neutral
+    case solid(UIKit.UIColor)
+    public static func == (a: CompanionCore.BannerSheetModel.Style, b: CompanionCore.BannerSheetModel.Style) -> Swift.Bool
+  }
+  public struct Appearance : Swift.Equatable {
+    public let icon: CompanionCore.BannerSheetModel.Icon
+    public let style: CompanionCore.BannerSheetModel.Style
+    public init(icon: CompanionCore.BannerSheetModel.Icon, style: CompanionCore.BannerSheetModel.Style)
+    public static func == (a: CompanionCore.BannerSheetModel.Appearance, b: CompanionCore.BannerSheetModel.Appearance) -> Swift.Bool
+  }
+  public init(appearance: CompanionCore.BannerSheetModel.Appearance, content: CompanionCore.InfoScreenContent, okAction: @escaping () -> Swift.Void)
+}
+extension CompanionCore.BannerSheetModel.Appearance {
+  public static let errorBanner: CompanionCore.BannerSheetModel.Appearance
+  public static let successBanner: CompanionCore.BannerSheetModel.Appearance
+  public static let neutralWithError: CompanionCore.BannerSheetModel.Appearance
+}
+extension CompanionCore.BannerSheetModel : Swift.Equatable {
+  public static func == (lhs: CompanionCore.BannerSheetModel, rhs: CompanionCore.BannerSheetModel) -> Swift.Bool
+}
+extension CompanionCore.BannerSheetModel.Icon : Swift.Equatable {
+  public static func == (lhs: CompanionCore.BannerSheetModel.Icon, rhs: CompanionCore.BannerSheetModel.Icon) -> Swift.Bool
+}
+public enum SuccessScreenTag {
+}
+public enum ErrorScreenTag {
+}
+public enum BannerSheetTag {
+}
+public protocol BannerSheetUIBuilder {
+  func makeStackScreen(context: DevicesUI.ViewContext, appearance: CompanionCore.BannerSheetModel.Appearance, content: CompanionCore.InfoScreenContent, onOkPressed: @escaping () -> Swift.Void) -> DevicesCore.StackScreen
+  func makeModalScreen(context: DevicesUI.ViewContext, appearance: CompanionCore.BannerSheetModel.Appearance, content: CompanionCore.InfoScreenContent, onOkPressed: @escaping () -> Swift.Void) -> DevicesCore.ModalTaggedScreen<CompanionCore.BannerSheetTag>
+}
+final public class BannerSheetUIBuilderImpl : CompanionCore.BannerSheetUIBuilder {
+  public init()
+  final public func makeStackScreen(context: DevicesUI.ViewContext, appearance: CompanionCore.BannerSheetModel.Appearance, content: CompanionCore.InfoScreenContent, onOkPressed: @escaping () -> Swift.Void) -> DevicesCore.StackScreen
+  final public func makeModalScreen(context: DevicesUI.ViewContext, appearance: CompanionCore.BannerSheetModel.Appearance, content: CompanionCore.InfoScreenContent, onOkPressed: @escaping () -> Swift.Void) -> DevicesCore.ModalTaggedScreen<CompanionCore.BannerSheetTag>
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class BluetoothAdapter : CompanionCore.BluetoothStarter {
+  final public var status: DevicesCore.Property<CompanionCore.BluetoothAdapterStatus> {
+    get
+  }
+  convenience public init(logger: DevicesCore.Logger?)
+  final public func prepare(_ callback: @escaping (CompanionCore.BluetoothAdapterStatus) -> Swift.Void)
+  @objc deinit
+}
+extension CompanionCore.BluetoothAdapter : CompanionCore.BluetoothCentralManagerDelegate {
+  final public func centralManagerDidUpdateState(_: CompanionCore.BluetoothCentralManager)
+}
+public struct BluetoothAdapterStatus : Swift.Equatable {
+  public let state: CoreBluetooth.CBManagerState
+  public let authorizationStatus: DevicesCore.AuthorizationStatus
+  public static let ready: CompanionCore.BluetoothAdapterStatus
+  public init(state: CoreBluetooth.CBManagerState, authorizationStatus: DevicesCore.AuthorizationStatus)
+  public static func == (a: CompanionCore.BluetoothAdapterStatus, b: CompanionCore.BluetoothAdapterStatus) -> Swift.Bool
+}
+public protocol BluetoothCentralManager {
+  var state: CoreBluetooth.CBManagerState { get }
+  var authorizationStatus: DevicesCore.AuthorizationStatus { get }
+  func startAuthorization()
+  func scanForPeripherals(withServices serviceUUIDs: [CoreBluetooth.CBUUID]?)
+  func stopScan()
+}
+extension CompanionCore.BluetoothCentralManager {
+  public var adapterStatus: CompanionCore.BluetoothAdapterStatus {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers final public class BluetoothCentralManagerAdapter : ObjectiveC.NSObject, CompanionCore.BluetoothCentralManager {
+  weak final public var delegate: CompanionCore.BluetoothCentralManagerDelegate?
+  final public var state: CoreBluetooth.CBManagerState
+  final public var authorizationStatus: DevicesCore.AuthorizationStatus {
+    get
+  }
+  final public func startAuthorization()
+  final public func scanForPeripherals(withServices serviceUUIDs: [CoreBluetooth.CBUUID]?)
+  final public func stopScan()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension CompanionCore.BluetoothCentralManagerAdapter : CoreBluetooth.CBCentralManagerDelegate {
+  @objc final public func centralManagerDidUpdateState(_ manager: CoreBluetooth.CBCentralManager)
+}
+public protocol BluetoothCentralManagerDelegate : AnyObject {
+  func centralManagerDidUpdateState(_ central: CompanionCore.BluetoothCentralManager)
+}
+public protocol BluetoothStarter {
+  var status: DevicesCore.Property<CompanionCore.BluetoothAdapterStatus> { get }
+  func prepare(_ callback: @escaping (CompanionCore.BluetoothAdapterStatus) -> Swift.Void)
+}
+public protocol BottomTabBarController : UIKit.UIViewController, DevicesUI.Measurable {
+  var barItems: [CompanionCore.TabBarItem] { get set }
+  var contentHeight: CoreFoundation.CGFloat { get }
+  var bottomInset: CoreFoundation.CGFloat { get set }
+  var okniksCenterTarget: CoreFoundation.CGPoint? { get set }
+  func addOkniksIfNeeded()
+}
+public struct BottomTabBarModel : DevicesUI.ViewRenderable {
+  public let tabs: [CompanionCore.TabBarItem]
+  public init(items: [CompanionCore.TabBarItem])
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public enum BuildType : Swift.String, Swift.CaseIterable, Swift.Equatable {
+  case dev
+  case nightly
+  case beta
+  case sberstore
+  case appstore
+  case testflight
+  case sbapps
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CompanionCore.BuildType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CompanionCore.BuildType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CompanionCore.BuildType {
+  public static var current: CompanionCore.BuildType {
+    get
+  }
+  @inlinable public var isRelease: Swift.Bool {
+    get {
+		[.appstore, .sbapps].contains(self)
+	}
+  }
+  @inlinable public func map<U>(_ block: (CompanionCore.BuildType) throws -> U) rethrows -> U {
+		try block(self)
+	}
+}
+extension Foundation.Bundle {
+  public var companionCore: Foundation.Bundle {
+    get
+  }
+}
+extension CoreFoundation.CGPoint {
+  public func projectedOffset(decelerationRate: UIKit.UIScrollView.DecelerationRate) -> CoreFoundation.CGPoint
+}
+extension CoreFoundation.CGSize {
+  public init(width: CoreFoundation.CGFloat)
+}
+extension CallKit.CXProviderConfiguration {
+  public static let salute: CallKit.CXProviderConfiguration
+}
+extension CompanionCore.CheckboxModel : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+public struct CheckboxModel {
+  public let icon: DevicesUI.ViewRenderable
+  public let margins: DevicesDesignSystem.Margins
+  public let onCheckboxTap: (CompanionCore.CheckboxView) -> Swift.Void
+  public init(icon: DevicesUI.ViewRenderable, margins: DevicesDesignSystem.Margins?, onCheckboxTap: @escaping (CompanionCore.CheckboxView) -> Swift.Void)
+  public init(isActive: Swift.Bool, margins: DevicesDesignSystem.Margins?, onCheckboxTap: @escaping (CompanionCore.CheckboxView) -> Swift.Void)
+}
+extension CompanionCore.CheckboxTextModel : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+public struct CheckboxTextModel {
+  public let checkbox: CompanionCore.CheckboxModel
+  public let text: DevicesUI.ViewRenderable
+  public let margins: DevicesDesignSystem.Margins
+  public init(checkbox: CompanionCore.CheckboxModel, text: DevicesUI.ViewRenderable, margins: DevicesDesignSystem.Margins?)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CheckboxUIView : UIKit.UIControl, CompanionCore.CheckboxView {
+  @_Concurrency.MainActor(unsafe) public init(model: CompanionCore.CheckboxModel, context: DevicesUI.ViewContext)
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func sizeThatFits(_: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) final public func set(model: CompanionCore.CheckboxModel)
+  @objc deinit
+}
+public protocol CheckboxView : AnyObject {
+  func set(model: CompanionCore.CheckboxModel)
+}
+public enum Companion {
+  public enum Host : Swift.String, Swift.CaseIterable {
+    public static let scheme: Swift.String
+    case open
+    case auth
+    case navigation
+    case accountActivation
+    case salutecast
+    case runApp
+    case payments
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CompanionCore.Companion.Host]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CompanionCore.Companion.Host] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public typealias Deeplink = DevicesCore.Tagged<CompanionCore.Companion.DeeplinkTag, DevicesCore.Deeplink>
+  public typealias DeeplinkService = DevicesCore.TaggedDeeplinkService<CompanionCore.Companion.DeeplinkTag>
+  public enum DeeplinkTag {
+  }
+}
+extension CompanionCore.CompanionButton : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+public struct CompanionButton {
+  public enum Style {
+    case positive
+    case negative
+    case neutral
+    case transparent
+    public static func == (a: CompanionCore.CompanionButton.Style, b: CompanionCore.CompanionButton.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let title: DevicesUI.StringContent
+  public let style: CompanionCore.CompanionButton.Style
+  public let handler: () -> Swift.Void
+  public init(title: DevicesUI.StringContent, style: CompanionCore.CompanionButton.Style, handler: @escaping () -> Swift.Void)
+}
+extension CompanionCore.CompanionButton {
+  public static func cancel(_ handler: @escaping () -> Swift.Void) -> CompanionCore.CompanionButton
+  public static func delete(_ handler: @escaping () -> Swift.Void) -> CompanionCore.CompanionButton
+  public static func resume(_ handler: @escaping () -> Swift.Void) -> CompanionCore.CompanionButton
+}
+public enum CompatibilityTag : Swift.String, DevicesCore.StackScreenTag {
+  case common
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+open class CustomNavigationHandler<Stage, CustomNavigationOption> where Stage : CompanionCore.FlowStage, CustomNavigationOption : Swift.Equatable {
+  public init()
+  open func move(to _: Stage, with _: CustomNavigationOption, animated _: Swift.Bool)
+  @objc deinit
+}
+extension CompanionCore.CustomNavigationHandler where CustomNavigationOption == Swift.Never {
+  public static var unused: CompanionCore.CustomNavigationHandler<Stage, Swift.Never> {
+    get
+  }
+}
+public protocol DeauthFlowPresenter {
+  func startDeauthFlow(onSuccessfulFinish: (() -> Swift.Void)?, onCancel: (() -> Swift.Void)?)
+}
+extension DevicesCore.TaggedDeeplinkService {
+  public func filter<Tag>(with scheme: [Swift.String], logger: DevicesCore.Logger, tag _: Tag.Type = Tag.self) -> DevicesCore.TaggedDeeplinkService<Tag>
+}
+@_hasMissingDesignatedInitializers final public class DefaultFlowRouter<Stage> : CompanionCore.FlowRouter<Stage> where Stage : CompanionCore.FlowStage {
+  public init(logger: DevicesCore.Logger, stackScreenPresenter: DevicesCore.StackScreenPresenter, navigationStackScreen: DevicesCore.NavigationStackScreen, modalPresenter: DevicesDesignSystem.ModalScreenPresenter, assertionCaller: DevicesCore.AssertionCaller = assertionCallerShared, makeScreenFor: @escaping (Stage) -> CompanionCore.FlowScreen?)
+  override final public func move<Route>(to stage: Stage, using route: Route, animated: Swift.Bool) where Route : CompanionCore.FlowRoute
+  @objc deinit
+}
+final public class DefaultFlowStageStore<Stage, Intent> : CompanionCore.FlowStageStore<Stage, Intent> where Stage : CompanionCore.FlowStage {
+  override final public var currentStage: Stage {
+    get
+  }
+  override final public var stateDescription: Swift.String {
+    get
+  }
+  public init(intentType _: Intent.Type = Intent.self, logger: DevicesCore.Logger, assertionCaller: DevicesCore.AssertionCaller = assertionCallerShared, router: CompanionCore.FlowRouter<Stage>, initialStage: Stage)
+  override final public func stackPrepend(_ stage: Stage, tag: DevicesCore.StackScreenTag, animated: Swift.Bool)
+  override final public func stackPush(to stage: Stage, tag: DevicesCore.StackScreenTag, animated: Swift.Bool)
+  override final public func stackPop(_ count: Swift.Int, tag: DevicesCore.StackScreenTag, animated: Swift.Bool)
+  override final public func push(to stage: Stage, animated: Swift.Bool)
+  override final public func pop(_ count: Swift.Int, animated: Swift.Bool)
+  override final public func popToRoot(prefix: Swift.Int, animated: Swift.Bool)
+  override final public func popToStage(_ target: Stage.ID, animated: Swift.Bool)
+  override final public func replaceLast(with stage: Stage, animated: Swift.Bool)
+  override final public func reset<Route>(to stageStack: [Stage], with route: Route, animated: Swift.Bool) where Route : CompanionCore.FlowRoute
+  override final public func startSubflow(_ stage: Stage)
+  override final public func forgetLast()
+  override final public func reportInvalidIntent(_ intent: Intent)
+  override final public func modalPush(to stage: Stage, animated: Swift.Bool)
+  override final public func modalPop(animated: Swift.Bool)
+  override final public func modalForgetPresented()
+  @objc deinit
+}
+public struct EmptyRouteContent : CompanionCore.FlowRouteContent {
+  public init()
+}
+public struct WhitelistEventsPolicy : DevicesCore.AnalyticsServicePolicy {
+  public var allowedEvents: Swift.Set<Swift.String>
+  public var disallowedEvents: Swift.Set<Swift.String>
+  public init(allowedEvents: Swift.Set<Swift.String>, disallowedEvents: Swift.Set<Swift.String>)
+  public static func + (lhs: CompanionCore.WhitelistEventsPolicy, rhs: CompanionCore.WhitelistEventsPolicy) -> CompanionCore.WhitelistEventsPolicy
+  public static func += (lhs: inout CompanionCore.WhitelistEventsPolicy, rhs: CompanionCore.WhitelistEventsPolicy)
+  public func shouldSend(event: DevicesCore.AnalyticsEvent) -> Swift.Bool
+}
+extension CompanionCore.WhitelistEventsPolicy {
+  public static func firebaseBasePolicy() -> CompanionCore.WhitelistEventsPolicy
+  public static func appsflyerBasePolicy() -> CompanionCore.WhitelistEventsPolicy
+}
+extension DevicesCore.Factory where Arg == DevicesCore.ExternalLinkAlertParameters, Item == DevicesCore.AlertScreen {
+  public init(stringProvider: DevicesCore.KeyedStringProvider<CompanionCore.ExternalLinkAlertStringID>)
+}
+public enum ExternalLinkAlertStringID : Swift.String, DevicesCore.StringID, Swift.CaseIterable {
+  case caption
+  case acceptText
+  case declineText
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CompanionCore.ExternalLinkAlertStringID]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CompanionCore.ExternalLinkAlertStringID] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+open class FlowEventDispatcher<AsyncEvent> {
+  public init()
+  open func dispatch(_: AsyncEvent)
+  open func bindProcessor(_: @escaping (AsyncEvent) -> Swift.Void)
+  @objc deinit
+}
+final public class FlowEventDispatcherImpl<AsyncEvent> : CompanionCore.FlowEventDispatcher<AsyncEvent> {
+  public init(logger: DevicesCore.Logger)
+  override final public func dispatch(_ event: AsyncEvent)
+  override final public func bindProcessor(_ block: @escaping (AsyncEvent) -> Swift.Void)
+  @objc deinit
+}
+open class FlowReducer<Intent> {
+  public init()
+  open func applyIntent(_: Intent)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class FlowReducerProxy<Intent> : CompanionCore.FlowReducer<Intent> {
+  weak final public var subject: CompanionCore.FlowReducer<Intent>!
+  override public init()
+  override final public func applyIntent(_ intent: Intent)
+  @objc deinit
+}
+extension CompanionCore.FlowReducer {
+  public typealias Proxy = CompanionCore.FlowReducerProxy<Intent>
+}
+public protocol FlowRoute : Swift.Equatable {
+  associatedtype ID : CompanionCore.FlowRouteID
+  static var id: Self.ID { get }
+}
+public protocol FlowRouteContent {
+}
+public struct FlowRouteContentBuilder<Stage> where Stage : CompanionCore.FlowStage {
+  public init(_ block: @escaping (Stage) -> CompanionCore.FlowRouteContent)
+  public func make(stage: Stage) -> CompanionCore.FlowRouteContent
+}
+extension CompanionCore.FlowRouteContentBuilder {
+  public func tryMake<RouteID>(stage: Stage, routeID _: RouteID.Type, assertionCaller: DevicesCore.AssertionCaller) -> RouteID.Content? where RouteID : CompanionCore.FlowRouteID
+}
+public struct FlowRouteContext<Stage> : DevicesCore.Configurable where Stage : CompanionCore.FlowStage {
+  public init()
+  public mutating func add<Route>(_ routeHandler: CompanionCore.FlowRouteHandler<Route>) where Route : CompanionCore.FlowRoute
+  public func handler<Route>(for _: Route.Type) -> CompanionCore.FlowRouteHandler<Route>? where Route : CompanionCore.FlowRoute
+}
+open class FlowRouteHandler<Route> where Route : CompanionCore.FlowRoute {
+  public init()
+  open func handle<Stage>(_: Stage, route _: Route, contentBuilder _: CompanionCore.FlowRouteContentBuilder<Stage>, animated _: Swift.Bool) where Stage : CompanionCore.FlowStage
+  @objc deinit
+}
+extension CompanionCore.FlowRouteHandler {
+  final public func content<Stage>(for stage: Stage, contentBuilder: CompanionCore.FlowRouteContentBuilder<Stage>, assertionCaller: DevicesCore.AssertionCaller) -> Route.ID.Content? where Stage : CompanionCore.FlowStage
+}
+public protocol FlowRouteID : Swift.Hashable {
+  associatedtype Content : CompanionCore.FlowRouteContent = Swift.Never
+}
+extension Swift.Never : CompanionCore.FlowRouteContent {
+}
+@_hasMissingDesignatedInitializers open class FlowRouter<Stage> where Stage : CompanionCore.FlowStage {
+  public func move<Route>(to _: Stage, using _: Route, animated _: Swift.Bool) where Route : CompanionCore.FlowRoute
+  @objc deinit
+}
+public enum FlowScreen {
+  case navigation(DevicesCore.StackScreen)
+  case stack(DevicesCore.StackScreen, interactivity: DevicesCore.StackScreenInteractivity)
+  case modal(DevicesCore.ModalScreen)
+}
+public protocol FlowStage : Swift.Identifiable {
+}
+extension CompanionCore.FlowStage where Self : Swift.RawRepresentable, Self.RawValue : Swift.Hashable {
+  public var id: Self.RawValue {
+    get
+  }
+}
+open class FlowStageStore<Stage, Intent> : DevicesCore.NamedType where Stage : CompanionCore.FlowStage {
+  open var currentStage: Stage {
+    get
+  }
+  open var stateDescription: Swift.String {
+    get
+  }
+  open func stackPrepend(_: Stage, tag _: DevicesCore.StackScreenTag, animated _: Swift.Bool = true)
+  open func stackPush(to _: Stage, tag _: DevicesCore.StackScreenTag, animated _: Swift.Bool = true)
+  open func stackPop(_: Swift.Int = 1, tag _: DevicesCore.StackScreenTag, animated _: Swift.Bool = true)
+  open func push(to _: Stage, animated _: Swift.Bool = true)
+  open func pop(_: Swift.Int = 1, animated _: Swift.Bool = true)
+  open func popToRoot(prefix _: Swift.Int, animated _: Swift.Bool = true)
+  open func replaceLast(with _: Stage, animated _: Swift.Bool)
+  open func popToStage(_: Stage.ID, animated _: Swift.Bool)
+  open func reset<Route>(to _: [Stage], with _: Route, animated _: Swift.Bool) where Route : CompanionCore.FlowRoute
+  open func startSubflow(_: Stage)
+  open func forgetLast()
+  open func reportInvalidIntent(_: Intent)
+  open func modalPush(to _: Stage, animated _: Swift.Bool = true)
+  open func modalPop(animated _: Swift.Bool = true)
+  open func modalForgetPresented()
+  public init()
+  @objc deinit
+}
+public struct IgnoreRoute : CompanionCore.FlowRoute {
+  public struct ID : CompanionCore.FlowRouteID {
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: CompanionCore.IgnoreRoute.ID, b: CompanionCore.IgnoreRoute.ID) -> Swift.Bool
+    public typealias Content = Swift.Never
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var id: CompanionCore.IgnoreRoute.ID {
+    get
+  }
+  public init()
+  public static func == (a: CompanionCore.IgnoreRoute, b: CompanionCore.IgnoreRoute) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers final public class IgnoreRouteHandler : CompanionCore.FlowRouteHandler<CompanionCore.IgnoreRoute> {
+  override final public func handle<Stage>(_: Stage, route _: CompanionCore.IgnoreRoute, contentBuilder _: CompanionCore.FlowRouteContentBuilder<Stage>, animated _: Swift.Bool) where Stage : CompanionCore.FlowStage
+  override public init()
+  @objc deinit
+}
+public struct InAppNotification {
+  public typealias ID = DevicesCore.Tagged<CompanionCore.InAppNotification, Swift.String>
+  public let id: CompanionCore.InAppNotification.ID
+  public let subject: DevicesUI.ViewRenderable
+  public let displayTime: Foundation.TimeInterval?
+  public init(id: CompanionCore.InAppNotification.ID, subject: DevicesUI.ViewRenderable, displayTime: Foundation.TimeInterval? = 5)
+}
+public protocol InAppNotificationPresenter {
+  func display(_ notification: CompanionCore.InAppNotification, context: DevicesUI.ViewContext)
+  func enqueue(_ notification: CompanionCore.InAppNotification, context: DevicesUI.ViewContext)
+  func dequeueNotification(byID notificationID: CompanionCore.InAppNotification.ID)
+}
+final public class InAppNotificationPresenterImpl : CompanionCore.InAppNotificationPresenter {
+  public init()
+  final public func display(_ notification: CompanionCore.InAppNotification, context: DevicesUI.ViewContext)
+  final public func enqueue(_ notification: CompanionCore.InAppNotification, context: DevicesUI.ViewContext)
+  final public func dequeueNotification(byID notificationID: CompanionCore.InAppNotification.ID)
+  @objc deinit
+}
+public struct InfoScreenContent : Swift.Equatable {
+  public let caption: DevicesUI.StringContent
+  public let body: DevicesUI.StringContent
+  public let okButtonLabel: DevicesUI.StringContent
+  public init(caption: DevicesUI.StringContent, body: DevicesUI.StringContent, okButtonLabel: DevicesUI.StringContent)
+  public static func == (lhs: CompanionCore.InfoScreenContent, rhs: CompanionCore.InfoScreenContent) -> Swift.Bool
+}
+extension CompanionCore.InfoScreenContent {
+  public static func makeGenericError(caption: DevicesUI.StringContent? = nil, body: DevicesUI.StringContent? = nil, okButtonLabel: DevicesUI.StringContent? = nil) -> CompanionCore.InfoScreenContent
+}
+extension Swift.Int {
+  public var isEven: Swift.Bool {
+    get
+  }
+}
+final public class JsonSerializer<Payload> : CompanionCore.Serializer where Payload : DevicesCore.Serializable, Payload : Swift.Equatable {
+  public init(serializationErrorHandler: DevicesCore.SerializationErrorHandler)
+  convenience public init(logger: DevicesCore.Logger)
+  final public func serialize(from payload: Payload, inPrettyAndStableFormat: Swift.Bool) -> Foundation.Data
+  @objc deinit
+}
+public protocol KeyboardAdjustingViewController : UIKit.UIViewController {
+  var bottomMargin: CoreFoundation.CGFloat { get set }
+}
+public struct KeyboardTrackerHolder {
+}
+public typealias KeyboardTrackerHolderFactory = DevicesCore.Factory<CompanionCore.KeyboardAdjustingViewController, CompanionCore.KeyboardTrackerHolder>
+extension DevicesCore.Factory where Arg == CompanionCore.KeyboardAdjustingViewController, Item == CompanionCore.KeyboardTrackerHolder {
+  public init()
+}
+extension CompanionCore.LoadingErrorModel : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+@available(*, deprecated, message: "Устаревшая модель - которую необходимо заменить на FailureModel после перехода на Salute 2.0")
+public struct LoadingErrorModel {
+}
+extension CompanionCore.LoadingErrorModel {
+  public struct Parameters {
+    public let title: DevicesUI.StringContent
+    public let error: DevicesUI.StringContent
+    public let errorDescription: DevicesUI.StringContent?
+    public let image: DevicesCore.ImageID
+    public let refreshAction: () -> Swift.Void
+    public init(title: Swift.String, error: Swift.String, errorDescription: Swift.String? = nil, image: DevicesCore.ImageID, refreshAction: @escaping () -> Swift.Void)
+    public init(title: DevicesUI.StringContent, error: DevicesUI.StringContent, errorDescription: DevicesUI.StringContent? = nil, image: DevicesCore.ImageID, refreshAction: @escaping () -> Swift.Void)
+  }
+  public static func make(parameters: CompanionCore.LoadingErrorModel.Parameters) -> CompanionCore.LoadingErrorModel
+}
+public typealias MetricsID = DevicesCore.Tagged<CompanionCore.MetricsIDTag, Swift.String>
+public enum MetricsIDTag {
+}
+public protocol MetricsIDLauncher {
+  func launch()
+}
+final public class MetricsIDRepository : CompanionCore.MetricsIDLauncher {
+  public init(isAuthorized: DevicesCore.Property<Swift.Bool>, isMetricsIDTrackingOn: DevicesCore.Property<Swift.Bool>, applicationState: DevicesCore.Property<DevicesCore.ApplicationState>, metricsID: DevicesCore.MutableProperty<CompanionCore.MetricsID?>, logger: DevicesCore.Logger, requestPerformer: CompanionCore.MetricsIDRequestPerformer)
+  final public func launch()
+  @objc deinit
+}
+public typealias MetricsIDRequestPerformer = DevicesCore.RequestPerformer<Swift.Void, CompanionCore.MetricsID>
+extension DevicesCore.RequestPerformer where Request == (), Response == DevicesCore.Tagged<CompanionCore.MetricsIDTag, Swift.String> {
+  public static func make(url: Foundation.URL, logger: DevicesCore.Logger, headerBuilderFactory: CompanionCore.SaluteHeaderBuilderFactory, urlRequestPerformer: DevicesCore.URLRequestPerformer) -> CompanionCore.MetricsIDRequestPerformer
+}
+public enum ModalRoute : CompanionCore.FlowRoute {
+  public struct ID : CompanionCore.FlowRouteID {
+    public typealias Content = CompanionCore.ModalRouteContent
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: CompanionCore.ModalRoute.ID, b: CompanionCore.ModalRoute.ID) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var id: CompanionCore.ModalRoute.ID {
+    get
+  }
+  case show
+  case dismiss
+  case forgetPresented
+  public static func == (a: CompanionCore.ModalRoute, b: CompanionCore.ModalRoute) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ModalRouteContent : CompanionCore.FlowRouteContent {
+  public let screen: DevicesCore.ModalScreen
+  public init(screen: DevicesCore.ModalScreen)
+}
+final public class ModalRouteHandler : CompanionCore.FlowRouteHandler<CompanionCore.ModalRoute> {
+  public init(modalPresenter: DevicesDesignSystem.ModalScreenPresenter, assertionCaller: DevicesCore.AssertionCaller)
+  override final public func handle<Stage>(_ stage: Stage, route: CompanionCore.ModalRoute, contentBuilder: CompanionCore.FlowRouteContentBuilder<Stage>, animated _: Swift.Bool) where Stage : CompanionCore.FlowStage
+  @objc deinit
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) public static func makeTransparentForModule() -> UIKit.UINavigationController
+}
+public enum NavigationDeeplinkTarget : Swift.String {
+  case feed
+  case gamepad
+  case devices
+  case assistant
+  case profile
+  case aon
+  case messenger
+  case music
+  case radio
+  case smartCamera
+  case smartMirror
+  case tablo
+  case about
+  case multiaccount
+  case startSDCast
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CompanionCore.NavigationDeeplinkTarget {
+  public var url: Foundation.URL {
+    get
+  }
+}
+public enum NavigationRoute : CompanionCore.FlowRoute {
+  public struct ID : CompanionCore.FlowRouteID {
+    public typealias Content = CompanionCore.NavigationRouteContent
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: CompanionCore.NavigationRoute.ID, b: CompanionCore.NavigationRoute.ID) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var id: CompanionCore.NavigationRoute.ID {
+    get
+  }
+  case push
+  case pop(_: Swift.Int)
+  case popToRoot(prefix: Swift.Int)
+  case replaceLast
+  public static func == (a: CompanionCore.NavigationRoute, b: CompanionCore.NavigationRoute) -> Swift.Bool
+}
+public struct NavigationRouteContent : CompanionCore.FlowRouteContent {
+  public let screen: DevicesCore.StackScreen
+  public init(screen: DevicesCore.StackScreen)
+}
+extension CompanionCore.NavigationRouteContent {
+  public init<Content>(view: Content) where Content : SwiftUI.View
+}
+final public class NavigationRouteHandler : CompanionCore.FlowRouteHandler<CompanionCore.NavigationRoute> {
+  public init(navigationStackScreen: DevicesCore.NavigationStackScreen, assertionCaller: DevicesCore.AssertionCaller)
+  override final public func handle<Stage>(_ stage: Stage, route: CompanionCore.NavigationRoute, contentBuilder: CompanionCore.FlowRouteContentBuilder<Stage>, animated: Swift.Bool) where Stage : CompanionCore.FlowStage
+  @objc deinit
+}
+extension DevicesDesignSystem.TextModel {
+  public static func navigationTitle(_ text: DevicesUI.StringContent) -> DevicesDesignSystem.TextModel
+}
+extension Swift.Optional {
+  public func withWrapped(_ block: (Wrapped) throws -> Swift.Void) rethrows
+}
+public struct PageControlModel {
+  public let numberOfPages: Swift.Int
+  @DevicesCore.Property @_projectedValueProperty($currentPage) public var currentPage: CoreFoundation.CGFloat {
+    get
+  }
+  public var $currentPage: DevicesCore.Property<CoreFoundation.CGFloat> {
+    get
+  }
+  public init(numberOfPages: Swift.Int, currentPage: DevicesCore.Property<CoreFoundation.CGFloat>)
+}
+extension CompanionCore.PageControlModel : DevicesUI.ViewRenderable {
+  public func renderView(context _: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+public struct PhoneSettingsOpener {
+  public init(assertionCaller: DevicesCore.AssertionCaller)
+  public func open()
+}
+public typealias ProfileUserName = DevicesCore.Tagged<CompanionCore.ProfileUserNameTag, Swift.String>
+public enum ProfileUserNameTag {
+}
+public protocol ProfileUserNameStorage {
+  var userName: DevicesCore.Property<CompanionCore.ProfileUserName?> { get }
+  func fetchProfileData(forceReload: Swift.Bool)
+  func updateUserName(_ name: Swift.String)
+}
+final public class ProfileUserNameStorageProxy : CompanionCore.ProfileUserNameStorage {
+  final public var subject: CompanionCore.ProfileUserNameStorage? {
+    get
+    set
+  }
+  final public var userName: DevicesCore.Property<CompanionCore.ProfileUserName?> {
+    get
+  }
+  public init()
+  final public func fetchProfileData(forceReload: Swift.Bool)
+  final public func updateUserName(_ name: Swift.String)
+  @objc deinit
+}
+extension DevicesCore.Proxy : CompanionCore.AnalyticsServiceContainer where Subject : CompanionCore.AnalyticsServiceContainer {
+  public func add(events: [Swift.String], to analyticsType: CompanionCore.AnalyticsType)
+}
+public struct RandomStringParameters : Swift.Equatable {
+  public let length: Swift.Int
+  public let charactersPool: Swift.Set<Swift.Character>
+  public init(length: Swift.Int, charactersPool: Swift.Set<Swift.Character>)
+  public static func == (a: CompanionCore.RandomStringParameters, b: CompanionCore.RandomStringParameters) -> Swift.Bool
+}
+public struct Regex {
+  public let lengthLimit: Swift.ClosedRange<Swift.Int>
+  public let regExp: Swift.String
+  public init(lengthLimit: Swift.ClosedRange<Swift.Int>, regExp: Swift.String)
+}
+public enum RegexCharacterSet : Swift.String, Swift.CaseIterable {
+  case latin
+  case cyrillic
+  case digits
+  case spaces
+  case special
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CompanionCore.RegexCharacterSet]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CompanionCore.RegexCharacterSet] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol RegexFactory {
+  func build(_ components: [CompanionCore.RegexCharacterSet], lengthLimit: Swift.ClosedRange<Swift.Int>) -> CompanionCore.Regex
+}
+final public class RegexFactoryImpl : CompanionCore.RegexFactory {
+  public init()
+  final public func build(_ components: [CompanionCore.RegexCharacterSet], lengthLimit: Swift.ClosedRange<Swift.Int>) -> CompanionCore.Regex
+  @objc deinit
+}
+public protocol RemoteScreenPresenter {
+  func presentRemoteScreen(_ screen: DevicesCore.ModalScreen)
+  func dismissRemoteScreen()
+}
+public protocol RenderableText : DevicesUI.ViewRenderable {
+}
+extension DevicesDesignSystem.TextModel : CompanionCore.RenderableText {
+}
+extension DevicesUI.AttributedTextModel : CompanionCore.RenderableText {
+}
+@objc @_hasMissingDesignatedInitializers @available(*, deprecated, message: "Use RenderingScreen instead")
+@_Concurrency.MainActor(unsafe) final public class RenderingViewController : UIKit.UIViewController {
+  public enum Size {
+    case fixedHeight(CoreFoundation.CGFloat)
+    case fixedWidth(CoreFoundation.CGFloat)
+    case fixedSize(CoreFoundation.CGSize)
+  }
+  public enum LayoutType {
+    case fullscreen(isNavigationBarHidden: Swift.Bool)
+    case centered
+    case fixedSize(CompanionCore.RenderingViewController.Size)
+  }
+  @_Concurrency.MainActor(unsafe) final public var backgroundImageView: UIKit.UIImageView?
+  @_Concurrency.MainActor(unsafe) final public var bottomMargin: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public var model: DevicesUI.ViewRenderable {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(model: DevicesUI.ViewRenderable, layout: CompanionCore.RenderingViewController.LayoutType, backgroundColor: UIKit.UIColor? = nil, backgroundImage: UIKit.UIImage? = nil, context: DevicesUI.ViewContext)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) final public func setKeyboardTrackerHolder(using factory: CompanionCore.KeyboardTrackerHolderFactory)
+  @objc deinit
+}
+extension CompanionCore.RenderingViewController : CompanionCore.KeyboardAdjustingViewController {
+}
+extension DevicesCore.RequestBuilders {
+  public static func salute<Request>(url: Foundation.URL, method: DevicesCore.HTTPMethod, headerBuilder: CompanionCore.SaluteHeaderBuilder, serializer: @escaping (Request) -> Swift.Result<Foundation.Data, Swift.Error>) -> DevicesCore.RequestBuilder<Request>
+  public static func salute(url: Foundation.URL, method: DevicesCore.HTTPMethod, headerBuilder: CompanionCore.SaluteHeaderBuilder) -> DevicesCore.RequestBuilder<Swift.Void>
+  public static func salute<Request>(url: Foundation.URL, method: DevicesCore.HTTPMethod, headerBuilder: CompanionCore.SaluteHeaderBuilder, inPrettyAndStableFormat: Swift.Bool = false, of requestParameters: Request.Type = Request.self) -> DevicesCore.RequestBuilder<Request> where Request : DevicesCore.Serializable
+  public static func saluteWithRequestComponents<Request>(url: Foundation.URL, method: DevicesCore.HTTPMethod, headerBuilder: CompanionCore.SaluteHeaderBuilder) -> DevicesCore.RequestBuilder<Request> where Request : DevicesCore.RequestComponents
+  public static func saluteMultipartFormData<Request>(of paramsType: Request.Type = Request.self, assertionCaller: DevicesCore.AssertionCaller, url: Foundation.URL, method: DevicesCore.HTTPMethod, headerBuilder: CompanionCore.SaluteHeaderBuilder) -> DevicesCore.RequestBuilder<Request> where Request : DevicesCore.MultipartFormEncodable
+}
+public protocol SafariScreen : DevicesCore.StackScreen {
+  func setDelegate(_ delegate: CompanionCore.SafariScreenDelegate)
+}
+public protocol SafariScreenDelegate : AnyObject {
+  func onFinish()
+}
+@objc final public class SafariScreenDelegateAdapter : ObjectiveC.NSObject, SafariServices.SFSafariViewControllerDelegate {
+  public init(subject: CompanionCore.SafariScreenDelegate)
+  @objc final public func safariViewControllerDidFinish(_: SafariServices.SFSafariViewController)
+  @objc deinit
+}
+final public class SafariScreenDelegateImpl : CompanionCore.SafariScreenDelegate {
+  public init(onClose: (() -> Swift.Void)?)
+  final public func onFinish()
+  @objc deinit
+}
+public protocol SafariScreenFactory {
+  func makeSafariScreen(url: Foundation.URL, delegate: CompanionCore.SafariScreenDelegate) -> DevicesCore.StackScreen
+  func makeSafariScreen(url: Foundation.URL, onFinish: @escaping () -> Swift.Void) -> DevicesCore.StackScreen
+}
+final public class SafariScreenFactoryImpl : CompanionCore.SafariScreenFactory {
+  public init(safariControllerFactory: @escaping (Foundation.URL) -> SafariServices.SFSafariViewController = SFSafariViewController.init, safariScreenFactory: @escaping (SafariServices.SFSafariViewController) -> CompanionCore.SafariScreen = { SafariScreenImpl(controller: $0) }, safariDelegateFactory: @escaping (@escaping () -> Swift.Void) -> CompanionCore.SafariScreenDelegate = SafariScreenDelegateImpl.init)
+  final public func makeSafariScreen(url: Foundation.URL, delegate: CompanionCore.SafariScreenDelegate) -> DevicesCore.StackScreen
+  final public func makeSafariScreen(url: Foundation.URL, onFinish: @escaping () -> Swift.Void) -> DevicesCore.StackScreen
+  @objc deinit
+}
+final public class SafariScreenImpl : CompanionCore.SafariScreen {
+  public typealias AdapterFactory = (CompanionCore.SafariScreenDelegate) -> CompanionCore.SafariScreenDelegateAdapter
+  final public var viewController: UIKit.UIViewController {
+    get
+  }
+  public init(controller: SafariServices.SFSafariViewController, delegateAdapterFactory: @escaping CompanionCore.SafariScreenImpl.AdapterFactory = SafariScreenDelegateAdapter.init)
+  final public func setDelegate(_ delegate: CompanionCore.SafariScreenDelegate)
+  final public func sizeThatFits(_ size: CoreFoundation.CGSize, safeAreaInsets: UIKit.UIEdgeInsets) -> CoreFoundation.CGSize
+  @objc deinit
+}
+public protocol SafariScreenPresenter {
+  func pushSafari(_ screen: DevicesCore.StackScreen, interactivity: DevicesCore.StackScreenInteractivity, trigger: DevicesCore.StackScreenInteractivity.ActionSource)
+  func onSafariClose()
+}
+public struct SaluteAppInfo {
+  public let applicationName: Swift.String
+  public let localizedApplicationName: Swift.String
+  public let appID: Swift.String
+  public let version: Swift.String
+  public let buildNumber: Swift.String
+  public let osType: Swift.String
+  public let osVersion: Swift.String
+  public let deviceModel: Swift.String
+  public let deviceType: Swift.String
+  public let deviceName: Swift.String
+  public let deviceID: DevicesCore.DeviceID?
+  public let locale: Foundation.Locale
+  public let buildType: Swift.String
+  public init(applicationName: Swift.String, localizedApplicationName: Swift.String, appID: Swift.String, version: Swift.String, buildNumber: Swift.String, osType: Swift.String, osVersion: Swift.String, deviceModel: Swift.String, deviceType: Swift.String, deviceName: Swift.String, deviceID: DevicesCore.DeviceID?, locale: Foundation.Locale, buildType: CompanionCore.BuildType)
+  public init(bundle: Foundation.Bundle, device: UIKit.UIDevice, buildType: CompanionCore.BuildType = .current)
+}
+extension CompanionCore.SaluteAppInfo {
+  public var fullVersion: Swift.String {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SaluteBottomTabContainerController : UIKit.UIViewController, CompanionCore.SaluteTabContainerController, DevicesCore.NamedType {
+  @_Concurrency.MainActor(unsafe) weak final public var swipeHandler: CompanionCore.SaluteTabContainerControllerSwipeHandler?
+  @_Concurrency.MainActor(unsafe) public init(logger: DevicesCore.Logger, context: DevicesUI.ViewContext, tabBarViewController: CompanionCore.BottomTabBarController, onShakeMotion: @escaping () -> Swift.Void, onNonProgrammaticModalDismiss: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) final public func setItems(_ items: [CompanionCore.TabBarItem])
+  @_Concurrency.MainActor(unsafe) final public func setVisible(_ visible: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) final public func setScreen(_ screen: CompanionCore.TabScreen)
+  @_Concurrency.MainActor(unsafe) final public func subscribeOnAssistantHeight(_ assistantBottomBarHeight: DevicesCore.Property<CoreFoundation.CGFloat>)
+  @_Concurrency.MainActor(unsafe) final public func presentAlert(alert: DevicesCore.AlertScreen, using viewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) final public func showModalScreen(_ modalScreen: DevicesCore.ModalScreen, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) final public func hideModalScreen(_ modalScreen: DevicesCore.ModalScreen, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc override final public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func motionEnded(_ motion: UIKit.UIEvent.EventSubtype, with _: UIKit.UIEvent?)
+  @objc deinit
+}
+extension CompanionCore.SaluteBottomTabContainerController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerDidDismiss(_: UIKit.UIPresentationController)
+}
+public struct SaluteHeaderBuilder : DevicesCore.Configurable {
+  public init(appInfo: CompanionCore.SaluteAppInfo, userIDStorage: CompanionCore.UserIDStorage)
+  public mutating func append(header: DevicesCore.HeaderBuilder)
+  public mutating func append(_ newHeaders: DevicesCore.HeaderBuilder...)
+  public func makeHeaderBuilder() -> DevicesCore.HeaderBuilder
+}
+public struct SaluteHeaderBuilderFactory {
+  public init(componentsProvider: @escaping () -> CompanionCore.SaluteHeaderComponents)
+  public func makeSalute(_ build: (inout CompanionCore.SaluteHeaderComponents) -> Swift.Void = { _ in }) -> CompanionCore.SaluteHeaderBuilder
+  public func makeCommon(_ build: (inout CompanionCore.SaluteHeaderComponents) -> Swift.Void = { _ in }) -> DevicesCore.HeaderBuilder
+}
+public protocol SaluteHeaderComponents {
+  mutating func single(_ key: DevicesCore.HeadersKey, value: Swift.String)
+  mutating func dictionary(_ dictionary: DevicesCore.Headers)
+  mutating func closure(_ makeHeaders: @escaping () -> Swift.Result<DevicesCore.Headers, Swift.Error>)
+  mutating func contentType(_ contentType: DevicesCore.HeaderBuilders.ContentType)
+  mutating func cookies()
+  mutating func authIDToken(isRequired: Swift.Bool)
+  func finalize() -> CompanionCore.SaluteHeaderBuilder
+}
+public enum SaluteStand : Swift.String, Swift.Equatable, Swift.RawRepresentable, Swift.CaseIterable {
+  case ift
+  case psi
+  case prod
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CompanionCore.SaluteStand]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CompanionCore.SaluteStand] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CompanionCore.SaluteStand {
+  public var tokenExchangeBaseURL: Foundation.URL {
+    get
+  }
+  public var esaBaseURL: Foundation.URL {
+    get
+  }
+  public var backendBaseURL: Foundation.URL {
+    get
+  }
+  public var saluteSolutionsBackendBaseURL: Foundation.URL {
+    get
+  }
+  public var remoteConfigURL: Foundation.URL {
+    get
+  }
+  public var deviceCastBackendURL: Foundation.URL {
+    get
+  }
+  public var esaCertificateDirective: DevicesCore.CertificateDirective {
+    get
+  }
+  public var messengerBackendURL: Foundation.URL {
+    get
+  }
+  public var messengerCertificateDirective: DevicesCore.CertificateDirective {
+    get
+  }
+  public var messengerSelfsignedCertificateDirective: DevicesCore.CertificateDirective {
+    get
+  }
+  public var clientID: Swift.String {
+    get
+  }
+  public var nativeAuthBaseURL: Foundation.URL {
+    get
+  }
+  public var registrationBaseURL: Foundation.URL {
+    get
+  }
+}
+public protocol SaluteTabContainerController : UIKit.UIViewController, CompanionCore.TabBarUI, CompanionCore.TabContentPresenter {
+  var swipeHandler: CompanionCore.SaluteTabContainerControllerSwipeHandler? { get set }
+  func subscribeOnAssistantHeight(_ assistantBottomBarHeight: DevicesCore.Property<CoreFoundation.CGFloat>)
+}
+public protocol SaluteTabContainerControllerSwipeHandler : AnyObject {
+  var tabs: [CompanionCore.TabScreen] { get }
+  func didSelect(_ screen: CompanionCore.TabScreen)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SaluteTopTabContainerController : UIKit.UIViewController, CompanionCore.SaluteTabContainerController, DevicesCore.NamedType {
+  @_Concurrency.MainActor(unsafe) weak final public var swipeHandler: CompanionCore.SaluteTabContainerControllerSwipeHandler?
+  @_Concurrency.MainActor(unsafe) public init(logger: DevicesCore.Logger, context: DevicesUI.ViewContext, onShakeMotion: @escaping () -> Swift.Void, onNonProgrammaticModalDismiss: @escaping () -> Swift.Void, assertionCaller: DevicesCore.AssertionCaller)
+  @_Concurrency.MainActor(unsafe) final public func setItems(_ items: [CompanionCore.TabBarItem])
+  @_Concurrency.MainActor(unsafe) final public func setVisible(_ visible: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) final public func setScreen(_ screen: CompanionCore.TabScreen)
+  @_Concurrency.MainActor(unsafe) final public func subscribeOnAssistantHeight(_ assistantBottomBarHeight: DevicesCore.Property<CoreFoundation.CGFloat>)
+  @_Concurrency.MainActor(unsafe) final public func presentAlert(alert: DevicesCore.AlertScreen, using viewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) final public func showModalScreen(_ modalScreen: DevicesCore.ModalScreen, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) final public func hideModalScreen(_ modalScreen: DevicesCore.ModalScreen, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc override final public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func motionEnded(_ motion: UIKit.UIEvent.EventSubtype, with _: UIKit.UIEvent?)
+  @objc deinit
+}
+extension CompanionCore.SaluteTopTabContainerController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerDidDismiss(_: UIKit.UIPresentationController)
+}
+extension CompanionCore.SaluteTopTabContainerController : UIKit.UIPageViewControllerDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+}
+extension CompanionCore.SaluteTopTabContainerController : UIKit.UIPageViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating _: Swift.Bool, previousViewControllers _: [UIKit.UIViewController], transitionCompleted _: Swift.Bool)
+}
+public typealias Screen = DevicesCore.Screen
+final public class SegmentedControlInteractor<Value> where Value : CompanionCore.SegmentedControlValue {
+  public init(uiFactory: CompanionCore.SegmentedControlViewFactory = SegmentedControlViewFactory(), context: DevicesUI.ViewContext, values: [Value], selectedValue: Value, onNewValueSelected: @escaping (Value) -> Swift.Void)
+  convenience public init(uiFactory: CompanionCore.SegmentedControlViewFactory = SegmentedControlViewFactory(), context: DevicesUI.ViewContext, selectedValue: Value, onNewValueSelected: @escaping (Value) -> Swift.Void) where Value : Swift.CaseIterable, Value.AllCases == [Value]
+  final public func prepareView() -> DevicesUI.ViewRenderable
+  final public func renderView() -> DevicesUI.ViewRenderable
+  @objc deinit
+}
+public protocol SegmentedControlValue : Swift.Equatable {
+  var label: Swift.String { get }
+}
+public protocol SegmentedControlView : DevicesUI.ViewRenderable {
+}
+public struct SegmentedControlViewParameters {
+}
+public typealias SegmentedControlViewFactory = DevicesCore.Factory<CompanionCore.SegmentedControlViewParameters, CompanionCore.SegmentedControlView>
+extension DevicesCore.Factory where Arg == CompanionCore.SegmentedControlViewParameters, Item == CompanionCore.SegmentedControlView {
+  public init()
+}
+public protocol Serializer {
+  associatedtype Payload : DevicesCore.Serializable, Swift.Equatable
+  func serialize(from payload: Self.Payload, inPrettyAndStableFormat: Swift.Bool) -> Foundation.Data
+}
+@objc @_Concurrency.MainActor(unsafe) final public class SideTransitioningDelegate : ObjectiveC.NSObject, UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public init(assertionCaller: DevicesCore.AssertionCaller)
+  @_Concurrency.MainActor(unsafe) @objc final public func navigationController(_: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from _: UIKit.UIViewController, to _: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @objc deinit
+}
+public protocol SimpleFlowStarter {
+  func start()
+}
+public enum StackRoute : CompanionCore.FlowRoute {
+  public struct ID : CompanionCore.FlowRouteID {
+    public typealias Content = CompanionCore.StackRouteContent
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: CompanionCore.StackRoute.ID, b: CompanionCore.StackRoute.ID) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var id: CompanionCore.StackRoute.ID {
+    get
+  }
+  case prepend(tag: DevicesCore.StackScreenTag)
+  case push(tag: DevicesCore.StackScreenTag)
+  case pop(_: Swift.Int, tag: DevicesCore.StackScreenTag)
+  case dropAll(tag: DevicesCore.StackScreenTag)
+}
+extension CompanionCore.StackRoute {
+  public static func == (lhs: CompanionCore.StackRoute, rhs: CompanionCore.StackRoute) -> Swift.Bool
+}
+public struct StackRouteContent : CompanionCore.FlowRouteContent {
+  public let screen: DevicesCore.StackScreen
+  public let interactivity: DevicesCore.StackScreenInteractivity
+  public init(screen: DevicesCore.StackScreen, interactivity: DevicesCore.StackScreenInteractivity)
+}
+extension CompanionCore.StackRouteContent {
+  public init<Content>(view: Content, interactivity: DevicesCore.StackScreenInteractivity) where Content : SwiftUI.View
+}
+final public class StackRouteHandler : CompanionCore.FlowRouteHandler<CompanionCore.StackRoute> {
+  public init(stackScreenPresenter: DevicesCore.StackScreenPresenter, assertionCaller: DevicesCore.AssertionCaller)
+  override final public func handle<Stage>(_ stage: Stage, route: CompanionCore.StackRoute, contentBuilder: CompanionCore.FlowRouteContentBuilder<Stage>, animated _: Swift.Bool) where Stage : CompanionCore.FlowStage
+  @objc deinit
+}
+extension DevicesCore.StackScreenPresenter {
+  @available(*, deprecated, message: "Use method with all arguments from protocol body")
+  public func push(_ screen: DevicesCore.StackScreen, interactivity: DevicesCore.StackScreenInteractivity, trigger: DevicesCore.StackScreenInteractivity.ActionSource)
+  @available(*, deprecated, message: "Use method with all arguments from protocol body")
+  public func pop(trigger: DevicesCore.StackScreenInteractivity.ActionSource)
+  @available(*, deprecated, message: "Use method with all arguments from protocol body")
+  public func dropAll()
+}
+final public class StackScreenPresenterProxy : DevicesCore.StackScreenPresenter {
+  final public var subject: DevicesCore.StackScreenPresenter?
+  public init()
+  final public func prepend(_ screen: DevicesCore.StackScreen, tag: DevicesCore.StackScreenTag, interactivity: DevicesCore.StackScreenInteractivity, trigger: DevicesCore.StackScreenInteractivity.ActionSource)
+  final public func push(_ screen: DevicesCore.StackScreen, tag: DevicesCore.StackScreenTag, interactivity: DevicesCore.StackScreenInteractivity, trigger: DevicesCore.StackScreenInteractivity.ActionSource)
+  final public func pop(tag: DevicesCore.StackScreenTag, trigger: DevicesCore.StackScreenInteractivity.ActionSource)
+  final public func dropAll(withTag tag: DevicesCore.StackScreenTag)
+  final public func hasDisplayedScreen(withTag tag: DevicesCore.StackScreenTag) -> Swift.Bool
+  @objc deinit
+}
+public struct StateJSON : Swift.Equatable {
+  public let status: CompanionCore.StateJSON.Status
+  public let title: Swift.String?
+  public let message: Swift.String?
+  public init(status: CompanionCore.StateJSON.Status, title: Swift.String?, message: Swift.String?)
+  public static func == (a: CompanionCore.StateJSON, b: CompanionCore.StateJSON) -> Swift.Bool
+}
+extension CompanionCore.StateJSON {
+  public typealias Status = DevicesCore.Tagged<CompanionCore.StateJSON.StatusTag, Swift.Int>
+  public enum StatusTag {
+  }
+}
+extension CompanionCore.StateJSON : DevicesCore.Deserializable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
+    case status
+    case title
+    case message
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias AllCases = [CompanionCore.StateJSON.CodingKeys]
+    public typealias RawValue = Swift.String
+    public static var allCases: [CompanionCore.StateJSON.CodingKeys] {
+      get
+    }
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension CompanionCore.StateJSON : DevicesCore.PrettyStringConvertible {
+}
+public protocol StateJSONDecoder {
+  func decodeStateJSON(from networkResult: Swift.Result<DevicesCore.HTTPResponse, Swift.Error>) -> CompanionCore.StateJSON?
+  func decodeStateJSON(from data: Foundation.Data) -> CompanionCore.StateJSON?
+}
+final public class StateJSONDecoderImpl : CompanionCore.StateJSONDecoder {
+  public init(deserializationContext: DevicesCore.DeserializationContext = .default)
+  final public func decodeStateJSON(from networkResult: Swift.Result<DevicesCore.HTTPResponse, Swift.Error>) -> CompanionCore.StateJSON?
+  final public func decodeStateJSON(from data: Foundation.Data) -> CompanionCore.StateJSON?
+  @objc deinit
+}
+public enum TLSCertificates : Swift.String, Swift.CaseIterable {
+  case esaIft
+  case esaPsi
+  case salute
+  case smartHomeProd
+  case smartHomeDev
+  case messengerIft
+  case messengerIftSelfsigned
+  case messengerPsi
+  case messengerPsiSelfsigned
+  case messengerProd
+  case messengerProdSelfsigned
+  case paylib
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CompanionCore.TLSCertificates]
+  public typealias RawValue = Swift.String
+  public static var allCases: [CompanionCore.TLSCertificates] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CompanionCore.TLSCertificates {
+  public var directive: DevicesCore.CertificateTrustVerifier {
+    get
+  }
+  public static func assistantCertificates(bundle: Foundation.Bundle) -> [DevicesCore.Certificate]
+}
+extension CompanionCore.TLSCertificates {
+  public static var jazzDirective: DevicesCore.CertificateTrustVerifier {
+    get
+  }
+}
+final public class TLSCertificatesValidator {
+  public init(logger: DevicesCore.Logger, assertionCaller: DevicesCore.AssertionCaller, validate: @escaping (CompanionCore.TLSCertificates) throws -> Swift.Void)
+  final public func validate()
+  @objc deinit
+}
+extension CompanionCore.TLSCertificatesValidator {
+  public static func validate(buildType: CompanionCore.BuildType = .current, isRunningTests: Swift.Bool, targetQueue: DevicesCore.SerialQueue, logger: DevicesCore.Logger, assertionCaller: DevicesCore.AssertionCaller, validate: @escaping (CompanionCore.TLSCertificates) throws -> Swift.Void = { try $0.directive.validate() })
+}
+extension DevicesCore.TLSSession {
+  convenience public init(logger: DevicesCore.Logger, configuration: Foundation.URLSessionConfiguration = .default, trustDirective: DevicesCore.TrustDefaultVerifier, sslPinningOn: DevicesCore.Property<Swift.Bool>)
+}
+public struct TabBarItem {
+  public let screenItem: CompanionCore.TabScreenBarItem
+  public let onSelected: () -> Swift.Void
+  public init(screenItem: CompanionCore.TabScreenBarItem, onSelected: @escaping () -> Swift.Void)
+}
+public protocol TabBarUI : AnyObject {
+  func setItems(_ items: [CompanionCore.TabBarItem])
+  func setVisible(_ visible: Swift.Bool)
+}
+public protocol TabContentAlertPresenter {
+  func presentAlert(alert: DevicesCore.AlertScreen, using viewController: UIKit.UIViewController)
+}
+public protocol TabContentModalPresenter {
+  func showModalScreen(_ modalScreen: DevicesCore.ModalScreen, completion: @escaping () -> Swift.Void)
+  func hideModalScreen(_ modalScreen: DevicesCore.ModalScreen, completion: @escaping () -> Swift.Void)
+}
+public protocol TabContentPresenter : CompanionCore.TabContentAlertPresenter, CompanionCore.TabContentModalPresenter, CompanionCore.TabContentSetter {
+}
+public protocol TabContentSetter {
+  func setScreen(_ screen: CompanionCore.TabScreen)
+}
+public protocol TabScreen : DevicesCore.Screen {
+  typealias ID = DevicesCore.Tagged<CompanionCore.TabScreen, Swift.String>
+  var id: Self.ID { get }
+  var tabBarItem: CompanionCore.TabScreenBarItem { get }
+  var shouldShowTabbar: Swift.Bool { get }
+  var shouldShowAssistant: Swift.Bool { get }
+  func activate()
+}
+extension CompanionCore.TabScreen {
+  public func activate()
+}
+public struct TabScreenBarItem {
+  public struct Icon {
+    public let still: DevicesCore.ImageID
+    public let selected: DevicesCore.ImageID
+    public init(still: DevicesCore.ImageID, selected: DevicesCore.ImageID)
+  }
+  public let title: DevicesUI.StringContent?
+  public let topIcon: CompanionCore.TabScreenBarItem.Icon
+  public let bottomIcon: CompanionCore.TabScreenBarItem.Icon
+  public init(title: DevicesUI.StringContent?, topIcon: CompanionCore.TabScreenBarItem.Icon, bottomIcon: CompanionCore.TabScreenBarItem.Icon, isBageShown: DevicesCore.Property<Swift.Bool>)
+  public func setSelected(_ value: Swift.Bool)
+}
+public struct TextFieldAppearance : Swift.Equatable {
+  public let keyboardType: UIKit.UIKeyboardType
+  public let cornerRadius: CoreFoundation.CGFloat
+  public let textMargins: DevicesDesignSystem.Margins
+  public let maxLength: Swift.Int
+  public let minLength: Swift.Int
+  public let allowedCharacters: Foundation.CharacterSet
+  public init(keyboardType: UIKit.UIKeyboardType, cornerRadius: CoreFoundation.CGFloat = 12, textMargins: DevicesDesignSystem.Margins?, maxLength: Swift.Int = 20, minLength: Swift.Int = 8, allowedCharacters: Foundation.CharacterSet = .alphanumerics)
+  public static func == (a: CompanionCore.TextFieldAppearance, b: CompanionCore.TextFieldAppearance) -> Swift.Bool
+}
+public struct TextFieldParameters {
+  public let model: CompanionCore.TextFieldModel
+  public let coordinator: CompanionCore.TextFieldViewCoordinator
+  public let appearance: CompanionCore.TextFieldAppearance
+  public let context: DevicesUI.ViewContext
+  public init(model: CompanionCore.TextFieldModel, coordinator: CompanionCore.TextFieldViewCoordinator, appearance: CompanionCore.TextFieldAppearance, context: DevicesUI.ViewContext)
+}
+public typealias TextFieldFactory = DevicesCore.Factory<CompanionCore.TextFieldParameters, CompanionCore.TextFieldView>
+extension DevicesCore.Factory where Arg == CompanionCore.TextFieldParameters, Item == CompanionCore.TextFieldView {
+  public static let `default`: CompanionCore.TextFieldFactory
+}
+extension CompanionCore.TextFieldModel {
+  public var icon: DevicesCore.ImageID? {
+    get
+  }
+  public var text: Swift.String {
+    get
+  }
+  public var placeholder: DevicesCore.StringID? {
+    get
+  }
+  public var caption: DevicesCore.StringID? {
+    get
+  }
+  public var isSecure: Swift.Bool? {
+    get
+  }
+}
+extension CompanionCore.TextFieldModel : Swift.Equatable {
+  public static func == (lhs: CompanionCore.TextFieldModel, rhs: CompanionCore.TextFieldModel) -> Swift.Bool
+}
+extension CompanionCore.TextFieldModel.FilledType : Swift.Equatable {
+  public static func == (lhs: CompanionCore.TextFieldModel.FilledType, rhs: CompanionCore.TextFieldModel.FilledType) -> Swift.Bool
+}
+extension CompanionCore.TextFieldModel.FocusedType : Swift.Equatable {
+  public static func == (lhs: CompanionCore.TextFieldModel.FocusedType, rhs: CompanionCore.TextFieldModel.FocusedType) -> Swift.Bool
+}
+public enum TextFieldModel {
+  case empty(placeholder: DevicesCore.StringID)
+  case focused(CompanionCore.TextFieldModel.FocusedType)
+  case filled(CompanionCore.TextFieldModel.FilledType)
+  public enum FocusedType {
+    case captionedText(caption: DevicesCore.StringID, text: Swift.String, isSecure: Swift.Bool)
+    case captionedTextRightIcon(caption: DevicesCore.StringID, text: Swift.String, icon: DevicesCore.ImageID, isSecure: Swift.Bool)
+  }
+  public enum FilledType {
+    case captionedText(caption: DevicesCore.StringID, text: Swift.String, isSecure: Swift.Bool)
+    case captionedTextRightIcon(caption: DevicesCore.StringID, text: Swift.String, icon: DevicesCore.ImageID, isSecure: Swift.Bool)
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TextFieldUIView : UIKit.UITextField, CompanionCore.TextFieldView {
+  @_Concurrency.MainActor(unsafe) @objc override final public var leftView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var rightView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public var model: CompanionCore.TextFieldModel {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public let appearance: CompanionCore.TextFieldAppearance
+  @_Concurrency.MainActor(unsafe) public init(model: CompanionCore.TextFieldModel, coordinator: CompanionCore.TextFieldViewCoordinator, appearance: CompanionCore.TextFieldAppearance, context: DevicesUI.ViewContext)
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func rightViewRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override final public func leftViewRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override final public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override final public func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override final public func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @objc deinit
+}
+extension CompanionCore.TextFieldUIView : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldBeginEditing(_: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidBeginEditing(_: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidEndEditing(_: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc final public func textField(_: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_: UIKit.UITextField) -> Swift.Bool
+}
+extension CompanionCore.TextFieldUIView : DevicesUI.ViewRenderable {
+  @_Concurrency.MainActor(unsafe) final public func renderView(context _: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+extension CompanionCore.TextFieldUIView : DevicesDesignSystem.BrandbookObserver {
+  @_Concurrency.MainActor(unsafe) final public func brandbookDidUpdate(_ brandbook: DevicesDesignSystem.Brandbook)
+}
+public protocol TextFieldView : AnyObject, DevicesUI.ViewRenderable {
+  var model: CompanionCore.TextFieldModel { get set }
+  var appearance: CompanionCore.TextFieldAppearance { get }
+  func resignFirstResponder() -> Swift.Bool
+}
+public protocol TextFieldViewCoordinator : AnyObject {
+  func onIconClick(_ textField: CompanionCore.TextFieldView)
+  func textField(_ textField: CompanionCore.TextFieldView, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  func textFieldShouldBeginEditing(_ textField: CompanionCore.TextFieldView) -> Swift.Bool
+  func textFieldDidBeginEditing(_ textField: CompanionCore.TextFieldView)
+  func textFieldDidEndEditing(_ textField: CompanionCore.TextFieldView)
+  func textFieldShouldReturn(_ textField: CompanionCore.TextFieldView) -> Swift.Bool
+}
+public class TextFieldViewCoordinatorProxy : CompanionCore.TextFieldViewCoordinator {
+  weak public var subject: CompanionCore.TextFieldViewCoordinator!
+  public init()
+  public func onIconClick(_ textField: CompanionCore.TextFieldView)
+  public func textField(_ textField: CompanionCore.TextFieldView, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  public func textFieldShouldBeginEditing(_ textField: CompanionCore.TextFieldView) -> Swift.Bool
+  public func textFieldDidBeginEditing(_ textField: CompanionCore.TextFieldView)
+  public func textFieldDidEndEditing(_ textField: CompanionCore.TextFieldView)
+  public func textFieldShouldReturn(_ textField: CompanionCore.TextFieldView) -> Swift.Bool
+  @objc deinit
+}
+final public class TimeAgoFormatter {
+  public init(assertionCaller: DevicesCore.AssertionCaller = assertionCallerShared, stringProvider: DevicesCore.StringProvider, dateProvider: @escaping DevicesCore.DateProvider = makeCurrentDate, justNowThreshold: Foundation.TimeInterval = 30)
+  final public func makeTimeAgoLabel(_ fromDate: Foundation.Date) -> Swift.String
+  @objc deinit
+}
+extension CompanionCore.TitleWithAccessories : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+public struct TitleWithAccessories {
+  public struct Accessory {
+    public init(icon: DevicesCore.ImageID, action: DevicesDesignSystem.AnyAction)
+  }
+  public enum Accessories {
+    case pair(CompanionCore.TitleWithAccessories.Accessory, CompanionCore.TitleWithAccessories.Accessory)
+    case single(CompanionCore.TitleWithAccessories.Accessory)
+  }
+  public init(text: DevicesUI.StringContent, leftAccessories: CompanionCore.TitleWithAccessories.Accessories?, rightAccessories: CompanionCore.TitleWithAccessories.Accessories?)
+}
+extension CompanionCore.TitleWithButton : DevicesUI.ViewRenderable {
+  public func renderView(context: DevicesUI.ViewContext, reusing _: DevicesUI.View?) -> DevicesUI.View
+}
+public struct TitleWithButton {
+  public init(text: DevicesUI.StringContent, refresh: @escaping () -> Swift.Void)
+  public init(text: DevicesUI.StringContent, iconID: DevicesCore.ImageID, action: @escaping () -> Swift.Void)
+}
+public typealias Toast = DevicesDesignSystem.Toast
+extension CompanionCore.TopTabBarButtonModel : DevicesUI.ViewRenderable {
+  final public func renderView(context: DevicesUI.ViewContext, reusing view: DevicesUI.View?) -> DevicesUI.View
+}
+final public class TopTabBarButtonModel {
+  final public let iconID: DevicesCore.ImageID
+  final public let selectedIconID: DevicesCore.ImageID
+  final public let title: DevicesUI.StringContent?
+  final public let titleColor: DevicesDesignSystem.TypeColor
+  final public let titleHighlightedColor: DevicesDesignSystem.TypeColor
+  @DevicesCore.Property @_projectedValueProperty($isSelected) final public var isSelected: Swift.Bool {
+    get
+  }
+  final public var $isSelected: DevicesCore.Property<Swift.Bool> {
+    get
+  }
+  @DevicesCore.Property @_projectedValueProperty($isBadgeShown) final public var isBadgeShown: Swift.Bool {
+    get
+  }
+  final public var $isBadgeShown: DevicesCore.Property<Swift.Bool> {
+    get
+  }
+  final public let onTap: () -> Swift.Void
+  public init(iconID: DevicesCore.ImageID, selectedIconID: DevicesCore.ImageID, title: DevicesUI.StringContent?, titleColor: DevicesDesignSystem.TypeColor, titleHighlightedColor: DevicesDesignSystem.TypeColor, isSelected: DevicesCore.Property<Swift.Bool>, isBadgeShown: DevicesCore.Property<Swift.Bool>, onTap: @escaping () -> Swift.Void)
+  @objc deinit
+}
+public struct ColorHSVComponents {
+  public let hue: CoreFoundation.CGFloat
+  public let saturation: CoreFoundation.CGFloat
+  public let brightness: CoreFoundation.CGFloat
+  public let alpha: CoreFoundation.CGFloat
+}
+extension UIKit.UIColor {
+  public var hsba: CompanionCore.ColorHSVComponents {
+    get
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func colorOfPoint(point: CoreFoundation.CGPoint, at layer: QuartzCore.CALayer) -> UIKit.UIColor
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func vStackLayoutItem(measurable: DevicesUI.Measurable? = nil, margins: UIKit.UIEdgeInsets = .zero, gravity: DevicesUI.HorizontalGravity = .center) -> DevicesUI.VStackLayoutItem
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var prefersAnimatedUpdate: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func performTransition(_ transition: @escaping () -> Swift.Void, animated: Swift.Bool, duration: Foundation.TimeInterval)
+  @inlinable @_Concurrency.MainActor(unsafe) public func performTransition(transition: @escaping () -> Swift.Void, duration: Foundation.TimeInterval = 0.25) {
+		performTransition(
+			transition,
+			animated: prefersAnimatedUpdate,
+			duration: duration
+		)
+	}
+}
+public enum UserAgent {
+  case saluteAppInfo(info: CompanionCore.SaluteAppInfo)
+  public var headerValue: Swift.String {
+    get
+  }
+}
+public typealias UserID = DevicesCore.Tagged<CompanionCore.UserIDTag, Swift.String>
+public enum UserIDTag {
+}
+public protocol UserIDStorage : AnyObject {
+  func acquireUserID() -> CompanionCore.UserID
+}
+final public class UserIDStorageImpl : CompanionCore.UserIDStorage {
+  public init(storage: DevicesCore.KeyValueStorage = UserDefaultsStorage(), makeUserID: @escaping () -> CompanionCore.UserID)
+  final public func acquireUserID() -> CompanionCore.UserID
+  @objc deinit
+}
+public enum VoipPushHandleStatus {
+  case handled
+  case unhandled
+  public static func == (a: CompanionCore.VoipPushHandleStatus, b: CompanionCore.VoipPushHandleStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol VoipPushHandler : AnyObject {
+  func handle(voipPushPayload: [Swift.AnyHashable : Any], completion: (CompanionCore.VoipPushHandleStatus) -> Swift.Void)
+}
+public protocol VoipPushHandlerRegistry {
+  @discardableResult
+  func register(handler: CompanionCore.VoipPushHandler) -> DevicesCore.Cancellable
+}
+public struct WebModalScreenDescriptor {
+  public let screen: DevicesCore.ModalScreen
+  public let controller: DevicesCore.WebContentController
+}
+public enum WebScreenType {
+  public enum ItemPosition {
+    case left
+    case right
+    public static func == (a: CompanionCore.WebScreenType.ItemPosition, b: CompanionCore.WebScreenType.ItemPosition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case `default`
+  case withNavigationItem(item: CompanionCore.WebNavigationItem, position: CompanionCore.WebScreenType.ItemPosition)
+  public var view: DevicesUI.ViewRenderable? {
+    get
+  }
+}
+public enum WebNavigationItem {
+  case cross(() -> Swift.Void)
+  public var renderable: DevicesUI.ViewRenderable {
+    get
+  }
+  public static func makeCloseItem(closeAction: @escaping () -> Swift.Void) -> CompanionCore.WebNavigationItem
+}
+public struct WebStackScreenDescriptor {
+  public let screen: DevicesCore.StackScreen
+  public let controller: DevicesCore.WebContentController
+}
+public protocol WebUIBuilder {
+  func makeStackWebScreen(type: CompanionCore.WebScreenType) -> CompanionCore.WebStackScreenDescriptor
+}
+final public class WebUIBuilderImpl : CompanionCore.WebUIBuilder {
+  public init(webViewGraphFactory: DevicesCore.WebViewGraphFactory, userAgent: CompanionCore.UserAgent?, context: DevicesUI.ViewContext)
+  final public func makeStackWebScreen(type: CompanionCore.WebScreenType) -> CompanionCore.WebStackScreenDescriptor
+  @objc deinit
+}
+extension CompanionCore.AnalyticsType : Swift.Hashable {}
+extension CompanionCore.AppIconID : Swift.Equatable {}
+extension CompanionCore.AppIconID : Swift.Hashable {}
+extension CompanionCore.AppIconID : Swift.RawRepresentable {}
+extension CompanionCore.AppImageID : Swift.Equatable {}
+extension CompanionCore.AppImageID : Swift.Hashable {}
+extension CompanionCore.AppImageID : Swift.RawRepresentable {}
+extension CompanionCore.AppImageID.Placeholder : Swift.Equatable {}
+extension CompanionCore.AppImageID.Placeholder : Swift.Hashable {}
+extension CompanionCore.AppImageID.Placeholder : Swift.RawRepresentable {}
+extension CompanionCore.AppStringID.Time : Swift.Equatable {}
+extension CompanionCore.AppStringID.Time : Swift.Hashable {}
+extension CompanionCore.AppStringID.Time : Swift.RawRepresentable {}
+extension CompanionCore.AppStringID.ErrorModel : Swift.Equatable {}
+extension CompanionCore.AppStringID.ErrorModel : Swift.Hashable {}
+extension CompanionCore.AppStringID.ErrorModel : Swift.RawRepresentable {}
+extension CompanionCore.AppStringID.Common : Swift.Equatable {}
+extension CompanionCore.AppStringID.Common : Swift.Hashable {}
+extension CompanionCore.AppStringID.Common : Swift.RawRepresentable {}
+extension CompanionCore.AppsFlyerAnalyticsEvent : Swift.Hashable {}
+extension CompanionCore.BuildType : Swift.Hashable {}
+extension CompanionCore.BuildType : Swift.RawRepresentable {}
+extension CompanionCore.Companion.Host : Swift.Equatable {}
+extension CompanionCore.Companion.Host : Swift.Hashable {}
+extension CompanionCore.Companion.Host : Swift.RawRepresentable {}
+extension CompanionCore.CompanionButton.Style : Swift.Equatable {}
+extension CompanionCore.CompanionButton.Style : Swift.Hashable {}
+extension CompanionCore.CompatibilityTag : Swift.Equatable {}
+extension CompanionCore.CompatibilityTag : Swift.Hashable {}
+extension CompanionCore.CompatibilityTag : Swift.RawRepresentable {}
+extension CompanionCore.ExternalLinkAlertStringID : Swift.Equatable {}
+extension CompanionCore.ExternalLinkAlertStringID : Swift.Hashable {}
+extension CompanionCore.ExternalLinkAlertStringID : Swift.RawRepresentable {}
+extension CompanionCore.ModalRoute : Swift.Hashable {}
+extension CompanionCore.NavigationDeeplinkTarget : Swift.Equatable {}
+extension CompanionCore.NavigationDeeplinkTarget : Swift.Hashable {}
+extension CompanionCore.NavigationDeeplinkTarget : Swift.RawRepresentable {}
+extension CompanionCore.RegexCharacterSet : Swift.Equatable {}
+extension CompanionCore.RegexCharacterSet : Swift.Hashable {}
+extension CompanionCore.RegexCharacterSet : Swift.RawRepresentable {}
+extension CompanionCore.SaluteStand : Swift.Hashable {}
+extension CompanionCore.StateJSON.CodingKeys : Swift.Equatable {}
+extension CompanionCore.StateJSON.CodingKeys : Swift.Hashable {}
+extension CompanionCore.StateJSON.CodingKeys : Swift.RawRepresentable {}
+extension CompanionCore.TLSCertificates : Swift.Equatable {}
+extension CompanionCore.TLSCertificates : Swift.Hashable {}
+extension CompanionCore.TLSCertificates : Swift.RawRepresentable {}
+extension CompanionCore.VoipPushHandleStatus : Swift.Equatable {}
+extension CompanionCore.VoipPushHandleStatus : Swift.Hashable {}
+extension CompanionCore.WebScreenType.ItemPosition : Swift.Equatable {}
+extension CompanionCore.WebScreenType.ItemPosition : Swift.Hashable {}

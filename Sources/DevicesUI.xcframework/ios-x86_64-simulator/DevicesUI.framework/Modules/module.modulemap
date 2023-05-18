@@ -1,0 +1,4 @@
+framework module DevicesUI {
+  header "DevicesUI-Swift.h"
+  requires objc
+}

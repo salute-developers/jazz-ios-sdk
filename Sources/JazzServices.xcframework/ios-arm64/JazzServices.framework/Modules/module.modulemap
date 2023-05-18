@@ -1,0 +1,4 @@
+framework module JazzServices {
+  header "JazzServices-Swift.h"
+  requires objc
+}
