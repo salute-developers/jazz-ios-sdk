@@ -1,0 +1,656 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JazzAPI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import DevicesCore
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+public typealias AnalyticsConferenceType = DevicesCore.Tagged<JazzAPI.AnalyticsConferenceTypeTag, Swift.String>
+extension DevicesCore.Tagged where Tag == JazzAPI.AnalyticsConferenceTypeTag, T == Swift.String {
+  public static let conference: DevicesCore.Tagged<JazzAPI.AnalyticsConferenceTypeTag, Swift.String>
+  public static let webinar: DevicesCore.Tagged<JazzAPI.AnalyticsConferenceTypeTag, Swift.String>
+  public static let dropIn: DevicesCore.Tagged<JazzAPI.AnalyticsConferenceTypeTag, Swift.String>
+  public static let c2c: DevicesCore.Tagged<JazzAPI.AnalyticsConferenceTypeTag, Swift.String>
+}
+public enum AnalyticsConferenceTypeTag {
+}
+public protocol AuthorizationLauncher {
+  func startAuthorization(predefinedDomain: Swift.String?)
+}
+public typealias BackendHost = DevicesCore.Tagged<JazzAPI.BackendHostTag, JazzAPI.Host>
+public struct BackendHostTag {
+}
+public struct BackendURL : Swift.Equatable {
+  public let url: Foundation.URL
+  public init?(url: Foundation.URL)
+  public init(host: JazzAPI.Host)
+  public static func == (a: JazzAPI.BackendURL, b: JazzAPI.BackendURL) -> Swift.Bool
+}
+extension Foundation.Bundle {
+  public var jazz: Foundation.Bundle {
+    get
+  }
+}
+public struct ConferenceData {
+  public let settings: JazzAPI.ConferenceData.Settings
+  public let services: JazzAPI.ConferenceData.Services
+  public init(settings: JazzAPI.ConferenceData.Settings, services: JazzAPI.ConferenceData.Services = .emptyServices)
+  public init(analyticsType: JazzAPI.AnalyticsConferenceType, userRole: JazzAPI.PrivateRoom.UserRole? = nil, roomId: JazzAPI.PublicRoom.ID? = nil, mediaSettings: JazzAPI.ConferenceMediaSettings = .allOff, customTokenProvider: JazzAPI.ConferenceTokenProvider? = nil, preferredSpeaker: JazzAPI.ConferencePreferredSpeaker? = nil)
+  public static let defaultConference: JazzAPI.ConferenceData
+}
+extension JazzAPI.ConferenceData {
+  public struct Settings : Swift.Equatable {
+    public let analyticsType: JazzAPI.AnalyticsConferenceType
+    public let userRole: JazzAPI.PrivateRoom.UserRole?
+    public let roomId: JazzAPI.PublicRoom.ID?
+    public let mediaSettings: JazzAPI.ConferenceMediaSettings
+    public let preferredSpeaker: JazzAPI.ConferencePreferredSpeaker?
+    public let shouldWaitForOtherParticipants: Swift.Bool
+    public init(analyticsType: JazzAPI.AnalyticsConferenceType, userRole: JazzAPI.PrivateRoom.UserRole? = nil, roomId: JazzAPI.PublicRoom.ID? = nil, mediaSettings: JazzAPI.ConferenceMediaSettings = .allOff, shouldWaitForOtherParticipants: Swift.Bool = false, preferredSpeaker: JazzAPI.ConferencePreferredSpeaker? = nil)
+    public static func == (a: JazzAPI.ConferenceData.Settings, b: JazzAPI.ConferenceData.Settings) -> Swift.Bool
+  }
+  final public class Services {
+    final public let customTokenProvider: JazzAPI.ConferenceTokenProvider?
+    final public let onUserCanceledConnection: ((JazzAPI.PublicRoom?) -> Swift.Void)?
+    public init(customTokenProvider: JazzAPI.ConferenceTokenProvider? = nil, onUserCanceledConnection: ((JazzAPI.PublicRoom?) -> Swift.Void)? = nil)
+    @objc deinit
+  }
+}
+extension JazzAPI.ConferenceData {
+  public func updatingMediaSettings(newSettings: JazzAPI.ConferenceMediaSettings) -> JazzAPI.ConferenceData
+}
+extension JazzAPI.ConferenceData.Settings {
+  public static let defaultConference: JazzAPI.ConferenceData.Settings
+}
+extension JazzAPI.ConferenceData.Services {
+  public static let emptyServices: JazzAPI.ConferenceData.Services
+}
+public struct ConferenceMediaSettings : Swift.Equatable {
+  public var isCameraOn: Swift.Bool
+  public var isMicrophoneOn: Swift.Bool
+  public init(isCameraOn: Swift.Bool, isMicrophoneOn: Swift.Bool)
+  public static var allOff: JazzAPI.ConferenceMediaSettings {
+    get
+  }
+  public static var allOn: JazzAPI.ConferenceMediaSettings {
+    get
+  }
+  public static func == (a: JazzAPI.ConferenceMediaSettings, b: JazzAPI.ConferenceMediaSettings) -> Swift.Bool
+}
+extension JazzAPI.ConferenceMediaSettings : DevicesCore.PrettyStringConvertible {
+  public func makePrettyDescription(additionalOffset: Swift.String?) -> Swift.String
+}
+public enum ConferencePreferredSpeaker : Swift.String {
+  case receiver
+  case speaker
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ConferenceRateService {
+  func shouldRateConference(room: JazzAPI.PublicRoom) -> Swift.Bool
+}
+public enum ConferenceRatingResult : Swift.String {
+  case like
+  case dislike
+  case skipped
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferenceTokenError : Swift.Error {
+  case invalidToken
+  public static func == (a: JazzAPI.ConferenceTokenError, b: JazzAPI.ConferenceTokenError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias JazzAuthToken = DevicesCore.Tagged<JazzAPI.JazzAuthTokenTag, Swift.String>
+public enum JazzAuthTokenTag {
+}
+public protocol ConferenceTokenProvider {
+  func provideForRoomCreation(cancelToken: DevicesCore.CancellationToken?, completion: @escaping (Swift.Result<JazzAPI.JazzAuthToken?, JazzAPI.ConferenceTokenError>) -> Swift.Void)
+  func provideForRoomLink(room: JazzAPI.PublicRoom, cancelToken: DevicesCore.CancellationToken?, completion: @escaping (Swift.Result<JazzAPI.JazzAuthToken?, JazzAPI.ConferenceTokenError>) -> Swift.Void)
+}
+extension JazzAPI.ConferenceTokenProvider {
+  public func provideForRoomCreation(completion: @escaping (Swift.Result<JazzAPI.JazzAuthToken?, JazzAPI.ConferenceTokenError>) -> Swift.Void)
+  public func provideForRoomLink(room: JazzAPI.PublicRoom, completion: @escaping (Swift.Result<JazzAPI.JazzAuthToken?, JazzAPI.ConferenceTokenError>) -> Swift.Void)
+}
+final public class ConstantConferenceRateService : JazzAPI.ConferenceRateService {
+  public init(shouldRateConference: Swift.Bool)
+  final public func shouldRateConference(room: JazzAPI.PublicRoom) -> Swift.Bool
+  @objc deinit
+}
+public struct CreateRoomParameters : Swift.Equatable {
+  public let kind: JazzAPI.PublicRoom.Kind
+  public let title: Swift.String?
+  public let guestEnabled: Swift.Bool
+  public let lobbyEnabled: Swift.Bool
+  public let autoRecordEnabled: Swift.Bool
+  public init(kind: JazzAPI.PublicRoom.Kind, title: Swift.String? = nil, guestEnabled: Swift.Bool, lobbyEnabled: Swift.Bool, autoRecordEnabled: Swift.Bool)
+  public static func == (a: JazzAPI.CreateRoomParameters, b: JazzAPI.CreateRoomParameters) -> Swift.Bool
+}
+extension JazzAPI.CreateRoomParameters {
+  public static func anonymous(title: Swift.String? = nil) -> JazzAPI.CreateRoomParameters
+}
+extension DevicesCore.DarwinNotification {
+  public static let jazzBroadcastStarted: DevicesCore.DarwinNotification
+  public static let jazzBroadcastFinished: DevicesCore.DarwinNotification
+  public static let jazzConferenceFinished: DevicesCore.DarwinNotification
+}
+public struct Host : Swift.Equatable, Swift.Hashable {
+  public let stringValue: Swift.String
+  public let urlValue: Foundation.URL
+  public init?(url: Foundation.URL)
+  public init?(string: Swift.String)
+  public static func == (a: JazzAPI.Host, b: JazzAPI.Host) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DevicesCore.ImageProviders {
+  public static func jazz(bundle: Foundation.Bundle) -> DevicesCore.ImageProvider
+}
+public enum Jazz {
+  public typealias Deeplink = DevicesCore.Tagged<JazzAPI.Jazz.DeeplinkTag, DevicesCore.Deeplink>
+  public typealias DeeplinkService = DevicesCore.TaggedDeeplinkService<JazzAPI.Jazz.DeeplinkTag>
+  public typealias EncodedPassword = DevicesCore.Tagged<JazzAPI.Jazz.EncodedPasswordTag, Swift.String>
+  public typealias DecodedPassword = DevicesCore.Tagged<JazzAPI.Jazz.DecodedPasswordTag, Swift.String>
+  public typealias UserName = DevicesCore.Tagged<JazzAPI.Jazz.UserNameTag, Swift.String>
+  public typealias OpenApplinkOnDevice = (Foundation.URL, @escaping (Swift.Bool) -> Swift.Void) -> Swift.Void
+}
+extension JazzAPI.Jazz {
+  public struct Device : Swift.Equatable {
+    public let name: Swift.String
+    public let serialNumber: Swift.String
+    public let type: Swift.String
+    public init(name: Swift.String, serialNumber: Swift.String, type: Swift.String)
+    public static func == (a: JazzAPI.Jazz.Device, b: JazzAPI.Jazz.Device) -> Swift.Bool
+  }
+}
+extension JazzAPI.Jazz {
+  public enum DeeplinkTag {
+  }
+  public enum EncodedPasswordTag {
+  }
+  public enum DecodedPasswordTag {
+  }
+  public enum UserNameTag {
+  }
+}
+extension JazzAPI.Jazz.Device {
+  public enum DeviceType {
+    case portal
+    case top
+    case unknown
+    public static func == (a: JazzAPI.Jazz.Device.DeviceType, b: JazzAPI.Jazz.Device.DeviceType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var deviceType: JazzAPI.Jazz.Device.DeviceType {
+    get
+  }
+}
+public protocol JazzActionPerformer {
+  func startConference(shouldSkipIntermidiateScreen: Swift.Bool, parameters: JazzAPI.CreateRoomParameters, data: JazzAPI.ConferenceData)
+  func joinConference(joinType: JazzAPI.JoinConferenceType, data: JazzAPI.ConferenceData)
+  func createConference(parameters: JazzAPI.CreateRoomParameters, customTokenProvider: JazzAPI.ConferenceTokenProvider?, completion: @escaping (Foundation.URL?) -> Swift.Void)
+  func getPrivateRoom(publicRoom: JazzAPI.PublicRoom, customTokenProvider: JazzAPI.ConferenceTokenProvider?, completion: @escaping (JazzAPI.PrivateRoom?) -> Swift.Void)
+  func terminateActiveConference()
+  func enterPiP()
+  func returnFromPiP()
+}
+public protocol JazzActivationListener {
+  func willActivateJazz()
+  func didDeactivateJazz()
+}
+public enum JazzConferencePhase : Swift.Equatable {
+  case inactive
+  case connecting
+  case conferenceLobby
+  case activeConference(JazzAPI.PublicRoom, JazzAPI.PrivateRoom)
+  case webinarLobby
+  case activeWebinar(JazzAPI.PublicRoom, JazzAPI.PrivateRoom)
+  public static func == (a: JazzAPI.JazzConferencePhase, b: JazzAPI.JazzConferencePhase) -> Swift.Bool
+}
+extension JazzAPI.JazzConferencePhase {
+  public var isInactive: Swift.Bool {
+    get
+  }
+  public var publicRoom: JazzAPI.PublicRoom? {
+    get
+  }
+  public var privateRoom: JazzAPI.PrivateRoom? {
+    get
+  }
+}
+public struct JazzConferenceVisibilitySettings : Swift.Equatable {
+  public let isSettingsVisible: Swift.Bool
+  public let isToggleReactionsVisible: Swift.Bool
+  public let isOpenChatVisible: Swift.Bool
+  public let isBackVisible: Swift.Bool
+  public let isConferenceMenuVisible: Swift.Bool
+  public let isParticipantListVisible: Swift.Bool
+  public let isCreatePollVisible: Swift.Bool
+  public let isChangeLayoutVisible: Swift.Bool
+  public let isShareConferenceLinkVisible: Swift.Bool
+  public let isSwitchCameraVisible: Swift.Bool
+  public let isRaiseHandVisible: Swift.Bool
+  public let isTransitionToDeviceVisible: Swift.Bool
+  public let isPinUserVisible: Swift.Bool
+  public let isShareScreenVisible: Swift.Bool
+  public let isAsrVisible: Swift.Bool
+  public init(isSettingsVisible: Swift.Bool, isToggleReactionsVisible: Swift.Bool, isOpenChatVisible: Swift.Bool, isBackVisible: Swift.Bool, isParticipantListVisible: Swift.Bool, isCreatePollVisible: Swift.Bool, isChangeLayoutVisible: Swift.Bool, isShareConferenceLinkVisible: Swift.Bool, isSwitchCameraVisible: Swift.Bool, isRaiseHandVisible: Swift.Bool, isTransitionToDeviceVisible: Swift.Bool, isPinUserVisible: Swift.Bool, isShareScreenVisible: Swift.Bool, isConferenceMenuVisible: Swift.Bool, isAsrVisible: Swift.Bool)
+  public static func == (a: JazzAPI.JazzConferenceVisibilitySettings, b: JazzAPI.JazzConferenceVisibilitySettings) -> Swift.Bool
+}
+public enum JazzEvent : Swift.Equatable {
+  case startJoiningConfenence
+  case roomCreated(JazzAPI.PublicRoom)
+  case joinedConference(JazzAPI.PublicRoom, JazzAPI.PrivateRoom)
+  case joinConferenceCanceled
+  case joinConferenceFailed
+  case leftActiveConference
+  case ratedConference(result: JazzAPI.ConferenceRatingResult)
+  public static func == (a: JazzAPI.JazzEvent, b: JazzAPI.JazzEvent) -> Swift.Bool
+}
+public protocol JazzGraph {
+  var jazzEvents: DevicesCore.Signal<JazzAPI.JazzEvent> { get }
+  var phase: DevicesCore.Property<JazzAPI.JazzConferencePhase> { get }
+  var actionPerformer: JazzAPI.JazzActionPerformer { get }
+  var applinkService: DevicesCore.URLHandler { get }
+  var deeplinkService: JazzAPI.Jazz.DeeplinkService { get }
+  var isPresented: DevicesCore.Property<Swift.Bool> { get }
+  var homeView: UIKit.UIView { get }
+}
+public typealias JazzHost = DevicesCore.Tagged<JazzAPI.JazzHostTag, JazzAPI.Host>
+public struct JazzHostTag {
+}
+extension JazzAPI.JazzLicense {
+  public static var defaultLicense: JazzAPI.JazzLicense {
+    get
+  }
+}
+public struct JazzLicense : Swift.Equatable {
+  public enum Kind : Swift.String {
+    case base
+    case premium
+    case unknown
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let kind: JazzAPI.JazzLicense.Kind
+  public let maxConferenceDurationSec: Swift.Int?
+  public var maxConferenceDuration: Swift.Int? {
+    get
+  }
+  public let maxConferenceCapacity: Swift.Int
+  public let isLobbyAvailable: Swift.Bool
+  public let closedRoomsAvailable: Swift.Bool
+  public let maxUsersForInfiniteConference: Swift.Int
+  public let isAutoCloudRecordAvailable: Swift.Bool
+  public init(kind: JazzAPI.JazzLicense.Kind, maxConferenceDurationSec: Swift.Int?, maxConferenceCapacity: Swift.Int, isLobbyAvailable: Swift.Bool, closedRoomsAvailable: Swift.Bool, maxUsersForInfiniteConference: Swift.Int, isAutoCloudRecordAvailable: Swift.Bool)
+  public static func == (a: JazzAPI.JazzLicense, b: JazzAPI.JazzLicense) -> Swift.Bool
+}
+public struct JazzRecipient : Swift.Equatable {
+  public enum PeerType : Swift.String {
+    case `private`
+    case group
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let id: JazzAPI.JazzRecipient.ID
+  public let type: JazzAPI.JazzRecipient.PeerType
+  public let name: JazzAPI.JazzRecipient.Name
+  public init(id: JazzAPI.JazzRecipient.ID, type: JazzAPI.JazzRecipient.PeerType, name: JazzAPI.JazzRecipient.Name)
+  public static func == (a: JazzAPI.JazzRecipient, b: JazzAPI.JazzRecipient) -> Swift.Bool
+}
+extension JazzAPI.JazzRecipient {
+  public typealias ID = DevicesCore.Tagged<JazzAPI.JazzRecipient.IDTag, Swift.String>
+  public typealias Name = DevicesCore.Tagged<JazzAPI.JazzRecipient.NameTag, Swift.String>
+  public enum IDTag {
+  }
+  public enum NameTag {
+  }
+}
+public struct JazzSpecs {
+  public let roomWithGuestsEnabled: DevicesCore.Property<Swift.Bool>
+  public let shouldDomainBeInRoomCode: DevicesCore.Property<Swift.Bool>
+  public let videoCallsDLPEnabled: DevicesCore.Property<Swift.Bool>
+  public let conferenceNewAsrOn: DevicesCore.Property<Swift.Bool>
+  public let isWebinarEnabled: DevicesCore.Property<Swift.Bool>
+  public let arePollsEnabled: DevicesCore.Property<Swift.Bool>
+  public let isVideoCallCloudRecordingEnabled: DevicesCore.Property<Swift.Bool>
+  public let isTechnicalSupportVisible: Swift.Bool
+  public let shouldShowRequestReview: Swift.Bool
+  public let preferredSpeaker: JazzAPI.ConferencePreferredSpeaker
+  public init(roomWithGuestsEnabled: DevicesCore.Property<Swift.Bool>, shouldDomainBeInRoomCode: DevicesCore.Property<Swift.Bool>, videoCallsDLPEnabled: DevicesCore.Property<Swift.Bool>, conferenceNewAsrOn: DevicesCore.Property<Swift.Bool>, isWebinarEnabled: DevicesCore.Property<Swift.Bool>, arePollsEnabled: DevicesCore.Property<Swift.Bool>, isVideoCallCloudRecordingEnabled: DevicesCore.Property<Swift.Bool>, preferredSpeaker: JazzAPI.ConferencePreferredSpeaker, isTechnicalSupportVisible: Swift.Bool, shouldShowRequestReview: Swift.Bool)
+}
+extension JazzAPI.JazzSpecs : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum JazzVideoPlayerLogLevel : Swift.String, Swift.CaseIterable {
+  case verbose
+  case info
+  case warning
+  case error
+  case none
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [JazzAPI.JazzVideoPlayerLogLevel]
+  public typealias RawValue = Swift.String
+  public static var allCases: [JazzAPI.JazzVideoPlayerLogLevel] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum JoinConferenceType : Swift.Equatable {
+  case skipIntermidiateScreen(room: JazzAPI.PublicRoom)
+  case showIntermidiateScreen(room: JazzAPI.PublicRoom?)
+  public static func == (a: JazzAPI.JoinConferenceType, b: JazzAPI.JoinConferenceType) -> Swift.Bool
+}
+public protocol PasswordCoder {
+  func encode(_ password: JazzAPI.Jazz.DecodedPassword) -> JazzAPI.Jazz.EncodedPassword
+  func decode(_ password: JazzAPI.Jazz.EncodedPassword) -> JazzAPI.Jazz.DecodedPassword?
+}
+extension JazzAPI.PrivateRoom : DevicesCore.PrettyStringConvertible {
+  public func makePrettyDescription(additionalOffset: Swift.String?) -> Swift.String
+}
+public struct PrivateRoom : Swift.Equatable {
+  public typealias ID = DevicesCore.Tagged<JazzAPI.PrivateRoom.IDTag, Swift.String>
+  public typealias Password = DevicesCore.Tagged<JazzAPI.PrivateRoom.PasswordTag, Swift.String>
+  public typealias Token = DevicesCore.Tagged<JazzAPI.PrivateRoom.TokenTag, Swift.String>
+  public struct RoomPolicy : Swift.Equatable {
+    public let canEditOwnName: Swift.Bool
+    public let canSendMessage: Swift.Bool
+    public let canInvite: Swift.Bool
+    public let canRequestPermission: Swift.Bool
+    public let canShareAudio: Swift.Bool
+    public let canShareCamera: Swift.Bool
+    public let canShareMedia: Swift.Bool
+    public let canViewModerators: Swift.Bool
+    public let canViewAsr: Swift.Bool
+    public let canManageAsr: Swift.Bool
+    public let canManageDenoiser: Swift.Bool
+    public let canServerVideoRecord: Swift.Bool
+    public init(canEditOwnName: Swift.Bool, canSendMessage: Swift.Bool, canInvite: Swift.Bool, canRequestPermission: Swift.Bool, canShareAudio: Swift.Bool, canShareCamera: Swift.Bool, canShareMedia: Swift.Bool, canViewModerators: Swift.Bool, canViewAsr: Swift.Bool, canManageAsr: Swift.Bool, canManageDenoiser: Swift.Bool, canServerVideoRecord: Swift.Bool)
+    public static func == (a: JazzAPI.PrivateRoom.RoomPolicy, b: JazzAPI.PrivateRoom.RoomPolicy) -> Swift.Bool
+  }
+  public struct UserPreferences : Swift.Equatable {
+    public let name: JazzAPI.Jazz.UserName?
+    public init(name: JazzAPI.Jazz.UserName?)
+    public static func == (a: JazzAPI.PrivateRoom.UserPreferences, b: JazzAPI.PrivateRoom.UserPreferences) -> Swift.Bool
+  }
+  public struct RoomSettings : Swift.Equatable {
+    public let title: Swift.String?
+    public let isWatermarkEnabled: Swift.Bool
+    public let isLobbyEnabled: Swift.Bool
+    public let isGuestEnabled: Swift.Bool
+    public let isSipEnabled: Swift.Bool
+    public let isAsrEnabled: Swift.Bool
+    public let isJsonChatEnabled: Swift.Bool
+    public init(title: Swift.String?, isWatermarkEnabled: Swift.Bool, isLobbyEnabled: Swift.Bool, isGuestEnabled: Swift.Bool, isSipEnabled: Swift.Bool, isAsrEnabled: Swift.Bool, isJsonChatEnabled: Swift.Bool)
+    public static func == (a: JazzAPI.PrivateRoom.RoomSettings, b: JazzAPI.PrivateRoom.RoomSettings) -> Swift.Bool
+  }
+  public enum UserRole : Swift.String, Swift.Equatable {
+    case owner
+    case member
+    case viewer
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct UserPermissions : Swift.Equatable {
+    public let canEditOwnName: Swift.Bool
+    public let canEditRoomPolicy: Swift.Bool
+    public let canEditRoomTitle: Swift.Bool
+    public let canFinishCall: Swift.Bool
+    public let canGrantPermission: Swift.Bool
+    public let canInvite: Swift.Bool
+    public let canKickUser: Swift.Bool
+    public let canMuteUser: Swift.Bool
+    public let canRequestPermission: Swift.Bool
+    public let canSendMessage: Swift.Bool
+    public let canShareAudio: Swift.Bool
+    public let canShareCamera: Swift.Bool
+    public let canShareMedia: Swift.Bool
+    public let canViewModerators: Swift.Bool
+    public let canViewAsr: Swift.Bool
+    public let canManageAsr: Swift.Bool
+    public let canManageWatermark: Swift.Bool
+    public let canManageLobby: Swift.Bool
+    public let canRecordScreen: Swift.Bool
+    public let canViewMembers: Swift.Bool
+    public let canViewViewers: Swift.Bool
+    public let canViewMessages: Swift.Bool
+    public init(canEditOwnName: Swift.Bool, canEditRoomPolicy: Swift.Bool, canEditRoomTitle: Swift.Bool, canFinishCall: Swift.Bool, canGrantPermission: Swift.Bool, canInvite: Swift.Bool, canKickUser: Swift.Bool, canMuteUser: Swift.Bool, canRequestPermission: Swift.Bool, canSendMessage: Swift.Bool, canShareAudio: Swift.Bool, canShareCamera: Swift.Bool, canShareMedia: Swift.Bool, canViewModerators: Swift.Bool, canViewAsr: Swift.Bool, canManageAsr: Swift.Bool, canManageWatermark: Swift.Bool, canManageLobby: Swift.Bool, canRecordScreen: Swift.Bool, canViewMembers: Swift.Bool, canViewViewers: Swift.Bool, canViewMessages: Swift.Bool)
+    public static func == (a: JazzAPI.PrivateRoom.UserPermissions, b: JazzAPI.PrivateRoom.UserPermissions) -> Swift.Bool
+  }
+  public struct AllPermissions : Swift.Equatable {
+    public static func == (a: JazzAPI.PrivateRoom.AllPermissions, b: JazzAPI.PrivateRoom.AllPermissions) -> Swift.Bool
+  }
+  public enum ContentType : Swift.Equatable {
+    case conference
+    case webinar(JazzAPI.PrivateRoom.WebinarContent)
+    public static func == (a: JazzAPI.PrivateRoom.ContentType, b: JazzAPI.PrivateRoom.ContentType) -> Swift.Bool
+  }
+  public struct WebinarContent : Swift.Equatable {
+    public let settings: JazzAPI.PrivateRoom.WebinarSettings
+    public let meetingState: JazzAPI.PrivateRoom.WebinarMeetingState
+    public let viewerConnectionData: JazzAPI.PrivateRoom.ViewerConnectionData
+    public static func == (a: JazzAPI.PrivateRoom.WebinarContent, b: JazzAPI.PrivateRoom.WebinarContent) -> Swift.Bool
+  }
+  public struct WebinarSettings : Swift.Equatable {
+    public let startDate: Foundation.Date
+    public let description: Swift.String?
+    public static func == (a: JazzAPI.PrivateRoom.WebinarSettings, b: JazzAPI.PrivateRoom.WebinarSettings) -> Swift.Bool
+  }
+  public struct ViewerConnectionData : Swift.Equatable {
+    public let url: Foundation.URL
+    public let id: JazzAPI.PrivateRoom.ID
+    public let password: JazzAPI.PrivateRoom.Password
+    public static func == (a: JazzAPI.PrivateRoom.ViewerConnectionData, b: JazzAPI.PrivateRoom.ViewerConnectionData) -> Swift.Bool
+  }
+  public struct WebinarMeetingState : Swift.Equatable {
+    public let isStarted: Swift.Bool
+    public static func == (a: JazzAPI.PrivateRoom.WebinarMeetingState, b: JazzAPI.PrivateRoom.WebinarMeetingState) -> Swift.Bool
+  }
+  public struct RoomRestrictions : Swift.Equatable {
+    public let maxConferenceDurationSec: Foundation.TimeInterval?
+    public let maxUsersForInfiniteConference: Swift.Int?
+    public let maxConferenceCapacity: Swift.Int?
+    public let isLobbyAllowed: Swift.Bool
+    public let isChatAllowed: Swift.Bool
+    public let isAsrAllowed: Swift.Bool
+    public let isDenoiserAllowed: Swift.Bool
+    public init(maxConferenceDurationSec: Foundation.TimeInterval?, maxUsersForInfiniteConference: Swift.Int?, maxConferenceCapacity: Swift.Int?, isLobbyAllowed: Swift.Bool, isChatAllowed: Swift.Bool, isAsrAllowed: Swift.Bool, isDenoiserAllowed: Swift.Bool)
+    public static func == (a: JazzAPI.PrivateRoom.RoomRestrictions, b: JazzAPI.PrivateRoom.RoomRestrictions) -> Swift.Bool
+  }
+  public let id: JazzAPI.PrivateRoom.ID
+  public let password: JazzAPI.PrivateRoom.Password
+  public let url: Foundation.URL
+  public let token: JazzAPI.PrivateRoom.Token
+  public let userPreferences: JazzAPI.PrivateRoom.UserPreferences
+  public let roomPolicy: JazzAPI.PrivateRoom.RoomPolicy?
+  public let roomType: JazzAPI.PublicRoom.Kind
+  public let roomSettings: JazzAPI.PrivateRoom.RoomSettings?
+  public let sessionSecret: JazzAPI.SessionSecret
+  public let userRole: JazzAPI.PrivateRoom.UserRole?
+  public let allPermissions: JazzAPI.PrivateRoom.AllPermissions?
+  public let contentType: JazzAPI.PrivateRoom.ContentType
+  public let roomRestrictions: JazzAPI.PrivateRoom.RoomRestrictions
+  public init(id: JazzAPI.PrivateRoom.ID, password: JazzAPI.PrivateRoom.Password, url: Foundation.URL, token: JazzAPI.PrivateRoom.Token, userPreferences: JazzAPI.PrivateRoom.UserPreferences, roomPolicy: JazzAPI.PrivateRoom.RoomPolicy?, roomType: JazzAPI.PublicRoom.Kind, roomSettings: JazzAPI.PrivateRoom.RoomSettings?, sessionSecret: JazzAPI.SessionSecret, userRole: JazzAPI.PrivateRoom.UserRole?, allPermissions: JazzAPI.PrivateRoom.AllPermissions?, contentType: JazzAPI.PrivateRoom.ContentType, roomRestrictions: JazzAPI.PrivateRoom.RoomRestrictions)
+  public static func == (a: JazzAPI.PrivateRoom, b: JazzAPI.PrivateRoom) -> Swift.Bool
+}
+extension JazzAPI.PrivateRoom : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.AllPermissions : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.UserPermissions : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.RoomPolicy : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.RoomSettings : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.WebinarSettings : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.WebinarMeetingState : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.ViewerConnectionData : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom.RoomRestrictions : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension JazzAPI.PrivateRoom {
+  public enum IDTag {
+  }
+  public enum PasswordTag {
+  }
+  public enum TokenTag {
+  }
+}
+extension JazzAPI.PrivateRoom {
+  public var userPermissions: JazzAPI.PrivateRoom.UserPermissions? {
+    get
+  }
+}
+extension DevicesCore.Proxy : JazzAPI.JazzActionPerformer where Subject : JazzAPI.JazzActionPerformer {
+  public func getPrivateRoom(publicRoom: JazzAPI.PublicRoom, customTokenProvider: JazzAPI.ConferenceTokenProvider?, completion: @escaping (JazzAPI.PrivateRoom?) -> Swift.Void)
+  public func createConference(parameters: JazzAPI.CreateRoomParameters, customTokenProvider: JazzAPI.ConferenceTokenProvider?, completion: @escaping (Foundation.URL?) -> Swift.Void)
+  public func startConference(shouldSkipIntermidiateScreen: Swift.Bool, parameters: JazzAPI.CreateRoomParameters, data: JazzAPI.ConferenceData)
+  public func joinConference(joinType: JazzAPI.JoinConferenceType, data: JazzAPI.ConferenceData)
+  public func terminateActiveConference()
+  public func enterPiP()
+  public func returnFromPiP()
+}
+extension JazzAPI.PublicRoom {
+  public init(roomCode: Swift.String, defaultHost: JazzAPI.JazzHost?, encodedPassword: JazzAPI.Jazz.EncodedPassword, decodedPassword: JazzAPI.Jazz.DecodedPassword)
+  public var code: Swift.String {
+    get
+  }
+}
+extension JazzAPI.PublicRoom {
+  public static let codeSeparator: Swift.String
+}
+extension JazzAPI.PublicRoom {
+  public func makeDisplayRoomCode(ignoredHosts: Swift.Set<JazzAPI.JazzHost>) -> Swift.String
+}
+extension JazzAPI.PublicRoom : DevicesCore.PrettyStringConvertible {
+  public func makePrettyDescription(additionalOffset: Swift.String?) -> Swift.String
+}
+public struct PublicRoom : Swift.Equatable {
+  public typealias ID = DevicesCore.Tagged<JazzAPI.PublicRoom.IDTag, Swift.String>
+  public let id: JazzAPI.PublicRoom.ID
+  public let host: JazzAPI.JazzHost?
+  public let encodedPassword: JazzAPI.Jazz.EncodedPassword
+  public let decodedPassword: JazzAPI.Jazz.DecodedPassword
+  public init(id: JazzAPI.PublicRoom.ID, host: JazzAPI.JazzHost?, encodedPassword: JazzAPI.Jazz.EncodedPassword, decodedPassword: JazzAPI.Jazz.DecodedPassword)
+  public static func == (a: JazzAPI.PublicRoom, b: JazzAPI.PublicRoom) -> Swift.Bool
+}
+extension JazzAPI.PublicRoom {
+  public enum IDTag {
+  }
+  public enum Kind : Swift.Equatable {
+    case anonymous
+    case custom(Swift.String)
+    case saluteclass
+    case webinar
+    public static func == (a: JazzAPI.PublicRoom.Kind, b: JazzAPI.PublicRoom.Kind) -> Swift.Bool
+  }
+}
+extension JazzAPI.PublicRoom.Kind {
+  public var value: Swift.String {
+    get
+  }
+}
+extension JazzAPI.PublicRoom.Kind : DevicesCore.DirectDeserializable, Swift.LosslessStringConvertible {
+  public init?(_ description: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+extension JazzAPI.PublicRoom.Kind : DevicesCore.Deserializable {
+  public init(deserializer: DevicesCore.Deserializer) throws
+}
+extension DevicesCore.Tagged where Tag == JazzAPI.PublicRoom.IDTag, T == Swift.String {
+  public static let sberStaffRoomIDPrefix: Swift.String
+  public var isSberStaffRoomID: Swift.Bool {
+    get
+  }
+}
+public enum ServerRecordState : Swift.Equatable {
+  case available
+  case loading
+  case recording
+  case unavailable
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: JazzAPI.ServerRecordState, b: JazzAPI.ServerRecordState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension JazzAPI.ServerRecordState {
+  public var isRecording: Swift.Bool {
+    get
+  }
+}
+public enum SessionSecretTag {
+}
+public typealias SessionSecret = DevicesCore.Tagged<JazzAPI.SessionSecretTag, Swift.String>
+final public class SingleConferenceTokenProvider : JazzAPI.ConferenceTokenProvider {
+  public init(token: JazzAPI.JazzAuthToken?)
+  final public func provideForRoomCreation(cancelToken _: DevicesCore.CancellationToken?, completion: @escaping (Swift.Result<JazzAPI.JazzAuthToken?, JazzAPI.ConferenceTokenError>) -> Swift.Void)
+  final public func provideForRoomLink(room _: JazzAPI.PublicRoom, cancelToken _: DevicesCore.CancellationToken?, completion: @escaping (Swift.Result<JazzAPI.JazzAuthToken?, JazzAPI.ConferenceTokenError>) -> Swift.Void)
+  @objc deinit
+}
+extension JazzAPI.ConferencePreferredSpeaker : Swift.Equatable {}
+extension JazzAPI.ConferencePreferredSpeaker : Swift.Hashable {}
+extension JazzAPI.ConferencePreferredSpeaker : Swift.RawRepresentable {}
+extension JazzAPI.ConferenceRatingResult : Swift.Equatable {}
+extension JazzAPI.ConferenceRatingResult : Swift.Hashable {}
+extension JazzAPI.ConferenceRatingResult : Swift.RawRepresentable {}
+extension JazzAPI.ConferenceTokenError : Swift.Equatable {}
+extension JazzAPI.ConferenceTokenError : Swift.Hashable {}
+extension JazzAPI.Jazz.Device.DeviceType : Swift.Equatable {}
+extension JazzAPI.Jazz.Device.DeviceType : Swift.Hashable {}
+extension JazzAPI.JazzLicense.Kind : Swift.Equatable {}
+extension JazzAPI.JazzLicense.Kind : Swift.Hashable {}
+extension JazzAPI.JazzLicense.Kind : Swift.RawRepresentable {}
+extension JazzAPI.JazzRecipient.PeerType : Swift.Equatable {}
+extension JazzAPI.JazzRecipient.PeerType : Swift.Hashable {}
+extension JazzAPI.JazzRecipient.PeerType : Swift.RawRepresentable {}
+extension JazzAPI.JazzVideoPlayerLogLevel : Swift.Equatable {}
+extension JazzAPI.JazzVideoPlayerLogLevel : Swift.Hashable {}
+extension JazzAPI.JazzVideoPlayerLogLevel : Swift.RawRepresentable {}
+extension JazzAPI.PrivateRoom.UserRole : Swift.Hashable {}
+extension JazzAPI.PrivateRoom.UserRole : Swift.RawRepresentable {}
+extension JazzAPI.ServerRecordState : Swift.Hashable {}

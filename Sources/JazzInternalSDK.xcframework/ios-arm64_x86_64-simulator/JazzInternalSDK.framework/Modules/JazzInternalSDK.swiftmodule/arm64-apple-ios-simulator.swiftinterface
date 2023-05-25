@@ -1,0 +1,24 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JazzInternalSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CompanionCore
+import DevicesCore
+import DevicesDesignSystem
+import JazzAPI
+import JazzBase
+import JazzImpl
+import JazzServices
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+public enum Jazz {
+  public static func initialize(defaultVisibilitySettings: JazzAPI.JazzConferenceVisibilitySettings = .allVisible, analyticsFeature: JazzImpl.JazzAnalyticsFeature = .makeDefault(), navigationFeature: JazzImpl.JazzNavigationFeature, networkFeature: JazzImpl.JazzNetworkFeature, mediaFeature: JazzImpl.JazzMediaFeature = .makeDefault(logger: nil), inviteFeature: JazzImpl.JazzConferenceInviteFeature = .makeDefault(customInviteButton: nil), authorizationFeature: JazzImpl.JazzAuthorizationFeature? = nil, profileSyncFeature: JazzImpl.JazzProfileSyncFeature? = nil, screenShareFeature: JazzImpl.JazzScreenShareFeature? = nil, loggingFeature: JazzImpl.JazzLoggingFeature, license: DevicesCore.Property<JazzAPI.JazzLicense?> = .constant(.jazzBase), conferenceRateService: JazzAPI.ConferenceRateService = ConstantConferenceRateService(shouldRateConference: true)) -> JazzAPI.JazzGraph
+}
+extension JazzImpl.JazzLoggingFeature {
+  public init(logger: DevicesCore.Logger, videoPlayerLogLevel: JazzAPI.JazzVideoPlayerLogLevel, jitsiLogLevel: DevicesCore.LogLevel)
+}
+extension JazzImpl.JazzNavigationFeature {
+  public init(stackScreenPresenter: DevicesCore.StackScreenPresenter)
+}

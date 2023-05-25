@@ -1,0 +1,160 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JazzSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import CompanionCore
+import CryptoKit
+import DevicesCore
+import DevicesDesignSystem
+import DevicesUI
+import Foundation
+import JazzAPI
+import JazzBase
+import JazzImpl
+import JazzServices
+import SDNavigation
+import Swift
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+public enum ConferencePreferredSpeaker : Swift.String {
+  case receiver
+  case speaker
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Jazz {
+  public static func initialize(sdkSecret: Swift.String, tokenConfigurationProvider: JazzSDK.JazzTokenConfigurationProvider, container: UIKit.UIViewController, settings: JazzSDK.JazzSettings, eventsListener: JazzSDK.JazzEventsListener? = nil, conferenceRateService: JazzAPI.ConferenceRateService = ConstantConferenceRateService(shouldRateConference: true)) throws
+  public static func saveLogToFile(toFile fileUrl: Foundation.URL) throws
+}
+public struct JazzConferenceConfiguration {
+  public let title: Swift.String?
+  public let type: Swift.String?
+  public let settings: JazzSDK.JazzConferenceSettings
+  public init(title: Swift.String? = nil, type: Swift.String? = nil, settings: JazzSDK.JazzConferenceSettings = JazzConferenceSettings())
+}
+extension JazzSDK.JazzConferenceConfiguration {
+  public static func anonymous(title: Swift.String? = nil) -> JazzSDK.JazzConferenceConfiguration
+}
+public struct JazzConferenceSettings {
+  public static let anonymous: JazzSDK.JazzConferenceSettings
+  public let isGuestsOn: Swift.Bool
+  public let isLobbyOn: Swift.Bool
+  public let isAutoRecordEnabled: Swift.Bool
+  public init(isGuestsOn: Swift.Bool = true, isLobbyOn: Swift.Bool = false, isAutoRecordEnabled: Swift.Bool = false)
+}
+public struct JazzControlsVisibility {
+  public let isSettingsVisible: Swift.Bool
+  public let isOpenChatVisible: Swift.Bool
+  public let isBackVisible: Swift.Bool
+  public let isConferenceMenuVisible: Swift.Bool
+  public let isToggleReactionsVisible: Swift.Bool
+  public let isParticipantListVisible: Swift.Bool
+  public let isChangeLayoutVisible: Swift.Bool
+  public let isShareConferenceLinkVisible: Swift.Bool
+  public let isSwitchCameraVisible: Swift.Bool
+  public let isRaiseHandVisible: Swift.Bool
+  public let isTransitionToDeviceVisible: Swift.Bool
+  public let isPinUserVisible: Swift.Bool
+  public let isShareScreenVisible: Swift.Bool
+  public let isAsrVisible: Swift.Bool
+  public let isCreatePollVisible: Swift.Bool
+  public init(isSettingsVisible: Swift.Bool, isToggleReactionsVisible: Swift.Bool, isOpenChatVisible: Swift.Bool, isBackVisible: Swift.Bool, isParticipantListVisible: Swift.Bool, isChangeLayoutVisible: Swift.Bool, isShareConferenceLinkVisible: Swift.Bool, isSwitchCameraVisible: Swift.Bool, isRaiseHandVisible: Swift.Bool, isTransitionToDeviceVisible: Swift.Bool, isPinUserVisible: Swift.Bool, isShareScreenVisible: Swift.Bool, isConferenceMenuVisible: Swift.Bool, isAsrVisible: Swift.Bool, isCreatePollVisible: Swift.Bool)
+}
+extension JazzSDK.JazzControlsVisibility {
+  public static let allVisible: JazzSDK.JazzControlsVisibility
+}
+public protocol JazzEventsListener {
+  func onStartJoiningConference()
+  func onConferenceCreated(room: JazzSDK.JazzRoom)
+  func onConferenceJoined(room: JazzSDK.JazzRoom)
+  func onConferenceCanceled()
+  func onConferenceFailed()
+  func onConferenceLeft()
+  func onConferenceRated(result: JazzAPI.ConferenceRatingResult)
+}
+extension JazzSDK.JazzEventsListener {
+  public func onStartJoiningConference()
+  public func onConferenceCreated(room _: JazzSDK.JazzRoom)
+  public func onConferenceJoined(room _: JazzSDK.JazzRoom)
+  public func onConferenceCanceled()
+  public func onConferenceFailed()
+  public func onConferenceLeft()
+  public func onConferenceRated(result: JazzAPI.ConferenceRatingResult)
+}
+public struct JazzInviteButton {
+  public let title: Swift.String
+  public let action: (Foundation.URL, JazzSDK.JazzRoom) -> Swift.Void
+}
+public struct JazzNetwork {
+  public let hostUrl: Foundation.URL
+  public static let `default`: JazzSDK.JazzNetwork
+  public init(hostUrl: Foundation.URL)
+}
+public struct JazzRoom {
+  public let id: Swift.String
+  public let decodedPassword: Swift.String
+  public let encodedPassword: Swift.String
+  public let host: Swift.String?
+}
+public enum JazzSDKError : Swift.Error {
+  case alreadyInitialized
+  case invalidSDKSecret
+  case invalidNetworkConfiguration
+  public static func == (a: JazzSDK.JazzSDKError, b: JazzSDK.JazzSDKError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class JazzSession {
+  public static let shared: JazzSDK.JazzSession
+  final public func createConference(configuration: JazzSDK.JazzConferenceConfiguration = .anonymous(), completion: @escaping (Foundation.URL?) -> Swift.Void)
+  final public func startConference(configuration: JazzSDK.JazzConferenceConfiguration = .anonymous(), mediaSettings: JazzSDK.JazzConferenceMediaSettings = .allOff, analyticsConferenceType: Swift.String? = nil, prefferedSpeaker: JazzSDK.ConferencePreferredSpeaker? = nil)
+  final public func joinConference(id: Swift.String, decodedPassword: Swift.String, mediaSettings: JazzSDK.JazzConferenceMediaSettings = .allOff, analyticsConferenceType: Swift.String? = nil, prefferedSpeaker: JazzSDK.ConferencePreferredSpeaker? = nil)
+  final public func terminateActiveConference()
+  final public func handle(url: Foundation.URL) -> Swift.Bool
+  final public var homeView: UIKit.UIView {
+    get
+  }
+  @objc deinit
+}
+public struct JazzSettings {
+  public let network: JazzSDK.JazzNetwork
+  public let buttonsVisibility: JazzSDK.JazzControlsVisibility
+  public let inviteButton: JazzSDK.JazzInviteButton?
+  public let screenShareExtensionIdentifier: Swift.String?
+  public let userNameService: JazzSDK.JazzUserNameService?
+  public init(network: JazzSDK.JazzNetwork, buttonsVisibility: JazzSDK.JazzControlsVisibility = .allVisible, inviteButton: JazzSDK.JazzInviteButton? = nil, screenShareExtensionIdentifier: Swift.String? = nil, userNameService: JazzSDK.JazzUserNameService? = nil)
+}
+public struct JazzTokenConfiguration : Swift.Hashable {
+  public let timeToLive: Swift.Int
+  public let issuer: Swift.String
+  public let userId: Swift.String
+  public let userName: Swift.String?
+  public let userEmail: Swift.String?
+  public init(timeToLive: Swift.Int = 120, issuer: Swift.String, userId: Swift.String, userName: Swift.String? = nil, userEmail: Swift.String? = nil)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: JazzSDK.JazzTokenConfiguration, b: JazzSDK.JazzTokenConfiguration) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol JazzTokenConfigurationProvider {
+  func provideTokenConfiguration() -> JazzSDK.JazzTokenConfiguration
+}
+public protocol JazzUserNameService {
+  func userName() -> Swift.String?
+  func userNameUpdated(newName: Swift.String)
+}
+public typealias JazzConferenceMediaSettings = JazzAPI.ConferenceMediaSettings
+extension JazzSDK.ConferencePreferredSpeaker : Swift.Equatable {}
+extension JazzSDK.ConferencePreferredSpeaker : Swift.Hashable {}
+extension JazzSDK.ConferencePreferredSpeaker : Swift.RawRepresentable {}
+extension JazzSDK.JazzSDKError : Swift.Equatable {}
+extension JazzSDK.JazzSDKError : Swift.Hashable {}
