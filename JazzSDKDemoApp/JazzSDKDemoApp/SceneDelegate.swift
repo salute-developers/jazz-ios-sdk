@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		/// Для корректной работы Jazz необходимо передать уникальный ключ SDK,
 		/// который был получен после регистрации приложения.
 		/// - important: Если передать неправильный ключ, то приложение не будет работать!
-		let sdkSecret = "eyJwcm9qZWN0SWQiOiIwNTRkMGFjMy0zODE4LTRhMzctYjk2Mi03NDMxNTg1NDhmM2YiLCJrZXkiOnsia3R5IjoiRUMiLCJkIjoiMDg0b3EtRlVzRnE4UkgyRU9GRG9SNlBlVy1mb0V0LWtGNXZsbUVqQkxfQktvMzJyTFdnSnphdjhLeTZDc0IzQyIsInVzZSI6ImVuYyIsImNydiI6IlAtMzg0Iiwia2lkIjoiOGI5OTE0YmYtZGVlYy00YWEwLWI4ZDgtNWJhYzA1MzJmZTc0IiwieCI6IjFJNkZISnlkbW9YcmNabHhKT3BudnFZY0pqX2NGZEw5UENNQWIyd0VTQ3JCRnYxcGhRVU9LM2tsdGk5REF4WnQiLCJ5Ijoid0JTOU5ac3MtMXd1c1daOXJRU2tVS3M1T2h5QXF2Qkc1SWtVUnR1UDZjUjJwYjRQZW9KcEl5NU0yUmNmMkloeiJ9fQ=="
+		let sdkSecret = ""
 		/// Для работы с Jazz необходима сущность, передающая Конфигурацию токена приложения.
 		/// Более подробно про конфигурацию см. `JazzTokenConfiguration`
 		let tokenConfigurationProvider = DemoTokenConfigurationProvider()
