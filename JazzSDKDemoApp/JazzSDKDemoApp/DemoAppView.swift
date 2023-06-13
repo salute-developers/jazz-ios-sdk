@@ -23,7 +23,7 @@ struct DemoAppView: View {
 				JazzSession.shared.createConference(
 					configuration: JazzConferenceConfiguration(
 						title: "Demo title",
-						type: "anonymous",
+                        type: "meeting",
 						settings: JazzConferenceSettings(
                             isGuestsOn: true,
                             isLobbyOn: false,
@@ -44,7 +44,7 @@ struct DemoAppView: View {
 				JazzSession.shared.startConference(
 					configuration: JazzConferenceConfiguration(
 						title: "Demo title",
-						type: "anonymous",
+						type: "meeting",
 						settings: JazzConferenceSettings(
 							isGuestsOn: true,
 							isLobbyOn: false,
@@ -56,7 +56,7 @@ struct DemoAppView: View {
 						isMicrophoneOn: false
 					),
 					analyticsConferenceType: nil,
-					preferredSpeaker: nil
+                    prefferedSpeaker: nil
 				)
 			}
 			Button("Присоединиться к конференции") {
