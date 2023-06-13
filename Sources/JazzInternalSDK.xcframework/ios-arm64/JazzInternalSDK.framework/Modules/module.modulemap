@@ -1,4 +1,0 @@
-framework module JazzInternalSDK {
-  header "JazzInternalSDK-Swift.h"
-  requires objc
-}

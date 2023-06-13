@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D300C052A387A7500CCD799 /* JazzServices.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF22A387A6F00CCD799 /* JazzServices.xcframework */; };
+		5D300C072A387A7500CCD799 /* JazzBase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF42A387A7000CCD799 /* JazzBase.xcframework */; };
+		5D300C082A387A7500CCD799 /* Swing.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF52A387A7000CCD799 /* Swing.xcframework */; };
+		5D300C092A387A7500CCD799 /* SaluteDesignSystem.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF62A387A7000CCD799 /* SaluteDesignSystem.xcframework */; };
+		5D300C0B2A387A7600CCD799 /* JazzSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF82A387A7100CCD799 /* JazzSDK.xcframework */; };
+		5D300C0C2A387A7600CCD799 /* SDNavigation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF92A387A7100CCD799 /* SDNavigation.xcframework */; };
+		5D300C0D2A387A7600CCD799 /* DevicesCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BFA2A387A7200CCD799 /* DevicesCore.xcframework */; };
+		5D300C0E2A387A7600CCD799 /* JazzAPI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BFB2A387A7200CCD799 /* JazzAPI.xcframework */; };
+		5D300C0F2A387A7700CCD799 /* JazzScreenShareImpl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BFC2A387A7200CCD799 /* JazzScreenShareImpl.xcframework */; };
+		5D300C102A387A7700CCD799 /* CompanionCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BFD2A387A7300CCD799 /* CompanionCore.xcframework */; };
+		5D300C112A387A7700CCD799 /* JazzImpl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BFE2A387A7300CCD799 /* JazzImpl.xcframework */; };
+		5D300C122A387A7700CCD799 /* JazzSDKScreenShare.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BFF2A387A7300CCD799 /* JazzSDKScreenShare.xcframework */; };
+		5D300C142A387A7800CCD799 /* DevicesDesignSystem.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300C012A387A7400CCD799 /* DevicesDesignSystem.xcframework */; };
+		5D300C152A387A7800CCD799 /* DevicesUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300C022A387A7400CCD799 /* DevicesUI.xcframework */; };
+		5D300C162A387A7900CCD799 /* JazzStrings.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300C032A387A7500CCD799 /* JazzStrings.xcframework */; };
+		5D300C182A387A8D00CCD799 /* JazzResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D300C172A387A8D00CCD799 /* JazzResources.bundle */; };
+		5D300C1A2A387A9D00CCD799 /* DevicesDesignSystemResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D300C192A387A9D00CCD799 /* DevicesDesignSystemResources.bundle */; };
+		5D300EEE2A3880A300CCD799 /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF32A387A6F00CCD799 /* WebRTC.xcframework */; };
+		5D300EEF2A3880A400CCD799 /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF32A387A6F00CCD799 /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D300EF12A3880A900CCD799 /* JazzCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300C002A387A7400CCD799 /* JazzCore.xcframework */; };
+		5D300EF22A3880A900CCD799 /* JazzCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300C002A387A7400CCD799 /* JazzCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D300EF32A3880AD00CCD799 /* LibSberCast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF72A387A7100CCD799 /* LibSberCast.xcframework */; };
+		5D300EF42A3880AE00CCD799 /* LibSberCast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF72A387A7100CCD799 /* LibSberCast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D9D684A29AF598F00EEF1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D684929AF598F00EEF1C0 /* AppDelegate.swift */; };
 		5D9D684C29AF598F00EEF1C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D684B29AF598F00EEF1C0 /* SceneDelegate.swift */; };
 		5D9D685329AF599100EEF1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D685229AF599100EEF1C0 /* Assets.xcassets */; };
@@ -16,7 +39,44 @@
 		5D9D689329AF6C3200EEF1C0 /* DemoTokenConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D689229AF6C3200EEF1C0 /* DemoTokenConfigurationProvider.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5D300EF02A3880A500CCD799 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5D300EEF2A3880A400CCD799 /* WebRTC.xcframework in Embed Frameworks */,
+				5D300EF22A3880A900CCD799 /* JazzCore.xcframework in Embed Frameworks */,
+				5D300EF42A3880AE00CCD799 /* LibSberCast.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5D300BF12A387A6F00CCD799 /* JazzInternalSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzInternalSDK.xcframework; path = ../../Sources/JazzInternalSDK.xcframework; sourceTree = "<group>"; };
+		5D300BF22A387A6F00CCD799 /* JazzServices.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzServices.xcframework; path = ../../Sources/JazzServices.xcframework; sourceTree = "<group>"; };
+		5D300BF32A387A6F00CCD799 /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebRTC.xcframework; path = ../../Sources/WebRTC.xcframework; sourceTree = "<group>"; };
+		5D300BF42A387A7000CCD799 /* JazzBase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzBase.xcframework; path = ../../Sources/JazzBase.xcframework; sourceTree = "<group>"; };
+		5D300BF52A387A7000CCD799 /* Swing.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Swing.xcframework; path = ../../Sources/Swing.xcframework; sourceTree = "<group>"; };
+		5D300BF62A387A7000CCD799 /* SaluteDesignSystem.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SaluteDesignSystem.xcframework; path = ../../Sources/SaluteDesignSystem.xcframework; sourceTree = "<group>"; };
+		5D300BF72A387A7100CCD799 /* LibSberCast.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LibSberCast.xcframework; path = ../../Sources/LibSberCast.xcframework; sourceTree = "<group>"; };
+		5D300BF82A387A7100CCD799 /* JazzSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzSDK.xcframework; path = ../../Sources/JazzSDK.xcframework; sourceTree = "<group>"; };
+		5D300BF92A387A7100CCD799 /* SDNavigation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDNavigation.xcframework; path = ../../Sources/SDNavigation.xcframework; sourceTree = "<group>"; };
+		5D300BFA2A387A7200CCD799 /* DevicesCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DevicesCore.xcframework; path = ../../Sources/DevicesCore.xcframework; sourceTree = "<group>"; };
+		5D300BFB2A387A7200CCD799 /* JazzAPI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzAPI.xcframework; path = ../../Sources/JazzAPI.xcframework; sourceTree = "<group>"; };
+		5D300BFC2A387A7200CCD799 /* JazzScreenShareImpl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzScreenShareImpl.xcframework; path = ../../Sources/JazzScreenShareImpl.xcframework; sourceTree = "<group>"; };
+		5D300BFD2A387A7300CCD799 /* CompanionCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CompanionCore.xcframework; path = ../../Sources/CompanionCore.xcframework; sourceTree = "<group>"; };
+		5D300BFE2A387A7300CCD799 /* JazzImpl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzImpl.xcframework; path = ../../Sources/JazzImpl.xcframework; sourceTree = "<group>"; };
+		5D300BFF2A387A7300CCD799 /* JazzSDKScreenShare.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzSDKScreenShare.xcframework; path = ../../Sources/JazzSDKScreenShare.xcframework; sourceTree = "<group>"; };
+		5D300C002A387A7400CCD799 /* JazzCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzCore.xcframework; path = ../../Sources/JazzCore.xcframework; sourceTree = "<group>"; };
+		5D300C012A387A7400CCD799 /* DevicesDesignSystem.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DevicesDesignSystem.xcframework; path = ../../Sources/DevicesDesignSystem.xcframework; sourceTree = "<group>"; };
+		5D300C022A387A7400CCD799 /* DevicesUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DevicesUI.xcframework; path = ../../Sources/DevicesUI.xcframework; sourceTree = "<group>"; };
+		5D300C032A387A7500CCD799 /* JazzStrings.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzStrings.xcframework; path = ../../Sources/JazzStrings.xcframework; sourceTree = "<group>"; };
+		5D300C172A387A8D00CCD799 /* JazzResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JazzResources.bundle; path = ../../Sources/JazzImpl.xcframework/JazzResources.bundle; sourceTree = "<group>"; };
+		5D300C192A387A9D00CCD799 /* DevicesDesignSystemResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DevicesDesignSystemResources.bundle; path = ../../Sources/DevicesDesignSystem.xcframework/DevicesDesignSystemResources.bundle; sourceTree = "<group>"; };
 		5D9D684629AF598F00EEF1C0 /* JazzSDKDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzSDKDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9D684929AF598F00EEF1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D9D684B29AF598F00EEF1C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +93,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D300C0E2A387A7600CCD799 /* JazzAPI.xcframework in Frameworks */,
+				5D300C0D2A387A7600CCD799 /* DevicesCore.xcframework in Frameworks */,
+				5D300C162A387A7900CCD799 /* JazzStrings.xcframework in Frameworks */,
+				5D300C092A387A7500CCD799 /* SaluteDesignSystem.xcframework in Frameworks */,
+				5D300C142A387A7800CCD799 /* DevicesDesignSystem.xcframework in Frameworks */,
+				5D300C052A387A7500CCD799 /* JazzServices.xcframework in Frameworks */,
+				5D300EEE2A3880A300CCD799 /* WebRTC.xcframework in Frameworks */,
+				5D300C0B2A387A7600CCD799 /* JazzSDK.xcframework in Frameworks */,
+				5D300C112A387A7700CCD799 /* JazzImpl.xcframework in Frameworks */,
+				5D300C122A387A7700CCD799 /* JazzSDKScreenShare.xcframework in Frameworks */,
+				5D300C072A387A7500CCD799 /* JazzBase.xcframework in Frameworks */,
+				5D300C152A387A7800CCD799 /* DevicesUI.xcframework in Frameworks */,
+				5D300C0C2A387A7600CCD799 /* SDNavigation.xcframework in Frameworks */,
+				5D300C0F2A387A7700CCD799 /* JazzScreenShareImpl.xcframework in Frameworks */,
+				5D300EF32A3880AD00CCD799 /* LibSberCast.xcframework in Frameworks */,
+				5D300EF12A3880A900CCD799 /* JazzCore.xcframework in Frameworks */,
+				5D300C082A387A7500CCD799 /* Swing.xcframework in Frameworks */,
+				5D300C102A387A7700CCD799 /* CompanionCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +144,27 @@
 				5D9D688E29AF6C0100EEF1C0 /* DemoSettings.swift */,
 				5D9D689029AF6C1500EEF1C0 /* DemoAppView.swift */,
 				5D9D689229AF6C3200EEF1C0 /* DemoTokenConfigurationProvider.swift */,
+				5D300BFD2A387A7300CCD799 /* CompanionCore.xcframework */,
+				5D300BFA2A387A7200CCD799 /* DevicesCore.xcframework */,
+				5D300C012A387A7400CCD799 /* DevicesDesignSystem.xcframework */,
+				5D300C172A387A8D00CCD799 /* JazzResources.bundle */,
+				5D300C022A387A7400CCD799 /* DevicesUI.xcframework */,
+				5D300BFB2A387A7200CCD799 /* JazzAPI.xcframework */,
+				5D300BF42A387A7000CCD799 /* JazzBase.xcframework */,
+				5D300C002A387A7400CCD799 /* JazzCore.xcframework */,
+				5D300BFE2A387A7300CCD799 /* JazzImpl.xcframework */,
+				5D300BF12A387A6F00CCD799 /* JazzInternalSDK.xcframework */,
+				5D300C192A387A9D00CCD799 /* DevicesDesignSystemResources.bundle */,
+				5D300BFC2A387A7200CCD799 /* JazzScreenShareImpl.xcframework */,
+				5D300BF82A387A7100CCD799 /* JazzSDK.xcframework */,
+				5D300BFF2A387A7300CCD799 /* JazzSDKScreenShare.xcframework */,
+				5D300BF22A387A6F00CCD799 /* JazzServices.xcframework */,
+				5D300C032A387A7500CCD799 /* JazzStrings.xcframework */,
+				5D300BF72A387A7100CCD799 /* LibSberCast.xcframework */,
+				5D300BF62A387A7000CCD799 /* SaluteDesignSystem.xcframework */,
+				5D300BF92A387A7100CCD799 /* SDNavigation.xcframework */,
+				5D300BF52A387A7000CCD799 /* Swing.xcframework */,
+				5D300BF32A387A6F00CCD799 /* WebRTC.xcframework */,
 			);
 			path = JazzSDKDemoApp;
 			sourceTree = "<group>";
@@ -80,6 +179,7 @@
 				5D9D684229AF598F00EEF1C0 /* Sources */,
 				5D9D684329AF598F00EEF1C0 /* Frameworks */,
 				5D9D684429AF598F00EEF1C0 /* Resources */,
+				5D300EF02A3880A500CCD799 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,7 +228,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D300C1A2A387A9D00CCD799 /* DevicesDesignSystemResources.bundle in Resources */,
 				5D9D685629AF599100EEF1C0 /* LaunchScreen.storyboard in Resources */,
+				5D300C182A387A8D00CCD799 /* JazzResources.bundle in Resources */,
 				5D9D685329AF599100EEF1C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
