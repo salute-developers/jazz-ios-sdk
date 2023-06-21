@@ -1,4 +1,0 @@
-framework module JazzScreenShareImpl {
-  header "JazzScreenShareImpl-Swift.h"
-  requires objc
-}

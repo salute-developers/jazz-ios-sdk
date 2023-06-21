@@ -1,9 +1,0 @@
-{
-  "jiraTeam" : "ATHENADEV",
-  "graph" : {
-    "layer" : "3rdparty"
-  },
-  "name" : "DevicesCore",
-  "type" : "xcframework",
-  "description" : "Core-библиотека монорепозитория Sberdevices"
-}
