@@ -1,4 +1,0 @@
-framework module SDNavigation {
-  header "SDNavigation-Swift.h"
-  requires objc
-}

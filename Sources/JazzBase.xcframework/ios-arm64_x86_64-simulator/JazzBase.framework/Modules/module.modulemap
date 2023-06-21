@@ -1,4 +1,0 @@
-framework module JazzBase {
-  header "JazzBase-Swift.h"
-  requires objc
-}

@@ -1,4 +1,0 @@
-framework module SaluteDesignSystem {
-  header "SaluteDesignSystem-Swift.h"
-  requires objc
-}

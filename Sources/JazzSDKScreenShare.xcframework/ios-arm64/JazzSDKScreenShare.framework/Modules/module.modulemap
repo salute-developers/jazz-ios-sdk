@@ -1,4 +1,0 @@
-framework module JazzSDKScreenShare {
-  header "JazzSDKScreenShare-Swift.h"
-  requires objc
-}

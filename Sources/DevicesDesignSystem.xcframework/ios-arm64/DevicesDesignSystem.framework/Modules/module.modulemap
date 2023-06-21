@@ -1,4 +1,0 @@
-framework module DevicesDesignSystem {
-  header "DevicesDesignSystem-Swift.h"
-  requires objc
-}

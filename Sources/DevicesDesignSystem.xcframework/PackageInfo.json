@@ -1,9 +1,0 @@
-{
-  "jiraTeam" : "ATHENADEV",
-  "graph" : {
-    "layer" : "3rdparty"
-  },
-  "name" : "DevicesDesignSystem",
-  "type" : "xcframework",
-  "description" : "DesignSystem-библиотека монорепозитория Sberdevices"
-}

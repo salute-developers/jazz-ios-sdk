@@ -1,9 +1,0 @@
-{
-  "jiraTeam" : "ATHENADEV",
-  "graph" : {
-    "layer" : "3rdparty"
-  },
-  "name" : "DevicesUI",
-  "type" : "xcframework",
-  "description" : "UI библиотека монорепозитория Sberdevices"
-}

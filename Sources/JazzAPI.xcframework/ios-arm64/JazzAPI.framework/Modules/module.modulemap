@@ -1,4 +1,0 @@
-framework module JazzAPI {
-  header "JazzAPI-Swift.h"
-  requires objc
-}

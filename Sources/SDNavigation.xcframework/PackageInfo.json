@@ -1,9 +1,0 @@
-{
-  "jiraTeam" : "ATHENADEV",
-  "graph" : {
-    "layer" : "3rdparty"
-  },
-  "name" : "SDNavigation",
-  "type" : "xcframework",
-  "description" : "Библиотека навигационного слоя SberDevices"
-}
