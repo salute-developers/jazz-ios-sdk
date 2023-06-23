@@ -14,32 +14,17 @@ https://developers.sber.ru/docs/ru/jazz/sdk/overview
 
 2. Залинкуйте все .xcframework'и в нужному таргету в .xcodeproj. Полный список необходимых фреймфорков:
 
-- CompanionCore.xcframework
-- DevicesCore.xcframework
-- DevicesDesignSystem.xcframework
-- DevicesUI.xcframework
-- JazzAPI.xcframework
-- JazzBase.xcframework
 - JazzCore.xcframework
-- JazzImpl.xcframework
-- JazzPushSupport.xcframework
-- JazzScreenShareImpl.xcframework
 - JazzSDK.xcframework
-- JazzSDKScreenShare.xcframework
-- JazzServices.xcframework
-- JazzStrings.xcframework
 - LibSberCast.xcframework
-- SaluteDesignSystem.xcframework
-- SDNavigation.xcframework
-- Swing.xcframework
 - WebRTC.xcframework
 
-`Важно: В секцию Embeded Binaries нужно добавить только JazzCore, LibSbercast и WebRTC`
+`Важно: В секцию Embeded Binaries нужно добавить все библиотеки`
 
 3. Скопируйте или сделайте символьные ссылки на следующие ресурсы из фреймворков:
 
-- DevicesDesignSystem.xcframework/DevicesDesignSystemResources.bundle
-- JazzImpl.xcframework/JazzResources.bundle
+- DevicesDesignSystemResources.bundle
+- JazzResources.bundle
 
 Далее добавляем все созданные ссылки на ресурсы в проект в нужный таргет и проверяем,
 что они присутствует в секции **Copy Bundle Resources** во вкладке **Builds Phases**.
@@ -97,4 +82,3 @@ class SampleHandler: RPBroadcastSampleHandler {
 }
 ```
 7. В основном таргете приложения при инициализации `JazzSDK` в `JazzSettings` укажите `screenShareExtensionIdentifier` равный `bundleId` вашего **Broadcast Upload Extension**
-
