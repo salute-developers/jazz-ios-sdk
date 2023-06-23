@@ -7,7 +7,9 @@ Pod::Spec.new do |spec|
   spec.authors      = { 'Salute Devices LLC' => 'developers@sberdevices.ru' }
   spec.summary      = 'SDK позволяет встроить видеозвонки в любое приложение. Интерфейс звонков можно настроить под ваше приложение.'
   spec.source       = { :git => 'https://github.com/salute-developers/jazz-ios-sdk.git', tag: 'v23.5.1' }
-  spec.ios.vendored_frameworks = 'JazzSDK.xcframework', 'LibSberCast.xcframework', 'JazzCore.xcframework', 'WebRTC.xcframework'
+  spec.ios.vendored_frameworks = 'Sources/JazzSDK.xcframework', 'Sources/LibSberCast.xcframework', 'Sources/JazzCore.xcframework', 'Sources/WebRTC.xcframework'
+  
+  spec.ios.resource = ['Sources/DevicesDesignSystemResources.bundle', 'Sources/JazzResources.bundle']
   
   spec.swift_version = '5.0'
   
