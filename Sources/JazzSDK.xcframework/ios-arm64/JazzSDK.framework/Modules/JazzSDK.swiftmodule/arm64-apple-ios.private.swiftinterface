@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JazzSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -20,7 +20,7 @@ public enum ConferencePreferredSpeaker : Swift.String {
   }
 }
 public enum Jazz {
-  public static func initialize(sdkSecret: Swift.String, tokenConfigurationProvider: JazzSDK.JazzTokenConfigurationProvider, container: UIKit.UIViewController, settings: JazzSDK.JazzSettings, eventsListener: JazzSDK.JazzEventsListener? = nil, shouldRateConference: Swift.Bool = true) throws
+  public static func initialize(sdkSecret: Swift.String, tokenConfigurationProvider: any JazzSDK.JazzTokenConfigurationProvider, container: UIKit.UIViewController, settings: JazzSDK.JazzSettings, eventsListener: (any JazzSDK.JazzEventsListener)? = nil, shouldRateConference: Swift.Bool = true) throws
   public static func saveLogToFile(toFile fileUrl: Foundation.URL) throws
 }
 public struct JazzConferenceConfiguration {
@@ -147,8 +147,8 @@ public struct JazzSettings {
   public let buttonsVisibility: JazzSDK.JazzControlsVisibility
   public let inviteButton: JazzSDK.JazzInviteButton?
   public let screenShareExtensionIdentifier: Swift.String?
-  public let userNameService: JazzSDK.JazzUserNameService?
-  public init(network: JazzSDK.JazzNetwork, buttonsVisibility: JazzSDK.JazzControlsVisibility = .allVisible, inviteButton: JazzSDK.JazzInviteButton? = nil, screenShareExtensionIdentifier: Swift.String? = nil, userNameService: JazzSDK.JazzUserNameService? = nil)
+  public let userNameService: (any JazzSDK.JazzUserNameService)?
+  public init(network: JazzSDK.JazzNetwork, buttonsVisibility: JazzSDK.JazzControlsVisibility = .allVisible, inviteButton: JazzSDK.JazzInviteButton? = nil, screenShareExtensionIdentifier: Swift.String? = nil, userNameService: (any JazzSDK.JazzUserNameService)? = nil)
 }
 public struct JazzTokenConfiguration : Swift.Hashable {
   public let timeToLive: Swift.Int

@@ -2053,6 +2053,69 @@
       "offset": 3058,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3769,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3814,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3963,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4555,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4572,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6746,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6779,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6813,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6849,
+      "length": 5,
+      "value": "false"
     }
   ]
 }

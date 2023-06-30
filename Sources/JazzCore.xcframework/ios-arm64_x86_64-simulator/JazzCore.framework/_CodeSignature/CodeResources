@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/JazzCore-Swift.h</key>
 		<data>
-		k9FPxSPY/PwkpjQwp8MjBxAx3oo=
+		NxKA/uxW6bWldZh1iv/mOsIkZsE=
 		</data>
 		<key>Headers/JazzCore.h</key>
 		<data>
@@ -74,55 +74,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TN9oGI2ISvDzbuC07yccQlqvzm4=
+		HrUxyGzu8kDGljKmkgVUJ8DI6bk=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		I+2nwi1hGyhRoP+EpHwXHY5lm4I=
+		cv+O6HPNiRDrF83fEwAeTKdPfwg=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		l5m5dO1QaGHLa8SM4b96ZbNBxpw=
+		sHGQlfH3Zzy1UG5QvZHKJdqhepY=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		7ruDXwKLIAUz3hhiACtxP4LwWFk=
+		hzmKVlQd9KA16rKeJk7ghCmV+QE=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		7asfUXkwZqwMoVVGdYWVynuNwlo=
+		Hy7HDvjG/kxrUlQsVjQo9D2uaOE=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		OO3sy7fRhiP4+H/AfRGwgEGfULc=
+		dG08Cgum0yguOPcOe+IeG4brOYc=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7asfUXkwZqwMoVVGdYWVynuNwlo=
+		Hy7HDvjG/kxrUlQsVjQo9D2uaOE=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HMig8sU6rSYZku5g3FfNsJdrVGs=
+		UVGVzHoO24Tcnmfe1bRlR4wc0QM=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		7ruDXwKLIAUz3hhiACtxP4LwWFk=
+		hzmKVlQd9KA16rKeJk7ghCmV+QE=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		B+KbZ3ij6/cUucnRbUBfNTrV5uo=
+		lXWrg+8KCrWR9riJ6Egqqf8ylm0=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		CeULkUHNt/5kaN5w5/hGNm1OWoE=
+		z3cUsxI0wJPXXb66CZ3WmpxZCIY=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		B+KbZ3ij6/cUucnRbUBfNTrV5uo=
+		lXWrg+8KCrWR9riJ6Egqqf8ylm0=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uu6S38Br5y49HkK0SYUINFoF6Z4=
+		Cqw6dmbTebBspZThIZx6yc4Kbes=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>main.jsbundle</key>
 		<data>
-		nS1kVAeUzTpMOiST3xR6PqNU03g=
+		YSAb7LT9zVW74HAhvRmkyMOBCM8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -150,7 +150,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+GkGprlzmlo+p3Nb3D9wkclfLMSXIWzzYb7RJA71wfg=
+			HT4H/xYkHhIFWjcxKQr99cXufstKLumX5x9SHhC1UxE=
 			</data>
 		</dict>
 		<key>Headers/JazzCore.h</key>
@@ -262,84 +262,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jz/KZwJCQ8KRu17e77LzorSdm7odLA+pdDJV8sXqHdc=
+			So6bNkzvxvA1AdQU47odwuzfRbVQ3lzDNkhYSN7UE1o=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mGborOU4ag/MDhy/n9RBRwVSh/Ub8QeG40RC9i73qDk=
+			MX99vx70vKLDZL+hOxiwiLWl2tFwQWCsQPwHux4wVIY=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OrV9KQ/ZO9sjB3rsotC5rW7nDMZS8ZA96K1LOlwxPeI=
+			mX0RKYACLjFA7TxjtWYfWGHLU/ghD8mld4rjp+pL6Z8=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MQD5ADxW5HvaYIUNptmgTdl/XtG2QFRlpDYMKSNSGRE=
+			HC447ZclF8vparB32djNkTcQjqCEy2fh+A5dfZOnZrQ=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mrpG6GG9vKQPXtBbkyGhvT1SLgpeIxOaTIqTHtnUqTM=
+			5wUpcXSlFveQl8/i6g3oS3095bdEQMcQwS38EjLg+ok=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MQD5ADxW5HvaYIUNptmgTdl/XtG2QFRlpDYMKSNSGRE=
+			HC447ZclF8vparB32djNkTcQjqCEy2fh+A5dfZOnZrQ=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EyBeujPQmHsb5aNrgxWKXdezg6wP82R455Y9fnbUD68=
+			lJzXzzoLSTA9Kgw0gFTRGW5xdcjhZKPxkjQC7hDjajc=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OrV9KQ/ZO9sjB3rsotC5rW7nDMZS8ZA96K1LOlwxPeI=
+			mX0RKYACLjFA7TxjtWYfWGHLU/ghD8mld4rjp+pL6Z8=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			16GPdKeGm20HM+FIT6Cd3+zyMmQmKXKIUzJQbC1Ed3k=
+			I4op8rNYSIJE3ehbvSlF2AF2QISVxMHIu+iRWJVf2bE=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2xAVW/2JgtC8oHJSEVw6LD5wgB8V73+gWd7syAyvUXc=
+			9vjJUthxlwCGfW7G+9r1PMC7DZZIb7EA3l6wli5zX3o=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			16GPdKeGm20HM+FIT6Cd3+zyMmQmKXKIUzJQbC1Ed3k=
+			I4op8rNYSIJE3ehbvSlF2AF2QISVxMHIu+iRWJVf2bE=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2DmI6ntbMWgtTOEEhb4CJHWaycN+wPokhSNGZvsPMQE=
+			u5TulLr5+oB9wUFrk9Ru2p9iLV7I74Yu8qqWmvIrF6A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -360,7 +360,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SddbFWOQwhwK6WmlE09iHHOfOuW47KOvConVv7MFmw8=
+			UavsgnwiqW1NL/X3gzGPFYhC6ppD+O9Qo0Cq71cYVvM=
 			</data>
 		</dict>
 	</dict>

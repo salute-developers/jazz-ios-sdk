@@ -5551,11 +5551,74 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/RequestPerformers\/GetJazzTokenPerformer.swift",
+      "kind": "StringLiteral",
+      "offset": 665,
+      "length": 31,
+      "value": "\"JazzSDK.GetJazzTokenPerformer\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/RequestPerformers\/GetJazzTokenPerformer.swift",
+      "kind": "StringLiteral",
+      "offset": 1124,
+      "length": 16,
+      "value": "\"auth\/login\/sdk\""
+    },
+    {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWT.swift",
       "kind": "StringLiteral",
       "offset": 330,
       "length": 5,
       "value": "\"JWT\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1371,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1472,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 1505,
+      "length": 3,
+      "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1910,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 1944,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 1960,
+      "length": 1,
+      "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 1973,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTSignAlgorithm.swift",
@@ -5603,6 +5666,146 @@
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "BooleanLiteral",
       "offset": 2154,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 2426,
+      "length": 16,
+      "value": "\"jazzSdkLogs.db\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3610,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 3652,
+      "length": 18,
+      "value": "\"MinCifra_Root_CA\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 3710,
+      "length": 17,
+      "value": "\"MinCifra_Sub_CA\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 3767,
+      "length": 24,
+      "value": "\"jazz_geotrust_sberbank\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 3831,
+      "length": 27,
+      "value": "\"jazz_uatsyncplay_sberbank\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 3898,
+      "length": 29,
+      "value": "\"jazz_vc_backend_sberdevices\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 3967,
+      "length": 18,
+      "value": "\"jazz_sberdevices\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 4025,
+      "length": 15,
+      "value": "\"jazz_sincplay\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 4080,
+      "length": 14,
+      "value": "\"Jazz_sber_ru\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 4134,
+      "length": 18,
+      "value": "\"sberbank-root-ca\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5612,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5642,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 5746,
+      "length": 10,
+      "value": "\"EXTERNAL\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6299,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 7046,
+      "length": 12,
+      "value": "\"mobile-sdk\""
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 628,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 654,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 770,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 795,
       "length": 4,
       "value": "true"
     },
@@ -5750,6 +5953,97 @@
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
       "kind": "BooleanLiteral",
       "offset": 2825,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5792,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5809,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5877,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 276,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 322,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 364,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 405,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 444,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 482,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 537,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 606,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 641,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 681,
       "length": 5,
       "value": "false"
     },
