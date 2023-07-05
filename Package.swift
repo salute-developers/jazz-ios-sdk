@@ -30,13 +30,13 @@ let package = Package(
         .target(
             name: "JazzResources",
             resources: [
-                .proccess("JazzResources.bundle")
+                .process("JazzResources.bundle")
             ]
         ),
         .target(
             name: "DevicesDesignSystemResources",
             resources: [
-                .proccess("DevicesDesignSystemResources.bundle")
+                .process("DevicesDesignSystemResources.bundle")
             ]
         )
     ]
