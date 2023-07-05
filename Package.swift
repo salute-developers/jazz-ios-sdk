@@ -31,13 +31,15 @@ let package = Package(
             name: "JazzResources",
             resources: [
                 .process("JazzResources.bundle")
-            ]
+            ],
+            path: "Sources/JazzResources.bundle"
         ),
         .target(
             name: "DevicesDesignSystemResources",
             resources: [
                 .process("DevicesDesignSystemResources.bundle")
-            ]
+            ],
+            path: "Sources/DevicesDesignSystemResources.bundle"
         )
     ]
 )
