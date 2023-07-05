@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "JazzSDK",
-            targets: ["JazzSDK", "LibSberCast", "JazzCore", "WebRTC", "JazzResources", "DevicesDesignSystemResources"]),
+            targets: ["JazzSDK", "LibSberCast", "JazzCore", "WebRTC"]),
     ],
     targets: [
         .binaryTarget(
@@ -30,19 +30,5 @@ let package = Package(
             name: "WebRTC",
             path: "Sources/WebRTC.xcframework"
         ),
-        .target(
-            name: "JazzResources",
-            resources: [
-                .process("JazzResources.bundle")
-            ],
-            path: "Sources/JazzResources.bundle"
-        ),
-        .target(
-            name: "DevicesDesignSystemResources",
-            resources: [
-                .process("DevicesDesignSystemResources.bundle")
-            ],
-            path: "Sources/DevicesDesignSystemResources.bundle"
-        )
     ]
 )
