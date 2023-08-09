@@ -22,6 +22,7 @@ public enum ConferencePreferredSpeaker : Swift.String {
 public enum Jazz {
   public static func initialize(sdkSecret: Swift.String, tokenConfigurationProvider: any JazzSDK.JazzTokenConfigurationProvider, container: UIKit.UIViewController, settings: JazzSDK.JazzSettings, eventsListener: (any JazzSDK.JazzEventsListener)? = nil, shouldRateConference: Swift.Bool = true) throws
   public static func saveLogToFile(toFile fileUrl: Foundation.URL) throws
+  public static func getUrl(room: JazzSDK.JazzRoom) -> Foundation.URL
 }
 public struct JazzConferenceConfiguration {
   public let title: Swift.String?
@@ -77,7 +78,8 @@ public struct JazzControlsVisibility {
   public let isShareScreenVisible: Swift.Bool
   public let isAsrVisible: Swift.Bool
   public let isCreatePollVisible: Swift.Bool
-  public init(isSettingsVisible: Swift.Bool, isToggleReactionsVisible: Swift.Bool, isOpenChatVisible: Swift.Bool, isBackVisible: Swift.Bool, isParticipantListVisible: Swift.Bool, isChangeLayoutVisible: Swift.Bool, isShareConferenceLinkVisible: Swift.Bool, isSwitchCameraVisible: Swift.Bool, isRaiseHandVisible: Swift.Bool, isTransitionToDeviceVisible: Swift.Bool, isPinUserVisible: Swift.Bool, isShareScreenVisible: Swift.Bool, isConferenceMenuVisible: Swift.Bool, isAsrVisible: Swift.Bool, isCreatePollVisible: Swift.Bool)
+  public let isCloudRecordVisible: Swift.Bool
+  public init(isSettingsVisible: Swift.Bool, isToggleReactionsVisible: Swift.Bool, isOpenChatVisible: Swift.Bool, isBackVisible: Swift.Bool, isParticipantListVisible: Swift.Bool, isChangeLayoutVisible: Swift.Bool, isShareConferenceLinkVisible: Swift.Bool, isSwitchCameraVisible: Swift.Bool, isRaiseHandVisible: Swift.Bool, isTransitionToDeviceVisible: Swift.Bool, isPinUserVisible: Swift.Bool, isShareScreenVisible: Swift.Bool, isConferenceMenuVisible: Swift.Bool, isAsrVisible: Swift.Bool, isCreatePollVisible: Swift.Bool, isCloudRecordVisible: Swift.Bool)
 }
 extension JazzSDK.JazzControlsVisibility {
   public static let allVisible: JazzSDK.JazzControlsVisibility

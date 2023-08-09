@@ -8,6 +8,32 @@ iOS: 14.x и выше; Swift: 5.6 и выше; Xcode: 13.3.1 и выше
 
 https://developers.sber.ru/docs/ru/jazz/sdk/overview
 
+## Лицензионное соглашение
+[Лицензионное соглашение](https://clck.ru/35F8h3)
+
+## Установка через менеджеры зависимостей
+### CocoaPods
+
+Чтобы встроить JazzSDK в ваше приложение, необходимо указать его в вашем `Podfile`:
+
+```ruby
+pod 'JazzSDK'
+```
+### Carthage
+Чтобы встроить JazzSDK в ваше приложение, необходимо указать его в вашем `Cartfile`:
+
+```ogdl
+github "salute-developers/jazz-ios-sdk"
+```
+
+### Swift Package Manager
+Чтобы встроить JazzSDK в ваше приложение, необходимо указать его в вашем `Package.swift`:
+```swift
+dependencies: [
+    .package(url: "https://github.com/salute-developers/jazz-ios-sdk.git")
+]
+```
+
 ## Подключение к проекту
 
 1. Скопируйте содержимое архива в директорию с вашим проектом
@@ -41,7 +67,7 @@ https://developers.sber.ru/docs/ru/jazz/sdk/overview
 ```
 <key>NSBonjourServices</key>
 <array>
-	<string>_staros._tcp</string>
+    <string>_staros._tcp</string>
 </array>
 ```
 
@@ -55,7 +81,7 @@ https://developers.sber.ru/docs/ru/jazz/sdk/overview
 
 1. Создайте в своем проекте таргет типа **Broadcast Upload Extension** (галочку Include UI Extension следует снять)
 2. Прилинкуйте к новому таргету фреймворки: JazzScreenShareImpl.xcframework, JazzSDKScreenShare.xcframework.
-	`Важно: В секцию Embeded Binaries добавлять не нужно
+    `Важно: В секцию Embeded Binaries добавлять не нужно
 3. Скопируйте или сделайте символьную ссылку на JazzScreenShareImpl/JazzScreenShareResources.bundle
 4. Добавьте в основной таргет приложения и в новый таргет **Broadcast Upload Extension** app groups capability и укажите одинаковый идентификатор группы
 5. Обновите **Info.plist** нового таргета и основного таргета приложения, чтобы в них содержался ключ `RTCAppGroupIdentifier` со значением равным идентификатору группы

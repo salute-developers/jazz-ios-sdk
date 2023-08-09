@@ -74,15 +74,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HrUxyGzu8kDGljKmkgVUJ8DI6bk=
+		tkMKEizIF4owLNWidlHdggEl4c8=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		cv+O6HPNiRDrF83fEwAeTKdPfwg=
+		r0NImaTcnt03hnIDHALdxxQIQ54=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		sHGQlfH3Zzy1UG5QvZHKJdqhepY=
+		8A7wqUnr7E4bLq+zDBTIOYeNf1E=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UVGVzHoO24Tcnmfe1bRlR4wc0QM=
+		UYVn4PbsfI0DXqZyMVjU/hQOukQ=
 		</data>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Cqw6dmbTebBspZThIZx6yc4Kbes=
+		LvogHIGi14AcXJXD4te6SMcA4EA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>main.jsbundle</key>
 		<data>
-		YSAb7LT9zVW74HAhvRmkyMOBCM8=
+		F3WnEeS983p2LxmZJZdPi7fav2U=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -262,14 +262,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			So6bNkzvxvA1AdQU47odwuzfRbVQ3lzDNkhYSN7UE1o=
+			UQqj2XRcd2/mf5JUush3cKY/JhCmK5todwl1W+iqvak=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MX99vx70vKLDZL+hOxiwiLWl2tFwQWCsQPwHux4wVIY=
+			zs3ppEBANLQtMUKWhRk4BL71RazatIGIkVhnh6Mq9UY=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -304,7 +304,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lJzXzzoLSTA9Kgw0gFTRGW5xdcjhZKPxkjQC7hDjajc=
+			WsN4+8cY95emWlspe688mOZVtEGde07JENfetXaQvLM=
 			</data>
 		</dict>
 		<key>Modules/JazzCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -339,7 +339,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u5TulLr5+oB9wUFrk9Ru2p9iLV7I74Yu8qqWmvIrF6A=
+			Sjwf2geMPE4O0AEHpmbCQwFqBZYrhVlyZuVaG4TjYa4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -360,7 +360,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UavsgnwiqW1NL/X3gzGPFYhC6ppD+O9Qo0Cq71cYVvM=
+			HMKOPYqBXZqIW21hDacjGX0eJhTbaX/u8jZG2T9GhI4=
 			</data>
 		</dict>
 	</dict>
