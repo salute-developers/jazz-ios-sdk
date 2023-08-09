@@ -13,7 +13,7 @@ extension JazzSettings {
 	/// Более поробно см. `JazzSettings`
 	static let demoSettings = JazzSettings(
 		network: JazzNetwork(
-			hostUrl: "https://jazz.sber.ru"
+			hostUrl: URL(string: "https://jazz.sber.ru")!
 		),
 		buttonsVisibility: .allVisible,
 		inviteButton: nil,
