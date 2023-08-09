@@ -56,7 +56,7 @@ struct DemoAppView: View {
 						isMicrophoneOn: false
 					),
 					analyticsConferenceType: nil,
-                    prefferedSpeaker: nil
+                    preferredSpeaker: nil
 				)
 			}
 			Button("Присоединиться к конференции") {
@@ -64,8 +64,6 @@ struct DemoAppView: View {
 				/// Получает в параметрах ID и пароль конференции, к которой нужно подключиться, настройки источников медиа
 				/// (см. `JazzConferenceMediaSettings`) и тип конференции для событий аналитики.
 				JazzSession.shared.joinConference(
-					id: roomId,
-					decodedPassword: roomPassword,
 					mediaSettings: JazzConferenceMediaSettings(
 						isCameraOn: false,
 						isMicrophoneOn: false
