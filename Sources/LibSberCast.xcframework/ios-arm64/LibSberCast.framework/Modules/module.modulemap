@@ -2,5 +2,5 @@ framework module LibSberCast {
 }
 
 module LibSberCast.Swift {
-    requires objc
+  requires objc
 }

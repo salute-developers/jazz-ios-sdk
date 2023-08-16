@@ -1,10 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name LibSberCast
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name LibSberCast
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import LibSberCast
 import Swift
 import _Concurrency
+import _StringProcessing
 public enum CastRequestResponseCode : Swift.Int {
   case success
   case badRequest
@@ -244,6 +246,7 @@ public protocol SberCastListener : AnyObject {
 public enum DeviceSetupChannelType : Swift.CaseIterable {
   case ble
   case wifi
+  case all
   public static func == (a: LibSberCast.DeviceSetupChannelType, b: LibSberCast.DeviceSetupChannelType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [LibSberCast.DeviceSetupChannelType]
@@ -255,21 +258,21 @@ public enum DeviceSetupChannelType : Swift.CaseIterable {
   }
 }
 public protocol SberCast : AnyObject {
-  func addListener(listener: LibSberCast.SberCastListener)
-  func removeListener(listener: LibSberCast.SberCastListener)
+  func addListener(listener: any LibSberCast.SberCastListener)
+  func removeListener(listener: any LibSberCast.SberCastListener)
   func sendDirective(deviceId: Swift.String, directive: LibSberCast.CastDirective) -> LibSberCast.CastDirectiveId?
   func sendRequest(deviceId: Swift.String, request: LibSberCast.CastRequest) -> LibSberCast.CastRequestId?
   func start()
   func setEsaToken(esaToken: Swift.String)
   func setBackendBaseUrl(url: Swift.String)
   func setClientName(name: Swift.String)
-  func setAnalytics(analyticsListener: LibSberCast.AnalyticsListener)
+  func setAnalytics(analyticsListener: any LibSberCast.AnalyticsListener)
   func stop()
   func pause()
   func refresh()
-  func deviceSetup() -> LibSberCast.DeviceSetup
+  func deviceSetup() -> any LibSberCast.DeviceSetup
   func enableBLE(newBLEState: Swift.Bool)
-  func setLogWrapper(logWriter: LibSberCast.SberCastLogWriter)
+  func setLogWrapper(logWriter: any LibSberCast.SberCastLogWriter)
   func connectToDevice(deviceId: Swift.String, accessToken: Swift.String) -> LibSberCast.CastRequestId?
   func confirmDeviceConnectionCode(deviceId: Swift.String, code: Swift.String) -> LibSberCast.CastRequestId?
   func cancelDeviceConnectionRequest(deviceId: Swift.String) -> LibSberCast.CastRequestId?
@@ -278,7 +281,7 @@ public protocol SberCast : AnyObject {
   func ipv4ListOfDevice(_ deviceId: Swift.String) -> Swift.Set<Swift.String>
   func ipv6ListOfDevice(_ deviceId: Swift.String) -> Swift.Set<Swift.String>
   func setBLEDeeplinkToRunOnDeviceWhenTouched(_ deeplink: Foundation.URL?)
-  var voiceTransport: LibSberCast.VoiceTransport { get }
+  var voiceTransport: any LibSberCast.VoiceTransport { get }
   var isPaused: Swift.Bool { get }
   var isRunning: Swift.Bool { get }
   var devices: [LibSberCast.SberCastDevice] { get }
@@ -404,7 +407,7 @@ public enum VoiceTransportRequestType : Swift.Int {
   }
 }
 public protocol VoiceTransport : AnyObject {
-  func resetListener(listener: LibSberCast.VoiceTransportListener) -> Swift.Bool
+  func resetListener(listener: any LibSberCast.VoiceTransportListener) -> Swift.Bool
   func startVoiceInput(deviceId: Swift.String)
   func sendAudioData(deviceId: Swift.String, audioType: LibSberCast.VoiceTransportAudioType, audioData: Foundation.Data)
   func cancelVoiceInput(deviceId: Swift.String)
@@ -473,18 +476,20 @@ public protocol SberCastLogWriter : AnyObject {
   func write(withRecord record: LibSberCast.CastLogRecord)
 }
 public enum SberCastFactory {
-  public static func makeSberCast(clientName: Swift.String) -> LibSberCast.SberCast
+  public static func makeSberCast(clientName: Swift.String) -> any LibSberCast.SberCast
 }
 public protocol DeviceSetup : AnyObject {
   func start(channelType: LibSberCast.DeviceSetupChannelType)
+  func startBLEPassiveScan()
   func stop()
-  func setListener(listener: LibSberCast.DeviceSetupListener?)
+  func setListener(listener: (any LibSberCast.DeviceSetupListener)?)
   func getNetworks()
   func connectWifi(ssid: Swift.String, password: Swift.String, type: LibSberCast.DeviceSetupWifiType, isHidden: Swift.Bool)
   func connectEthernet()
   func startReconfiguringDevice(_ remoteDevice: LibSberCast.DeviceSetupRemoteDevice)
-  func setLogWrapper(logWriter: LibSberCast.SberCastLogWriter)
-  func setAnalytics(analyticsListener: LibSberCast.AnalyticsListener)
+  func deviceActionSetupDeviceFromPassiveScan(_ remoteDevice: LibSberCast.DeviceSetupRemoteDevice)
+  func setLogWrapper(logWriter: any LibSberCast.SberCastLogWriter)
+  func setAnalytics(analyticsListener: any LibSberCast.AnalyticsListener)
 }
 public enum DeviceSetupEthernetStatus : Swift.Equatable {
   case available(connected: Swift.Bool)
@@ -494,8 +499,12 @@ public enum DeviceSetupEthernetStatus : Swift.Equatable {
 }
 public protocol DeviceSetupListener : AnyObject {
   func onStateChanged(_ state: LibSberCast.DeviceSetupState)
-  func onError(_ error: Swift.Error)
+  func onError(_ error: any Swift.Error)
   func onCurrentDeviceSetupStep(_ deviceSetupStep: LibSberCast.DeviceSetupStep)
+  func onPassiveScanDeviceFound(_ deviceInfo: LibSberCast.DeviceSetupDeviceInfo)
+}
+extension LibSberCast.DeviceSetupListener {
+  public func onPassiveScanDeviceFound(_: LibSberCast.DeviceSetupDeviceInfo)
 }
 public protocol AnalyticsListener : AnyObject {
   func fireEvent(eventName: Swift.String, values: [Swift.String : Swift.String])

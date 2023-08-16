@@ -221,12 +221,11 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
           "RawDocComment"
         ]
       },
@@ -234,6 +233,56 @@
         "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDJson",
+        "printedName": "SDJson",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDLogging",
+        "printedName": "SDLogging",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDNetworkKit",
+        "printedName": "SDNetworkKit",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDReactive",
+        "printedName": "SDReactive",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -252,24 +301,12 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
-        "declKind": "Import",
-        "moduleName": "JazzSDK",
-        "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
+          "ImplementationOnly"
         ]
       },
       {
@@ -277,7 +314,40 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "JazzSDK"
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -298,6 +368,16 @@
       },
       {
         "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
         "declKind": "Import",
@@ -310,16 +390,6 @@
         "kind": "Import",
         "name": "CompanionCore",
         "printedName": "CompanionCore",
-        "declKind": "Import",
-        "moduleName": "JazzSDK",
-        "declAttributes": [
-          "ImplementationOnly"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -345,6 +415,13 @@
         "declAttributes": [
           "ImplementationOnly"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK"
       },
       {
         "kind": "Import",
@@ -388,8 +465,68 @@
       },
       {
         "kind": "Import",
-        "name": "SDNavigation",
-        "printedName": "SDNavigation",
+        "name": "SDFlowNavigation",
+        "printedName": "SDFlowNavigation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDJson",
+        "printedName": "SDJson",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDLogging",
+        "printedName": "SDLogging",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDNetworkKit",
+        "printedName": "SDNetworkKit",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDPersistance",
+        "printedName": "SDPersistance",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDReactive",
+        "printedName": "SDReactive",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -512,6 +649,34 @@
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUrl",
+            "printedName": "getUrl(room:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "JazzRoom",
+                "printedName": "JazzSDK.JazzRoom",
+                "usr": "s:7JazzSDK0A4RoomV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7JazzSDK0A0O6getUrl4room10Foundation3URLVAA0A4RoomV_tFZ",
+            "mangledName": "$s7JazzSDK0A0O6getUrl4room10Foundation3URLVAA0A4RoomV_tFZ",
+            "moduleName": "JazzSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -544,13 +709,42 @@
       },
       {
         "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
         ]
       },
       {
@@ -834,12 +1028,11 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
           "RawDocComment"
         ]
       },
@@ -847,6 +1040,16 @@
         "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -1198,13 +1401,32 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
         ]
       },
       {
@@ -1444,6 +1666,26 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "JazzConferenceSettings",
         "printedName": "JazzConferenceSettings",
@@ -1675,8 +1917,7 @@
         "mangledName": "$s7JazzSDK0A18ConferenceSettingsV",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
+          "AccessControl"
         ]
       },
       {
@@ -2370,15 +2611,66 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isCloudRecordVisible",
+            "printedName": "isCloudRecordVisible",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7JazzSDK0A18ControlsVisibilityV20isCloudRecordVisibleSbvp",
+            "mangledName": "$s7JazzSDK0A18ControlsVisibilityV20isCloudRecordVisibleSbvp",
+            "moduleName": "JazzSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7JazzSDK0A18ControlsVisibilityV20isCloudRecordVisibleSbvg",
+                "mangledName": "$s7JazzSDK0A18ControlsVisibilityV20isCloudRecordVisibleSbvg",
+                "moduleName": "JazzSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(isSettingsVisible:isToggleReactionsVisible:isOpenChatVisible:isBackVisible:isParticipantListVisible:isChangeLayoutVisible:isShareConferenceLinkVisible:isSwitchCameraVisible:isRaiseHandVisible:isTransitionToDeviceVisible:isPinUserVisible:isShareScreenVisible:isConferenceMenuVisible:isAsrVisible:isCreatePollVisible:)",
+            "printedName": "init(isSettingsVisible:isToggleReactionsVisible:isOpenChatVisible:isBackVisible:isParticipantListVisible:isChangeLayoutVisible:isShareConferenceLinkVisible:isSwitchCameraVisible:isRaiseHandVisible:isTransitionToDeviceVisible:isPinUserVisible:isShareScreenVisible:isConferenceMenuVisible:isAsrVisible:isCreatePollVisible:isCloudRecordVisible:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "JazzControlsVisibility",
                 "printedName": "JazzSDK.JazzControlsVisibility",
                 "usr": "s:7JazzSDK0A18ControlsVisibilityV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -2472,8 +2764,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:7JazzSDK0A18ControlsVisibilityV17isSettingsVisible0e15ToggleReactionsG00e8OpenChatG00e4BackG00e15ParticipantListG00e12ChangeLayoutG00e19ShareConferenceLinkG00e12SwitchCameraG00e9RaiseHandG00e18TransitionToDeviceG00e7PinUserG00eq6ScreenG00er4MenuG00e3AsrG00e10CreatePollG0ACSb_S14btcfc",
-            "mangledName": "$s7JazzSDK0A18ControlsVisibilityV17isSettingsVisible0e15ToggleReactionsG00e8OpenChatG00e4BackG00e15ParticipantListG00e12ChangeLayoutG00e19ShareConferenceLinkG00e12SwitchCameraG00e9RaiseHandG00e18TransitionToDeviceG00e7PinUserG00eq6ScreenG00er4MenuG00e3AsrG00e10CreatePollG0ACSb_S14btcfc",
+            "usr": "s:7JazzSDK0A18ControlsVisibilityV17isSettingsVisible0e15ToggleReactionsG00e8OpenChatG00e4BackG00e15ParticipantListG00e12ChangeLayoutG00e19ShareConferenceLinkG00e12SwitchCameraG00e9RaiseHandG00e18TransitionToDeviceG00e7PinUserG00eq6ScreenG00er4MenuG00e3AsrG00e10CreatePollG00e11CloudRecordG0ACSb_S15btcfc",
+            "mangledName": "$s7JazzSDK0A18ControlsVisibilityV17isSettingsVisible0e15ToggleReactionsG00e8OpenChatG00e4BackG00e15ParticipantListG00e12ChangeLayoutG00e19ShareConferenceLinkG00e12SwitchCameraG00e9RaiseHandG00e18TransitionToDeviceG00e7PinUserG00eq6ScreenG00er4MenuG00e3AsrG00e10CreatePollG00e11CloudRecordG0ACSb_S15btcfc",
             "moduleName": "JazzSDK",
             "declAttributes": [
               "AccessControl"
@@ -2541,13 +2833,32 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
         ]
       },
       {
@@ -2952,6 +3263,16 @@
       },
       {
         "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3129,6 +3450,16 @@
         "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -3464,13 +3795,32 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
         ]
       },
       {
@@ -3678,6 +4028,16 @@
             "usr": "s:SQ",
             "mangledName": "$sSQ"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -3898,8 +4258,7 @@
         "mangledName": "$s7JazzSDK0A8SDKErrorO",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
+          "AccessControl"
         ],
         "conformances": [
           {
@@ -3934,21 +4293,13 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
-        "declKind": "Import",
-        "moduleName": "JazzSDK",
-        "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "JazzSDK"
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -3974,6 +4325,26 @@
         "kind": "Import",
         "name": "JazzServices",
         "printedName": "JazzServices",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDURLHandling",
+        "printedName": "SDURLHandling",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -4723,48 +5094,28 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "JazzAPI",
         "printedName": "JazzAPI",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
+          "ImplementationOnly"
         ]
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
-        "declKind": "Import",
-        "moduleName": "JazzSDK",
-        "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "JazzSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
-        "declKind": "Import",
-        "moduleName": "JazzSDK",
-        "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SDNavigation",
-        "printedName": "SDNavigation",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -4773,19 +5124,28 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
           "RawDocComment"
         ]
       },
       {
         "kind": "Import",
-        "name": "SDNavigation",
-        "printedName": "SDNavigation",
+        "name": "SDFlowNavigation",
+        "printedName": "SDFlowNavigation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -4798,6 +5158,93 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "JazzSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDFlowNavigation",
+        "printedName": "SDFlowNavigation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDReactive",
+        "printedName": "SDReactive",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDFlowNavigation",
+        "printedName": "SDFlowNavigation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "JazzSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -5254,6 +5701,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "JazzTokenConfigurationProvider",
         "printedName": "JazzTokenConfigurationProvider",
@@ -5295,12 +5752,11 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
           "RawDocComment"
         ]
       },
@@ -5316,12 +5772,31 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "SDNetworkKit",
+        "printedName": "SDNetworkKit",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -5347,6 +5822,26 @@
       },
       {
         "kind": "Import",
+        "name": "SDNetworkKit",
+        "printedName": "SDNetworkKit",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CompanionCore",
         "printedName": "CompanionCore",
         "declKind": "Import",
@@ -5358,8 +5853,25 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SDReactive",
+        "printedName": "SDReactive",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
@@ -5456,13 +5968,22 @@
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
         ]
       },
       {
@@ -5470,16 +5991,28 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "JazzSDK"
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
-        "name": "DevicesCore",
-        "printedName": "DevicesCore",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -5495,12 +6028,31 @@
       },
       {
         "kind": "Import",
-        "name": "JazzAPI",
-        "printedName": "JazzAPI",
+        "name": "SDReactive",
+        "printedName": "SDReactive",
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -5511,8 +6063,47 @@
         "declKind": "Import",
         "moduleName": "JazzSDK",
         "declAttributes": [
-          "ImplementationOnly",
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "JazzAPI",
+        "printedName": "JazzAPI",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDSoup",
+        "printedName": "SDSoup",
+        "declKind": "Import",
+        "moduleName": "JazzSDK",
+        "declAttributes": [
+          "ImplementationOnly"
         ]
       },
       {
@@ -5520,11 +6111,11 @@
         "name": "StackScreenController",
         "printedName": "StackScreenController",
         "declKind": "Class",
-        "usr": "s:12SDNavigation21StackScreenControllerC",
-        "mangledName": "$s12SDNavigation21StackScreenControllerC",
-        "moduleName": "SDNavigation",
-        "genericSig": "<τ_0_0 where τ_0_0 : DevicesCore.StackScreen>",
-        "sugared_genericSig": "<Screen where Screen : DevicesCore.StackScreen>",
+        "usr": "s:16SDFlowNavigation21StackScreenControllerC",
+        "mangledName": "$s16SDFlowNavigation21StackScreenControllerC",
+        "moduleName": "SDFlowNavigation",
+        "genericSig": "<τ_0_0 where τ_0_0 : SDFlowNavigation.StackScreen>",
+        "sugared_genericSig": "<Screen where Screen : SDFlowNavigation.StackScreen>",
         "declAttributes": [
           "Final"
         ],
@@ -5534,15 +6125,15 @@
             "kind": "Conformance",
             "name": "Pausable",
             "printedName": "Pausable",
-            "usr": "s:11DevicesCore8PausableP",
-            "mangledName": "$s11DevicesCore8PausableP"
+            "usr": "s:6SDSoup8PausableP",
+            "mangledName": "$s6SDSoup8PausableP"
           },
           {
             "kind": "Conformance",
             "name": "StackScreenDropper",
             "printedName": "StackScreenDropper",
-            "usr": "s:12SDNavigation18StackScreenDropperP",
-            "mangledName": "$s12SDNavigation18StackScreenDropperP"
+            "usr": "s:16SDFlowNavigation18StackScreenDropperP",
+            "mangledName": "$s16SDFlowNavigation18StackScreenDropperP"
           }
         ]
       }
@@ -5553,385 +6144,399 @@
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/RequestPerformers\/GetJazzTokenPerformer.swift",
       "kind": "StringLiteral",
-      "offset": 665,
+      "offset": 831,
       "length": 31,
       "value": "\"JazzSDK.GetJazzTokenPerformer\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/RequestPerformers\/GetJazzTokenPerformer.swift",
       "kind": "StringLiteral",
-      "offset": 1124,
+      "offset": 1290,
       "length": 16,
       "value": "\"auth\/login\/sdk\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWT.swift",
       "kind": "StringLiteral",
-      "offset": 330,
+      "offset": 357,
       "length": 5,
       "value": "\"JWT\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 1371,
+      "offset": 1366,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 1472,
+      "offset": 1467,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1505,
+      "offset": 1500,
       "length": 3,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 1910,
+      "offset": 1905,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1944,
+      "offset": 1939,
       "length": 30,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1960,
+      "offset": 1955,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTGeneratorImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1973,
+      "offset": 1968,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTSignAlgorithm.swift",
       "kind": "StringLiteral",
-      "offset": 221,
+      "offset": 256,
       "length": 7,
       "value": "\"ES256\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTSignAlgorithm.swift",
       "kind": "StringLiteral",
-      "offset": 243,
+      "offset": 278,
       "length": 7,
       "value": "\"ES384\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTSignAlgorithm.swift",
       "kind": "StringLiteral",
-      "offset": 265,
+      "offset": 300,
       "length": 7,
       "value": "\"ES512\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTSignAlgorithm.swift",
       "kind": "StringLiteral",
-      "offset": 221,
+      "offset": 256,
       "length": 7,
       "value": "\"ES256\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTSignAlgorithm.swift",
       "kind": "StringLiteral",
-      "offset": 243,
+      "offset": 278,
       "length": 7,
       "value": "\"ES384\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/JWTSignAlgorithm.swift",
       "kind": "StringLiteral",
-      "offset": 265,
+      "offset": 300,
       "length": 7,
       "value": "\"ES512\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "BooleanLiteral",
-      "offset": 2154,
+      "offset": 2417,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 2426,
+      "offset": 2746,
       "length": 16,
       "value": "\"jazzSdkLogs.db\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "BooleanLiteral",
-      "offset": 3610,
+      "offset": 3964,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 3652,
+      "offset": 4006,
       "length": 18,
       "value": "\"MinCifra_Root_CA\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 3710,
+      "offset": 4064,
       "length": 17,
       "value": "\"MinCifra_Sub_CA\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 3767,
+      "offset": 4121,
       "length": 24,
       "value": "\"jazz_geotrust_sberbank\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 3831,
+      "offset": 4185,
       "length": 27,
       "value": "\"jazz_uatsyncplay_sberbank\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 3898,
+      "offset": 4252,
       "length": 29,
       "value": "\"jazz_vc_backend_sberdevices\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 3967,
+      "offset": 4321,
       "length": 18,
       "value": "\"jazz_sberdevices\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 4025,
+      "offset": 4379,
       "length": 15,
       "value": "\"jazz_sincplay\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 4080,
+      "offset": 4434,
       "length": 14,
       "value": "\"Jazz_sber_ru\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 4134,
+      "offset": 4488,
       "length": 18,
       "value": "\"sberbank-root-ca\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "BooleanLiteral",
-      "offset": 5612,
+      "offset": 5966,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "BooleanLiteral",
-      "offset": 5642,
+      "offset": 5996,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 5746,
+      "offset": 6100,
       "length": 10,
       "value": "\"EXTERNAL\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "BooleanLiteral",
-      "offset": 6299,
+      "offset": 6655,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
       "kind": "StringLiteral",
-      "offset": 7046,
+      "offset": 7682,
       "length": 12,
       "value": "\"mobile-sdk\""
     },
     {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Jazz.swift",
+      "kind": "StringLiteral",
+      "offset": 8554,
+      "length": 31,
+      "value": "\"LinkBuilder не создан\""
+    },
+    {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 628,
+      "offset": 641,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 654,
+      "offset": 667,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 770,
+      "offset": 783,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzConferenceMediaSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 795,
+      "offset": 808,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/ConferenceConfiguration\/JazzConferenceSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 366,
+      "offset": 416,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/ConferenceConfiguration\/JazzConferenceSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 392,
+      "offset": 442,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/ConferenceConfiguration\/JazzConferenceSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 429,
+      "offset": 479,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3210,
+      "offset": 3366,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3244,
+      "offset": 3400,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3271,
+      "offset": 3427,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3294,
+      "offset": 3450,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3328,
+      "offset": 3484,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3359,
+      "offset": 3515,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3397,
+      "offset": 3553,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3428,
+      "offset": 3584,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3456,
+      "offset": 3612,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3493,
+      "offset": 3649,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3519,
+      "offset": 3675,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3549,
+      "offset": 3705,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3582,
+      "offset": 3738,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3604,
+      "offset": 3760,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
       "kind": "BooleanLiteral",
-      "offset": 3633,
+      "offset": 3789,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzControlsVisibility.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3819,
       "length": 4,
       "value": "true"
     },
@@ -5945,175 +6550,175 @@
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
       "kind": "StringLiteral",
-      "offset": 808,
+      "offset": 845,
       "length": 153,
       "value": "\"Jazz не был проинициализирован! Необходимо вызвать Jazz.initialize перед использованием SDK.\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 2825,
+      "offset": 2862,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 5792,
+      "offset": 5829,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 5809,
+      "offset": 5846,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzSession.swift",
       "kind": "BooleanLiteral",
-      "offset": 5877,
+      "offset": 5914,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 276,
+      "offset": 329,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 322,
+      "offset": 375,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 364,
+      "offset": 417,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 405,
+      "offset": 458,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 444,
+      "offset": 497,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 482,
+      "offset": 535,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 537,
+      "offset": 590,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 606,
+      "offset": 659,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 641,
+      "offset": 694,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/JazzSpecs+SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 681,
+      "offset": 734,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/JazzTokenConfiguration.swift",
       "kind": "IntegerLiteral",
-      "offset": 1056,
+      "offset": 1071,
       "length": 3,
       "value": "120"
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 509,
+      "offset": 559,
       "length": 4,
       "value": "\"EC\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 509,
+      "offset": 559,
       "length": 4,
       "value": "\"EC\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 563,
+      "offset": 613,
       "length": 7,
       "value": "\"P-256\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 585,
+      "offset": 635,
       "length": 7,
       "value": "\"P-384\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 607,
+      "offset": 657,
       "length": 7,
       "value": "\"P-521\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 563,
+      "offset": 613,
       "length": 7,
       "value": "\"P-256\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 585,
+      "offset": 635,
       "length": 7,
       "value": "\"P-384\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKSecret.swift",
       "kind": "StringLiteral",
-      "offset": 607,
+      "offset": 657,
       "length": 7,
       "value": "\"P-521\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzSDK\/Sources\/JazzSDK\/Internal\/Authorization\/SDKTokenStorageImpl.swift",
       "kind": "Dictionary",
-      "offset": 289,
+      "offset": 342,
       "length": 3,
       "value": "[]"
     }
