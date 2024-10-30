@@ -39,3 +39,49 @@ RCT_EXPORT_METHOD(sendEvent:(NSString *)name
 После этого стоит проверить, что внесенные изменения действительно применились (clean проекта, очистить derived data, перезапустить) и делать ПР
 
 Если есть неоходимость запуска metro bundler (например для горячей перезагрузки js), то необходимо в таргете JazzCore в "Build Settings" изменить значение `USE_METRO_BUNDLER` на `YES`
+
+## Известные ошибки при сборки и варианты решения
+
+```
+Can't find the 'node' binary to build the React Native bundle.  If you have a non-standard Node.js installation, select your project in Xcode, find  'Build Phases' - 'Bundle React Native code and images' and change NODE_BINARY to an  absolute path to your node executable. You can find it by invoking 'which node' in the terminal.
+```
+Выполнить команду 
+ln -s $(which node) /usr/local/bin/node
+
+```
+Error: Cannot find module '@hapi/joi'
+Require stack:
+- /Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/schema.js
+- /Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/readConfigFromDisk.js
+- /Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/index.js
+- /Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/commands/install/install.js
+- /Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/commands/index.js
+- /Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/index.js
+- /Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/react-native/cli.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:746:27)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:92:18)
+    at t (/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/schema.js:9:40)
+    at Object.<anonymous> (/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/schema.js:26:17)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/schema.js',
+    '/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/readConfigFromDisk.js',
+    '/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/tools/config/index.js',
+    '/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/commands/install/install.js',
+    '/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/commands/index.js',
+    '/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/@react-native-community/cli/build/index.js',
+    '/Users/out-vyrko-ma/Dev/assistant-sdk-ios/Submodules/JazzCore/node_modules/react-native/cli.js'
+  ]
+}
++ [[ false != true ]]
++ [[ ! -f /Users/out-vyrko-ma/Library/Developer/Xcode/DerivedData/SDWorkspace-gvauqoqdovyejidrjodcjcnsuikb/Build/Products/Debug-iphonesimulator/JazzCore.framework/main.jsbundle ]]
++ echo 'error: File /Users/out-vyrko-ma/Library/Developer/Xcode/DerivedData/SDWorkspace-gvauqoqdovyejidrjodcjcnsuikb/Build/Products/Debug-iphonesimulator/JazzCore.framework/main.jsbundle does not exist. This must be a bug with'
+```
+
+выполнить x setup_js

@@ -57,7 +57,26 @@
 - (void)requestRoomPermission:(NSString* _Nonnull)permission;
 - (void)updateVideoStream:(JitsiEndpointPayload* _Nonnull)endpointPayload;
 - (void)approveAccess:(NSString* _Nonnull)participantID;
+- (void)approveAccessForAll;
 - (void)denyAccess:(NSString* _Nonnull)participantID;
+- (void)turnParticipantMicrophoneOff:(NSString* _Nonnull)participantID;
+- (void)turnParticipantCameraOff:(NSString* _Nonnull)participantID;
+- (void)turnMicrophoneOffForAll;
+- (void)turnCameraOffForAll;
+- (void)removeParticipant:(NSString* _Nonnull)participantID;
+- (void)endConferenceForAll;
+- (void)updatePermission:(NSString* _Nonnull)permissionType WithAllowed:(BOOL)allowed to:(NSString* _Nonnull) participantID;
+/**
+ * Создание сессионных групп
+ * Словарь 'sessionGroups' содержит следующее:
+ * [
+ * "sessionGroups": [
+ *    "title": String,
+ *    "participants": [String],
+ *    ]
+ * ]
+ */
+- (void)createSessionGroups:(NSDictionary * _Nonnull)sessionGroups;
 
 - (WebRTCModuleWrapper *_Nonnull) mediaStreamRetriever;
 

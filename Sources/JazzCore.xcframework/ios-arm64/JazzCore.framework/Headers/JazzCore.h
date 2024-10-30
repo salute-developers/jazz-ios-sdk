@@ -23,7 +23,9 @@
 #import <JazzCore/JitsiLog.h>
 #import <JazzCore/InfoPlistUtil.h>
 #import <JazzCore/WebRTCModuleWrapper.h>
+#import <JazzCore/RTCYUVHelper.h>
 #import <JazzCore/JitsiReaction.h>
 #import <JazzCore/JitsiEndpointPayload.h>
 #import <JazzCore/JitsiEndpoint.h>
 #import <JazzCore/RCTHTTPRequestPinning.h>
+#import <JazzCore/CameraVideoCapturer.h>

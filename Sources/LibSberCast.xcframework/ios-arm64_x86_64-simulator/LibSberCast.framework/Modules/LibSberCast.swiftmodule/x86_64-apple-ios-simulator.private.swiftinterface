@@ -262,6 +262,8 @@ public protocol SberCast : AnyObject {
   func removeListener(listener: any LibSberCast.SberCastListener)
   func sendDirective(deviceId: Swift.String, directive: LibSberCast.CastDirective) -> LibSberCast.CastDirectiveId?
   func sendRequest(deviceId: Swift.String, request: LibSberCast.CastRequest) -> LibSberCast.CastRequestId?
+  func getSettings() -> LibSberCast.SberCastSettings
+  func setSettings(sberCastSettings: LibSberCast.SberCastSettings) -> Swift.Bool
   func start()
   func setEsaToken(esaToken: Swift.String)
   func setBackendBaseUrl(url: Swift.String)
@@ -280,7 +282,8 @@ public protocol SberCast : AnyObject {
   func setAccessTokenForDevice(_ deviceId: Swift.String, accessToken: Swift.String)
   func ipv4ListOfDevice(_ deviceId: Swift.String) -> Swift.Set<Swift.String>
   func ipv6ListOfDevice(_ deviceId: Swift.String) -> Swift.Set<Swift.String>
-  func setBLEDeeplinkToRunOnDeviceWhenTouched(_ deeplink: Foundation.URL?)
+  func setExpectBLEDeeplinkFromTouchedDevice(state: LibSberCast.ExpectBLEDeeplinkState)
+  func setBLEDeeplinkToRunOnDeviceWhenTouched(_ deeplink: Foundation.URL?, timeoutMs: Swift.Int64)
   var voiceTransport: any LibSberCast.VoiceTransport { get }
   var isPaused: Swift.Bool { get }
   var isRunning: Swift.Bool { get }
@@ -289,6 +292,7 @@ public protocol SberCast : AnyObject {
 extension LibSberCast.SberCast {
   @available(*, deprecated, message: "use `if (isPaused) {start()}` instead")
   public func unpause()
+  public func setBLEDeeplinkToRunOnDeviceWhenTouched(_ deeplink: Foundation.URL?, timeoutMs: Swift.Int64 = 0)
 }
 public enum DeviceSetupWifiType : Swift.CaseIterable {
   case open
@@ -352,6 +356,8 @@ public enum DeviceSetupConnectingToNetworkStatus : Swift.Equatable {
   case notConfigured
   case connecting
   case connected
+  case errorWrongPassword
+  case errorWifiWithoutInternet
   case error
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LibSberCast.DeviceSetupConnectingToNetworkStatus, b: LibSberCast.DeviceSetupConnectingToNetworkStatus) -> Swift.Bool
@@ -406,6 +412,21 @@ public enum VoiceTransportRequestType : Swift.Int {
     get
   }
 }
+public struct SberCastSettings : Swift.CustomDebugStringConvertible {
+  public struct ConnectionMediums : Swift.CustomDebugStringConvertible {
+    public var wifiMdns: Swift.Bool
+    public var ble: Swift.Bool
+    public init(wifiMdns: Swift.Bool, ble: Swift.Bool)
+    public var debugDescription: Swift.String {
+      get
+    }
+  }
+  public var connectionMediums: LibSberCast.SberCastSettings.ConnectionMediums
+  public init(connectionMediums: LibSberCast.SberCastSettings.ConnectionMediums)
+  public var debugDescription: Swift.String {
+    get
+  }
+}
 public protocol VoiceTransport : AnyObject {
   func resetListener(listener: any LibSberCast.VoiceTransportListener) -> Swift.Bool
   func startVoiceInput(deviceId: Swift.String)
@@ -422,6 +443,7 @@ public enum RunBLEDeeplinkOnDeviceStatus : Swift.Int {
   case searchingDevice
   case waitingAnswerFromDevice
   case success
+  case timeout
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -526,6 +548,16 @@ public struct DeviceSetupDeviceInfo : Swift.Equatable {
   public init(id: Swift.String, serialNumber: Swift.String, product: Swift.String)
   public static func == (a: LibSberCast.DeviceSetupDeviceInfo, b: LibSberCast.DeviceSetupDeviceInfo) -> Swift.Bool
 }
+public enum ExpectBLEDeeplinkState : Swift.Int {
+  case doNotExpect
+  case expectOnce
+  case expectMultipleTimes
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public struct DeviceSetupEthernetInfo : Swift.Equatable {
   public let status: LibSberCast.DeviceSetupEthernetStatus
   public init(status: LibSberCast.DeviceSetupEthernetStatus)
@@ -583,3 +615,6 @@ extension LibSberCast.RunBLEDeeplinkOnDeviceStatus : Swift.Hashable {}
 extension LibSberCast.RunBLEDeeplinkOnDeviceStatus : Swift.RawRepresentable {}
 extension LibSberCast.CastLogSeverity : Swift.Hashable {}
 extension LibSberCast.CastLogSeverity : Swift.RawRepresentable {}
+extension LibSberCast.ExpectBLEDeeplinkState : Swift.Equatable {}
+extension LibSberCast.ExpectBLEDeeplinkState : Swift.Hashable {}
+extension LibSberCast.ExpectBLEDeeplinkState : Swift.RawRepresentable {}
