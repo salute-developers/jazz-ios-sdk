@@ -28,13 +28,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		/// Изначальные настройки приложения, такие как ссылки на бекенд и хост приложения, видимость кнопок в приложении,
 		/// настройка дополнительной кнопки в меню пригласить, идентификатор ScreenSharing'а для корректной работы функции
 		/// демнострации экрана и сервис для хранения и изменения имени пользователя в приложении
-		let settings = JazzSettings.demoSettings
+		let settings = JazzSettings(
+            network: JazzNetwork(
+                hostUrl: URL(string: "https://jazz.sber.ru")!
+            ),
+            buttonsVisibility: .allVisible,
+            inviteButton: nil,
+            screenShareExtensionIdentifier: nil,
+            userNameService: nil
+        )
 		/// Инициализация Jazz в приложении.
 		/// - important: Если не провести инициализацию приложения, то будет недоступен функционал SDK и при попытке вызова
 		/// функций, приложение будет выдавать ошибку авторизации
 		try? Jazz.initialize(
-			sdkSecret: sdkSecret,
-			tokenConfigurationProvider: tokenConfigurationProvider,
+            conferenceAuthorizationType: .secretKey(
+                secretKey: sdkSecret,
+                tokenConfigurationProvider: tokenConfigurationProvider
+            ),
 			container: rootViewController,
 			settings: settings
 		)

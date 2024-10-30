@@ -1,7 +1,7 @@
 framework module JazzCore {
   umbrella header "JazzCore.h"
-
   export *
+
   module * { export * }
 }
 

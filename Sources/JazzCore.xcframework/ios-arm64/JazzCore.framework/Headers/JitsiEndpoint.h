@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Эндпоинт видеопотока участника конференции
 @interface JitsiEndpoint : NSObject
 
-/// Идентификатор участника конференции
+/// Идентификатор трекера (если поддерживается multi stream) или участника конференции
 @property (nonatomic, strong, readonly) NSString *identifier;
 /// Расположен ли пользователь в режиме спикера на экране пользователя
 @property (nonatomic, assign, readonly) BOOL isPrimary;

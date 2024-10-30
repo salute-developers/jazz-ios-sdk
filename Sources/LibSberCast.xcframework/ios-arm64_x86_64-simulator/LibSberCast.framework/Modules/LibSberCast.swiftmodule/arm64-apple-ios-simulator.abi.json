@@ -7721,6 +7721,62 @@
           },
           {
             "kind": "Function",
+            "name": "getSettings",
+            "printedName": "getSettings()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SberCastSettings",
+                "printedName": "LibSberCast.SberCastSettings",
+                "usr": "s:11LibSberCast0bC8SettingsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LibSberCast0bC0P11getSettingsAA0bcE0VyF",
+            "mangledName": "$s11LibSberCast0bC0P11getSettingsAA0bcE0VyF",
+            "moduleName": "LibSberCast",
+            "genericSig": "<τ_0_0 where τ_0_0 : LibSberCast.SberCast>",
+            "sugared_genericSig": "<Self where Self : LibSberCast.SberCast>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setSettings",
+            "printedName": "setSettings(sberCastSettings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SberCastSettings",
+                "printedName": "LibSberCast.SberCastSettings",
+                "usr": "s:11LibSberCast0bC8SettingsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LibSberCast0bC0P11setSettings04sbercE0SbAA0bcE0V_tF",
+            "mangledName": "$s11LibSberCast0bC0P11setSettings04sbercE0SbAA0bcE0V_tF",
+            "moduleName": "LibSberCast",
+            "genericSig": "<τ_0_0 where τ_0_0 : LibSberCast.SberCast>",
+            "sugared_genericSig": "<Self where Self : LibSberCast.SberCast>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "start",
             "printedName": "start()",
             "children": [
@@ -8254,8 +8310,38 @@
           },
           {
             "kind": "Function",
+            "name": "setExpectBLEDeeplinkFromTouchedDevice",
+            "printedName": "setExpectBLEDeeplinkFromTouchedDevice(state:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExpectBLEDeeplinkState",
+                "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LibSberCast0bC0P37setExpectBLEDeeplinkFromTouchedDevice5stateyAA0eF5StateO_tF",
+            "mangledName": "$s11LibSberCast0bC0P37setExpectBLEDeeplinkFromTouchedDevice5stateyAA0eF5StateO_tF",
+            "moduleName": "LibSberCast",
+            "genericSig": "<τ_0_0 where τ_0_0 : LibSberCast.SberCast>",
+            "sugared_genericSig": "<Self where Self : LibSberCast.SberCast>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "setBLEDeeplinkToRunOnDeviceWhenTouched",
-            "printedName": "setBLEDeeplinkToRunOnDeviceWhenTouched(_:)",
+            "printedName": "setBLEDeeplinkToRunOnDeviceWhenTouched(_:timeoutMs:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8275,11 +8361,17 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
               }
             ],
             "declKind": "Func",
-            "usr": "s:11LibSberCast0bC0P38setBLEDeeplinkToRunOnDeviceWhenTouchedyy10Foundation3URLVSgF",
-            "mangledName": "$s11LibSberCast0bC0P38setBLEDeeplinkToRunOnDeviceWhenTouchedyy10Foundation3URLVSgF",
+            "usr": "s:11LibSberCast0bC0P38setBLEDeeplinkToRunOnDeviceWhenTouched_9timeoutMsy10Foundation3URLVSg_s5Int64VtF",
+            "mangledName": "$s11LibSberCast0bC0P38setBLEDeeplinkToRunOnDeviceWhenTouched_9timeoutMsy10Foundation3URLVSg_s5Int64VtF",
             "moduleName": "LibSberCast",
             "genericSig": "<τ_0_0 where τ_0_0 : LibSberCast.SberCast>",
             "sugared_genericSig": "<Self where Self : LibSberCast.SberCast>",
@@ -8498,6 +8590,50 @@
             "declAttributes": [
               "AccessControl",
               "Available"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setBLEDeeplinkToRunOnDeviceWhenTouched",
+            "printedName": "setBLEDeeplinkToRunOnDeviceWhenTouched(_:timeoutMs:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "hasDefaultArg": true,
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11LibSberCast0bC0PAAE38setBLEDeeplinkToRunOnDeviceWhenTouched_9timeoutMsy10Foundation3URLVSg_s5Int64VtF",
+            "mangledName": "$s11LibSberCast0bC0PAAE38setBLEDeeplinkToRunOnDeviceWhenTouched_9timeoutMsy10Foundation3URLVSg_s5Int64VtF",
+            "moduleName": "LibSberCast",
+            "genericSig": "<τ_0_0 where τ_0_0 : LibSberCast.SberCast>",
+            "sugared_genericSig": "<Self where Self : LibSberCast.SberCast>",
+            "declAttributes": [
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -10529,6 +10665,80 @@
           },
           {
             "kind": "Var",
+            "name": "errorWrongPassword",
+            "printedName": "errorWrongPassword",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LibSberCast.DeviceSetupConnectingToNetworkStatus.Type) -> LibSberCast.DeviceSetupConnectingToNetworkStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DeviceSetupConnectingToNetworkStatus",
+                    "printedName": "LibSberCast.DeviceSetupConnectingToNetworkStatus",
+                    "usr": "s:11LibSberCast36DeviceSetupConnectingToNetworkStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LibSberCast.DeviceSetupConnectingToNetworkStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeviceSetupConnectingToNetworkStatus",
+                        "printedName": "LibSberCast.DeviceSetupConnectingToNetworkStatus",
+                        "usr": "s:11LibSberCast36DeviceSetupConnectingToNetworkStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LibSberCast36DeviceSetupConnectingToNetworkStatusO18errorWrongPasswordyA2CmF",
+            "mangledName": "$s11LibSberCast36DeviceSetupConnectingToNetworkStatusO18errorWrongPasswordyA2CmF",
+            "moduleName": "LibSberCast"
+          },
+          {
+            "kind": "Var",
+            "name": "errorWifiWithoutInternet",
+            "printedName": "errorWifiWithoutInternet",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LibSberCast.DeviceSetupConnectingToNetworkStatus.Type) -> LibSberCast.DeviceSetupConnectingToNetworkStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DeviceSetupConnectingToNetworkStatus",
+                    "printedName": "LibSberCast.DeviceSetupConnectingToNetworkStatus",
+                    "usr": "s:11LibSberCast36DeviceSetupConnectingToNetworkStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LibSberCast.DeviceSetupConnectingToNetworkStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeviceSetupConnectingToNetworkStatus",
+                        "printedName": "LibSberCast.DeviceSetupConnectingToNetworkStatus",
+                        "usr": "s:11LibSberCast36DeviceSetupConnectingToNetworkStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LibSberCast36DeviceSetupConnectingToNetworkStatusO24errorWifiWithoutInternetyA2CmF",
+            "mangledName": "$s11LibSberCast36DeviceSetupConnectingToNetworkStatusO24errorWifiWithoutInternetyA2CmF",
+            "moduleName": "LibSberCast"
+          },
+          {
+            "kind": "Var",
             "name": "error",
             "printedName": "error",
             "children": [
@@ -12097,6 +12307,459 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "SberCastSettings",
+        "printedName": "SberCastSettings",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "ConnectionMediums",
+            "printedName": "ConnectionMediums",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "wifiMdns",
+                "printedName": "wifiMdns",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvp",
+                "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvp",
+                "moduleName": "LibSberCast",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvg",
+                    "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvg",
+                    "moduleName": "LibSberCast",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvs",
+                    "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvs",
+                    "moduleName": "LibSberCast",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvM",
+                    "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdnsSbvM",
+                    "moduleName": "LibSberCast",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "ble",
+                "printedName": "ble",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvp",
+                "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvp",
+                "moduleName": "LibSberCast",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvg",
+                    "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvg",
+                    "moduleName": "LibSberCast",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvs",
+                    "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvs",
+                    "moduleName": "LibSberCast",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvM",
+                    "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV3bleSbvM",
+                    "moduleName": "LibSberCast",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(wifiMdns:ble:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionMediums",
+                    "printedName": "LibSberCast.SberCastSettings.ConnectionMediums",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdns3bleAESb_Sbtcfc",
+                "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV8wifiMdns3bleAESb_Sbtcfc",
+                "moduleName": "LibSberCast",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "debugDescription",
+                "printedName": "debugDescription",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV16debugDescriptionSSvp",
+                "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV16debugDescriptionSSvp",
+                "moduleName": "LibSberCast",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV16debugDescriptionSSvg",
+                    "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV16debugDescriptionSSvg",
+                    "moduleName": "LibSberCast",
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV",
+            "mangledName": "$s11LibSberCast0bC8SettingsV17ConnectionMediumsV",
+            "moduleName": "LibSberCast",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "CustomDebugStringConvertible",
+                "printedName": "CustomDebugStringConvertible",
+                "usr": "s:s28CustomDebugStringConvertibleP",
+                "mangledName": "$ss28CustomDebugStringConvertibleP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "connectionMediums",
+            "printedName": "connectionMediums",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectionMediums",
+                "printedName": "LibSberCast.SberCastSettings.ConnectionMediums",
+                "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0Vvp",
+            "mangledName": "$s11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0Vvp",
+            "moduleName": "LibSberCast",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionMediums",
+                    "printedName": "LibSberCast.SberCastSettings.ConnectionMediums",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0Vvg",
+                "mangledName": "$s11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0Vvg",
+                "moduleName": "LibSberCast",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionMediums",
+                    "printedName": "LibSberCast.SberCastSettings.ConnectionMediums",
+                    "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0Vvs",
+                "mangledName": "$s11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0Vvs",
+                "moduleName": "LibSberCast",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0VvM",
+                "mangledName": "$s11LibSberCast0bC8SettingsV17connectionMediumsAC010ConnectionF0VvM",
+                "moduleName": "LibSberCast",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(connectionMediums:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SberCastSettings",
+                "printedName": "LibSberCast.SberCastSettings",
+                "usr": "s:11LibSberCast0bC8SettingsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectionMediums",
+                "printedName": "LibSberCast.SberCastSettings.ConnectionMediums",
+                "usr": "s:11LibSberCast0bC8SettingsV17ConnectionMediumsV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11LibSberCast0bC8SettingsV17connectionMediumsA2C010ConnectionF0V_tcfc",
+            "mangledName": "$s11LibSberCast0bC8SettingsV17connectionMediumsA2C010ConnectionF0V_tcfc",
+            "moduleName": "LibSberCast",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "debugDescription",
+            "printedName": "debugDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11LibSberCast0bC8SettingsV16debugDescriptionSSvp",
+            "mangledName": "$s11LibSberCast0bC8SettingsV16debugDescriptionSSvp",
+            "moduleName": "LibSberCast",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LibSberCast0bC8SettingsV16debugDescriptionSSvg",
+                "mangledName": "$s11LibSberCast0bC8SettingsV16debugDescriptionSSvg",
+                "moduleName": "LibSberCast",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11LibSberCast0bC8SettingsV",
+        "mangledName": "$s11LibSberCast0bC8SettingsV",
+        "moduleName": "LibSberCast",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LibSberCast",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "VoiceTransport",
         "printedName": "VoiceTransport",
         "children": [
@@ -12578,6 +13241,43 @@
             "declKind": "EnumElement",
             "usr": "s:11LibSberCast28RunBLEDeeplinkOnDeviceStatusO7successyA2CmF",
             "mangledName": "$s11LibSberCast28RunBLEDeeplinkOnDeviceStatusO7successyA2CmF",
+            "moduleName": "LibSberCast"
+          },
+          {
+            "kind": "Var",
+            "name": "timeout",
+            "printedName": "timeout",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LibSberCast.RunBLEDeeplinkOnDeviceStatus.Type) -> LibSberCast.RunBLEDeeplinkOnDeviceStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RunBLEDeeplinkOnDeviceStatus",
+                    "printedName": "LibSberCast.RunBLEDeeplinkOnDeviceStatus",
+                    "usr": "s:11LibSberCast28RunBLEDeeplinkOnDeviceStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LibSberCast.RunBLEDeeplinkOnDeviceStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RunBLEDeeplinkOnDeviceStatus",
+                        "printedName": "LibSberCast.RunBLEDeeplinkOnDeviceStatus",
+                        "usr": "s:11LibSberCast28RunBLEDeeplinkOnDeviceStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LibSberCast28RunBLEDeeplinkOnDeviceStatusO7timeoutyA2CmF",
+            "mangledName": "$s11LibSberCast28RunBLEDeeplinkOnDeviceStatusO7timeoutyA2CmF",
             "moduleName": "LibSberCast"
           },
           {
@@ -15493,6 +16193,252 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ExpectBLEDeeplinkState",
+        "printedName": "ExpectBLEDeeplinkState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "doNotExpect",
+            "printedName": "doNotExpect",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LibSberCast.ExpectBLEDeeplinkState.Type) -> LibSberCast.ExpectBLEDeeplinkState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExpectBLEDeeplinkState",
+                    "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                    "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LibSberCast.ExpectBLEDeeplinkState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExpectBLEDeeplinkState",
+                        "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                        "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO05doNotD0yA2CmF",
+            "mangledName": "$s11LibSberCast22ExpectBLEDeeplinkStateO05doNotD0yA2CmF",
+            "moduleName": "LibSberCast"
+          },
+          {
+            "kind": "Var",
+            "name": "expectOnce",
+            "printedName": "expectOnce",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LibSberCast.ExpectBLEDeeplinkState.Type) -> LibSberCast.ExpectBLEDeeplinkState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExpectBLEDeeplinkState",
+                    "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                    "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LibSberCast.ExpectBLEDeeplinkState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExpectBLEDeeplinkState",
+                        "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                        "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO10expectOnceyA2CmF",
+            "mangledName": "$s11LibSberCast22ExpectBLEDeeplinkStateO10expectOnceyA2CmF",
+            "moduleName": "LibSberCast"
+          },
+          {
+            "kind": "Var",
+            "name": "expectMultipleTimes",
+            "printedName": "expectMultipleTimes",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LibSberCast.ExpectBLEDeeplinkState.Type) -> LibSberCast.ExpectBLEDeeplinkState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExpectBLEDeeplinkState",
+                    "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                    "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LibSberCast.ExpectBLEDeeplinkState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExpectBLEDeeplinkState",
+                        "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                        "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO19expectMultipleTimesyA2CmF",
+            "mangledName": "$s11LibSberCast22ExpectBLEDeeplinkStateO19expectMultipleTimesyA2CmF",
+            "moduleName": "LibSberCast"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LibSberCast.ExpectBLEDeeplinkState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExpectBLEDeeplinkState",
+                    "printedName": "LibSberCast.ExpectBLEDeeplinkState",
+                    "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11LibSberCast22ExpectBLEDeeplinkStateO8rawValueACSgSi_tcfc",
+            "moduleName": "LibSberCast",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO8rawValueSivp",
+            "mangledName": "$s11LibSberCast22ExpectBLEDeeplinkStateO8rawValueSivp",
+            "moduleName": "LibSberCast",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO8rawValueSivg",
+                "mangledName": "$s11LibSberCast22ExpectBLEDeeplinkStateO8rawValueSivg",
+                "moduleName": "LibSberCast",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11LibSberCast22ExpectBLEDeeplinkStateO",
+        "mangledName": "$s11LibSberCast22ExpectBLEDeeplinkStateO",
+        "moduleName": "LibSberCast",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LibSberCast",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "DeviceSetupEthernetInfo",
         "printedName": "DeviceSetupEthernetInfo",
         "children": [
@@ -15808,1663 +16754,1768 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 194,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 211,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
       "length": 18,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 5,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 9,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 194,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 211,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
       "length": 18,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 5,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 9,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 194,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 211,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
       "length": 18,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 5,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/CastRequestResponseCode.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 9,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 200,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 220,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 234,
       "length": 19,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 260,
       "length": 12,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 279,
       "length": 12,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 200,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 220,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 234,
       "length": 19,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 260,
       "length": 12,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 279,
       "length": 12,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 200,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 220,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 234,
       "length": 19,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 260,
       "length": 12,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Response\/ConnectWifiCastResponseStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 279,
       "length": 12,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 624,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 629,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 681,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 686,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 735,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 740,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 791,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 796,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 855,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "IntegerLiteral",
       "offset": 860,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 940,
       "length": 9,
       "value": "\"browser\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 964,
       "length": 9,
       "value": "\"youtube\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 985,
       "length": 6,
       "value": "\"jazz\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 1005,
       "length": 8,
       "value": "\"screen\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 1035,
       "length": 16,
       "value": "\"gamepadService\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 1289,
       "length": 21,
       "value": "\"Features(\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 1308,
       "length": 1,
       "value": "\")\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3559,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3565,
       "length": 8,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3572,
       "length": 5,
       "value": "\"nil\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3616,
       "length": 7,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3622,
       "length": 8,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3629,
       "length": 5,
       "value": "\"nil\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3645,
       "length": 102,
       "value": "\"SberCastDevice(discoveredDeviceKey: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3704,
       "length": 2,
       "value": "\" id: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3714,
       "length": 1,
       "value": "\", name: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3729,
       "length": 1,
       "value": "\", type: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3744,
       "length": 1,
       "value": "\", \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3753,
       "length": 37,
       "value": "\"starosDeviceId: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3787,
       "length": 1,
       "value": "\", \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3796,
       "length": 101,
       "value": "\"isKnownToBackend: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3834,
       "length": 1,
       "value": "\", isDiscovered: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3865,
       "length": 1,
       "value": "\", isConnected: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3894,
       "length": 1,
       "value": "\", \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3903,
       "length": 61,
       "value": "\"version: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3926,
       "length": 5,
       "value": "\"nil\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3932,
       "length": 1,
       "value": "\", features: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3961,
       "length": 1,
       "value": "\", \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3970,
       "length": 29,
       "value": "\"metadata: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastDevice.swift",
       "kind": "StringLiteral",
       "offset": 3998,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatus.swift",
       "kind": "StringLiteral",
       "offset": 600,
       "length": 56,
       "value": "\"CastStatus(state: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatus.swift",
       "kind": "StringLiteral",
       "offset": 627,
       "length": 1,
       "value": "\", startError: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatus.swift",
       "kind": "StringLiteral",
       "offset": 654,
       "length": 1,
       "value": "\")\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 206,
       "length": 18,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
       "length": 18,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 5,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 10,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 302,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 206,
       "length": 18,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
       "length": 18,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 5,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 10,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 302,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 206,
       "length": 18,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 231,
       "length": 18,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
       "length": 5,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 285,
       "length": 10,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 302,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
       "kind": "IntegerLiteral",
       "offset": 201,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
       "kind": "IntegerLiteral",
       "offset": 201,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusState.swift",
       "kind": "IntegerLiteral",
       "offset": 201,
       "length": 7,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 15,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 208,
       "length": 11,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 226,
       "length": 14,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 247,
       "length": 7,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 10,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 15,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 208,
       "length": 11,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 226,
       "length": 14,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 247,
       "length": 7,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 10,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 186,
       "length": 15,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 208,
       "length": 11,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 226,
       "length": 14,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 247,
       "length": 7,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastStatusStartError.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 10,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportAudioType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Protocol\/SberCast.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5138,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportAudioType.swift",
       "kind": "IntegerLiteral",
       "offset": 194,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportAudioType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportAudioType.swift",
       "kind": "IntegerLiteral",
       "offset": 194,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportAudioType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportAudioType.swift",
       "kind": "IntegerLiteral",
       "offset": 194,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 315,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 367,
       "length": 17,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 445,
       "length": 5,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 510,
       "length": 9,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 565,
       "length": 5,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 616,
       "length": 18,
       "value": "7"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 315,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 367,
       "length": 17,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 445,
       "length": 5,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 510,
       "length": 9,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 565,
       "length": 5,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 616,
       "length": 18,
       "value": "7"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 261,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 315,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 367,
       "length": 17,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 445,
       "length": 5,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 510,
       "length": 9,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 565,
       "length": 5,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportConversationStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 616,
       "length": 18,
       "value": "7"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 196,
       "length": 15,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 218,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 238,
       "length": 16,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 196,
       "length": 15,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 218,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 238,
       "length": 16,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 196,
       "length": 15,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 218,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/VoiceTransport\/VoiceTransportRequestType.swift",
       "kind": "IntegerLiteral",
       "offset": 238,
       "length": 16,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 186,
-      "length": 21,
-      "value": "1"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 214,
-      "length": 18,
-      "value": "2"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 239,
-      "length": 17,
-      "value": "3"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 263,
-      "length": 9,
-      "value": "4"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 279,
-      "length": 21,
-      "value": "5"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 307,
-      "length": 15,
-      "value": "6"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 329,
-      "length": 23,
-      "value": "7"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 359,
-      "length": 7,
-      "value": "8"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 186,
-      "length": 21,
-      "value": "1"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 214,
-      "length": 18,
-      "value": "2"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 239,
-      "length": 17,
-      "value": "3"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 263,
-      "length": 9,
-      "value": "4"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 279,
-      "length": 21,
-      "value": "5"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 307,
-      "length": 15,
-      "value": "6"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 329,
-      "length": 23,
-      "value": "7"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 359,
-      "length": 7,
-      "value": "8"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 186,
-      "length": 21,
-      "value": "1"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 214,
-      "length": 18,
-      "value": "2"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 239,
-      "length": 17,
-      "value": "3"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 263,
-      "length": 9,
-      "value": "4"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 279,
-      "length": 21,
-      "value": "5"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 307,
-      "length": 15,
-      "value": "6"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 329,
-      "length": 23,
-      "value": "7"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "IntegerLiteral",
-      "offset": 359,
-      "length": 7,
-      "value": "8"
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2189,
-      "length": 139,
-      "value": "\"CastRunBLEDeeplinkOnDeviceInfo(status: \""
+      "offset": 664,
+      "length": 50,
+      "value": "\"ConnectionMediums: wifi: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2238,
-      "length": 8,
-      "value": "\" deeplink: \""
+      "offset": 701,
+      "length": 3,
+      "value": "\" ble: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2279,
-      "length": 5,
-      "value": "\"nil\""
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 2285,
-      "length": 18,
-      "value": "\" deeplinkToRunIsSet: \""
-    },
-    {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 2327,
+      "offset": 713,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 1397,
+      "length": 40,
+      "value": "\"SberCastSettings(\""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/SberCastSettings.swift",
+      "kind": "StringLiteral",
+      "offset": 1435,
+      "length": 1,
+      "value": "\")\""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 186,
+      "length": 21,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 214,
+      "length": 18,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 239,
+      "length": 17,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 263,
+      "length": 9,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 279,
+      "length": 21,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 307,
+      "length": 15,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 23,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 359,
+      "length": 7,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 373,
+      "length": 7,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 186,
+      "length": 21,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 214,
+      "length": 18,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 239,
+      "length": 17,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 263,
+      "length": 9,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 279,
+      "length": 21,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 307,
+      "length": 15,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 23,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 359,
+      "length": 7,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 373,
+      "length": 7,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 186,
+      "length": 21,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 214,
+      "length": 18,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 239,
+      "length": 17,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 263,
+      "length": 9,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 279,
+      "length": 21,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 307,
+      "length": 15,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 23,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 359,
+      "length": 7,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 373,
+      "length": 7,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 2239,
+      "length": 139,
+      "value": "\"CastRunBLEDeeplinkOnDeviceInfo(status: \""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 2288,
+      "length": 8,
+      "value": "\" deeplink: \""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 2329,
+      "length": 5,
+      "value": "\"nil\""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 2335,
+      "length": 18,
+      "value": "\" deeplinkToRunIsSet: \""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/RunBLEDeeplinkOnDeviceInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 2377,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
       "kind": "BooleanLiteral",
       "offset": 1811,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
       "kind": "IntegerLiteral",
       "offset": 2295,
       "length": 5,
       "value": "1000"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
       "kind": "StringLiteral",
       "offset": 2355,
       "length": 16,
       "value": "\"private.seqNum\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/LoggerWriter.swift",
       "kind": "IntegerLiteral",
       "offset": 2385,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 233,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 249,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 265,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 283,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 298,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 314,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 332,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "StringLiteral",
       "offset": 855,
       "length": 9,
       "value": "\"nothing\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "StringLiteral",
       "offset": 887,
       "length": 7,
       "value": "\"fatal\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "StringLiteral",
       "offset": 917,
       "length": 7,
       "value": "\"error\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "StringLiteral",
       "offset": 949,
       "length": 9,
       "value": "\"warning\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "StringLiteral",
       "offset": 980,
       "length": 6,
       "value": "\"info\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "StringLiteral",
       "offset": 1009,
       "length": 7,
       "value": "\"debug\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "StringLiteral",
       "offset": 1041,
       "length": 9,
       "value": "\"verbose\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 233,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 249,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 265,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 283,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 298,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 314,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 332,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 233,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 249,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 265,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 283,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 298,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 314,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Log\/CastLogRecord.swift",
       "kind": "IntegerLiteral",
       "offset": 332,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Factory\/SberCastImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Factory\/SberCastImpl.swift",
       "kind": "Array",
-      "offset": 494,
+      "offset": 532,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Factory\/SberCastImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Factory\/SberCastImpl.swift",
       "kind": "StringLiteral",
-      "offset": 1458,
+      "offset": 1502,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 1642,
       "length": 57,
       "value": "\"DeviceSetup.onStateChanged: nativeState: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 1698,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 1760,
       "length": 50,
       "value": "\"DeviceSetup.onStateChanged: knownState: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 1809,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 1907,
       "length": 41,
       "value": "\"DeviceSetup.onStateChanged: no listener\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2007,
       "length": 48,
       "value": "\"DeviceSetup.onError: error message: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2054,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2170,
       "length": 34,
       "value": "\"DeviceSetup.onError: no listener\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2294,
       "length": 103,
       "value": "\"DeviceSetup.onCurrentDeviceSetupStep: nativeStep: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2358,
       "length": 1,
       "value": "\", nativeStepType: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2396,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2469,
       "length": 52,
       "value": "\"DeviceSetup.onCurrentDeviceSetupStep: unknown step\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2552,
       "length": 58,
       "value": "\"DeviceSetup.onCurrentDeviceSetupStep: knownStep: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2609,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2716,
       "length": 51,
       "value": "\"DeviceSetup.onCurrentDeviceSetupStep: no listener\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 2865,
       "length": 40,
       "value": "\"DeviceSetup.onPassiveScanDeviceFound: \""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/DeviceSetup\/DeviceSetupImpl.swift",
       "kind": "StringLiteral",
       "offset": 3074,
       "length": 51,
       "value": "\"DeviceSetup.onPassiveScanDeviceFound: no listener\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
       "kind": "StringLiteral",
       "offset": 920,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
       "kind": "StringLiteral",
       "offset": 978,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
       "kind": "StringLiteral",
       "offset": 1034,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
       "kind": "StringLiteral",
       "offset": 1098,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
       "kind": "StringLiteral",
       "offset": 1154,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/usr\/local\/var\/jenkins-slave\/workspace\/StarOS\/StarOS-cpp\/build_sbercast\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/CastSmartAppInfo.swift",
       "kind": "StringLiteral",
       "offset": 1206,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/ExpectBLEDeeplinkState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 138,
+      "length": 10,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/ExpectBLEDeeplinkState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 155,
+      "length": 19,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/ExpectBLEDeeplinkState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 138,
+      "length": 10,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/ExpectBLEDeeplinkState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 155,
+      "length": 19,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/ExpectBLEDeeplinkState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 138,
+      "length": 10,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/18329973\/sber\/src\/staros\/StarOS\/SberCastSDK\/ios\/LibSberCast\/Sources\/swift\/Models\/ExpectBLEDeeplinkState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 155,
+      "length": 19,
+      "value": "2"
     }
   ]
 }
