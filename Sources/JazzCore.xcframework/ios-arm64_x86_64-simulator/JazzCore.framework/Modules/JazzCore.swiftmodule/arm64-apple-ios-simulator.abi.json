@@ -154,12 +154,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "CallKit.CXProviderDelegate?",
+                "printedName": "(any CallKit.CXProviderDelegate)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CXProviderDelegate",
-                    "printedName": "CallKit.CXProviderDelegate",
+                    "printedName": "any CallKit.CXProviderDelegate",
                     "usr": "c:objc(pl)CXProviderDelegate"
                   }
                 ],
@@ -215,7 +215,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -225,12 +225,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -525,7 +525,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -535,12 +535,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -583,12 +583,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "JazzCore.CXProviderProtocol?",
+                "printedName": "(any JazzCore.CXProviderProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CXProviderProtocol",
-                    "printedName": "JazzCore.CXProviderProtocol",
+                    "printedName": "any JazzCore.CXProviderProtocol",
                     "usr": "s:8JazzCore18CXProviderProtocolP"
                   }
                 ],
@@ -617,12 +617,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "JazzCore.CXProviderProtocol?",
+                    "printedName": "(any JazzCore.CXProviderProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CXProviderProtocol",
-                        "printedName": "JazzCore.CXProviderProtocol",
+                        "printedName": "any JazzCore.CXProviderProtocol",
                         "usr": "s:8JazzCore18CXProviderProtocolP"
                       }
                     ],
@@ -653,12 +653,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "JazzCore.CXProviderProtocol?",
+                    "printedName": "(any JazzCore.CXProviderProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CXProviderProtocol",
-                        "printedName": "JazzCore.CXProviderProtocol",
+                        "printedName": "any JazzCore.CXProviderProtocol",
                         "usr": "s:8JazzCore18CXProviderProtocolP"
                       }
                     ],
@@ -708,12 +708,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "JazzCore.CXCallControllerProtocol?",
+                "printedName": "(any JazzCore.CXCallControllerProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CXCallControllerProtocol",
-                    "printedName": "JazzCore.CXCallControllerProtocol",
+                    "printedName": "any JazzCore.CXCallControllerProtocol",
                     "usr": "s:8JazzCore24CXCallControllerProtocolP"
                   }
                 ],
@@ -741,12 +741,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "JazzCore.CXCallControllerProtocol?",
+                    "printedName": "(any JazzCore.CXCallControllerProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CXCallControllerProtocol",
-                        "printedName": "JazzCore.CXCallControllerProtocol",
+                        "printedName": "any JazzCore.CXCallControllerProtocol",
                         "usr": "s:8JazzCore24CXCallControllerProtocolP"
                       }
                     ],
@@ -777,12 +777,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "JazzCore.CXCallControllerProtocol?",
+                    "printedName": "(any JazzCore.CXCallControllerProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CXCallControllerProtocol",
-                        "printedName": "JazzCore.CXCallControllerProtocol",
+                        "printedName": "any JazzCore.CXCallControllerProtocol",
                         "usr": "s:8JazzCore24CXCallControllerProtocolP"
                       }
                     ],
@@ -1023,7 +1023,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "JMCallKitListener",
-                "printedName": "JazzCore.JMCallKitListener",
+                "printedName": "any JazzCore.JMCallKitListener",
                 "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener"
               }
             ],
@@ -1052,7 +1052,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "JMCallKitListener",
-                "printedName": "JazzCore.JMCallKitListener",
+                "printedName": "any JazzCore.JMCallKitListener",
                 "usr": "c:@M@JazzCore@objc(pl)JMCallKitListener"
               }
             ],
@@ -1151,7 +1151,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1161,12 +1161,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -1409,7 +1409,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1419,12 +1419,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -2043,79 +2043,16 @@
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
       "kind": "StringLiteral",
-      "offset": 2732,
+      "offset": 2876,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
       "kind": "BooleanLiteral",
-      "offset": 3058,
+      "offset": 3235,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3769,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3814,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3963,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4555,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4572,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6746,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6779,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6813,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/19823210\/sberdevices\/assistant-sdk-ios\/Submodules\/JazzCore\/ios\/Sources\/callkit\/JMCallKitProxy.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6849,
-      "length": 5,
-      "value": "false"
     }
   ]
 }

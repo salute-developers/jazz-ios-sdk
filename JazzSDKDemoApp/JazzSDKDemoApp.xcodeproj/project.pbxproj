@@ -17,13 +17,11 @@
 		5D51F9032A5833F1007128FD /* JazzSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D300BF82A387A7100CCD799 /* JazzSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D51F9062A583423007128FD /* DevicesDesignSystemResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D51F9042A583423007128FD /* DevicesDesignSystemResources.bundle */; };
 		5D51F9072A583423007128FD /* JazzResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D51F9052A583423007128FD /* JazzResources.bundle */; };
-		5D56A6A22A839D5A00E48EF3 /* DevicesDesignSystemResources.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 5D51F9042A583423007128FD /* DevicesDesignSystemResources.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5D56A6A32A839D5A00E48EF3 /* JazzResources.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 5D51F9052A583423007128FD /* JazzResources.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5D8E30282CE6230300072043 /* SDUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D8E30272CE6230300072043 /* SDUIResources.bundle */; };
 		5D9D684A29AF598F00EEF1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D684929AF598F00EEF1C0 /* AppDelegate.swift */; };
 		5D9D684C29AF598F00EEF1C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D684B29AF598F00EEF1C0 /* SceneDelegate.swift */; };
 		5D9D685329AF599100EEF1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D685229AF599100EEF1C0 /* Assets.xcassets */; };
 		5D9D685629AF599100EEF1C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D685429AF599100EEF1C0 /* LaunchScreen.storyboard */; };
-		5D9D688F29AF6C0100EEF1C0 /* DemoSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D688E29AF6C0100EEF1C0 /* DemoSettings.swift */; };
 		5D9D689129AF6C1500EEF1C0 /* DemoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D689029AF6C1500EEF1C0 /* DemoAppView.swift */; };
 		5D9D689329AF6C3200EEF1C0 /* DemoTokenConfigurationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D689229AF6C3200EEF1C0 /* DemoTokenConfigurationProvider.swift */; };
 /* End PBXBuildFile section */
@@ -43,18 +41,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D56A6A42A839D5B00E48EF3 /* Embed PlugIns */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				5D56A6A32A839D5A00E48EF3 /* JazzResources.bundle in Embed PlugIns */,
-				5D56A6A22A839D5A00E48EF3 /* DevicesDesignSystemResources.bundle in Embed PlugIns */,
-			);
-			name = "Embed PlugIns";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -64,13 +50,13 @@
 		5D300C002A387A7400CCD799 /* JazzCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JazzCore.xcframework; path = ../../Sources/JazzCore.xcframework; sourceTree = "<group>"; };
 		5D51F9042A583423007128FD /* DevicesDesignSystemResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DevicesDesignSystemResources.bundle; path = ../../Sources/DevicesDesignSystemResources.bundle; sourceTree = "<group>"; };
 		5D51F9052A583423007128FD /* JazzResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JazzResources.bundle; path = ../../Sources/JazzResources.bundle; sourceTree = "<group>"; };
+		5D8E30272CE6230300072043 /* SDUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SDUIResources.bundle; path = ../Sources/SDUIResources.bundle; sourceTree = SOURCE_ROOT; };
 		5D9D684629AF598F00EEF1C0 /* JazzSDKDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazzSDKDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9D684929AF598F00EEF1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D9D684B29AF598F00EEF1C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5D9D685229AF599100EEF1C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D9D685529AF599100EEF1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D9D685729AF599100EEF1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D9D688E29AF6C0100EEF1C0 /* DemoSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSettings.swift; sourceTree = "<group>"; };
 		5D9D689029AF6C1500EEF1C0 /* DemoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppView.swift; sourceTree = "<group>"; };
 		5D9D689229AF6C3200EEF1C0 /* DemoTokenConfigurationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTokenConfigurationProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,12 +103,12 @@
 		5D9D684829AF598F00EEF1C0 /* JazzSDKDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				5D8E30272CE6230300072043 /* SDUIResources.bundle */,
 				5D9D684929AF598F00EEF1C0 /* AppDelegate.swift */,
 				5D9D684B29AF598F00EEF1C0 /* SceneDelegate.swift */,
 				5D9D685229AF599100EEF1C0 /* Assets.xcassets */,
 				5D9D685429AF599100EEF1C0 /* LaunchScreen.storyboard */,
 				5D9D685729AF599100EEF1C0 /* Info.plist */,
-				5D9D688E29AF6C0100EEF1C0 /* DemoSettings.swift */,
 				5D9D689029AF6C1500EEF1C0 /* DemoAppView.swift */,
 				5D9D689229AF6C3200EEF1C0 /* DemoTokenConfigurationProvider.swift */,
 				5D300C002A387A7400CCD799 /* JazzCore.xcframework */,
@@ -146,7 +132,6 @@
 				5D9D684329AF598F00EEF1C0 /* Frameworks */,
 				5D9D684429AF598F00EEF1C0 /* Resources */,
 				5D300EF02A3880A500CCD799 /* Embed Frameworks */,
-				5D56A6A42A839D5B00E48EF3 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -199,6 +184,7 @@
 				5D51F9062A583423007128FD /* DevicesDesignSystemResources.bundle in Resources */,
 				5D51F9072A583423007128FD /* JazzResources.bundle in Resources */,
 				5D9D685329AF599100EEF1C0 /* Assets.xcassets in Resources */,
+				5D8E30282CE6230300072043 /* SDUIResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +199,6 @@
 				5D9D689129AF6C1500EEF1C0 /* DemoAppView.swift in Sources */,
 				5D9D684A29AF598F00EEF1C0 /* AppDelegate.swift in Sources */,
 				5D9D684C29AF598F00EEF1C0 /* SceneDelegate.swift in Sources */,
-				5D9D688F29AF6C0100EEF1C0 /* DemoSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Sberbank.JazzSDKDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -392,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Sberbank.JazzSDKDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

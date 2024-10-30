@@ -216,9 +216,15 @@
 
 /**
  * Вызывается когда выставляются разрешения приватной комнаты.
- * Словарь 'data' содержит данные для декодирования 'PrivateRoom.RoomPolicy'.
+ * Словарь 'data' содержит данные для декодирования 'RoomPolicy'.
  */
 - (void)setRoomPolicy:(NSDictionary *)data;
+
+/**
+ * Вызывается когда выставляются ролевые права в комнате.
+ * Словарь 'data' содержит данные для декодирования 'PrivateRoom.AllPermissions'.
+ */
+- (void)setRolePermissions:(NSDictionary *)data;
 
 /**
  * Вызывается когда выставляются настройки приватной комнаты.
@@ -378,5 +384,52 @@
  * Словарь 'data' содержит следующие ключи: type, address, port, protocol
  */
 - (void)iceCandidateReceived:(NSDictionary *)data;
+
+/**
+ * Получение события о том, что опрос начался
+ *
+ * Словарь 'data' содержит следующие ключи: type, address, port, protocol
+ */
+- (void)pollStarted:(NSDictionary *)data;
+
+/**
+ * Получение события о том, что голосование в опросе завершено
+ *
+ * Словарь 'data' содержит следующие ключи: type, address, port, protocol
+ */
+- (void)pollFinished:(NSDictionary *)data;
+
+/**
+ * Получение события о том, что результаты голосования в опросе показаны голосовавшим
+ *
+ * Словарь 'data' содержит следующие ключи: type, address, port, protocol
+ */
+- (void)pollResultsPublished:(NSDictionary *)data;
+
+/**
+ * Получение события о том, что обновились результаты голосования в опросе
+ *
+ * Словарь 'data' содержит следующие ключи: type, address, port, protocol
+ */
+- (void)pollResultsUpdated:(NSDictionary *)data;
+
+/**
+ * Получение события о том, что опрос завершен
+ *
+ * Словарь 'data' содержит следующие ключи: type, address, port, protocol
+ */
+- (void)pollClosed:(NSDictionary *)data;
+
+/**
+ * Получено событие о переходе в сессионную группу и выходе из нее
+ * Словарь 'data' содержит следующие ключи: 'id'
+ */
+- (void)moveToRoom:(NSDictionary *)data;
+
+/**
+ * Получено событие о получении запроса на включение фичи со стороны
+ * участника конференции
+ */
+- (void)permissionsRequestReceived:(NSDictionary *)data;
 
 @end
